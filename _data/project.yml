@@ -1,0 +1,58 @@
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to you under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# Apache Project configurations
+#
+name: Apache Tuweni
+short_name: Tuweni
+unix_name: tuweni
+incubator_name: incubator-tuweni
+incubator_slash_name: incubator/tuweni
+description: Apache Tuweni is a set of libraries and other tools to aid development of blockchain and other decentralized software in Java and other JVM languages.
+
+download: /download
+latest_release: 1.0.0
+
+dev_list: dev@tuweni.incubator.apache.org
+dev_list_subscribe: dev-subscribe@tuweni.incubator.apache.org
+dev_list_unsubscribe: dev-unsubscribe@tuweni.incubator.apache.org
+dev_list_archive: http://mail-archives.apache.org/mod_mbox/tuweni-dev/
+dev_list_archive_mailarchive: https://www.mail-archive.com/dev@tuweni.incubator.apache.org/
+dev_list_archive_markmail:
+
+user_list: users@tuweni.incubator.apache.org
+user_list_subscribe: users-subscribe@tuweni.incubator.apache.org
+user_list_unsubscribe: users-unsubscribe@tuweni.incubator.apache.org
+user_list_archive: http://mail-archives.apache.org/mod_mbox/tuweni-users/
+user_list_archive_mailarchive: https://www.mail-archive.com/users@tuweni.incubator.apache.org/
+user_list_archive_markmail:
+
+commits_list: commits@tuweni.incubator.apache.org
+commits_list_subscribe: commits-subscribe@tuweni.incubator.apache.org
+commits_list_unsubscribe: commits-unsubscribe@tuweni.incubator.apache.org
+commits_list_archive: http://mail-archives.apache.org/mod_mbox/tuweni-commits/
+commits_list_archive_mailarchive: https://www.mail-archive.com/commits@tuweni.incubator.apache.org/
+commits_list_archive_markmail:
+
+jira: TUWENI
+github_project_name: incubator-tuweni
+
+source_repository: https://git-wip-us.apache.org/repos/asf/incubator-tuweni.git
+source_repository_mirror: https://github.com/apache/incubator-tuweni
+
+website_repository: https://git-wip-us.apache.org/repos/asf/incubator-tuweni-website.git
+website_repository_mirror: https://github.com/apache/incubator-tuweni-website
+
+podling: true
