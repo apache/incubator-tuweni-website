@@ -49,10 +49,10 @@ commits_list_archive_markmail:
 jira: TUWENI
 github_project_name: incubator-tuweni
 
-source_repository: https://git-wip-us.apache.org/repos/asf/incubator-tuweni.git
-source_repository_mirror: https://github.com/apache/incubator-tuweni
+source_repository: https://github.com/apache/incubator-tuweni
+source_repository_mirror: https://git-wip-us.apache.org/repos/asf/incubator-tuweni.git
 
-website_repository: https://git-wip-us.apache.org/repos/asf/incubator-tuweni-website.git
-website_repository_mirror: https://github.com/apache/incubator-tuweni-website
+website_repository: https://github.com/apache/incubator-tuweni-website
+website_repository_mirror: https://git-wip-us.apache.org/repos/asf/incubator-tuweni-website.git
 
 podling: true
