@@ -21,13 +21,13 @@
   apacheId: toulmean
   githubId: atoulme
   role: PMC
-  org: ConsenSys
+  org: The Machine Consultancy
   homepage: https://antoine.toulme.name
   
 - name: jonny rhea
   apacheId: jrhea
   githubId: jrhea
-  role: Zombie
+  role: PMC
   org: ConsenSys
   homepage: https://github.com/jrhea
 
