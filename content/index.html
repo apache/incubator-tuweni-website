@@ -19,6 +19,7 @@
     <!-- Le styles -->
     <link href="/assets/themes/apache/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="/assets/themes/apache/css/style.css?body=1" rel="stylesheet" type="text/css">
+    <link href="/css/main.css?body=1" rel="stylesheet" type="text/css">
     <link href="/assets/themes/apache/css/syntax.css" rel="stylesheet"  type="text/css" media="screen" />
     <!-- Le fav and touch icons -->
     <!-- Update these with your own images
@@ -32,48 +33,51 @@
 
   <body>
 
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
+    <nav class="navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="">
-              <img src="/assets/themes/apache/img/logo.png" width="50">
-              Apache Tuweni
-          </a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img src="/assets/themes/apache/img/logo.png" width="30" height="30">
+                Apache Tuweni
+            </a>
         </div>
-        <nav class="navbar-collapse collapse" role="navigation">
-          <ul class="nav navbar-nav navbar-right">
-            <li id="community">
-              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Community<b class="caret"></b></a>
-               <ul class="dropdown-menu dropdown-left">
-                <li><a href="/community">Get Involved</a></li>
-                <li><a href="/community-members">Who we are</a></li>
-               </ul>
-            </li>
-            <li><a href="https://github.com/apache/incubator-tuweni">GitHub</a></li>
-            <li id="apache">
-              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Apache<b class="caret"></b></a>
-               <ul class="dropdown-menu">
-                <li><a href="http://www.apache.org/foundation/how-it-works.html">Apache Software Foundation</a></li>
-                <li><a href="http://www.apache.org/licenses/">Apache License</a></li>
-                <li><a href="http://www.apache.org/foundation/sponsorship.html">Sponsorship</a></li>
-                <li><a href="http://www.apache.org/foundation/thanks.html">Thanks</a></li>
-                </ul>
-            </li>
-          </ul>
-        </nav><!--/.navbar-collapse -->
-      </div>
-    </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li id="community">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Community<b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-left">
+                        <li><a href="/community">Get Involved</a></li>
+                        <li><a href="/community-members">Who we are</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/apache/incubator-tuweni">GitHub</a></li>
+                <li id="apache">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Apache<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://www.apache.org/foundation/how-it-works.html">Apache Software Foundation</a></li>
+                        <li><a href="http://www.apache.org/licenses/">Apache License</a></li>
+                        <li><a href="http://www.apache.org/foundation/sponsorship.html">Sponsorship</a></li>
+                        <li><a href="http://www.apache.org/foundation/thanks.html">Thanks</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 
 
 <div class="jumbotron">
   <div class="container">
-    <h1>Apache Tuweni</h1>
+    <h1>Jumpstart your next blockchain application</h1>
     <p>Apache Tuweni is a set of libraries and other tools to aid development of blockchain and other decentralized software in Java and other JVM languages.</p>
 
     
@@ -84,11 +88,11 @@
 
 
 
-    <div class="container">
+    <div class="container" style="margin-top:10px">
       
 
 <!--<div class="hero-unit Home">
-  <h1> <small>Apache Project !</small></h1>
+  <h1> <small>Apache Tuweni</small></h1>
 </div>
 -->
 
@@ -98,9 +102,7 @@
 
 -->
 
-<h2 id="apache-tuweni">Apache Tuweni</h2>
-
-<p>Tuweni is a set of libraries and other tools to aid development of blockchain and other decentralized software in Java and other JVM languages. It includes a low-level bytes library, serialization and deserialization codecs (e.g. RLP), various cryptography functions and primatives, and lots of other helpful utilities. Tuweni is developed for JDK 1.8 or higher, and depends on various other FOSS libraries.</p>
+<p>Apache Tuweni is a set of libraries and other tools to aid development of blockchain and other decentralized software in Java and other JVM languages. It includes a low-level bytes library, serialization and deserialization codecs (e.g. RLP), various cryptography functions and primatives, and lots of other helpful utilities. Tuweni is developed for JDK 1.8 or higher, and depends on various other FOSS libraries.</p>
 
   </div>
 </div>
