@@ -73,6 +73,11 @@ body {
 
 .bigFingerButton {
     margin-right: 10px;
+    color: #FFF;
+}
+
+a.bigFingerButton:visited {
+    color: #FFF;
 }
 
 .navbar-inverse .navbar-toggle {

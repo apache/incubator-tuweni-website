@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Downloads
-description: Project Downloads page
+description: Apache Tuweni Downloads page
 group: nav-right
 ---
 <!--
@@ -26,7 +26,7 @@ limitations under the License.
 
 ## {{ site.data.project.name }} Downloads
 
-{{ site.data.project.name }} is released as a source artifact, and also through Maven.
+{{ site.data.project.name }} is made available as a distribution and through Maven Central.
 
 ### Release Artifacts
 
@@ -102,3 +102,8 @@ succeed.
 For security, hash and signature files are always hosted at
 [Apache](https://www.apache.org/dist).
 
+### Maven Central
+
+You can download Apache Tuweni dependencies through Maven Central.
+
+*We are still in the process of publishing our bits to Maven Central and will update this page once it is completed.*

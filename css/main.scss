@@ -16,7 +16,9 @@ $spacing-unit:     30px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
+$background:       url("/assets/themes/apache/img/body-bg.png") repeat $background-color;
 $brand-color:      #2a7ae2;
+$jumbotron-bg:     url("/assets/themes/apache/img/body-bg.png") repeat #106190;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);

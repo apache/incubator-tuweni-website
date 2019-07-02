@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Home
-tagline: Apache Project !
+tagline: Apache Tuweni
 ---
 <!--
 {% comment %}
@@ -24,6 +24,4 @@ limitations under the License.
 
 {% include JB/setup %}
 
-## Apache Tuweni
-
-Tuweni is a set of libraries and other tools to aid development of blockchain and other decentralized software in Java and other JVM languages. It includes a low-level bytes library, serialization and deserialization codecs (e.g. RLP), various cryptography functions and primatives, and lots of other helpful utilities. Tuweni is developed for JDK 1.8 or higher, and depends on various other FOSS libraries.
+Apache Tuweni is a set of libraries and other tools to aid development of blockchain and other decentralized software in Java and other JVM languages. It includes a low-level bytes library, serialization and deserialization codecs (e.g. RLP), various cryptography functions and primatives, and lots of other helpful utilities. Tuweni is developed for JDK 1.8 or higher, and depends on various other FOSS libraries.
