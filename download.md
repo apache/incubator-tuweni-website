@@ -41,16 +41,40 @@ limitations under the License.
     </thead>
     <tbody>
         <tr>
-            <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (tar.gz)</td>
-            <td><a href="http://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}/{{site.data.project.unix_name}}-{{site.data.project.latest_release}}-bin.tar.gz">tar.gz</a></td>
-            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}/{{site.data.project.unix_name}}-{{site.data.project.latest_release}}-bin.tar.gz.sha512">SHA-512</a></td>
-            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}/{{site.data.project.unix_name}}-{{site.data.project.latest_release}}-bin.tar.gz.asc">ASC</a></td>
+            <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (tgz)</td>
+            <td><a href="http://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.tgz">tgz</a></td>
+            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.tgz.sha512">SHA-512</a></td>
+            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.tgz.asc">ASC</a></td>
         </tr>
         <tr>
-            <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (source tar.gz)</td>
-            <td><a href="http://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}/{{site.data.project.unix_name}}-{{site.data.project.latest_release}}-src.tar.gz">tar.gz</a></td>
-            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}/{{site.data.project.unix_name}}-{{site.data.project.latest_release}}-src.tar.gz.sha512">SHA-512</a></td>
-            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}/{{site.data.project.unix_name}}-{{site.data.project.latest_release}}-src.tar.gz.asc">ASC</a></td>
+            <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (zip)</td>
+            <td><a href="http://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.zip">zip</a></td>
+            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.zip.sha512">SHA-512</a></td>
+            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.zip.asc">ASC</a></td>
+        </tr>
+        <tr>
+            <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (source tgz)</td>
+            <td><a href="http://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-src-{{site.data.project.latest_release}}-incubating.tgz">tgz</a></td>
+            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-src-{{site.data.project.latest_release}}-incubating.tgz.sha512">SHA-512</a></td>
+            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-src-{{site.data.project.latest_release}}-incubating.tgz.asc">ASC</a></td>
+        </tr>
+        <tr>
+            <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (source zip)</td>
+            <td><a href="http://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-src-{{site.data.project.latest_release}}-incubating.zip">zip</a></td>
+            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-src-{{site.data.project.latest_release}}-incubating.zip.sha512">SHA-512</a></td>
+            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-src-{{site.data.project.latest_release}}-incubating.zip.asc">ASC</a></td>
+        </tr>
+        <tr>
+            <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (Gossip application tgz)</td>
+            <td><a href="http://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-gossip-{{site.data.project.latest_release}}-incubating.tgz">tgz</a></td>
+            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-gossip-{{site.data.project.latest_release}}-incubating.tgz.sha512">SHA-512</a></td>
+            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-gossip-{{site.data.project.latest_release}}-incubating.tgz.asc">ASC</a></td>
+        </tr>
+        <tr>
+            <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (Gossip application zip)</td>
+            <td><a href="http://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-gossip-{{site.data.project.latest_release}}-incubating.zip">zip</a></td>
+            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-gossip-{{site.data.project.latest_release}}-incubating.zip.sha512">SHA-512</a></td>
+            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}/{{site.data.project.unix_name}}-gossip-{{site.data.project.latest_release}}-incubating.zip.asc">ASC</a></td>
         </tr>
         <!--tr>
             <td>Release Notes</td>
