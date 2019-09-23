@@ -48,9 +48,9 @@ limitations under the License.
         </tr>
         <tr>
             <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (zip)</td>
-            <td><a href="http://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.zip">zip</a></td>
-            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.zip.sha512">SHA-512</a></td>
-            <td><a href="http://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.zip.asc">ASC</a></td>
+            <td><a href="https://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.zip">zip</a></td>
+            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.zip.sha512">SHA-512</a></td>
+            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.zip.asc">ASC</a></td>
         </tr>
         <tr>
             <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (source tgz)</td>
@@ -100,9 +100,9 @@ limitations under the License.
 
 Choose a source distribution in either *tar* or *zip* format,
 and [verify](https://www.apache.org/dyn/closer.cgi#verify)
-using the corresponding *pgp* signature (using the committer file in
+using the corresponding *asc* signature (using the committer file in
 [KEYS](https://www.apache.org/dist/{{ site.data.project.incubator_slash_name }}/KEYS)).
-If you cannot do that, the *md5* hash file may be used to check that the
+If you cannot do that, the *sha512* hash file may be used to check that the
 download has completed OK.
 
 For fast downloads, current source distributions are hosted on mirror servers;
