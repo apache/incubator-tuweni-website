@@ -118,4 +118,18 @@ For security, hash and signature files are always hosted at
 
 You can download Apache Tuweni dependencies through Maven Central.
 
-*We are still in the process of publishing our bits to Maven Central and will update this page once it is completed.*
+For Maven:
+
+```xml
+<dependency>
+  <groupId>org.apache.tuweni</groupId>
+  <artifactId>tuweni-bytes</artifactId> <!-- swap with the component you want -->
+  <version>0.8.2</version>
+</dependency>
+```
+
+Gradle:
+
+```groovy
+compile 'org.apache.tuweni:tuweni-bytes:0.8.2'
+```
