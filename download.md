@@ -124,12 +124,12 @@ For Maven:
 <dependency>
   <groupId>org.apache.tuweni</groupId>
   <artifactId>tuweni-bytes</artifactId> <!-- swap with the component you want -->
-  <version>0.8.2</version>
+  <version>{{site.data.project.latest_release}}</version>
 </dependency>
 ```
 
 Gradle:
 
 ```groovy
-compile 'org.apache.tuweni:tuweni-bytes:0.8.2'
+compile 'org.apache.tuweni:tuweni-bytes:{{site.data.project.latest_release}}'
 ```
