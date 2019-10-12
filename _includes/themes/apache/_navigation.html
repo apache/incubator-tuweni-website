@@ -17,6 +17,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+                <li id="download">
+                    <a href="/download">Download</a>
+                </li>
                 <li id="community">
                     <a href="#" data-toggle="dropdown" class="dropdown-toggle">Community<b class="caret"></b></a>
                     <ul class="dropdown-menu dropdown-left">
@@ -42,7 +45,7 @@
 {% if page.title == "Home" %}
 <div class="jumbotron">
   <div class="container">
-    <h1>{{ site.data.project.tagline }}</h1>
+    <h1 style="text-align: center">{{ site.data.project.tagline }}</h1>
     <p>{{ site.data.project.description }}</p>
 
     {% if site.data.project.download %}
