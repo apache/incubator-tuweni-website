@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Community
+title: Apache Tuweni | Community
 description: Project Community Page
 group: nav-right
 ---

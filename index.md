@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Home
+title: Apache Tuweni
 tagline: Apache Tuweni
 ---
 <!--

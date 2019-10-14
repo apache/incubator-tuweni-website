@@ -1,6 +1,6 @@
 ---
 layout: page
-title: History
+title: Apache Tuweni | Release history
 description: Release History
 group: nav-right
 ---
