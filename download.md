@@ -43,50 +43,50 @@ limitations under the License.
         <tr>
             <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (tgz)</td>
             <td><a href="https://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.tgz">tgz</a></td>
-            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.tgz.sha512">SHA-512</a></td>
-            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.tgz.asc">ASC</a></td>
+            <td><a href="https://downloads.apache.org/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.tgz.sha512">SHA-512</a></td>
+            <td><a href="https://downloads.apache.org/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.tgz.asc">ASC</a></td>
         </tr>
         <tr>
             <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (zip)</td>
             <td><a href="https://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.zip">zip</a></td>
-            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.zip.sha512">SHA-512</a></td>
-            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.zip.asc">ASC</a></td>
+            <td><a href="https://downloads.apache.org/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.zip.sha512">SHA-512</a></td>
+            <td><a href="https://downloads.apache.org/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-bin-{{site.data.project.latest_release}}-incubating.zip.asc">ASC</a></td>
         </tr>
         <tr>
             <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (source tgz)</td>
             <td><a href="https://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-src-{{site.data.project.latest_release}}-incubating.tgz">tgz</a></td>
-            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-src-{{site.data.project.latest_release}}-incubating.tgz.sha512">SHA-512</a></td>
-            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-src-{{site.data.project.latest_release}}-incubating.tgz.asc">ASC</a></td>
+            <td><a href="https://downloads.apache.org/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-src-{{site.data.project.latest_release}}-incubating.tgz.sha512">SHA-512</a></td>
+            <td><a href="https://downloads.apache.org/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-src-{{site.data.project.latest_release}}-incubating.tgz.asc">ASC</a></td>
         </tr>
         <tr>
             <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (source zip)</td>
             <td><a href="https://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-src-{{site.data.project.latest_release}}-incubating.zip">zip</a></td>
-            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-src-{{site.data.project.latest_release}}-incubating.zip.sha512">SHA-512</a></td>
-            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-src-{{site.data.project.latest_release}}-incubating.zip.asc">ASC</a></td>
+            <td><a href="https://downloads.apache.org/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-src-{{site.data.project.latest_release}}-incubating.zip.sha512">SHA-512</a></td>
+            <td><a href="https://downloads.apache.org/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-src-{{site.data.project.latest_release}}-incubating.zip.asc">ASC</a></td>
         </tr>
         <tr>
             <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (Gossip application tgz)</td>
             <td><a href="https://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-gossip-{{site.data.project.latest_release}}-incubating.tgz">tgz</a></td>
-            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-gossip-{{site.data.project.latest_release}}-incubating.tgz.sha512">SHA-512</a></td>
-            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-gossip-{{site.data.project.latest_release}}-incubating.tgz.asc">ASC</a></td>
+            <td><a href="https://downloads.apache.org/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-gossip-{{site.data.project.latest_release}}-incubating.tgz.sha512">SHA-512</a></td>
+            <td><a href="https://downloads.apache.org/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-gossip-{{site.data.project.latest_release}}-incubating.tgz.asc">ASC</a></td>
         </tr>
         <tr>
             <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (Gossip application zip)</td>
             <td><a href="https://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-gossip-{{site.data.project.latest_release}}-incubating.zip">zip</a></td>
-            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-gossip-{{site.data.project.latest_release}}-incubating.zip.sha512">SHA-512</a></td>
-            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-gossip-{{site.data.project.latest_release}}-incubating.zip.asc">ASC</a></td>
+            <td><a href="https://downloads.apache.org/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-gossip-{{site.data.project.latest_release}}-incubating.zip.sha512">SHA-512</a></td>
+            <td><a href="https://downloads.apache.org/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-gossip-{{site.data.project.latest_release}}-incubating.zip.asc">ASC</a></td>
         </tr>
         <tr>
             <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (Relayer application tgz)</td>
             <td><a href="https://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-relayer-{{site.data.project.latest_release}}-incubating.tgz">tgz</a></td>
-            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-relayer-{{site.data.project.latest_release}}-incubating.tgz.sha512">SHA-512</a></td>
-            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-relayer-{{site.data.project.latest_release}}-incubating.tgz.asc">ASC</a></td>
+            <td><a href="https://downloads.apache.org/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-relayer-{{site.data.project.latest_release}}-incubating.tgz.sha512">SHA-512</a></td>
+            <td><a href="https://downloads.apache.org/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-relayer-{{site.data.project.latest_release}}-incubating.tgz.asc">ASC</a></td>
         </tr>
         <tr>
             <td>{{ site.data.project.name }} {{site.data.project.latest_release}} (Relayer application zip)</td>
             <td><a href="https://www.apache.org/dyn/closer.lua/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-relayer-{{site.data.project.latest_release}}-incubating.zip">zip</a></td>
-            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-relayer-{{site.data.project.latest_release}}-incubating.zip.sha512">SHA-512</a></td>
-            <td><a href="https://www.apache.org/dist/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-relayer-{{site.data.project.latest_release}}-incubating.zip.asc">ASC</a></td>
+            <td><a href="https://downloads.apache.org/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-relayer-{{site.data.project.latest_release}}-incubating.zip.sha512">SHA-512</a></td>
+            <td><a href="https://downloads.apache.org/{{site.data.project.incubator_slash_name}}/{{site.data.project.latest_release}}-incubating/{{site.data.project.unix_name}}-relayer-{{site.data.project.latest_release}}-incubating.zip.asc">ASC</a></td>
         </tr>
         <!--tr>
             <td>Release Notes</td>
@@ -101,7 +101,7 @@ limitations under the License.
 Choose a source distribution in either *tar* or *zip* format,
 and [verify](https://www.apache.org/dyn/closer.cgi#verify)
 using the corresponding *asc* signature (using the committer file in
-[KEYS](https://www.apache.org/dist/{{ site.data.project.incubator_slash_name }}/KEYS)).
+[KEYS](https://downloads.apache.org/{{ site.data.project.incubator_slash_name }}/KEYS)).
 If you cannot do that, the *sha512* hash file may be used to check that the
 download has completed OK.
 
@@ -112,7 +112,7 @@ If a download from a mirror fails, retry, and the second download will likely
 succeed.
 
 For security, hash and signature files are always hosted at
-[Apache](https://www.apache.org/dist).
+[Apache](https://downloads.apache.org).
 
 ### Maven Central
 
