@@ -50,7 +50,7 @@ rvm use 2.7.0
 #
 cd master-branch
 echo "Building site..."
-gem install bundler
+gem install bundler -v 1.16.2
 bundle install && bundle exec jekyll build
 if [ $? -ne 0 ]; then
 	echo "Build failed!"
