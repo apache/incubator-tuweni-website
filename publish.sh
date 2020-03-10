@@ -46,11 +46,11 @@ rvm install 2.7.0
 rvm use 2.7.0
 
 #
-# Run the gradlew script to generate HTML for tuweni.apache.org
+# Run the jekyll script to generate HTML for tuweni.apache.org
 #
-
 cd master-branch
 echo "Building site..."
+gem install bundler
 bundle install && bundle exec jekyll build
 if [ $? -ne 0 ]; then
 	echo "Build failed!"
