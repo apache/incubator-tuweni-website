@@ -24,7 +24,7 @@ tagline: Jumpstart your next blockchain application
 description: Apache Tuweni is a set of libraries and other tools to aid development of blockchain and other decentralized software written in Java and Kotlin.
 
 download: /download
-latest_release: 1.0.0
+latest_release: 1.1.0
 
 dev_list: dev@tuweni.incubator.apache.org
 dev_list_subscribe: dev-subscribe@tuweni.incubator.apache.org
