@@ -57,7 +57,7 @@ Get help using {{ site.data.project.short_name }} or contribute to the project o
 
 #### Bug Reports
 
-Found bug? Enter an issue in the [Issue Tracker](https://issues.apache.org/jira/browse/{{ site.data.project.jira }}).
+Found bug? Enter an issue in the [Issue Tracker](https://github.com/apache/incubator-tuweni/issues).
 
 Before submitting an issue, please:
 
@@ -72,7 +72,7 @@ Before submitting an issue, please:
 Enhancement requests for new features are also welcome. The more concrete and rationale the request is, the greater the chance it will incorporated into future releases.
 
 
-  [https://issues.apache.org/jira/browse/{{ site.data.project.jira }}](https://issues.apache.org/jira/browse/{{ site.data.project.jira }})
+  [https://github.com/apache/incubator-tuweni/issues](https://github.com/apache/incubator-tuweni/issues)
 
 
 ### Source Code

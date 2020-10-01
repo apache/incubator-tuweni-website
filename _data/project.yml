@@ -26,25 +26,25 @@ description: Apache Tuweni is a set of libraries and other tools to aid developm
 download: /download
 latest_release: 1.1.0
 
-dev_list: dev@tuweni.incubator.apache.org
-dev_list_subscribe: dev-subscribe@tuweni.incubator.apache.org
-dev_list_unsubscribe: dev-unsubscribe@tuweni.incubator.apache.org
+dev_list: dev@tuweni.apache.org
+dev_list_subscribe: dev-subscribe@tuweni.apache.org
+dev_list_unsubscribe: dev-unsubscribe@tuweni.apache.org
 dev_list_archive: http://mail-archives.apache.org/mod_mbox/tuweni-dev/
-dev_list_archive_mailarchive: https://www.mail-archive.com/dev@tuweni.incubator.apache.org/
+dev_list_archive_mailarchive: https://www.mail-archive.com/dev@tuweni.apache.org/
 dev_list_archive_markmail:
 
-user_list: users@tuweni.incubator.apache.org
-user_list_subscribe: users-subscribe@tuweni.incubator.apache.org
-user_list_unsubscribe: users-unsubscribe@tuweni.incubator.apache.org
+user_list: users@tuweni.apache.org
+user_list_subscribe: users-subscribe@tuweni.apache.org
+user_list_unsubscribe: users-unsubscribe@tuweni.apache.org
 user_list_archive: http://mail-archives.apache.org/mod_mbox/tuweni-users/
-user_list_archive_mailarchive: https://www.mail-archive.com/users@tuweni.incubator.apache.org/
+user_list_archive_mailarchive: https://www.mail-archive.com/users@tuweni.apache.org/
 user_list_archive_markmail:
 
-commits_list: commits@tuweni.incubator.apache.org
-commits_list_subscribe: commits-subscribe@tuweni.incubator.apache.org
-commits_list_unsubscribe: commits-unsubscribe@tuweni.incubator.apache.org
+commits_list: commits@tuweni.apache.org
+commits_list_subscribe: commits-subscribe@tuweni.apache.org
+commits_list_unsubscribe: commits-unsubscribe@tuweni.apache.org
 commits_list_archive: http://mail-archives.apache.org/mod_mbox/tuweni-commits/
-commits_list_archive_mailarchive: https://www.mail-archive.com/commits@tuweni.incubator.apache.org/
+commits_list_archive_mailarchive: https://www.mail-archive.com/commits@tuweni.apache.org/
 commits_list_archive_markmail:
 
 jira: TUWENI
