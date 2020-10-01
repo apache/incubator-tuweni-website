@@ -38,8 +38,6 @@ You can:
 * Report bugs and submit patches.
 * Contribute code, javadocs, documentation.
 
-Visit the [Contributing] page for more information.
-
 ### Mailing list
 
 Get help using {{ site.data.project.short_name }} or contribute to the project on our mailing lists:
