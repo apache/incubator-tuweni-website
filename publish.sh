@@ -22,6 +22,10 @@
 # git clone https://github.com/apache/incubator-tuweni-website.git master-branch
 # asf-site-branch (pushing):
 # git clone https://gitbox.apache.org/repos/asf/incubator-tuweni-website.git asf-site-branch
+TEMPDIR="$(mktemp  -d -t tuweni-site-XXXXXXX)"
+cd $TEMPDIR
+git clone https://github.com/apache/incubator-tuweni-website.git master-branch
+git clone https://gitbox.apache.org/repos/asf/incubator-tuweni-website.git asf-site-branch
 
 #
 # Testing:
@@ -92,6 +96,7 @@ if [ $? -ne 0 ]; then
     echo "Push failed."
     exit 3
 fi
+rm -Rf $TEMPDIR
 echo "Done."
 
 
