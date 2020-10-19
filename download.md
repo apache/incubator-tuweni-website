@@ -67,6 +67,9 @@ limitations under the License.
         <tr>
             <td>Release Notes</td>
             <td><a href="https://github.com/apache/incubator-tuweni/releases/tag/v{{ site.data.project.latest_release }}-incubating/">{{ site.data.project.latest_release }}</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     </tbody>
 </table>
