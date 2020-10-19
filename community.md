@@ -87,8 +87,8 @@ We use <a href="https://github.com/apache/incubator-tuweni/issues">Github for bu
 
 ### Source Code
 
-The project sources are accessible via the [source code repository]({{ site.data.project.source_repository }}) which is also mirrored at [Apache]({{ site.data.project.source_repository_mirror }})
+The project sources are accessible via the [source code repository]({{ site.data.project.source_repository }}) which is also mirrored at [Apache]({{ site.data.project.source_repository_mirror }}).
 
 ### Website Source Code
 
-The project website sources are accessible via the [website source code repository]({{ site.data.project.website_repository }}) which is also mirrored at [Apache]({{ site.data.project.website_repository_mirror }})
+The project website sources are accessible via the [website source code repository]({{ site.data.project.website_repository }}) which is also mirrored at [Apache]({{ site.data.project.website_repository_mirror }}).
