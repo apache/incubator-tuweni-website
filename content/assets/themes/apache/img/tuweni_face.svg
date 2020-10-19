@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Capa_1"
+   viewBox="0 0 29.487854 29.487854"
+   preserveAspectRatio="xMinYMin meet"
+   xml:space="preserve"
+   width="29.487854"
+   height="29.487854"
+   sodipodi:docname="tuweni_face.svg"
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)"
+   inkscape:export-filename="/Users/interop/w/incubator-tuweni/tuweni.png"
+   inkscape:export-xdpi="324.52347"
+   inkscape:export-ydpi="324.52347"><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1680"
+   inkscape:window-height="1005"
+   id="namedview1573"
+   showgrid="false"
+   inkscape:zoom="7.2832466"
+   inkscape:cx="38.732509"
+   inkscape:cy="14.743927"
+   inkscape:window-x="0"
+   inkscape:window-y="23"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="g1055"
+   inkscape:document-rotation="0" /><metadata
+   id="metadata1062"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata>
+  <defs
+   id="defs1035">
+    <linearGradient
+   id="feather"
+   x1="0.30000001"
+   y1="0.050000001"
+   x2="0.30000001"
+   y2="1">
+        <stop
+   offset="5%"
+   stop-color="#F79A25"
+   id="stop1002" />
+        <stop
+   offset="10%"
+   stop-color="#EA7826"
+   id="stop1004" />
+        <stop
+   offset="40%"
+   stop-color="#CB2138"
+   id="stop1006" />
+        <stop
+   offset="60%"
+   stop-color="#9E2165"
+   id="stop1008" />
+        <stop
+   offset="80%"
+   stop-color="#662F8F"
+   id="stop1010" />
+        <stop
+   offset="95%"
+   stop-color="#282661"
+   id="stop1012" />
+    </linearGradient>
+      <pattern
+   id="never"
+   x="0"
+   y="0"
+   width="10"
+   height="10"
+   patternUnits="userSpaceOnUse">
+      <rect
+   x="0"
+   y="0"
+   width="5"
+   height="5"
+   fill="#cccccc"
+   id="rect1015">
+        <animate
+   attributeName="fill"
+   values="#ccc;#fff;#ccc"
+   dur="60s"
+   repeatCount="indefinite" />
+      </rect>
+          <rect
+   x="0"
+   y="5"
+   width="5"
+   height="5"
+   fill="#FFFFFF"
+   id="rect1017">
+        <animate
+   attributeName="fill"
+   values="#fff;#ccc;#fff"
+   dur="60s"
+   repeatCount="indefinite" />
+      </rect>
+          <rect
+   x="5"
+   y="0"
+   width="5"
+   height="5"
+   fill="#FFFFFF"
+   id="rect1019">
+        <animate
+   attributeName="fill"
+   values="#fff;#ccc;#fff"
+   dur="60s"
+   repeatCount="indefinite" />
+      </rect>
+          <rect
+   x="5"
+   y="5"
+   width="5"
+   height="5"
+   fill="#cccccc"
+   id="rect1021">
+        <animate
+   attributeName="fill"
+   values="#ccc;#fff;#ccc"
+   dur="60s"
+   repeatCount="indefinite" />
+      </rect>
+    </pattern>
+      <pattern
+   id="neverever"
+   x="0"
+   y="0"
+   width="4"
+   height="4"
+   patternUnits="userSpaceOnUse">
+      <rect
+   x="0"
+   y="0"
+   width="4"
+   height="4"
+   fill="#FFFFFF"
+   id="rect1024" />
+          <rect
+   x="0"
+   y="0"
+   width="2"
+   height="2"
+   fill="#FFFFFF"
+   id="rect1026" />
+          <rect
+   x="0"
+   y="2"
+   width="2"
+   height="2"
+   fill="#6D6E71"
+   id="rect1028">
+        <animate
+   attributeName="fill"
+   values="#6D6E71;#fff;#6D6E71"
+   dur="10s"
+   repeatCount="indefinite" />
+      </rect>
+          <rect
+   x="2"
+   y="0"
+   width="2"
+   height="2"
+   fill="#6D6E71"
+   id="rect1030">
+        <animate
+   attributeName="fill"
+   values="#6D6E71;#fff;#6D6E71"
+   dur="10s"
+   repeatCount="indefinite" />
+      </rect>
+          <rect
+   x="2"
+   y="2"
+   width="2"
+   height="2"
+   fill="#FFFFFF"
+   id="rect1032" />
+    </pattern>
+  </defs>
+    <g
+   id="g1057"
+   transform="translate(-5.2233605,-32.848169)">
+  <g
+   id="g1055">
+    
+      
+      
+
+      <!-- <rect x="16.829" y="47" width="20" height="4" fill="#F79A25"/> -->
+      
+      
+
+      <!-- <rect x="84.842" y="47" width="20" height="4" fill="#F79A25"/> -->
+      
+      
+
+      
+      
+  <g
+   id="g2616"
+   transform="translate(3.9576578,-0.40323095)"><circle
+     cx="6.6932826"
+     cy="48.026123"
+     r="2.5841024"
+     fill="#9E2165"
+     id="circle1043"
+     style="fill:#000000;fill-opacity:1;stroke-width:0.308955" /><circle
+     cx="25.2306"
+     cy="48.026123"
+     r="2.5841024"
+     fill="#EA7826"
+     id="circle1047"
+     style="fill:#000000;fill-opacity:1;stroke-width:0.308955" /><rect
+     x="19.978361"
+     y="52.969406"
+     width="1.2358212"
+     height="3.0895531"
+     fill="#D22128"
+     id="rect1051"
+     style="fill:#000000;fill-opacity:1;stroke-width:0.308955" /><rect
+     x="11.018657"
+     y="55.750004"
+     width="10.195525"
+     height="1.2358212"
+     fill="#D22128"
+     id="rect1053"
+     style="fill:#000000;fill-opacity:1;stroke-width:0.308955" /><circle
+     style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.45963;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1"
+     id="path2585"
+     cx="16.00963"
+     cy="47.995327"
+     r="14.014112" /></g></g>
+  </g>
+</svg>
