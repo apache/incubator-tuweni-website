@@ -32,6 +32,7 @@
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   -->
+  <script src="/assets/themes/apache/jquery/jquery-2.1.1.min.js"></script>
 
   </head>
 
@@ -133,23 +134,39 @@
 
 <h3 id="issue-tracker">Issue tracker</h3>
 
-<h4 id="bug-reports">Bug Reports</h4>
+<p>We use <a href="https://github.com/apache/incubator-tuweni/issues">Github for bug reports and feature requests</a>, with <span id="open">(loading)</span> issues.</p>
 
-<p>Found bug? Enter an issue in the <a href="https://github.com/apache/incubator-tuweni/issues">Issue Tracker</a>.</p>
+<div>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+      <th style="min-width:50px">
+        #
+      </th>
+      <th>
+        Title
+      </th>
+      </tr>
+    </thead>
+    <tbody id="github-issues">
+    </tbody>
+  </table>
+</div>
 
-<p>Before submitting an issue, please:</p>
+<script>
+    var urlToGetAllOpenBugs = "https://api.github.com/repos/apache/incubator-tuweni/issues?state=open";
 
-<ul>
-  <li>Verify that the bug does in fact exist.</li>
-  <li>Search the issue tracker to verify there is no existing issue reporting the bug you’ve found.</li>
-  <li>Consider tracking down the bug yourself in the Wink’s source and submitting a patch along with your bug report. This is a great time saver for the Wink developers and helps ensure the bug will be fixed quickly.</li>
-</ul>
+    $(document).ready(function () {
+        $.getJSON(urlToGetAllOpenBugs, function (allIssues) {
+            $("span#open").text(allIssues.length);
+            $.each(allIssues, function (i, issue) {
 
-<h4 id="feature-requests">Feature Requests</h4>
-
-<p>Enhancement requests for new features are also welcome. The more concrete and rationale the request is, the greater the chance it will incorporated into future releases.</p>
-
-<p><a href="https://github.com/apache/incubator-tuweni/issues">https://github.com/apache/incubator-tuweni/issues</a></p>
+                $("tbody#github-issues")
+                    .append("<tr><td><a href=\"" + issue.html_url + "\"><strong>#" + issue.number + "</strong></a></td><td><a href=\"" + issue.html_url + "\">" + issue.title + "</a></td></tr>");
+            });
+        });
+    });
+</script>
 
 <h3 id="source-code">Source Code</h3>
 
@@ -186,7 +203,7 @@
                 </div>
                 
                 <div>
-                    Copyright &copy; 2019 <a href="http://www.apache.org">The Apache Software Foundation</a>.
+                    Copyright &copy; 2019-2020 <a href="http://www.apache.org">The Apache Software Foundation</a>.
                     Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version
                     2.0</a>.
                     <br>
@@ -204,7 +221,7 @@
     </div>
 
     
-    <script src="/assets/themes/apache/jquery/jquery-2.1.1.min.js"></script>
+    
 
     <script src="/assets/themes/apache/bootstrap/js/bootstrap.min.js"></script>
 
