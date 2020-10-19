@@ -355,3 +355,18 @@ and (max-width : 1024px) {
       padding-right: 0;
   }
 }
+
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url('/assets/themes/apache/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url('/assets/themes/apache/fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat Light';
+    src: url('/assets/themes/apache/fonts/Montserrat-Light.ttf') format('truetype');
+}
