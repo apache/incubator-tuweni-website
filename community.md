@@ -51,32 +51,43 @@ Get help using {{ site.data.project.short_name }} or contribute to the project o
 
 ### Issue tracker
 
+We use <a href="https://github.com/apache/incubator-tuweni/issues">Github for bug reports and feature requests</a>, with <span id="open">(loading)</span> issues.
 
+<div>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+      <th  style="min-width:50px">
+        #
+      </th>
+      <th>
+        Title
+      </th>
+      </tr>
+    </thead>
+    <tbody id="github-issues">
+    </tbody>
+  </table>
+</div>
 
-#### Bug Reports
+<script>
+    var urlToGetAllOpenBugs = "https://api.github.com/repos/apache/incubator-tuweni/issues?state=open";
 
-Found bug? Enter an issue in the [Issue Tracker](https://github.com/apache/incubator-tuweni/issues).
+    $(document).ready(function () {
+        $.getJSON(urlToGetAllOpenBugs, function (allIssues) {
+            $("span#open").text(allIssues.length);
+            $.each(allIssues, function (i, issue) {
 
-Before submitting an issue, please:
-
-* Verify that the bug does in fact exist.
-* Search the issue tracker to verify there is no existing issue reporting the bug you've found.
-* Consider tracking down the bug yourself in the Wink's source and submitting a patch along with your bug report. This is a great time saver for the Wink developers and helps ensure the bug will be fixed quickly.
-
-
-
-#### Feature Requests
-
-Enhancement requests for new features are also welcome. The more concrete and rationale the request is, the greater the chance it will incorporated into future releases.
-
-
-  [https://github.com/apache/incubator-tuweni/issues](https://github.com/apache/incubator-tuweni/issues)
-
+                $("tbody#github-issues")
+                    .append("<tr><td><a href=\"" + issue.html_url + "\"><strong>#" + issue.number + "</strong></a></td><td><a href=\"" + issue.html_url + "\">" + issue.title + "</a></td></tr>");
+            });
+        });
+    });
+</script>
 
 ### Source Code
 
 The project sources are accessible via the [source code repository]({{ site.data.project.source_repository }}) which is also mirrored at [Apache]({{ site.data.project.source_repository_mirror }})
-
 
 ### Website Source Code
 
