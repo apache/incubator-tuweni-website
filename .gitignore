@@ -2,3 +2,4 @@
 .sass-cache
 target
 .bundle
+.DS_Store

@@ -26,6 +26,7 @@ TEMPDIR="$(mktemp  -d -t tuweni-site-XXXXXXX)"
 cd $TEMPDIR
 git clone https://github.com/apache/incubator-tuweni-website.git master-branch
 git clone https://gitbox.apache.org/repos/asf/incubator-tuweni-website.git asf-site-branch
+git clone https://github.com/apache/incubator-tuweni.git code
 
 #
 # Testing:
@@ -71,6 +72,20 @@ git fetch origin asf-site
 git pull origin asf-site
 
 cp -R ../master-branch/target/* content
+cd ..
+
+#
+# Generate javadocs
+#
+cd code
+gradle setup
+./gradlew dokka
+mkdir -p ../asf-site-branch/content/docs
+cp build/docs/style.css ../asf-site-branch/content/style.css
+cp -R build/docs/tuweni/* ../asf-site-branch/content/docs
+cd ..
+cd asf-site-branch
+
 
 #
 # Commit and push to gitbox
