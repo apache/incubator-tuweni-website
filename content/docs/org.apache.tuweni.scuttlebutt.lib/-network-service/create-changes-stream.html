@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>NetworkService.createChangesStream - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.lib</a>&nbsp;/&nbsp;<a href="index.html">NetworkService</a>&nbsp;/&nbsp;<a href="./create-changes-stream.html">createChangesStream</a><br/>
+<br/>
+<h1>createChangesStream</h1>
+<a name="org.apache.tuweni.scuttlebutt.lib.NetworkService$createChangesStream(java.util.function.Function((java.lang.Runnable, org.apache.tuweni.scuttlebutt.lib.model.StreamHandler((org.apache.tuweni.scuttlebutt.lib.model.PeerStateChange)))))"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">createChangesStream</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.NetworkService$createChangesStream(java.util.function.Function((java.lang.Runnable, org.apache.tuweni.scuttlebutt.lib.model.StreamHandler((org.apache.tuweni.scuttlebutt.lib.model.PeerStateChange)))))/streamHandler">streamHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.lib.model/-stream-handler/index.html"><span class="identifier">StreamHandler</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.lib.model/-peer-state-change/index.html"><span class="identifier">PeerStateChange</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-client-lib/src/main/java/org/apache/tuweni/scuttlebutt/lib/NetworkService.java#L150">(source)</a>
+<p>Opens a stream of peer connection state changes.</p>
+<h3>Parameters</h3>
+<p><a name="streamHandler"></a>
+<code>streamHandler</code> - <span class="identifier">Function</span><span class="symbol">&lt;</span><span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.lib.model/-stream-handler/index.html"><span class="identifier">StreamHandler</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.lib.model/-peer-state-change/index.html"><span class="identifier">PeerStateChange</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A function that can be invoked to instantiate a stream handler to pass events to, with a given runnable to close the stream early</p>
+<h3>Exceptions</h3>
+<p><a name="JsonProcessingException"></a>
+<code>JsonProcessingException</code> - If the stream could be opened due to an error serializing the request</p>
+<p><a name="ConnectionClosedException"></a>
+<code>ConnectionClosedException</code> - if the stream could not be opened due to the connection being closed</p>
+</BODY>
+</HTML>

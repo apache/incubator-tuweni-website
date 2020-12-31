@@ -1,0 +1,111 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AES256GCM.decrypt - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="index.html">AES256GCM</a>&nbsp;/&nbsp;<a href="./decrypt.html">decrypt</a><br/>
+<br/>
+<h1>decrypt</h1>
+<a name="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">fun </span><span class="identifier">decrypt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/cipherText">cipherText</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<span class="identifier">Nonce</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/AES256GCM.java#L761">(source)</a>
+<p>Decrypt a message.</p>
+<h3>Parameters</h3>
+<p><a name="cipherText"></a>
+<code>cipherText</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The cipher text to decrypt.</p>
+<p><a name="nonce"></a>
+<code>nonce</code> - <span class="identifier">Nonce</span><span class="symbol">!</span><span class="symbol">:</span> The nonce that was used for encryption.</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span><span class="symbol">:</span> The decrypted data, or <code>null</code> if verification failed.</p>
+<a name="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">fun </span><span class="identifier">decrypt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/cipherText">cipherText</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<span class="identifier">Nonce</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/AES256GCM.java#L774">(source)</a>
+<p>Decrypt a message.</p>
+<h3>Parameters</h3>
+<p><a name="cipherText"></a>
+<code>cipherText</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The cipher text to decrypt.</p>
+<p><a name="nonce"></a>
+<code>nonce</code> - <span class="identifier">Nonce</span><span class="symbol">!</span><span class="symbol">:</span> The nonce that was used for encryption.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">:</span> The decrypted data, or <code>null</code> if verification failed.</p>
+<a name="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">fun </span><span class="identifier">decrypt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/cipherText">cipherText</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/data">data</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<span class="identifier">Nonce</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/AES256GCM.java#L787">(source)</a>
+<p>Decrypt a message.</p>
+<h3>Parameters</h3>
+<p><a name="cipherText"></a>
+<code>cipherText</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The cipher text to decrypt.</p>
+<p><a name="data"></a>
+<code>data</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> Extra non-confidential data that is included within the encrypted payload.</p>
+<p><a name="nonce"></a>
+<code>nonce</code> - <span class="identifier">Nonce</span><span class="symbol">!</span><span class="symbol">:</span> The nonce that was used for encryption.</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span><span class="symbol">:</span> The decrypted data, or <code>null</code> if verification failed.</p>
+<a name="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(kotlin.ByteArray, kotlin.ByteArray, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">fun </span><span class="identifier">decrypt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(kotlin.ByteArray, kotlin.ByteArray, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/cipherText">cipherText</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(kotlin.ByteArray, kotlin.ByteArray, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(kotlin.ByteArray, kotlin.ByteArray, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<span class="identifier">Nonce</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/AES256GCM.java#L801">(source)</a>
+<p>Decrypt a message.</p>
+<h3>Parameters</h3>
+<p><a name="cipherText"></a>
+<code>cipherText</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The cipher text to decrypt.</p>
+<p><a name="data"></a>
+<code>data</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> Extra non-confidential data that is included within the encrypted payload.</p>
+<p><a name="nonce"></a>
+<code>nonce</code> - <span class="identifier">Nonce</span><span class="symbol">!</span><span class="symbol">:</span> The nonce that was used for encryption.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">:</span> The decrypted data, or <code>null</code> if verification failed.</p>
+<a name="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decrypt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/cipherText">cipherText</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<span class="identifier">Nonce</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/AES256GCM.java#L681">(source)</a>
+<p>Decrypt a message using a given key.</p>
+<h3>Parameters</h3>
+<p><a name="cipherText"></a>
+<code>cipherText</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The cipher text to decrypt.</p>
+<p><a name="key"></a>
+<code>key</code> - <span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">:</span> The key to use for decryption.</p>
+<p><a name="nonce"></a>
+<code>nonce</code> - <span class="identifier">Nonce</span><span class="symbol">!</span><span class="symbol">:</span> The nonce to use when decrypting.</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span><span class="symbol">:</span> The decrypted data, or <code>null</code> if verification failed.</p>
+<a name="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decrypt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/cipherText">cipherText</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<span class="identifier">Nonce</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/AES256GCM.java#L695">(source)</a>
+<p>Decrypt a message using a given key.</p>
+<h3>Parameters</h3>
+<p><a name="cipherText"></a>
+<code>cipherText</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The cipher text to decrypt.</p>
+<p><a name="key"></a>
+<code>key</code> - <span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">:</span> The key to use for decryption.</p>
+<p><a name="nonce"></a>
+<code>nonce</code> - <span class="identifier">Nonce</span><span class="symbol">!</span><span class="symbol">:</span> The nonce to use when decrypting.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">:</span> The decrypted data, or <code>null</code> if verification failed.</p>
+<a name="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decrypt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/cipherText">cipherText</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/data">data</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<span class="identifier">Nonce</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/AES256GCM.java#L709">(source)</a>
+<p>Decrypt a message using a given key.</p>
+<h3>Parameters</h3>
+<p><a name="cipherText"></a>
+<code>cipherText</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The cipher text to decrypt.</p>
+<p><a name="data"></a>
+<code>data</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> Extra non-confidential data that is included within the encrypted payload.</p>
+<p><a name="key"></a>
+<code>key</code> - <span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">:</span> The key to use for decryption.</p>
+<p><a name="nonce"></a>
+<code>nonce</code> - <span class="identifier">Nonce</span><span class="symbol">!</span><span class="symbol">:</span> The nonce that was used for encryption.</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span><span class="symbol">:</span> The decrypted data, or <code>null</code> if verification failed.</p>
+<a name="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(kotlin.ByteArray, kotlin.ByteArray, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decrypt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(kotlin.ByteArray, kotlin.ByteArray, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/cipherText">cipherText</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(kotlin.ByteArray, kotlin.ByteArray, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(kotlin.ByteArray, kotlin.ByteArray, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$decrypt(kotlin.ByteArray, kotlin.ByteArray, org.apache.tuweni.crypto.sodium.AES256GCM.Key, org.apache.tuweni.crypto.sodium.AES256GCM.Nonce)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<span class="identifier">Nonce</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/AES256GCM.java#L725">(source)</a>
+<p>Decrypt a message using a given key.</p>
+<h3>Parameters</h3>
+<p><a name="cipherText"></a>
+<code>cipherText</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The cipher text to decrypt.</p>
+<p><a name="data"></a>
+<code>data</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> Extra non-confidential data that is included within the encrypted payload.</p>
+<p><a name="key"></a>
+<code>key</code> - <span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">:</span> The key to use for decryption.</p>
+<p><a name="nonce"></a>
+<code>nonce</code> - <span class="identifier">Nonce</span><span class="symbol">!</span><span class="symbol">:</span> The nonce that was used for encryption.</p>
+<h3>Exceptions</h3>
+<p><a name="UnsupportedOperationException"></a>
+<code>UnsupportedOperationException</code> - If AES256-GSM support is not available.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">:</span> The decrypted data, or <code>null</code> if verification failed.</p>
+</BODY>
+</HTML>

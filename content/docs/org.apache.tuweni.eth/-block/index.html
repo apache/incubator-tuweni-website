@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Block - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth</a>&nbsp;/&nbsp;<a href="./index.html">Block</a><br/>
+<br/>
+<h1>Block</h1>
+<code><span class="keyword">class </span><span class="identifier">Block</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth/src/main/java/org/apache/tuweni/eth/Block.java#L28">(source)</a>
+<p>An Ethereum block.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Creates a block.</p>
+<code><span class="identifier">Block</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Block$<init>(org.apache.tuweni.eth.BlockHeader, org.apache.tuweni.eth.BlockBody)/header">header</span><span class="symbol">:</span>&nbsp;<a href="../-block-header/index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Block$<init>(org.apache.tuweni.eth.BlockHeader, org.apache.tuweni.eth.BlockBody)/body">body</span><span class="symbol">:</span>&nbsp;<a href="../-block-body/index.html"><span class="identifier">BlockBody</span></a><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Block$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-bytes.html">fromBytes</a></h4>
+</td>
+<td>
+<p>Deserialize a block from RLP encoded bytes.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Block$fromBytes(org.apache.tuweni.bytes.Bytes)/encoded">encoded</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Block</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-hex-string.html">fromHexString</a></h4>
+</td>
+<td>
+<p>Parse a hexadecimal string into a <code><a href="./index.html">Block</a></code>.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromHexString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Block$fromHexString(kotlin.String)/str">str</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Block</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-body.html">getBody</a></h4>
+</td>
+<td>
+<p>Provides the block body</p>
+<code><span class="keyword">fun </span><span class="identifier">getBody</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-block-body/index.html"><span class="identifier">BlockBody</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-header.html">getHeader</a></h4>
+</td>
+<td>
+<p>Provides the block header</p>
+<code><span class="keyword">fun </span><span class="identifier">getHeader</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-block-header/index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-from.html">readFrom</a></h4>
+</td>
+<td>
+<p>Deserialize a block from an RLP input.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">readFrom</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Block$readFrom(org.apache.tuweni.rlp.RLPReader)/reader">reader</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlp/-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Block</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-bytes.html">toBytes</a></h4>
+</td>
+<td>
+<p>Provides the block bytes</p>
+<code><span class="keyword">fun </span><span class="identifier">toBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-to.html">writeTo</a></h4>
+</td>
+<td>
+<p>Write this block to an RLP output.</p>
+<code><span class="keyword">fun </span><span class="identifier">writeTo</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Block$writeTo(org.apache.tuweni.rlp.RLPWriter)/writer">writer</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlp/-r-l-p-writer/index.html"><span class="identifier">RLPWriter</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

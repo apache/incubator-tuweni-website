@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSZ.encodeUIntList - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ssz</a>&nbsp;/&nbsp;<a href="index.html">SSZ</a>&nbsp;/&nbsp;<a href="./encode-u-int-list.html">encodeUIntList</a><br/>
+<br/>
+<h1>encodeUIntList</h1>
+<a name="org.apache.tuweni.ssz.SSZ$encodeUIntList(kotlin.Int, kotlin.IntArray)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUIntList(kotlin.Int, kotlin.IntArray)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUIntList(kotlin.Int, kotlin.IntArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZ.java#L844">(source)</a>
+<p>Encode a list of unsigned integers. Note that the <code>elements</code> are native signed ints, but will be interpreted as an unsigned values.</p>
+<h3>Parameters</h3>
+<p><a name="bitLength"></a>
+<code>bitLength</code> - <span class="identifier">Int</span><span class="symbol">:</span> the bit length of the encoded integers (must be a multiple of 8)</p>
+<p><a name="elements"></a>
+<code>elements</code> - <span class="identifier">Int</span><span class="symbol">:</span> the integers to write</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if any values are too large for the specified <code>bitLength</code></p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> SSZ encoding in a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value</p>
+<a name="org.apache.tuweni.ssz.SSZ$encodeUIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Int)))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Int)))/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Int)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZ.java#L860">(source)</a>
+<p>Encode a list of unsigned integers. Note that the <code>elements</code> are native signed ints, but will be interpreted as an unsigned values.</p>
+<h3>Parameters</h3>
+<p><a name="bitLength"></a>
+<code>bitLength</code> - <span class="identifier">Int</span><span class="symbol">:</span> the bit length of the encoded integers (must be a multiple of 8)</p>
+<p><a name="elements"></a>
+<code>elements</code> - <span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> the integers to write</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if any values are too large for the specified <code>bitLength</code></p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> SSZ encoding in a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value</p>
+</BODY>
+</HTML>

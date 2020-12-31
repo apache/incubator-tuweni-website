@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Concatenate - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="./index.html">Concatenate</a><br/>
+<br/>
+<h1>Concatenate</h1>
+<code><span class="keyword">class </span><span class="identifier">Concatenate</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/Concatenate.java#L24">(source)</a>
+<p>Concatenate elements allocated to Sodium memory.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Concatenate elements allocated to Sodium memory.</p>
+<code><span class="identifier">Concatenate</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add.html">add</a></h4>
+</td>
+<td>
+<p>Adds a hash to the elements to concatenate.</p>
+<code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Concatenate$add(org.apache.tuweni.crypto.sodium.GenericHash.Hash)/hash">hash</span><span class="symbol">:</span>&nbsp;<span class="identifier">Hash</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Concatenate</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Concatenate$add(org.apache.tuweni.crypto.sodium.SHA256Hash.Hash)/hash">hash</span><span class="symbol">:</span>&nbsp;<span class="identifier">Hash</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Concatenate</span></a><span class="symbol">!</span></code>
+<p>Adds a HMAC key to the elements to concatenate.</p>
+<code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Concatenate$add(org.apache.tuweni.crypto.sodium.HMACSHA512256.Key)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Concatenate</span></a><span class="symbol">!</span></code>
+<p>Adds a memory allocated value to the elements to concatenate.</p>
+<code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Concatenate$add(org.apache.tuweni.crypto.sodium.Allocated)/allocated">allocated</span><span class="symbol">:</span>&nbsp;<a href="../-allocated/index.html"><span class="identifier">Allocated</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Concatenate</span></a><span class="symbol">!</span></code>
+<p>Adds a key to the elements to concatenate.</p>
+<code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Concatenate$add(org.apache.tuweni.crypto.sodium.DiffieHelman.Secret)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Secret</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Concatenate</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Concatenate$add(org.apache.tuweni.crypto.sodium.Box.SecretKey)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Concatenate</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Concatenate$add(org.apache.tuweni.crypto.sodium.Signature.SecretKey)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Concatenate</span></a><span class="symbol">!</span></code>
+<p>Adds a public key to the elements to concatenate.</p>
+<code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Concatenate$add(org.apache.tuweni.crypto.sodium.Signature.PublicKey)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Concatenate</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Concatenate$add(org.apache.tuweni.crypto.sodium.Box.PublicKey)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Concatenate</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="concatenate.html">concatenate</a></h4>
+</td>
+<td>
+<p>Concatenates the values collected into a new safe memory allocation</p>
+<code><span class="keyword">fun </span><span class="identifier">concatenate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-allocated/index.html"><span class="identifier">Allocated</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

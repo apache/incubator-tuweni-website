@@ -1,0 +1,98 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>State - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.plumtree</a>&nbsp;/&nbsp;<a href="./index.html">State</a><br/>
+<br/>
+<h1>State</h1>
+<code><span class="keyword">class </span><span class="identifier">State</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/plumtree/src/main/java/org/apache/tuweni/plumtree/State.java#L33">(source)</a>
+<p>Local state to our peer, representing the make-up of the tree of peers.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Constructor using default time constants.</p>
+<code><span class="identifier">State</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.plumtree.State$<init>(org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.MessageSender, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning)/peerRepository">peerRepository</span><span class="symbol">:</span>&nbsp;<a href="../-peer-repository/index.html"><span class="identifier">PeerRepository</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$<init>(org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.MessageSender, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning)/messageHashingFunction">messageHashingFunction</span><span class="symbol">:</span>&nbsp;<a href="../-message-hashing/index.html"><span class="identifier">MessageHashing</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$<init>(org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.MessageSender, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning)/messageSender">messageSender</span><span class="symbol">:</span>&nbsp;<a href="../-message-sender/index.html"><span class="identifier">MessageSender</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$<init>(org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.MessageSender, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning)/messageListener">messageListener</span><span class="symbol">:</span>&nbsp;<a href="../-message-listener/index.html"><span class="identifier">MessageListener</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$<init>(org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.MessageSender, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning)/messageValidator">messageValidator</span><span class="symbol">:</span>&nbsp;<a href="../-message-validator/index.html"><span class="identifier">MessageValidator</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$<init>(org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.MessageSender, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning)/peerPruningFunction">peerPruningFunction</span><span class="symbol">:</span>&nbsp;<a href="../-peer-pruning/index.html"><span class="identifier">PeerPruning</span></a><span class="symbol">!</span><span class="symbol">)</span></code>
+<p>Default constructor.</p>
+<code><span class="identifier">State</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.plumtree.State$<init>(org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.MessageSender, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Long, kotlin.Long)/peerRepository">peerRepository</span><span class="symbol">:</span>&nbsp;<a href="../-peer-repository/index.html"><span class="identifier">PeerRepository</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$<init>(org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.MessageSender, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Long, kotlin.Long)/messageHashingFunction">messageHashingFunction</span><span class="symbol">:</span>&nbsp;<a href="../-message-hashing/index.html"><span class="identifier">MessageHashing</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$<init>(org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.MessageSender, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Long, kotlin.Long)/messageSender">messageSender</span><span class="symbol">:</span>&nbsp;<a href="../-message-sender/index.html"><span class="identifier">MessageSender</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$<init>(org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.MessageSender, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Long, kotlin.Long)/messageListener">messageListener</span><span class="symbol">:</span>&nbsp;<a href="../-message-listener/index.html"><span class="identifier">MessageListener</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$<init>(org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.MessageSender, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Long, kotlin.Long)/messageValidator">messageValidator</span><span class="symbol">:</span>&nbsp;<a href="../-message-validator/index.html"><span class="identifier">MessageValidator</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$<init>(org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.MessageSender, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Long, kotlin.Long)/peerPruningFunction">peerPruningFunction</span><span class="symbol">:</span>&nbsp;<a href="../-peer-pruning/index.html"><span class="identifier">PeerPruning</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$<init>(org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.MessageSender, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Long, kotlin.Long)/graftDelay">graftDelay</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$<init>(org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.MessageSender, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Long, kotlin.Long)/lazyQueueInterval">lazyQueueInterval</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-peer.html">addPeer</a></h4>
+</td>
+<td>
+<p>Adds a new peer to this state.</p>
+<code><span class="keyword">fun </span><span class="identifier">addPeer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.plumtree.State$addPeer(org.apache.tuweni.plumtree.Peer)/peer">peer</span><span class="symbol">:</span>&nbsp;<a href="../-peer.html"><span class="identifier">Peer</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="receive-gossip-message.html">receiveGossipMessage</a></h4>
+</td>
+<td>
+<p>Records a message was received in full from a peer.</p>
+<code><span class="keyword">fun </span><span class="identifier">receiveGossipMessage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.plumtree.State$receiveGossipMessage(org.apache.tuweni.plumtree.Peer, kotlin.String, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/peer">peer</span><span class="symbol">:</span>&nbsp;<a href="../-peer.html"><span class="identifier">Peer</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$receiveGossipMessage(org.apache.tuweni.plumtree.Peer, kotlin.String, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/attributes">attributes</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$receiveGossipMessage(org.apache.tuweni.plumtree.Peer, kotlin.String, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$receiveGossipMessage(org.apache.tuweni.plumtree.Peer, kotlin.String, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/messageHash">messageHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="receive-graft-message.html">receiveGraftMessage</a></h4>
+</td>
+<td>
+<p>Requests a peer be grafted to the eager peers list.</p>
+<code><span class="keyword">fun </span><span class="identifier">receiveGraftMessage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.plumtree.State$receiveGraftMessage(org.apache.tuweni.plumtree.Peer, org.apache.tuweni.bytes.Bytes)/peer">peer</span><span class="symbol">:</span>&nbsp;<a href="../-peer.html"><span class="identifier">Peer</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$receiveGraftMessage(org.apache.tuweni.plumtree.Peer, org.apache.tuweni.bytes.Bytes)/messageHash">messageHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="receive-i-have-message.html">receiveIHaveMessage</a></h4>
+</td>
+<td>
+<p>Records a message was partially received from a peer.</p>
+<code><span class="keyword">fun </span><span class="identifier">receiveIHaveMessage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.plumtree.State$receiveIHaveMessage(org.apache.tuweni.plumtree.Peer, org.apache.tuweni.bytes.Bytes)/peer">peer</span><span class="symbol">:</span>&nbsp;<a href="../-peer.html"><span class="identifier">Peer</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$receiveIHaveMessage(org.apache.tuweni.plumtree.Peer, org.apache.tuweni.bytes.Bytes)/messageHash">messageHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="receive-prune-message.html">receivePruneMessage</a></h4>
+</td>
+<td>
+<p>Requests a peer be pruned away from the eager peers into the lazy peers.</p>
+<code><span class="keyword">fun </span><span class="identifier">receivePruneMessage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.plumtree.State$receivePruneMessage(org.apache.tuweni.plumtree.Peer)/peer">peer</span><span class="symbol">:</span>&nbsp;<a href="../-peer.html"><span class="identifier">Peer</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-peer.html">removePeer</a></h4>
+</td>
+<td>
+<p>Removes a peer from the collection of peers we are connected to.</p>
+<code><span class="keyword">fun </span><span class="identifier">removePeer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.plumtree.State$removePeer(org.apache.tuweni.plumtree.Peer)/peer">peer</span><span class="symbol">:</span>&nbsp;<a href="../-peer.html"><span class="identifier">Peer</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="send-gossip-message.html">sendGossipMessage</a></h4>
+</td>
+<td>
+<p>Sends a gossip message to all peers, according to their status.</p>
+<code><span class="keyword">fun </span><span class="identifier">sendGossipMessage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.plumtree.State$sendGossipMessage(kotlin.String, org.apache.tuweni.bytes.Bytes)/attributes">attributes</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.State$sendGossipMessage(kotlin.String, org.apache.tuweni.bytes.Bytes)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stop.html">stop</a></h4>
+</td>
+<td>
+<p>Stops the gossip network state, cancelling all in progress tasks.</p>
+<code><span class="keyword">fun </span><span class="identifier">stop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

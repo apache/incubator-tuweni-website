@@ -1,0 +1,100 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Log - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth</a>&nbsp;/&nbsp;<a href="./index.html">Log</a><br/>
+<br/>
+<h1>Log</h1>
+<code><span class="keyword">class </span><span class="identifier">Log</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth/src/main/java/org/apache/tuweni/eth/Log.java#L28">(source)</a>
+<p>A log entry is a tuple of a logger’s address (the address of the contract that added the logs), a series of 32-bytes log topics, and some number of bytes of data.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">Log</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Log$<init>(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes, kotlin.collections.MutableList((org.apache.tuweni.bytes.Bytes32)))/logger">logger</span><span class="symbol">:</span>&nbsp;<a href="../-address/index.html"><span class="identifier">Address</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Log$<init>(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes, kotlin.collections.MutableList((org.apache.tuweni.bytes.Bytes32)))/data">data</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Log$<init>(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes, kotlin.collections.MutableList((org.apache.tuweni.bytes.Bytes32)))/topics">topics</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Log$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-data.html">getData</a></h4>
+</td>
+<td>
+<p>Provides the data of the log</p>
+<code><span class="keyword">fun </span><span class="identifier">getData</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-logger.html">getLogger</a></h4>
+</td>
+<td>
+<p>Provides the logger's address</p>
+<code><span class="keyword">fun </span><span class="identifier">getLogger</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-address/index.html"><span class="identifier">Address</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-topics.html">getTopics</a></h4>
+</td>
+<td>
+<p>Provides the topics of the log</p>
+<code><span class="keyword">fun </span><span class="identifier">getTopics</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-from.html">readFrom</a></h4>
+</td>
+<td>
+<p>Reads the log entry from the provided RLP input.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">readFrom</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Log$readFrom(org.apache.tuweni.rlp.RLPReader)/in">in</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlp/-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Log</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-bytes.html">toBytes</a></h4>
+</td>
+<td>
+<p>Encodes log to RLP.</p>
+<code><span class="keyword">fun </span><span class="identifier">toBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-to.html">writeTo</a></h4>
+</td>
+<td>
+<p>Writes the log entry to the provided RLP output.</p>
+<code><span class="keyword">fun </span><span class="identifier">writeTo</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Log$writeTo(org.apache.tuweni.rlp.RLPWriter)/writer">writer</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlp/-r-l-p-writer/index.html"><span class="identifier">RLPWriter</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

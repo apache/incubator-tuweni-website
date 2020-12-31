@@ -1,0 +1,123 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BlockStats - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ethstats</a>&nbsp;/&nbsp;<a href="./index.html">BlockStats</a><br/>
+<br/>
+<h1>BlockStats</h1>
+<code><span class="keyword">class </span><span class="identifier">BlockStats</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ethstats/src/main/java/org/apache/tuweni/ethstats/BlockStats.java#L28">(source)</a>
+<p>Block statistics reported to ethnetstats.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Default constructor.</p>
+<code><span class="identifier">BlockStats</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethstats.BlockStats$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Long, org.apache.tuweni.eth.Address, kotlin.Long, kotlin.Long, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, kotlin.collections.MutableList((org.apache.tuweni.ethstats.TxStats)), org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.collections.MutableList((org.apache.tuweni.eth.BlockHeader)))/blockNumber">blockNumber</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.BlockStats$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Long, org.apache.tuweni.eth.Address, kotlin.Long, kotlin.Long, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, kotlin.collections.MutableList((org.apache.tuweni.ethstats.TxStats)), org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.collections.MutableList((org.apache.tuweni.eth.BlockHeader)))/hash">hash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.BlockStats$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Long, org.apache.tuweni.eth.Address, kotlin.Long, kotlin.Long, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, kotlin.collections.MutableList((org.apache.tuweni.ethstats.TxStats)), org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.collections.MutableList((org.apache.tuweni.eth.BlockHeader)))/parentHash">parentHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.BlockStats$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Long, org.apache.tuweni.eth.Address, kotlin.Long, kotlin.Long, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, kotlin.collections.MutableList((org.apache.tuweni.ethstats.TxStats)), org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.collections.MutableList((org.apache.tuweni.eth.BlockHeader)))/timestamp">timestamp</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.BlockStats$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Long, org.apache.tuweni.eth.Address, kotlin.Long, kotlin.Long, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, kotlin.collections.MutableList((org.apache.tuweni.ethstats.TxStats)), org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.collections.MutableList((org.apache.tuweni.eth.BlockHeader)))/miner">miner</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.BlockStats$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Long, org.apache.tuweni.eth.Address, kotlin.Long, kotlin.Long, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, kotlin.collections.MutableList((org.apache.tuweni.ethstats.TxStats)), org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.collections.MutableList((org.apache.tuweni.eth.BlockHeader)))/gasUsed">gasUsed</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.BlockStats$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Long, org.apache.tuweni.eth.Address, kotlin.Long, kotlin.Long, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, kotlin.collections.MutableList((org.apache.tuweni.ethstats.TxStats)), org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.collections.MutableList((org.apache.tuweni.eth.BlockHeader)))/gasLimit">gasLimit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.BlockStats$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Long, org.apache.tuweni.eth.Address, kotlin.Long, kotlin.Long, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, kotlin.collections.MutableList((org.apache.tuweni.ethstats.TxStats)), org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.collections.MutableList((org.apache.tuweni.eth.BlockHeader)))/difficulty">difficulty</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.BlockStats$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Long, org.apache.tuweni.eth.Address, kotlin.Long, kotlin.Long, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, kotlin.collections.MutableList((org.apache.tuweni.ethstats.TxStats)), org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.collections.MutableList((org.apache.tuweni.eth.BlockHeader)))/totalDifficulty">totalDifficulty</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.BlockStats$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Long, org.apache.tuweni.eth.Address, kotlin.Long, kotlin.Long, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, kotlin.collections.MutableList((org.apache.tuweni.ethstats.TxStats)), org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.collections.MutableList((org.apache.tuweni.eth.BlockHeader)))/transactions">transactions</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../-tx-stats/index.html"><span class="identifier">TxStats</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.BlockStats$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Long, org.apache.tuweni.eth.Address, kotlin.Long, kotlin.Long, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, kotlin.collections.MutableList((org.apache.tuweni.ethstats.TxStats)), org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.collections.MutableList((org.apache.tuweni.eth.BlockHeader)))/transactionsRoot">transactionsRoot</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.BlockStats$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Long, org.apache.tuweni.eth.Address, kotlin.Long, kotlin.Long, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, kotlin.collections.MutableList((org.apache.tuweni.ethstats.TxStats)), org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.collections.MutableList((org.apache.tuweni.eth.BlockHeader)))/stateRoot">stateRoot</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.BlockStats$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Long, org.apache.tuweni.eth.Address, kotlin.Long, kotlin.Long, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, kotlin.collections.MutableList((org.apache.tuweni.ethstats.TxStats)), org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.collections.MutableList((org.apache.tuweni.eth.BlockHeader)))/uncles">uncles</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-block-header/index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-block-number.html">getBlockNumber</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getBlockNumber</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-difficulty.html">getDifficulty</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getDifficulty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-gas-limit.html">getGasLimit</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getGasLimit</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-gas-used.html">getGasUsed</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getGasUsed</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-hash.html">getHash</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getHash</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-miner.html">getMiner</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getMiner</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-parent-hash.html">getParentHash</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getParentHash</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-state-root.html">getStateRoot</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getStateRoot</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-timestamp.html">getTimestamp</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getTimestamp</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-total-difficulty.html">getTotalDifficulty</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getTotalDifficulty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-transactions.html">getTransactions</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getTransactions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../-tx-stats/index.html"><span class="identifier">TxStats</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-transactions-root.html">getTransactionsRoot</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getTransactionsRoot</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-uncles.html">getUncles</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getUncles</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-block-header/index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

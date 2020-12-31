@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ProgPoW - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.progpow</a>&nbsp;/&nbsp;<a href="./index.html">ProgPoW</a><br/>
+<br/>
+<h1>ProgPoW</h1>
+<code><span class="keyword">class </span><span class="identifier">ProgPoW</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/pow/src/main/java/org/apache/tuweni/progpow/ProgPoW.java#L34">(source)</a>
+<p>Ethereum ProgPoW mining algorithm, based on revision 0.9.2. This implements the ProgPoW algorithm (https://github.com/ifdefelse/ProgPOW). This algorithm is licensed under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) See the specification at https://github.com/ifdefelse/ProgPOW</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Ethereum ProgPoW mining algorithm, based on revision 0.9.2. This implements the ProgPoW algorithm (https://github.com/ifdefelse/ProgPOW). This algorithm is licensed under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) See the specification at https://github.com/ifdefelse/ProgPOW</p>
+<code><span class="identifier">ProgPoW</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="create-dag-cache.html">createDagCache</a></h4>
+</td>
+<td>
+<p>Creates a cache for the DAG at a given block number</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">createDagCache</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.progpow.ProgPoW$createDagCache(kotlin.Long, java.util.function.Function((org.apache.tuweni.units.bigints.UInt32, org.apache.tuweni.bytes.Bytes)))/blockNumber">blockNumber</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.progpow.ProgPoW$createDagCache(kotlin.Long, java.util.function.Function((org.apache.tuweni.units.bigints.UInt32, org.apache.tuweni.bytes.Bytes)))/datasetLookup">datasetLookup</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int32/index.html"><span class="identifier">UInt32</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Array</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int32/index.html"><span class="identifier">UInt32</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="prog-pow-hash.html">progPowHash</a></h4>
+</td>
+<td>
+<p>Creates a hash using the ProgPoW formulation of a block</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">progPowHash</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.progpow.ProgPoW$progPowHash(kotlin.Long, kotlin.Long, org.apache.tuweni.bytes.Bytes32, kotlin.Array((org.apache.tuweni.units.bigints.UInt32)), java.util.function.Function((org.apache.tuweni.units.bigints.UInt32, org.apache.tuweni.bytes.Bytes)))/blockNumber">blockNumber</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.progpow.ProgPoW$progPowHash(kotlin.Long, kotlin.Long, org.apache.tuweni.bytes.Bytes32, kotlin.Array((org.apache.tuweni.units.bigints.UInt32)), java.util.function.Function((org.apache.tuweni.units.bigints.UInt32, org.apache.tuweni.bytes.Bytes)))/nonce">nonce</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.progpow.ProgPoW$progPowHash(kotlin.Long, kotlin.Long, org.apache.tuweni.bytes.Bytes32, kotlin.Array((org.apache.tuweni.units.bigints.UInt32)), java.util.function.Function((org.apache.tuweni.units.bigints.UInt32, org.apache.tuweni.bytes.Bytes)))/header">header</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.progpow.ProgPoW$progPowHash(kotlin.Long, kotlin.Long, org.apache.tuweni.bytes.Bytes32, kotlin.Array((org.apache.tuweni.units.bigints.UInt32)), java.util.function.Function((org.apache.tuweni.units.bigints.UInt32, org.apache.tuweni.bytes.Bytes)))/dag">dag</span><span class="symbol">:</span>&nbsp;<span class="identifier">Array</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int32/index.html"><span class="identifier">UInt32</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.progpow.ProgPoW$progPowHash(kotlin.Long, kotlin.Long, org.apache.tuweni.bytes.Bytes32, kotlin.Array((org.apache.tuweni.units.bigints.UInt32)), java.util.function.Function((org.apache.tuweni.units.bigints.UInt32, org.apache.tuweni.bytes.Bytes)))/dagLookupFunction">dagLookupFunction</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int32/index.html"><span class="identifier">UInt32</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

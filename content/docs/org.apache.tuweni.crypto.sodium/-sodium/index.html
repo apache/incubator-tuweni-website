@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Sodium - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="./index.html">Sodium</a><br/>
+<br/>
+<h1>Sodium</h1>
+<code><span class="keyword">class </span><span class="identifier">Sodium</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/Sodium.java#L34">(source)</a>
+<p>Access to the sodium native library. </p>
+<p> This class provides static methods for checking or loading the sodium native library.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="is-available.html">isAvailable</a></h4>
+</td>
+<td>
+<p>Check if the sodium library is available. </p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isAvailable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load-library.html">loadLibrary</a></h4>
+</td>
+<td>
+<p>Load and initialize the native libsodium shared library. </p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">loadLibrary</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Sodium$loadLibrary(java.nio.file.Path)/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="min-supported-version.html">minSupportedVersion</a></h4>
+</td>
+<td>
+<p>The minimum version of the sodium native library that this binding supports.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">minSupportedVersion</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-sodium-version/index.html"><span class="identifier">SodiumVersion</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="search-library.html">searchLibrary</a></h4>
+</td>
+<td>
+<p>Search for, then load and initialize the native libsodium shared library. </p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">searchLibrary</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.crypto.sodium.Sodium$searchLibrary(kotlin.Array((java.nio.file.Path)))/paths">paths</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">searchLibrary</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Sodium$searchLibrary(kotlin.String, kotlin.Array((java.nio.file.Path)))/libraryName">libraryName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.crypto.sodium.Sodium$searchLibrary(kotlin.String, kotlin.Array((java.nio.file.Path)))/paths">paths</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="supports-version.html">supportsVersion</a></h4>
+</td>
+<td>
+<p>Check if the loaded sodium native library is the same or later than the specified version.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">supportsVersion</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Sodium$supportsVersion(org.apache.tuweni.crypto.sodium.SodiumVersion)/requiredVersion">requiredVersion</span><span class="symbol">:</span>&nbsp;<a href="../-sodium-version/index.html"><span class="identifier">SodiumVersion</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="version.html">version</a></h4>
+</td>
+<td>
+<p>The version of the loaded sodium native library.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">version</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-sodium-version/index.html"><span class="identifier">SodiumVersion</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

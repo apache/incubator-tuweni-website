@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>timeoutAndRetry - tuweni</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">tuweni</a>&nbsp;/&nbsp;<a href="index.html">org.apache.tuweni.concurrent.coroutines</a>&nbsp;/&nbsp;<a href="./timeout-and-retry.html">timeoutAndRetry</a><br/>
+<br/>
+<h1>timeoutAndRetry</h1>
+<a name="org.apache.tuweni.concurrent.coroutines$timeoutAndRetry(kotlin.Long, kotlin.coroutines.SuspendFunction1((kotlin.Int, org.apache.tuweni.concurrent.coroutines.timeoutAndRetry.R)))"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <span class="identifier">timeoutAndRetry</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.coroutines$timeoutAndRetry(kotlin.Long, kotlin.coroutines.SuspendFunction1((kotlin.Int, org.apache.tuweni.concurrent.coroutines.timeoutAndRetry.R)))/timeout">timeout</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.coroutines$timeoutAndRetry(kotlin.Long, kotlin.coroutines.SuspendFunction1((kotlin.Int, org.apache.tuweni.concurrent.coroutines.timeoutAndRetry.R)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="identifier">Int</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">R</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">R</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent-coroutines/src/main/kotlin/org/apache/tuweni/concurrent/coroutines/Retryable.kt#L119">(source)</a>
+<p>Cancel and retry a suspending block until a non-null result is obtained.</p>
+<h3>Parameters</h3>
+<p><a name="timeout"></a>
+<code>timeout</code> - the delay before re-attempting</p>
+<p><a name="block"></a>
+<code>block</code> - the suspending block to be executed</p>
+<p><strong>Return</strong><br/>
+the first non-null result</p>
+<a name="org.apache.tuweni.concurrent.coroutines$timeoutAndRetry(kotlin.Long, kotlin.Int, kotlin.coroutines.SuspendFunction1((kotlin.Int, org.apache.tuweni.concurrent.coroutines.timeoutAndRetry.R)))"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <span class="identifier">timeoutAndRetry</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.coroutines$timeoutAndRetry(kotlin.Long, kotlin.Int, kotlin.coroutines.SuspendFunction1((kotlin.Int, org.apache.tuweni.concurrent.coroutines.timeoutAndRetry.R)))/timeout">timeout</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.coroutines$timeoutAndRetry(kotlin.Long, kotlin.Int, kotlin.coroutines.SuspendFunction1((kotlin.Int, org.apache.tuweni.concurrent.coroutines.timeoutAndRetry.R)))/maxRetries">maxRetries</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.coroutines$timeoutAndRetry(kotlin.Long, kotlin.Int, kotlin.coroutines.SuspendFunction1((kotlin.Int, org.apache.tuweni.concurrent.coroutines.timeoutAndRetry.R)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="identifier">Int</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">R</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">R</span><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent-coroutines/src/main/kotlin/org/apache/tuweni/concurrent/coroutines/Retryable.kt#L132">(source)</a>
+<p>Cancel and retry a suspending block until a non-null result is obtained.</p>
+<h3>Parameters</h3>
+<p><a name="timeout"></a>
+<code>timeout</code> - the delay before re-attempting</p>
+<p><a name="maxRetries"></a>
+<code>maxRetries</code> - the maximum number of attempts</p>
+<p><a name="block"></a>
+<code>block</code> - the suspending block to be executed</p>
+<p><strong>Return</strong><br/>
+the first non-null result, or <code>null</code> if all attempts fail</p>
+<a name="org.apache.tuweni.concurrent.coroutines$timeoutAndRetry(kotlin.Function1((kotlin.Int, kotlin.Long)), kotlin.coroutines.SuspendFunction1((kotlin.Int, org.apache.tuweni.concurrent.coroutines.timeoutAndRetry.R)))"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <span class="identifier">timeoutAndRetry</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.coroutines$timeoutAndRetry(kotlin.Function1((kotlin.Int, kotlin.Long)), kotlin.coroutines.SuspendFunction1((kotlin.Int, org.apache.tuweni.concurrent.coroutines.timeoutAndRetry.R)))/timeout">timeout</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">Int</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Long</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.coroutines$timeoutAndRetry(kotlin.Function1((kotlin.Int, kotlin.Long)), kotlin.coroutines.SuspendFunction1((kotlin.Int, org.apache.tuweni.concurrent.coroutines.timeoutAndRetry.R)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="identifier">Int</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">R</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">R</span><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent-coroutines/src/main/kotlin/org/apache/tuweni/concurrent/coroutines/Retryable.kt#L146">(source)</a>
+<p>Cancel and retry a suspending block until a non-null result is obtained.</p>
+<h3>Parameters</h3>
+<p><a name="timeout"></a>
+<code>timeout</code> - a function returning the delay that should follow each attempt, or <code>null</code> if no further attempts
+    should be made</p>
+<p><a name="block"></a>
+<code>block</code> - the suspending block to be executed</p>
+<p><strong>Return</strong><br/>
+the first non-null result, or <code>null</code> if all attempts fail</p>
+</BODY>
+</HTML>

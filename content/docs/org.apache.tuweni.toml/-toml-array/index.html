@@ -1,0 +1,229 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TomlArray - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.toml</a>&nbsp;/&nbsp;<a href="./index.html">TomlArray</a><br/>
+<br/>
+<h1>TomlArray</h1>
+<code><span class="keyword">interface </span><span class="identifier">TomlArray</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/TomlArray.java#L28">(source)</a>
+<p>An array of TOML values.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="contains-arrays.html">containsArrays</a></h4>
+</td>
+<td>
+<p>Returns true if the array contains arrays.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">containsArrays</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains-booleans.html">containsBooleans</a></h4>
+</td>
+<td>
+<p>Returns true if the array contains booleans.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">containsBooleans</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains-doubles.html">containsDoubles</a></h4>
+</td>
+<td>
+<p>Returns true if the array contains doubles.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">containsDoubles</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains-local-dates.html">containsLocalDates</a></h4>
+</td>
+<td>
+<p>Returns true if the array contains local dates.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">containsLocalDates</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains-local-date-times.html">containsLocalDateTimes</a></h4>
+</td>
+<td>
+<p>Returns true if the array contains local date times.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">containsLocalDateTimes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains-local-times.html">containsLocalTimes</a></h4>
+</td>
+<td>
+<p>Returns true if the array contains local time objects.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">containsLocalTimes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains-longs.html">containsLongs</a></h4>
+</td>
+<td>
+<p>Returns true if the array contains longs.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">containsLongs</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains-offset-date-times.html">containsOffsetDateTimes</a></h4>
+</td>
+<td>
+<p>Returns true if the array contains offset date times.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">containsOffsetDateTimes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains-strings.html">containsStrings</a></h4>
+</td>
+<td>
+<p>Returns true if the array contains strings.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">containsStrings</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains-tables.html">containsTables</a></h4>
+</td>
+<td>
+<p>Returns true if the array contains tables.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">containsTables</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<p>Get a value at a specified index.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlArray$get(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-array.html">getArray</a></h4>
+</td>
+<td>
+<p>Get an array at a specified index.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getArray</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlArray$getArray(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">TomlArray</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-boolean.html">getBoolean</a></h4>
+</td>
+<td>
+<p>Get a boolean at a specified index.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getBoolean</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlArray$getBoolean(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-double.html">getDouble</a></h4>
+</td>
+<td>
+<p>Get a double at a specified index.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDouble</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlArray$getDouble(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-local-date.html">getLocalDate</a></h4>
+</td>
+<td>
+<p>Get a local date at a specified index.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalDate</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlArray$getLocalDate(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalDate</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-local-date-time.html">getLocalDateTime</a></h4>
+</td>
+<td>
+<p>Get a local date time at a specified index.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlArray$getLocalDateTime(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalDateTime</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-local-time.html">getLocalTime</a></h4>
+</td>
+<td>
+<p>Get a local time at a specified index.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlArray$getLocalTime(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalTime</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-long.html">getLong</a></h4>
+</td>
+<td>
+<p>Get a long at a specified index.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlArray$getLong(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-offset-date-time.html">getOffsetDateTime</a></h4>
+</td>
+<td>
+<p>Get an offset date time at a specified index.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOffsetDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlArray$getOffsetDateTime(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">OffsetDateTime</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-string.html">getString</a></h4>
+</td>
+<td>
+<p>Get a string at a specified index.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlArray$getString(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-table.html">getTable</a></h4>
+</td>
+<td>
+<p>Get a table at a specified index.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTable</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlArray$getTable(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-table/index.html"><span class="identifier">TomlTable</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="input-position-of.html">inputPositionOf</a></h4>
+</td>
+<td>
+<p>Get the position where a value is defined in the TOML document.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">inputPositionOf</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlArray$inputPositionOf(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-position/index.html"><span class="identifier">TomlPosition</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-empty.html">isEmpty</a></h4>
+</td>
+<td>
+<p>Returns true if the array is empty.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="size.html">size</a></h4>
+</td>
+<td>
+<p>Provides the size of the array.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">size</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-json.html">toJson</a></h4>
+</td>
+<td>
+<p>Return a representation of this array using JSON.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toJson</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Append a JSON representation of this array to the appendable output.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toJson</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlArray$toJson(java.lang.Appendable)/appendable">appendable</span><span class="symbol">:</span>&nbsp;<span class="identifier">Appendable</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-list.html">toList</a></h4>
+</td>
+<td>
+<p>Get the elements of this array as a <code><a href="#">List</a></code>. </p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">toList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

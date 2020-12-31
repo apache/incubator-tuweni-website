@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SECP256K1.PublicKey.recoverFromSignature - tuweni</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../../index.html">org.apache.tuweni.crypto</a>&nbsp;/&nbsp;<a href="../index.html">SECP256K1</a>&nbsp;/&nbsp;<a href="index.html">PublicKey</a>&nbsp;/&nbsp;<a href="./recover-from-signature.html">recoverFromSignature</a><br/>
+<br/>
+<h1>recoverFromSignature</h1>
+<a name="org.apache.tuweni.crypto.SECP256K1.PublicKey$recoverFromSignature(kotlin.ByteArray, org.apache.tuweni.crypto.SECP256K1.Signature)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">recoverFromSignature</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.PublicKey$recoverFromSignature(kotlin.ByteArray, org.apache.tuweni.crypto.SECP256K1.Signature)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.PublicKey$recoverFromSignature(kotlin.ByteArray, org.apache.tuweni.crypto.SECP256K1.Signature)/signature">signature</span><span class="symbol">:</span>&nbsp;<span class="identifier">Signature</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">PublicKey</span><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/SECP256K1.java#L620">(source)</a>
+<p>Recover a public key using a digital signature and the data it signs.</p>
+<h3>Parameters</h3>
+<p><a name="data"></a>
+<code>data</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The signed data.</p>
+<p><a name="signature"></a>
+<code>signature</code> - <span class="identifier">Signature</span><span class="symbol">!</span><span class="symbol">:</span> The digital signature.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">PublicKey</span><span class="symbol">?</span><span class="symbol">:</span> The associated public key, or <code>null</code> if recovery wasn't possible.</p>
+<a name="org.apache.tuweni.crypto.SECP256K1.PublicKey$recoverFromSignature(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.Signature)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">recoverFromSignature</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.PublicKey$recoverFromSignature(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.Signature)/data">data</span><span class="symbol">:</span>&nbsp;<a href="../../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.PublicKey$recoverFromSignature(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.Signature)/signature">signature</span><span class="symbol">:</span>&nbsp;<span class="identifier">Signature</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">PublicKey</span><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/SECP256K1.java#L632">(source)</a>
+<p>Recover a public key using a digital signature and the data it signs.</p>
+<h3>Parameters</h3>
+<p><a name="data"></a>
+<code>data</code> - <a href="../../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The signed data.</p>
+<p><a name="signature"></a>
+<code>signature</code> - <span class="identifier">Signature</span><span class="symbol">!</span><span class="symbol">:</span> The digital signature.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">PublicKey</span><span class="symbol">?</span><span class="symbol">:</span> The associated public key, or <code>null</code> if recovery wasn't possible.</p>
+</BODY>
+</HTML>

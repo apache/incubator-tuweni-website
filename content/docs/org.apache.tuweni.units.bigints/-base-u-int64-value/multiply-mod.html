@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BaseUInt64Value.multiplyMod - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.units.bigints</a>&nbsp;/&nbsp;<a href="index.html">BaseUInt64Value</a>&nbsp;/&nbsp;<a href="./multiply-mod.html">multiplyMod</a><br/>
+<br/>
+<h1>multiplyMod</h1>
+<a name="org.apache.tuweni.units.bigints.BaseUInt64Value$multiplyMod(org.apache.tuweni.units.bigints.BaseUInt64Value.T, org.apache.tuweni.units.bigints.UInt64)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiplyMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt64Value$multiplyMod(org.apache.tuweni.units.bigints.BaseUInt64Value.T, org.apache.tuweni.units.bigints.UInt64)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt64Value$multiplyMod(org.apache.tuweni.units.bigints.BaseUInt64Value.T, org.apache.tuweni.units.bigints.UInt64)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int64/index.html"><span class="identifier">UInt64</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/units/src/main/java/org/apache/tuweni/units/bigints/BaseUInt64Value.java#L215">(source)</a><br/>
+<a name="org.apache.tuweni.units.bigints.BaseUInt64Value$multiplyMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt64)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiplyMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt64Value$multiplyMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt64)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt64Value$multiplyMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt64)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int64/index.html"><span class="identifier">UInt64</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/units/src/main/java/org/apache/tuweni/units/bigints/BaseUInt64Value.java#L232">(source)</a><br/>
+<a name="org.apache.tuweni.units.bigints.BaseUInt64Value$multiplyMod(kotlin.Long, kotlin.Long)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiplyMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt64Value$multiplyMod(kotlin.Long, kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt64Value$multiplyMod(kotlin.Long, kotlin.Long)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/units/src/main/java/org/apache/tuweni/units/bigints/BaseUInt64Value.java#L237">(source)</a><a name="org.apache.tuweni.units.bigints.BaseUInt64Value$multiplyMod(org.apache.tuweni.units.bigints.UInt64, org.apache.tuweni.units.bigints.UInt64)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiplyMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt64Value$multiplyMod(org.apache.tuweni.units.bigints.UInt64, org.apache.tuweni.units.bigints.UInt64)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-u-int64/index.html"><span class="identifier">UInt64</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt64Value$multiplyMod(org.apache.tuweni.units.bigints.UInt64, org.apache.tuweni.units.bigints.UInt64)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int64/index.html"><span class="identifier">UInt64</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/units/src/main/java/org/apache/tuweni/units/bigints/BaseUInt64Value.java#L227">(source)</a>
+<p>Returns a value that is <code>((this * value) mod modulus)</code>.</p>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <a href="../-u-int64/index.html"><span class="identifier">UInt64</span></a><span class="symbol">!</span><span class="symbol">:</span> The amount to multiply this value by.</p>
+<p><a name="modulus"></a>
+<code>modulus</code> - <a href="../-u-int64/index.html"><span class="identifier">UInt64</span></a><span class="symbol">!</span><span class="symbol">:</span> The modulus.</p>
+<h3>Exceptions</h3>
+<p><a name="ArithmeticException"></a>
+<code>ArithmeticException</code> - <code>value</code> &lt; 0 or <code>modulus</code> == 0.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">T</span><span class="symbol">:</span> <code>(this * value) mod modulus</code></p>
+</BODY>
+</HTML>

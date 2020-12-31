@@ -1,0 +1,182 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MutableBytes - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.bytes</a>&nbsp;/&nbsp;<a href="./index.html">MutableBytes</a><br/>
+<br/>
+<h1>MutableBytes</h1>
+<code><span class="keyword">interface </span><span class="identifier">MutableBytes</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-bytes/index.html"><span class="identifier">Bytes</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/bytes/src/main/java/org/apache/tuweni/bytes/MutableBytes.java#L28">(source)</a>
+<p>A mutable <code><a href="../-bytes/index.html">Bytes</a></code> value.</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-e-m-p-t-y.html">EMPTY</a></h4>
+</td>
+<td>
+<p>The empty value (with 0 bytes).</p>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">EMPTY</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="clear.html">clear</a></h4>
+</td>
+<td>
+<p>Set all bytes in this value to 0.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="create.html">create</a></h4>
+</td>
+<td>
+<p>Create a new mutable byte value.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$create(kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decrement.html">decrement</a></h4>
+</td>
+<td>
+<p>Decrements the value of the bytes by 1, treating the value as big endian. If decrementing underflows the value then all bits flip, i.e. decrementing 0x0000 will return 0xFFFF.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">decrement</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="fill.html">fill</a></h4>
+</td>
+<td>
+<p>Fill all the bytes of this value with the specified byte.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">fill</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$fill(kotlin.Byte)/b">b</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="increment.html">increment</a></h4>
+</td>
+<td>
+<p>Increments the value of the bytes by 1, treating the value as big endian. If incrementing overflows the value then all bits flip, i.e. incrementing 0xFFFF will return 0x0000.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">increment</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mutable-slice.html">mutableSlice</a></h4>
+</td>
+<td>
+<p>Create a mutable slice of the bytes of this value. </p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">mutableSlice</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$mutableSlice(kotlin.Int, kotlin.Int)/i">i</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$mutableSlice(kotlin.Int, kotlin.Int)/length">length</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="of.html">of</a></h4>
+</td>
+<td>
+<p>Create a value that contains the specified bytes in their specified order.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">of</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$of(kotlin.ByteArray)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">of</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$of(kotlin.IntArray)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set.html">set</a></h4>
+</td>
+<td>
+<p>Set a byte in this value.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">set</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$set(kotlin.Int, kotlin.Byte)/i">i</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$set(kotlin.Int, kotlin.Byte)/b">b</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">set</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$set(kotlin.Int, org.apache.tuweni.bytes.Bytes)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$set(kotlin.Int, org.apache.tuweni.bytes.Bytes)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="../-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-int.html">setInt</a></h4>
+</td>
+<td>
+<p>Set the 4 bytes starting at the specified index to the specified integer value.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$setInt(kotlin.Int, kotlin.Int)/i">i</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$setInt(kotlin.Int, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-long.html">setLong</a></h4>
+</td>
+<td>
+<p>Set the 8 bytes starting at the specified index to the specified long value.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$setLong(kotlin.Int, kotlin.Long)/i">i</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$setLong(kotlin.Int, kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="wrap.html">wrap</a></h4>
+</td>
+<td>
+<p>Wrap a byte array in a <code><a href="./index.html">MutableBytes</a></code> value.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">wrap</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$wrap(kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">!</span></code>
+<p>Wrap a slice of a byte array as a <code><a href="./index.html">MutableBytes</a></code> value. </p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">wrap</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$wrap(kotlin.ByteArray, kotlin.Int, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$wrap(kotlin.ByteArray, kotlin.Int, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$wrap(kotlin.ByteArray, kotlin.Int, kotlin.Int)/length">length</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="wrap-buffer.html">wrapBuffer</a></h4>
+</td>
+<td>
+<p>Wrap a full Vert.x <code><a href="#">Buffer</a></code> as a <code><a href="./index.html">MutableBytes</a></code> value. </p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">wrapBuffer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$wrapBuffer(io.vertx.core.buffer.Buffer)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<span class="identifier">Buffer</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">!</span></code>
+<p>Wrap a slice of a Vert.x <code><a href="#">Buffer</a></code> as a <code><a href="./index.html">MutableBytes</a></code> value. </p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">wrapBuffer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$wrapBuffer(io.vertx.core.buffer.Buffer, kotlin.Int, kotlin.Int)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<span class="identifier">Buffer</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$wrapBuffer(io.vertx.core.buffer.Buffer, kotlin.Int, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$wrapBuffer(io.vertx.core.buffer.Buffer, kotlin.Int, kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="wrap-byte-buf.html">wrapByteBuf</a></h4>
+</td>
+<td>
+<p>Wrap a full Netty <code><a href="#">ByteBuf</a></code> as a <code><a href="./index.html">MutableBytes</a></code> value. </p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">wrapByteBuf</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$wrapByteBuf(io.netty.buffer.ByteBuf)/byteBuf">byteBuf</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteBuf</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">!</span></code>
+<p>Wrap a slice of a Netty <code><a href="#">ByteBuf</a></code> as a <code><a href="./index.html">MutableBytes</a></code> value. </p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">wrapByteBuf</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$wrapByteBuf(io.netty.buffer.ByteBuf, kotlin.Int, kotlin.Int)/byteBuf">byteBuf</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteBuf</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$wrapByteBuf(io.netty.buffer.ByteBuf, kotlin.Int, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$wrapByteBuf(io.netty.buffer.ByteBuf, kotlin.Int, kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="wrap-byte-buffer.html">wrapByteBuffer</a></h4>
+</td>
+<td>
+<p>Wrap a full Java NIO <code><a href="#">ByteBuffer</a></code> as a <code><a href="./index.html">MutableBytes</a></code> value. </p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">wrapByteBuffer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$wrapByteBuffer(java.nio.ByteBuffer)/byteBuffer">byteBuffer</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteBuffer</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">!</span></code>
+<p>Wrap a slice of a Java NIO <code><a href="#">ByteBuffer</a></code> as a <code><a href="./index.html">MutableBytes</a></code> value. </p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">wrapByteBuffer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$wrapByteBuffer(java.nio.ByteBuffer, kotlin.Int, kotlin.Int)/byteBuffer">byteBuffer</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteBuffer</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$wrapByteBuffer(java.nio.ByteBuffer, kotlin.Int, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$wrapByteBuffer(java.nio.ByteBuffer, kotlin.Int, kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-mutable-byte-buffer-wrapping-bytes/index.html">MutableByteBufferWrappingBytes</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MutableByteBufferWrappingBytes</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ByteBufferWrappingBytes</span><span class="symbol">, </span><a href="./index.html"><span class="identifier">MutableBytes</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-mutable-bytes32/index.html">MutableBytes32</a></h4>
+</td>
+<td>
+<p>A mutable <code><a href="../-bytes32/index.html">Bytes32</a></code>, that is a mutable <code><a href="../-bytes/index.html">Bytes</a></code> value of exactly 32 bytes.</p>
+<code><span class="keyword">interface </span><span class="identifier">MutableBytes32</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">, </span><a href="../-bytes32/index.html"><span class="identifier">Bytes32</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-mutable-bytes48/index.html">MutableBytes48</a></h4>
+</td>
+<td>
+<p>A mutable <code><a href="../-bytes48/index.html">Bytes48</a></code>, that is a mutable <code><a href="../-bytes/index.html">Bytes</a></code> value of exactly 48 bytes.</p>
+<code><span class="keyword">interface </span><span class="identifier">MutableBytes48</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">, </span><a href="../-bytes48/index.html"><span class="identifier">Bytes48</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ScuttlebuttLocalDiscoveryService - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.discovery</a>&nbsp;/&nbsp;<a href="./index.html">ScuttlebuttLocalDiscoveryService</a><br/>
+<br/>
+<h1>ScuttlebuttLocalDiscoveryService</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ScuttlebuttLocalDiscoveryService</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-discovery/src/main/java/org/apache/tuweni/scuttlebutt/discovery/ScuttlebuttLocalDiscoveryService.java#L45">(source)</a>
+<p>Scuttlebutt local discovery service, based on the Scuttlebutt network protocol defined <a href="https://ssbc.github.io/scuttlebutt-protocol-guide/">here</a>. This service offers two functions: </p>
+<p> It broadcasts to the local network every minute Scuttlebutt identities, as individual packets. </p>
+<p> It listens to broadcasted packets on the local network and relays Scuttlebutt identities identified to listeners.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Default constructor.</p>
+<code><span class="identifier">ScuttlebuttLocalDiscoveryService</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.discovery.ScuttlebuttLocalDiscoveryService$<init>(io.vertx.core.Vertx, kotlin.Int, kotlin.String, kotlin.String)/vertx">vertx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Vertx</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.discovery.ScuttlebuttLocalDiscoveryService$<init>(io.vertx.core.Vertx, kotlin.Int, kotlin.String, kotlin.String)/listenPort">listenPort</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.discovery.ScuttlebuttLocalDiscoveryService$<init>(io.vertx.core.Vertx, kotlin.Int, kotlin.String, kotlin.String)/listenNetworkInterface">listenNetworkInterface</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.discovery.ScuttlebuttLocalDiscoveryService$<init>(io.vertx.core.Vertx, kotlin.Int, kotlin.String, kotlin.String)/multicastAddress">multicastAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-identity-to-broadcast-list.html">addIdentityToBroadcastList</a></h4>
+</td>
+<td>
+<p>Adds an identity to the ones to be broadcast by the service. Identities may be added at any time during the lifecycle of the service</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addIdentityToBroadcastList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.discovery.ScuttlebuttLocalDiscoveryService$addIdentityToBroadcastList(org.apache.tuweni.scuttlebutt.discovery.LocalIdentity)/identity">identity</span><span class="symbol">:</span>&nbsp;<a href="../-local-identity/index.html"><span class="identifier">LocalIdentity</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-listener.html">addListener</a></h4>
+</td>
+<td>
+<p>Adds a listener to be notified when the service receives UDP packets that match Scuttlebutt identities. Listeners may be added at any time during the lifecycle of the service</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addListener</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.discovery.ScuttlebuttLocalDiscoveryService$addListener(java.util.function.Consumer((org.apache.tuweni.scuttlebutt.discovery.LocalIdentity)))/listener">listener</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../-local-identity/index.html"><span class="identifier">LocalIdentity</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start.html">start</a></h4>
+</td>
+<td>
+<p>Starts the service.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">start</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stop.html">stop</a></h4>
+</td>
+<td>
+<p>Stops the service.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">stop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>WireConnectionRepository.asIterable - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlpx</a>&nbsp;/&nbsp;<a href="index.html">WireConnectionRepository</a>&nbsp;/&nbsp;<a href="./as-iterable.html">asIterable</a><br/>
+<br/>
+<h1>asIterable</h1>
+<a name="org.apache.tuweni.rlpx.WireConnectionRepository$asIterable()"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">asIterable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlpx/src/main/java/org/apache/tuweni/rlpx/WireConnectionRepository.java#L62">(source)</a>
+<p>Provides a view of the wire connections as an iterable. There is no guarantee of sorting wire connections.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> an Iterable object allowing to traverse all wire connections held by this repository</p>
+<a name="org.apache.tuweni.rlpx.WireConnectionRepository$asIterable(org.apache.tuweni.rlpx.wire.SubProtocolIdentifier)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">asIterable</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.WireConnectionRepository$asIterable(org.apache.tuweni.rlpx.wire.SubProtocolIdentifier)/identifier">identifier</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-sub-protocol-identifier/index.html"><span class="identifier">SubProtocolIdentifier</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlpx/src/main/java/org/apache/tuweni/rlpx/WireConnectionRepository.java#L70">(source)</a>
+<p>Provides a subset of wire connections with a particular capabilities.</p>
+<h3>Parameters</h3>
+<p><a name="identifier"></a>
+<code>identifier</code> - <a href="../../org.apache.tuweni.rlpx.wire/-sub-protocol-identifier/index.html"><span class="identifier">SubProtocolIdentifier</span></a><span class="symbol">!</span><span class="symbol">:</span> the subprotocol those connections must use</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> an Iterable object allowing to traverse all wire connections held by this repository</p>
+</BODY>
+</HTML>

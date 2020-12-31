@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EphemeralPeerRepository - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.devp2p</a>&nbsp;/&nbsp;<a href="./index.html">EphemeralPeerRepository</a><br/>
+<br/>
+<h1>EphemeralPeerRepository</h1>
+<code><span class="keyword">class </span><span class="identifier">EphemeralPeerRepository</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-peer-repository/index.html"><span class="identifier">PeerRepository</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/devp2p/src/main/kotlin/org/apache/tuweni/devp2p/PeerRepository.kt#L101">(source)</a>
+<p>An in-memory peer repository.</p>
+<p>Note: as the storage is in-memory, no retrieval methods in this implementation will suspend.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>An in-memory peer repository.</p>
+<code><span class="identifier">EphemeralPeerRepository</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<p>Get a peer from node ID and endpoint information</p>
+<code><span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.EphemeralPeerRepository$get(org.apache.tuweni.crypto.SECP256K1.PublicKey, org.apache.tuweni.devp2p.Endpoint)/nodeId">nodeId</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.EphemeralPeerRepository$get(org.apache.tuweni.crypto.SECP256K1.PublicKey, org.apache.tuweni.devp2p.Endpoint)/endpoint">endpoint</span><span class="symbol">:</span>&nbsp;<a href="../-endpoint/index.html"><span class="identifier">Endpoint</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-peer/index.html"><span class="identifier">Peer</span></a></code>
+<p>Get a Peer based on a URI components.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.EphemeralPeerRepository$get(kotlin.String, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.PublicKey)/host">host</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.EphemeralPeerRepository$get(kotlin.String, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.PublicKey)/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.EphemeralPeerRepository$get(kotlin.String, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.PublicKey)/nodeId">nodeId</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-peer/index.html"><span class="identifier">Peer</span></a></code>
+<p>Get a Peer based on a URI.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.EphemeralPeerRepository$get(java.net.URI)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">URI</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-peer/index.html"><span class="identifier">Peer</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-async.html">getAsync</a></h4>
+</td>
+<td>
+<p>Get a Peer based on a URI.</p>
+<code><span class="keyword">fun </span><span class="identifier">getAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.EphemeralPeerRepository$getAsync(java.net.URI)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">URI</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">&gt;</span></code>
+<p>Get a Peer based on a URI string.</p>
+<code><span class="keyword">fun </span><span class="identifier">getAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.EphemeralPeerRepository$getAsync(kotlin.String)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

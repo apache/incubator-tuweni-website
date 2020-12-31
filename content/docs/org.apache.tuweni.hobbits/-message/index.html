@@ -1,0 +1,115 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Message - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.hobbits</a>&nbsp;/&nbsp;<a href="./index.html">Message</a><br/>
+<br/>
+<h1>Message</h1>
+<code><span class="keyword">class </span><span class="identifier">Message</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/hobbits/src/main/kotlin/org/apache/tuweni/hobbits/Message.kt#L34">(source)</a>
+<p>Hobbits message.</p>
+<h3>Parameters</h3>
+<p><a name="version"></a>
+<code>version</code> - Hobbits version</p>
+<p><a name="protocol"></a>
+<code>protocol</code> - message protocol</p>
+<p><a name="headers"></a>
+<code>headers</code> - headers to send</p>
+<p><a name="body"></a>
+<code>body</code> - the body of the message</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Hobbits message.</p>
+<code><span class="identifier">Message</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.hobbits.Message$<init>(kotlin.Int, org.apache.tuweni.hobbits.Protocol, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/version">version</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;3<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.Message$<init>(kotlin.Int, org.apache.tuweni.hobbits.Protocol, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/protocol">protocol</span><span class="symbol">:</span>&nbsp;<a href="../-protocol/index.html"><span class="identifier">Protocol</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.Message$<init>(kotlin.Int, org.apache.tuweni.hobbits.Protocol, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.Message$<init>(kotlin.Int, org.apache.tuweni.hobbits.Protocol, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/body">body</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="body.html">body</a></h4>
+</td>
+<td>
+<p>the body of the message</p>
+<code><span class="keyword">val </span><span class="identifier">body</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="headers.html">headers</a></h4>
+</td>
+<td>
+<p>headers to send</p>
+<code><span class="keyword">val </span><span class="identifier">headers</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="protocol.html">protocol</a></h4>
+</td>
+<td>
+<p>message protocol</p>
+<code><span class="keyword">val </span><span class="identifier">protocol</span><span class="symbol">: </span><a href="../-protocol/index.html"><span class="identifier">Protocol</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="version.html">version</a></h4>
+</td>
+<td>
+<p>Hobbits version</p>
+<code><span class="keyword">val </span><span class="identifier">version</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="size.html">size</a></h4>
+</td>
+<td>
+<p>Provides the size of the message</p>
+<code><span class="keyword">fun </span><span class="identifier">size</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-bytes.html">toBytes</a></h4>
+</td>
+<td>
+<p>Writes a message into bytes.</p>
+<code><span class="keyword">fun </span><span class="identifier">toBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<p>Transforms the message into a string, with a request line following by headers and body in hex representation.</p>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="read-message.html">readMessage</a></h4>
+</td>
+<td>
+<p>Reads a message from a byte buffer.</p>
+<code><span class="keyword">fun </span><span class="identifier">readMessage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.hobbits.Message.Companion$readMessage(org.apache.tuweni.bytes.Bytes)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Message</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

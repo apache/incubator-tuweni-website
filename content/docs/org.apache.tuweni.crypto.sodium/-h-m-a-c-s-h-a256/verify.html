@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>HMACSHA256.verify - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="index.html">HMACSHA256</a>&nbsp;/&nbsp;<a href="./verify.html">verify</a><br/>
+<br/>
+<h1>verify</h1>
+<a name="org.apache.tuweni.crypto.sodium.HMACSHA256$verify(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.HMACSHA256.Key)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">verify</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.HMACSHA256$verify(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.HMACSHA256.Key)/authenticator">authenticator</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.HMACSHA256$verify(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.HMACSHA256.Key)/in">in</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.HMACSHA256$verify(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.HMACSHA256.Key)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/HMACSHA256.java#L178">(source)</a>
+<p>Verifies the authenticator of a message matches according to a secret.</p>
+<h3>Parameters</h3>
+<p><a name="authenticator"></a>
+<code>authenticator</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the authenticator to verify</p>
+<p><a name="in"></a>
+<code>in</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the message to match against the authenticator</p>
+<p><a name="key"></a>
+<code>key</code> - <span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">:</span> the secret key to use for verification</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> true if the authenticator verifies the message according to the secret, false otherwise</p>
+<a name="org.apache.tuweni.crypto.sodium.HMACSHA256$verify(kotlin.ByteArray, kotlin.ByteArray, org.apache.tuweni.crypto.sodium.HMACSHA256.Key)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">verify</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.HMACSHA256$verify(kotlin.ByteArray, kotlin.ByteArray, org.apache.tuweni.crypto.sodium.HMACSHA256.Key)/authenticator">authenticator</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.HMACSHA256$verify(kotlin.ByteArray, kotlin.ByteArray, org.apache.tuweni.crypto.sodium.HMACSHA256.Key)/in">in</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.HMACSHA256$verify(kotlin.ByteArray, kotlin.ByteArray, org.apache.tuweni.crypto.sodium.HMACSHA256.Key)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/HMACSHA256.java#L190">(source)</a>
+<p>Verifies the authenticator of a message matches according to a secret.</p>
+<h3>Parameters</h3>
+<p><a name="authenticator"></a>
+<code>authenticator</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> the authenticator to verify</p>
+<p><a name="in"></a>
+<code>in</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> the message to match against the authenticator</p>
+<p><a name="key"></a>
+<code>key</code> - <span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">:</span> the secret key to use for verification</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> true if the authenticator verifies the message according to the secret, false otherwise</p>
+</BODY>
+</HTML>

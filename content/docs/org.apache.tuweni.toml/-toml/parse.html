@@ -1,0 +1,126 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Toml.parse - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.toml</a>&nbsp;/&nbsp;<a href="index.html">Toml</a>&nbsp;/&nbsp;<a href="./parse.html">parse</a><br/>
+<br/>
+<h1>parse</h1>
+<a name="org.apache.tuweni.toml.Toml$parse(kotlin.String)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(kotlin.String)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/Toml.java#L43">(source)</a>
+<p>Parse a TOML string.</p>
+<h3>Parameters</h3>
+<p><a name="input"></a>
+<code>input</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> The input to parse.</p>
+<p><strong>Return</strong><br/>
+<a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span><span class="symbol">:</span> The parse result.</p>
+<a name="org.apache.tuweni.toml.Toml$parse(kotlin.String, org.apache.tuweni.toml.TomlVersion)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(kotlin.String, org.apache.tuweni.toml.TomlVersion)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(kotlin.String, org.apache.tuweni.toml.TomlVersion)/version">version</span><span class="symbol">:</span>&nbsp;<a href="../-toml-version/index.html"><span class="identifier">TomlVersion</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/Toml.java#L54">(source)</a>
+<p>Parse a TOML string.</p>
+<h3>Parameters</h3>
+<p><a name="input"></a>
+<code>input</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> The input to parse.</p>
+<p><a name="version"></a>
+<code>version</code> - <a href="../-toml-version/index.html"><span class="identifier">TomlVersion</span></a><span class="symbol">!</span><span class="symbol">:</span> The version level to parse at.</p>
+<p><strong>Return</strong><br/>
+<a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span><span class="symbol">:</span> The parse result.</p>
+<a name="org.apache.tuweni.toml.Toml$parse(java.nio.file.Path)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.nio.file.Path)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/Toml.java#L66">(source)</a>
+<p>Parse a TOML file.</p>
+<h3>Parameters</h3>
+<p><a name="file"></a>
+<code>file</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> The input file to parse.</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - If an IO error occurs.</p>
+<p><strong>Return</strong><br/>
+<a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span><span class="symbol">:</span> The parse result.</p>
+<a name="org.apache.tuweni.toml.Toml$parse(java.nio.file.Path, org.apache.tuweni.toml.TomlVersion)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.nio.file.Path, org.apache.tuweni.toml.TomlVersion)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.nio.file.Path, org.apache.tuweni.toml.TomlVersion)/version">version</span><span class="symbol">:</span>&nbsp;<a href="../-toml-version/index.html"><span class="identifier">TomlVersion</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/Toml.java#L78">(source)</a>
+<p>Parse a TOML file.</p>
+<h3>Parameters</h3>
+<p><a name="file"></a>
+<code>file</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> The input file to parse.</p>
+<p><a name="version"></a>
+<code>version</code> - <a href="../-toml-version/index.html"><span class="identifier">TomlVersion</span></a><span class="symbol">!</span><span class="symbol">:</span> The version level to parse at.</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - If an IO error occurs.</p>
+<p><strong>Return</strong><br/>
+<a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span><span class="symbol">:</span> The parse result.</p>
+<a name="org.apache.tuweni.toml.Toml$parse(java.io.InputStream)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.io.InputStream)/is">is</span><span class="symbol">:</span>&nbsp;<span class="identifier">InputStream</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/Toml.java#L90">(source)</a>
+<p>Parse a TOML input stream.</p>
+<h3>Parameters</h3>
+<p><a name="is"></a>
+<code>is</code> - <span class="identifier">InputStream</span><span class="symbol">!</span><span class="symbol">:</span> The input stream to read the TOML document from.</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - If an IO error occurs.</p>
+<p><strong>Return</strong><br/>
+<a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span><span class="symbol">:</span> The parse result.</p>
+<a name="org.apache.tuweni.toml.Toml$parse(java.io.InputStream, org.apache.tuweni.toml.TomlVersion)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.io.InputStream, org.apache.tuweni.toml.TomlVersion)/is">is</span><span class="symbol">:</span>&nbsp;<span class="identifier">InputStream</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.io.InputStream, org.apache.tuweni.toml.TomlVersion)/version">version</span><span class="symbol">:</span>&nbsp;<a href="../-toml-version/index.html"><span class="identifier">TomlVersion</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/Toml.java#L102">(source)</a>
+<p>Parse a TOML input stream.</p>
+<h3>Parameters</h3>
+<p><a name="is"></a>
+<code>is</code> - <span class="identifier">InputStream</span><span class="symbol">!</span><span class="symbol">:</span> The input stream to read the TOML document from.</p>
+<p><a name="version"></a>
+<code>version</code> - <a href="../-toml-version/index.html"><span class="identifier">TomlVersion</span></a><span class="symbol">!</span><span class="symbol">:</span> The version level to parse at.</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - If an IO error occurs.</p>
+<p><strong>Return</strong><br/>
+<a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span><span class="symbol">:</span> The parse result.</p>
+<a name="org.apache.tuweni.toml.Toml$parse(java.io.Reader)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.io.Reader)/reader">reader</span><span class="symbol">:</span>&nbsp;<span class="identifier">Reader</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/Toml.java#L114">(source)</a>
+<p>Parse a TOML reader.</p>
+<h3>Parameters</h3>
+<p><a name="reader"></a>
+<code>reader</code> - <span class="identifier">Reader</span><span class="symbol">!</span><span class="symbol">:</span> The reader to obtain the TOML document from.</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - If an IO error occurs.</p>
+<p><strong>Return</strong><br/>
+<a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span><span class="symbol">:</span> The parse result.</p>
+<a name="org.apache.tuweni.toml.Toml$parse(java.io.Reader, org.apache.tuweni.toml.TomlVersion)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.io.Reader, org.apache.tuweni.toml.TomlVersion)/reader">reader</span><span class="symbol">:</span>&nbsp;<span class="identifier">Reader</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.io.Reader, org.apache.tuweni.toml.TomlVersion)/version">version</span><span class="symbol">:</span>&nbsp;<a href="../-toml-version/index.html"><span class="identifier">TomlVersion</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/Toml.java#L126">(source)</a>
+<p>Parse a TOML input stream.</p>
+<h3>Parameters</h3>
+<p><a name="reader"></a>
+<code>reader</code> - <span class="identifier">Reader</span><span class="symbol">!</span><span class="symbol">:</span> The reader to obtain the TOML document from.</p>
+<p><a name="version"></a>
+<code>version</code> - <a href="../-toml-version/index.html"><span class="identifier">TomlVersion</span></a><span class="symbol">!</span><span class="symbol">:</span> The version level to parse at.</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - If an IO error occurs.</p>
+<p><strong>Return</strong><br/>
+<a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span><span class="symbol">:</span> The parse result.</p>
+<a name="org.apache.tuweni.toml.Toml$parse(java.nio.channels.ReadableByteChannel)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.nio.channels.ReadableByteChannel)/channel">channel</span><span class="symbol">:</span>&nbsp;<span class="identifier">ReadableByteChannel</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/Toml.java#L138">(source)</a>
+<p>Parse a TOML reader.</p>
+<h3>Parameters</h3>
+<p><a name="channel"></a>
+<code>channel</code> - <span class="identifier">ReadableByteChannel</span><span class="symbol">!</span><span class="symbol">:</span> The channel to read the TOML document from.</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - If an IO error occurs.</p>
+<p><strong>Return</strong><br/>
+<a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span><span class="symbol">:</span> The parse result.</p>
+<a name="org.apache.tuweni.toml.Toml$parse(java.nio.channels.ReadableByteChannel, org.apache.tuweni.toml.TomlVersion)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.nio.channels.ReadableByteChannel, org.apache.tuweni.toml.TomlVersion)/channel">channel</span><span class="symbol">:</span>&nbsp;<span class="identifier">ReadableByteChannel</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.nio.channels.ReadableByteChannel, org.apache.tuweni.toml.TomlVersion)/version">version</span><span class="symbol">:</span>&nbsp;<a href="../-toml-version/index.html"><span class="identifier">TomlVersion</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/Toml.java#L150">(source)</a>
+<p>Parse a TOML input stream.</p>
+<h3>Parameters</h3>
+<p><a name="channel"></a>
+<code>channel</code> - <span class="identifier">ReadableByteChannel</span><span class="symbol">!</span><span class="symbol">:</span> The channel to read the TOML document from.</p>
+<p><a name="version"></a>
+<code>version</code> - <a href="../-toml-version/index.html"><span class="identifier">TomlVersion</span></a><span class="symbol">!</span><span class="symbol">:</span> The version level to parse at.</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - If an IO error occurs.</p>
+<p><strong>Return</strong><br/>
+<a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span><span class="symbol">:</span> The parse result.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,410 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSZWriter - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ssz</a>&nbsp;/&nbsp;<a href="./index.html">SSZWriter</a><br/>
+<br/>
+<h1>SSZWriter</h1>
+<code><span class="keyword">interface </span><span class="identifier">SSZWriter</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZWriter.java#L25">(source)</a>
+<p>A writer for encoding values to SSZ.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="write-address.html">writeAddress</a></h4>
+</td>
+<td>
+<p>Write an address.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeAddress</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeAddress(org.apache.tuweni.bytes.Bytes)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-address-list.html">writeAddressList</a></h4>
+</td>
+<td>
+<p>Write a list of addresses.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeAddressList</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeAddressList(kotlin.Array((org.apache.tuweni.bytes.Bytes)))/elements">elements</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeAddressList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeAddressList(kotlin.collections.MutableList((org.apache.tuweni.bytes.Bytes)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-big-integer.html">writeBigInteger</a></h4>
+</td>
+<td>
+<p>Write a big integer to the output.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeBigInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeBigInteger(java.math.BigInteger, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeBigInteger(java.math.BigInteger, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-big-integer-list.html">writeBigIntegerList</a></h4>
+</td>
+<td>
+<p>Write a list of big integers.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeBigIntegerList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeBigIntegerList(kotlin.Int, kotlin.Array((java.math.BigInteger)))/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeBigIntegerList(kotlin.Int, kotlin.Array((java.math.BigInteger)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeBigIntegerList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeBigIntegerList(kotlin.Int, kotlin.collections.MutableList((java.math.BigInteger)))/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeBigIntegerList(kotlin.Int, kotlin.collections.MutableList((java.math.BigInteger)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-boolean.html">writeBoolean</a></h4>
+</td>
+<td>
+<p>Write a boolean to the output.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeBoolean</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeBoolean(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-boolean-list.html">writeBooleanList</a></h4>
+</td>
+<td>
+<p>Write a list of booleans.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeBooleanList</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeBooleanList(kotlin.BooleanArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeBooleanList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeBooleanList(kotlin.collections.MutableList((kotlin.Boolean)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Boolean</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-bytes.html">writeBytes</a></h4>
+</td>
+<td>
+<p>Encode a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value to SSZ.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeBytes(org.apache.tuweni.bytes.Bytes)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Encode a byte array to SSZ.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeBytes(kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-bytes-list.html">writeBytesList</a></h4>
+</td>
+<td>
+<p>Write a list of bytes.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeBytesList</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeBytesList(kotlin.Array((org.apache.tuweni.bytes.Bytes)))/elements">elements</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeBytesList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeBytesList(kotlin.collections.MutableList((org.apache.tuweni.bytes.Bytes)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-fixed-bytes.html">writeFixedBytes</a></h4>
+</td>
+<td>
+<p>Encode a known fixed-length <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value to SSZ without the length mixin.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeFixedBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeFixedBytes(org.apache.tuweni.bytes.Bytes)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-fixed-bytes-list.html">writeFixedBytesList</a></h4>
+</td>
+<td>
+<p>Write a list of known-size homogenous bytes. The list itself WILL have a length mixin, but the elements WILL NOT.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeFixedBytesList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeFixedBytesList(kotlin.collections.MutableList((org.apache.tuweni.bytes.Bytes)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-fixed-bytes-vector.html">writeFixedBytesVector</a></h4>
+</td>
+<td>
+<p>Write a known-size fixed-length list of known-size homogenous bytes. Neither the list nor the elements in the list will have a length mixin.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeFixedBytesVector</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeFixedBytesVector(kotlin.collections.MutableList((org.apache.tuweni.bytes.Bytes)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-hash.html">writeHash</a></h4>
+</td>
+<td>
+<p>Write a hash.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeHash</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeHash(org.apache.tuweni.bytes.Bytes)/hash">hash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-hash-list.html">writeHashList</a></h4>
+</td>
+<td>
+<p>Write a list of hashes.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeHashList</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeHashList(kotlin.Array((org.apache.tuweni.bytes.Bytes)))/elements">elements</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeHashList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeHashList(kotlin.collections.MutableList((org.apache.tuweni.bytes.Bytes)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-int.html">writeInt</a></h4>
+</td>
+<td>
+<p>Write a two's-compliment integer to the output.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeInt(kotlin.Int, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeInt(kotlin.Int, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-int16.html">writeInt16</a></h4>
+</td>
+<td>
+<p>Write a 16-bit two's-compliment integer to the output.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeInt16</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeInt16(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-int16-list.html">writeInt16List</a></h4>
+</td>
+<td>
+<p>Write a list of 16-bit two's compliment integers.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeInt16List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeInt16List(kotlin.IntArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeInt16List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeInt16List(kotlin.collections.MutableList((kotlin.Int)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-int32.html">writeInt32</a></h4>
+</td>
+<td>
+<p>Write a 32-bit two's-compliment integer to the output.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeInt32</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeInt32(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-int32-list.html">writeInt32List</a></h4>
+</td>
+<td>
+<p>Write a list of 32-bit two's compliment integers.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeInt32List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeInt32List(kotlin.IntArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeInt32List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeInt32List(kotlin.collections.MutableList((kotlin.Int)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-int64.html">writeInt64</a></h4>
+</td>
+<td>
+<p>Write a 64-bit two's-compliment integer to the output.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeInt64</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeInt64(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-int64-list.html">writeInt64List</a></h4>
+</td>
+<td>
+<p>Write a list of 64-bit two's compliment integers.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeInt64List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeInt64List(kotlin.LongArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeInt64List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeInt64List(kotlin.collections.MutableList((kotlin.Long)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-int8.html">writeInt8</a></h4>
+</td>
+<td>
+<p>Write an 8-bit two's-compliment integer to the output.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeInt8</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeInt8(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-int8-list.html">writeInt8List</a></h4>
+</td>
+<td>
+<p>Write a list of 8-bit two's compliment integers.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeInt8List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeInt8List(kotlin.IntArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeInt8List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeInt8List(kotlin.collections.MutableList((kotlin.Int)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-int-list.html">writeIntList</a></h4>
+</td>
+<td>
+<p>Write a list of two's compliment integers.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeIntList(kotlin.Int, kotlin.IntArray)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeIntList(kotlin.Int, kotlin.IntArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Int)))/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Int)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-long.html">writeLong</a></h4>
+</td>
+<td>
+<p>Write a two's-compliment long to the output.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeLong(kotlin.Long, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeLong(kotlin.Long, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-long-int-list.html">writeLongIntList</a></h4>
+</td>
+<td>
+<p>Write a list of two's compliment long integers.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeLongIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeLongIntList(kotlin.Int, kotlin.LongArray)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeLongIntList(kotlin.Int, kotlin.LongArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeLongIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeLongIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Long)))/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeLongIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Long)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-s-s-z.html">writeSSZ</a></h4>
+</td>
+<td>
+<p>Append an already SSZ encoded value. Note that this method <strong>may not</strong> validate that <code>value</code> is a valid SSZ sequence. Appending an invalid SSZ sequence will cause the entire SSZ encoding produced by this writer to also be invalid.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">writeSSZ</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeSSZ(org.apache.tuweni.bytes.Bytes)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeSSZ</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeSSZ(kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-string.html">writeString</a></h4>
+</td>
+<td>
+<p>Write a string to the output.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeString(kotlin.String)/str">str</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-string-list.html">writeStringList</a></h4>
+</td>
+<td>
+<p>Write a list of strings, which must be of the same length</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeStringList</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeStringList(kotlin.Array((kotlin.String)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeStringList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeStringList(kotlin.collections.MutableList((kotlin.String)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-u-big-integer.html">writeUBigInteger</a></h4>
+</td>
+<td>
+<p>Write an unsigned big integer to the output.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUBigInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUBigInteger(java.math.BigInteger, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUBigInteger(java.math.BigInteger, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-u-int.html">writeUInt</a></h4>
+</td>
+<td>
+<p>Write an unsigned integer to the output. Note that the argument <code>value</code> is a native signed int but will be interpreted as an unsigned value.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt(kotlin.Int, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt(kotlin.Int, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-u-int16.html">writeUInt16</a></h4>
+</td>
+<td>
+<p>Write a 16-bit unsigned integer to the output.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt16</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt16(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-u-int16-list.html">writeUInt16List</a></h4>
+</td>
+<td>
+<p>Write a list of 16-bit unsigned integers.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt16List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt16List(kotlin.IntArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt16List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt16List(kotlin.collections.MutableList((kotlin.Int)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-u-int256.html">writeUInt256</a></h4>
+</td>
+<td>
+<p>Write a <code><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html">UInt256</a></code> to the output.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt256</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt256(org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-u-int256-list.html">writeUInt256List</a></h4>
+</td>
+<td>
+<p>Write a list of unsigned 256-bit integers.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt256List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt256List(kotlin.Array((org.apache.tuweni.units.bigints.UInt256)))/elements">elements</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt256List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt256List(kotlin.collections.MutableList((org.apache.tuweni.units.bigints.UInt256)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-u-int32.html">writeUInt32</a></h4>
+</td>
+<td>
+<p>Write a 32-bit unsigned integer to the output.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt32</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt32(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-u-int32-list.html">writeUInt32List</a></h4>
+</td>
+<td>
+<p>Write a list of 32-bit unsigned integers.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt32List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt32List(kotlin.LongArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt32List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt32List(kotlin.collections.MutableList((kotlin.Long)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-u-int384.html">writeUInt384</a></h4>
+</td>
+<td>
+<p>Write a <code><a href="../../org.apache.tuweni.units.bigints/-u-int384/index.html">UInt384</a></code> to the output.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt384</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt384(org.apache.tuweni.units.bigints.UInt384)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-u-int384-list.html">writeUInt384List</a></h4>
+</td>
+<td>
+<p>Write a list of unsigned 384-bit integers.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt384List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt384List(kotlin.collections.MutableList((org.apache.tuweni.units.bigints.UInt384)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt384List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt384List(kotlin.Array((org.apache.tuweni.units.bigints.UInt384)))/elements">elements</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-u-int64.html">writeUInt64</a></h4>
+</td>
+<td>
+<p>Write a 64-bit unsigned integer to the output. Note that the argument <code>value</code> is a native signed long but will be interpreted as an unsigned value.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt64</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt64(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-u-int64-list.html">writeUInt64List</a></h4>
+</td>
+<td>
+<p>Write a list of 64-bit unsigned integers. Note that the <code>elements</code> are native signed longs, but will be interpreted as an unsigned values.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt64List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt64List(kotlin.LongArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt64List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt64List(kotlin.collections.MutableList((kotlin.Long)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-u-int8.html">writeUInt8</a></h4>
+</td>
+<td>
+<p>Write an 8-bit unsigned integer to the output.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt8</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt8(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-u-int8-list.html">writeUInt8List</a></h4>
+</td>
+<td>
+<p>Write a list of 8-bit unsigned integers.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt8List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt8List(kotlin.IntArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUInt8List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUInt8List(kotlin.collections.MutableList((kotlin.Int)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-u-int-list.html">writeUIntList</a></h4>
+</td>
+<td>
+<p>Write a list of unsigned integers. Note that the <code>elements</code> are native signed ints, but will be interpreted as an unsigned values.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUIntList(kotlin.Int, kotlin.IntArray)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUIntList(kotlin.Int, kotlin.IntArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeUIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Int)))/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeUIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Int)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-u-long.html">writeULong</a></h4>
+</td>
+<td>
+<p>Write an unsigned long to the output. Note that the argument <code>value</code> is a native signed long but will be interpreted as an unsigned value.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeULong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeULong(kotlin.Long, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeULong(kotlin.Long, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-u-long-int-list.html">writeULongIntList</a></h4>
+</td>
+<td>
+<p>Write a list of unsigned long integers. Note that the <code>elements</code> are native signed longs, but will be interpreted as an unsigned values.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeULongIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeULongIntList(kotlin.Int, kotlin.LongArray)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeULongIntList(kotlin.Int, kotlin.LongArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeULongIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeULongIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Long)))/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeULongIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Long)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-vector.html">writeVector</a></h4>
+</td>
+<td>
+<p>Write a vector of bytes.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeVector</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeVector(kotlin.collections.MutableList((org.apache.tuweni.bytes.Bytes)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

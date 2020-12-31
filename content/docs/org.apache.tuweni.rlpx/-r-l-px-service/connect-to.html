@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RLPxService.connectTo - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlpx</a>&nbsp;/&nbsp;<a href="index.html">RLPxService</a>&nbsp;/&nbsp;<a href="./connect-to.html">connectTo</a><br/>
+<br/>
+<h1>connectTo</h1>
+<a name="org.apache.tuweni.rlpx.RLPxService$connectTo(org.apache.tuweni.crypto.SECP256K1.PublicKey, java.net.InetSocketAddress)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">connectTo</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxService$connectTo(org.apache.tuweni.crypto.SECP256K1.PublicKey, java.net.InetSocketAddress)/peerPublicKey">peerPublicKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxService$connectTo(org.apache.tuweni.crypto.SECP256K1.PublicKey, java.net.InetSocketAddress)/peerAddress">peerAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">InetSocketAddress</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlpx/src/main/java/org/apache/tuweni/rlpx/RLPxService.java#L38">(source)</a>
+<p>Connects to a remote peer.</p>
+<h3>Parameters</h3>
+<p><a name="peerPublicKey"></a>
+<code>peerPublicKey</code> - <span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">:</span> the peer public key</p>
+<p><a name="peerAddress"></a>
+<code>peerAddress</code> - <span class="identifier">InetSocketAddress</span><span class="symbol">!</span><span class="symbol">:</span> the peer host and port</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> a handle that completes if the peer connects successfully, providing the connection.</p>
+</BODY>
+</HTML>

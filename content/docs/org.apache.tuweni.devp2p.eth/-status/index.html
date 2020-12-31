@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Status - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.devp2p.eth</a>&nbsp;/&nbsp;<a href="./index.html">Status</a><br/>
+<br/>
+<h1>Status</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Status</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/devp2p-eth/src/main/kotlin/org/apache/tuweni/devp2p/eth/Status.kt#L33">(source)</a>
+<p>Peer status information</p>
+<h3>Parameters</h3>
+<p><a name="protocolVersion"></a>
+<code>protocolVersion</code> - ETH subprotocol version</p>
+<p><a name="networkID"></a>
+<code>networkID</code> - the network ID</p>
+<p><a name="totalDifficulty"></a>
+<code>totalDifficulty</code> - the total difficulty known to the peer</p>
+<p><a name="bestHash"></a>
+<code>bestHash</code> - best block hash known to the peer</p>
+<p><a name="genesisHash"></a>
+<code>genesisHash</code> - genesis hash used by peer</p>
+<p><a name="forkHash"></a>
+<code>forkHash</code> - the hash of the fork if known</p>
+<p><a name="forkBlock"></a>
+<code>forkBlock</code> - the fork block number if known</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Peer status information</p>
+<code><span class="identifier">Status</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.Status$<init>(kotlin.Int, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.bytes.Bytes32, org.apache.tuweni.bytes.Bytes32, org.apache.tuweni.bytes.Bytes, kotlin.Long)/protocolVersion">protocolVersion</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.Status$<init>(kotlin.Int, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.bytes.Bytes32, org.apache.tuweni.bytes.Bytes32, org.apache.tuweni.bytes.Bytes, kotlin.Long)/networkID">networkID</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.Status$<init>(kotlin.Int, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.bytes.Bytes32, org.apache.tuweni.bytes.Bytes32, org.apache.tuweni.bytes.Bytes, kotlin.Long)/totalDifficulty">totalDifficulty</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.Status$<init>(kotlin.Int, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.bytes.Bytes32, org.apache.tuweni.bytes.Bytes32, org.apache.tuweni.bytes.Bytes, kotlin.Long)/bestHash">bestHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.Status$<init>(kotlin.Int, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.bytes.Bytes32, org.apache.tuweni.bytes.Bytes32, org.apache.tuweni.bytes.Bytes, kotlin.Long)/genesisHash">genesisHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.Status$<init>(kotlin.Int, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.bytes.Bytes32, org.apache.tuweni.bytes.Bytes32, org.apache.tuweni.bytes.Bytes, kotlin.Long)/forkHash">forkHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.Status$<init>(kotlin.Int, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.bytes.Bytes32, org.apache.tuweni.bytes.Bytes32, org.apache.tuweni.bytes.Bytes, kotlin.Long)/forkBlock">forkBlock</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">?</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="best-hash.html">bestHash</a></h4>
+</td>
+<td>
+<p>best block hash known to the peer</p>
+<code><span class="keyword">val </span><span class="identifier">bestHash</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="fork-block.html">forkBlock</a></h4>
+</td>
+<td>
+<p>the fork block number if known</p>
+<code><span class="keyword">val </span><span class="identifier">forkBlock</span><span class="symbol">: </span><span class="identifier">Long</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="fork-hash.html">forkHash</a></h4>
+</td>
+<td>
+<p>the hash of the fork if known</p>
+<code><span class="keyword">val </span><span class="identifier">forkHash</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="genesis-hash.html">genesisHash</a></h4>
+</td>
+<td>
+<p>genesis hash used by peer</p>
+<code><span class="keyword">val </span><span class="identifier">genesisHash</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="network-i-d.html">networkID</a></h4>
+</td>
+<td>
+<p>the network ID</p>
+<code><span class="keyword">val </span><span class="identifier">networkID</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="protocol-version.html">protocolVersion</a></h4>
+</td>
+<td>
+<p>ETH subprotocol version</p>
+<code><span class="keyword">val </span><span class="identifier">protocolVersion</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="total-difficulty.html">totalDifficulty</a></h4>
+</td>
+<td>
+<p>the total difficulty known to the peer</p>
+<code><span class="keyword">val </span><span class="identifier">totalDifficulty</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

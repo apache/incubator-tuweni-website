@@ -1,0 +1,98 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AccountState - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth</a>&nbsp;/&nbsp;<a href="./index.html">AccountState</a><br/>
+<br/>
+<h1>AccountState</h1>
+<code><span class="keyword">class </span><span class="identifier">AccountState</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth/src/main/java/org/apache/tuweni/eth/AccountState.java#L28">(source)</a>
+<p>State of an account as stored on chain.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Default constructor for account state without a version.</p>
+<code><span class="identifier">AccountState</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.AccountState$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.AccountState$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash)/balance">balance</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.AccountState$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash)/storageRoot">storageRoot</span><span class="symbol">:</span>&nbsp;<a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.AccountState$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash)/codeHash">codeHash</span><span class="symbol">:</span>&nbsp;<a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span><span class="symbol">)</span></code>
+<p>Default constructor for account state.</p>
+<code><span class="identifier">AccountState</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.AccountState$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Int)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.AccountState$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Int)/balance">balance</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.AccountState$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Int)/storageRoot">storageRoot</span><span class="symbol">:</span>&nbsp;<a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.AccountState$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Int)/codeHash">codeHash</span><span class="symbol">:</span>&nbsp;<a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.AccountState$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, kotlin.Int)/version">version</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.AccountState$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-bytes.html">fromBytes</a></h4>
+</td>
+<td>
+<p>Reads an account state from a RLP representation.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.AccountState$fromBytes(org.apache.tuweni.bytes.Bytes)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AccountState</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-balance.html">getBalance</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getBalance</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-code-hash.html">getCodeHash</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCodeHash</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-nonce.html">getNonce</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getNonce</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-storage-root.html">getStorageRoot</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getStorageRoot</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-version.html">getVersion</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getVersion</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-bytes.html">toBytes</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

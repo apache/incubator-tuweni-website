@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Multiplexer.makeAsyncRequest - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.rpc.mux</a>&nbsp;/&nbsp;<a href="index.html">Multiplexer</a>&nbsp;/&nbsp;<a href="./make-async-request.html">makeAsyncRequest</a><br/>
+<br/>
+<h1>makeAsyncRequest</h1>
+<a name="org.apache.tuweni.scuttlebutt.rpc.mux.Multiplexer$makeAsyncRequest(org.apache.tuweni.scuttlebutt.rpc.RPCAsyncRequest)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">makeAsyncRequest</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.mux.Multiplexer$makeAsyncRequest(org.apache.tuweni.scuttlebutt.rpc.RPCAsyncRequest)/request">request</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.rpc/-r-p-c-async-request/index.html"><span class="identifier">RPCAsyncRequest</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.rpc/-r-p-c-response/index.html"><span class="identifier">RPCResponse</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-rpc/src/main/java/org/apache/tuweni/scuttlebutt/rpc/mux/Multiplexer.java#L38">(source)</a>
+<p>Issue an 'async' type request to a node, which will eventually return a result from the node.</p>
+<h3>Parameters</h3>
+<p><a name="request"></a>
+<code>request</code> - <a href="../../org.apache.tuweni.scuttlebutt.rpc/-r-p-c-async-request/index.html"><span class="identifier">RPCAsyncRequest</span></a><span class="symbol">!</span><span class="symbol">:</span> the request details</p>
+<h3>Exceptions</h3>
+<p><a name="JsonProcessingException"></a>
+<code>JsonProcessingException</code> - if JSON marshalling fails.</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.rpc/-r-p-c-response/index.html"><span class="identifier">RPCResponse</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> an async result which will be completed with the result or an error if the request fails.</p>
+</BODY>
+</HTML>

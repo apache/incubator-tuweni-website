@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>org.apache.tuweni.rlp - tuweni</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">tuweni</a>&nbsp;/&nbsp;<a href="./index.html">org.apache.tuweni.rlp</a><br/>
+<br/>
+<h2>Package org.apache.tuweni.rlp</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-r-l-p/index.html">RLP</a></h4>
+</td>
+<td>
+<p>Recursive Length Prefix (RLP) encoding and decoding.</p>
+<code><span class="keyword">class </span><span class="identifier">RLP</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-l-p-reader/index.html">RLPReader</a></h4>
+</td>
+<td>
+<p>A reader for consuming values from an RLP encoded source.</p>
+<code><span class="keyword">interface </span><span class="identifier">RLPReader</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-l-p-writer/index.html">RLPWriter</a></h4>
+</td>
+<td>
+<p>A writer for encoding values to RLP.</p>
+<code><span class="keyword">interface </span><span class="identifier">RLPWriter</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-end-of-r-l-p-exception/index.html">EndOfRLPException</a></h4>
+</td>
+<td>
+<p>Indicates the end of the RLP source has been reached unexpectedly.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EndOfRLPException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-r-l-p-exception/index.html"><span class="identifier">RLPException</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-invalid-r-l-p-encoding-exception/index.html">InvalidRLPEncodingException</a></h4>
+</td>
+<td>
+<p>Indicates that invalid RLP encoding was encountered.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">InvalidRLPEncodingException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-r-l-p-exception/index.html"><span class="identifier">RLPException</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-invalid-r-l-p-type-exception/index.html">InvalidRLPTypeException</a></h4>
+</td>
+<td>
+<p>Indicates that an unexpected type was encountered when decoding RLP.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">InvalidRLPTypeException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-r-l-p-exception/index.html"><span class="identifier">RLPException</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-l-p-exception/index.html">RLPException</a></h4>
+</td>
+<td>
+<p>Base type for all RLP encoding and decoding exceptions.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RLPException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

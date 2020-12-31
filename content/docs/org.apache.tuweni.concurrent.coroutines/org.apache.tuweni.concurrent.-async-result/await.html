@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>await - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.concurrent.coroutines</a>&nbsp;/&nbsp;<a href="index.html">org.apache.tuweni.concurrent.AsyncResult</a>&nbsp;/&nbsp;<a href="./await.html">await</a><br/>
+<br/>
+<h1>await</h1>
+<a name="org.apache.tuweni.concurrent.coroutines$await(org.apache.tuweni.concurrent.AsyncResult((org.apache.tuweni.concurrent.coroutines.await.T)))"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">await</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent-coroutines/src/main/kotlin/org/apache/tuweni/concurrent/coroutines/AsyncResult.kt#L136">(source)</a>
+<p>Awaits for completion of the <a href="../../org.apache.tuweni.concurrent/-async-result/index.html">AsyncResult</a> without blocking a thread.</p>
+<p>This suspending function is cancellable.
+If the <a href="#">Job</a> of the current coroutine is cancelled or completed while this suspending function is waiting, this function
+stops waiting for the <a href="../../org.apache.tuweni.concurrent/-async-result/index.html">AsyncResult</a> and immediately resumes with <a href="#">CancellationException</a>.</p>
+<p>Note, that <a href="../../org.apache.tuweni.concurrent/-async-result/index.html">AsyncResult</a> does not support prompt removal of listeners, so on cancellation of this wait
+a few small objects will remain in the <a href="../../org.apache.tuweni.concurrent/-async-result/index.html">AsyncResult</a> stack of completion actions until it completes itself.
+However, care is taken to clear the reference to the waiting coroutine itself, so that its memory can be
+released even if the <a href="../../org.apache.tuweni.concurrent/-async-result/index.html">AsyncResult</a> never completes.</p>
+</BODY>
+</HTML>

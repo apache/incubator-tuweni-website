@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSZ.decodeUInt16 - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ssz</a>&nbsp;/&nbsp;<a href="index.html">SSZ</a>&nbsp;/&nbsp;<a href="./decode-u-int16.html">decodeUInt16</a><br/>
+<br/>
+<h1>decodeUInt16</h1>
+<a name="org.apache.tuweni.ssz.SSZ$decodeUInt16(org.apache.tuweni.bytes.Bytes)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeUInt16</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUInt16(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZ.java#L1464">(source)</a>
+<p>Read a 16-bit unsigned integer from the SSZ source.</p>
+<h3>Parameters</h3>
+<p><a name="source"></a>
+<code>source</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the SSZ encoded bytes</p>
+<h3>Exceptions</h3>
+<p><a name="InvalidSSZTypeException"></a>
+<code>InvalidSSZTypeException</code> - if there are insufficient encoded bytes for a 16-bit int</p>
+<p><a name="EndOfSSZException"></a>
+<code>EndOfSSZException</code> - if there are no more SSZ values to read</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Int</span><span class="symbol">:</span> an int</p>
+</BODY>
+</HTML>

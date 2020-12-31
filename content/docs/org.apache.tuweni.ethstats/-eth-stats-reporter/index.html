@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EthStatsReporter - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ethstats</a>&nbsp;/&nbsp;<a href="./index.html">EthStatsReporter</a><br/>
+<br/>
+<h1>EthStatsReporter</h1>
+<code><span class="keyword">class </span><span class="identifier">EthStatsReporter</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ethstats/src/main/java/org/apache/tuweni/ethstats/EthStatsReporter.java#L58">(source)</a>
+<p>ETHNetStats reporting service. </p>
+<p> This service connects to a running ethnetstats service and reports. </p>
+<p> If the service is not available, the reporter will keep trying to connect periodically. The service will report statistics over time.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Default constructor.</p>
+<code><span class="identifier">EthStatsReporter</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsReporter$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.collections.MutableList((java.net.URI)), kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.function.Consumer((kotlin.collections.MutableList((org.apache.tuweni.units.bigints.UInt256)))), java.util.function.Supplier((kotlin.Long)))/vertx">vertx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Vertx</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsReporter$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.collections.MutableList((java.net.URI)), kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.function.Consumer((kotlin.collections.MutableList((org.apache.tuweni.units.bigints.UInt256)))), java.util.function.Supplier((kotlin.Long)))/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsReporter$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.collections.MutableList((java.net.URI)), kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.function.Consumer((kotlin.collections.MutableList((org.apache.tuweni.units.bigints.UInt256)))), java.util.function.Supplier((kotlin.Long)))/ethstatsServerURIs">ethstatsServerURIs</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">URI</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsReporter$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.collections.MutableList((java.net.URI)), kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.function.Consumer((kotlin.collections.MutableList((org.apache.tuweni.units.bigints.UInt256)))), java.util.function.Supplier((kotlin.Long)))/secret">secret</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsReporter$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.collections.MutableList((java.net.URI)), kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.function.Consumer((kotlin.collections.MutableList((org.apache.tuweni.units.bigints.UInt256)))), java.util.function.Supplier((kotlin.Long)))/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsReporter$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.collections.MutableList((java.net.URI)), kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.function.Consumer((kotlin.collections.MutableList((org.apache.tuweni.units.bigints.UInt256)))), java.util.function.Supplier((kotlin.Long)))/node">node</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsReporter$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.collections.MutableList((java.net.URI)), kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.function.Consumer((kotlin.collections.MutableList((org.apache.tuweni.units.bigints.UInt256)))), java.util.function.Supplier((kotlin.Long)))/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsReporter$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.collections.MutableList((java.net.URI)), kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.function.Consumer((kotlin.collections.MutableList((org.apache.tuweni.units.bigints.UInt256)))), java.util.function.Supplier((kotlin.Long)))/network">network</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsReporter$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.collections.MutableList((java.net.URI)), kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.function.Consumer((kotlin.collections.MutableList((org.apache.tuweni.units.bigints.UInt256)))), java.util.function.Supplier((kotlin.Long)))/protocol">protocol</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsReporter$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.collections.MutableList((java.net.URI)), kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.function.Consumer((kotlin.collections.MutableList((org.apache.tuweni.units.bigints.UInt256)))), java.util.function.Supplier((kotlin.Long)))/os">os</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsReporter$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.collections.MutableList((java.net.URI)), kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.function.Consumer((kotlin.collections.MutableList((org.apache.tuweni.units.bigints.UInt256)))), java.util.function.Supplier((kotlin.Long)))/osVer">osVer</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsReporter$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.collections.MutableList((java.net.URI)), kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.function.Consumer((kotlin.collections.MutableList((org.apache.tuweni.units.bigints.UInt256)))), java.util.function.Supplier((kotlin.Long)))/historyRequester">historyRequester</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsReporter$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.collections.MutableList((java.net.URI)), kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.function.Consumer((kotlin.collections.MutableList((org.apache.tuweni.units.bigints.UInt256)))), java.util.function.Supplier((kotlin.Long)))/timeSupplier">timeSupplier</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="send-history-response.html">sendHistoryResponse</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">sendHistoryResponse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsReporter$sendHistoryResponse(kotlin.collections.MutableList((org.apache.tuweni.ethstats.BlockStats)))/blocks">blocks</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../-block-stats/index.html"><span class="identifier">BlockStats</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="send-new-head.html">sendNewHead</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">sendNewHead</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsReporter$sendNewHead(org.apache.tuweni.ethstats.BlockStats)/newBlockStats">newBlockStats</span><span class="symbol">:</span>&nbsp;<a href="../-block-stats/index.html"><span class="identifier">BlockStats</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="send-new-node-stats.html">sendNewNodeStats</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">sendNewNodeStats</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsReporter$sendNewNodeStats(org.apache.tuweni.ethstats.NodeStats)/nodeStats">nodeStats</span><span class="symbol">:</span>&nbsp;<a href="../-node-stats/index.html"><span class="identifier">NodeStats</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="send-new-pending-transaction-count.html">sendNewPendingTransactionCount</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">sendNewPendingTransactionCount</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsReporter$sendNewPendingTransactionCount(kotlin.Int)/txCount">txCount</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start.html">start</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">start</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stop.html">stop</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">stop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

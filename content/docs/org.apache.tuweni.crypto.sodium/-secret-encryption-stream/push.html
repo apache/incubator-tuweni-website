@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SecretEncryptionStream.push - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="index.html">SecretEncryptionStream</a>&nbsp;/&nbsp;<a href="./push.html">push</a><br/>
+<br/>
+<h1>push</h1>
+<a name="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$push(org.apache.tuweni.bytes.Bytes)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">push</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$push(org.apache.tuweni.bytes.Bytes)/clearText">clearText</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/SecretEncryptionStream.java#L46">(source)</a>
+<p>Push a message to this secret stream.</p>
+<h3>Parameters</h3>
+<p><a name="clearText"></a>
+<code>clearText</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The message to encrypt.</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The encrypted message.</p>
+<a name="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$push(kotlin.ByteArray)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">push</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$push(kotlin.ByteArray)/clearText">clearText</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/SecretEncryptionStream.java#L56">(source)</a>
+<p>Push a message to this secret stream.</p>
+<h3>Parameters</h3>
+<p><a name="clearText"></a>
+<code>clearText</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The message to encrypt.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The encrypted message.</p>
+<a name="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$push(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">push</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$push(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/clearText">clearText</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$push(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/isFinal">isFinal</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/SecretEncryptionStream.java#L87">(source)</a>
+<p>Push a message to this secret stream.</p>
+<h3>Parameters</h3>
+<p><a name="clearText"></a>
+<code>clearText</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The message to encrypt.</p>
+<p><a name="isFinal"></a>
+<code>isFinal</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> <code>true</code> if this is the final message that will be sent on this stream.</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The encrypted message.</p>
+<a name="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$push(kotlin.ByteArray, kotlin.Boolean)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">push</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$push(kotlin.ByteArray, kotlin.Boolean)/clearText">clearText</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$push(kotlin.ByteArray, kotlin.Boolean)/isFinal">isFinal</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/SecretEncryptionStream.java#L98">(source)</a>
+<p>Push a message to this secret stream.</p>
+<h3>Parameters</h3>
+<p><a name="clearText"></a>
+<code>clearText</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The message to encrypt.</p>
+<p><a name="isFinal"></a>
+<code>isFinal</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> <code>true</code> if this is the final message that will be sent on this stream.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The encrypted message.</p>
+</BODY>
+</HTML>

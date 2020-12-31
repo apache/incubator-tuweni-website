@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BaseUInt256Value.addMod - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.units.bigints</a>&nbsp;/&nbsp;<a href="index.html">BaseUInt256Value</a>&nbsp;/&nbsp;<a href="./add-mod.html">addMod</a><br/>
+<br/>
+<h1>addMod</h1>
+<a name="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(org.apache.tuweni.units.bigints.BaseUInt256Value.T, org.apache.tuweni.units.bigints.UInt256)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(org.apache.tuweni.units.bigints.BaseUInt256Value.T, org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(org.apache.tuweni.units.bigints.BaseUInt256Value.T, org.apache.tuweni.units.bigints.UInt256)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/units/src/main/java/org/apache/tuweni/units/bigints/BaseUInt256Value.java#L131">(source)</a><br/>
+<a name="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt256)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt256)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/units/src/main/java/org/apache/tuweni/units/bigints/BaseUInt256Value.java#L148">(source)</a><br/>
+<a name="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(kotlin.Long, kotlin.Long)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(kotlin.Long, kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(kotlin.Long, kotlin.Long)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/units/src/main/java/org/apache/tuweni/units/bigints/BaseUInt256Value.java#L153">(source)</a><a name="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/units/src/main/java/org/apache/tuweni/units/bigints/BaseUInt256Value.java#L143">(source)</a>
+<p>Returns a value equivalent to <code>((this + value) mod modulus)</code>.</p>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">:</span> The amount to be added to this value.</p>
+<p><a name="modulus"></a>
+<code>modulus</code> - <a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">:</span> The modulus.</p>
+<h3>Exceptions</h3>
+<p><a name="ArithmeticException"></a>
+<code>ArithmeticException</code> - <code>modulus</code> == 0.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">T</span><span class="symbol">:</span> <code>(this + value) mod modulus</code></p>
+</BODY>
+</HTML>

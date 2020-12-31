@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>WireConnectionPeerRepositoryAdapter - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ethclient</a>&nbsp;/&nbsp;<a href="./index.html">WireConnectionPeerRepositoryAdapter</a><br/>
+<br/>
+<h1>WireConnectionPeerRepositoryAdapter</h1>
+<code><span class="keyword">class </span><span class="identifier">WireConnectionPeerRepositoryAdapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx/-wire-connection-repository/index.html"><span class="identifier">WireConnectionRepository</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth-client/src/main/kotlin/org/apache/tuweni/ethclient/WireConnectionPeerRepositoryAdapter.kt#L26">(source)</a>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">WireConnectionPeerRepositoryAdapter</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.WireConnectionPeerRepositoryAdapter$<init>(org.apache.tuweni.peer.repository.PeerRepository)/peerRepository">peerRepository</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-peer-repository/index.html"><span class="identifier">PeerRepository</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="peer-repository.html">peerRepository</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">peerRepository</span><span class="symbol">: </span><a href="../../org.apache.tuweni.peer.repository/-peer-repository/index.html"><span class="identifier">PeerRepository</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add.html">add</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.WireConnectionPeerRepositoryAdapter$add(org.apache.tuweni.rlpx.wire.WireConnection)/wireConnection">wireConnection</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-connection-listener.html">addConnectionListener</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addConnectionListener</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.WireConnectionPeerRepositoryAdapter$addConnectionListener(org.apache.tuweni.rlpx.WireConnectionRepository.Listener)/listener">listener</span><span class="symbol">:</span>&nbsp;<span class="identifier">Listener</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-disconnection-listener.html">addDisconnectionListener</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addDisconnectionListener</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.WireConnectionPeerRepositoryAdapter$addDisconnectionListener(org.apache.tuweni.rlpx.WireConnectionRepository.Listener)/listener">listener</span><span class="symbol">:</span>&nbsp;<span class="identifier">Listener</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="as-iterable.html">asIterable</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">asIterable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Iterable</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">&gt;</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">asIterable</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.WireConnectionPeerRepositoryAdapter$asIterable(org.apache.tuweni.rlpx.wire.SubProtocolIdentifier)/identifier">identifier</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-sub-protocol-identifier/index.html"><span class="identifier">SubProtocolIdentifier</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Iterable</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="close.html">close</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.WireConnectionPeerRepositoryAdapter$get(kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

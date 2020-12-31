@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>VertxTrustOptions.recordClientFingerprints - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.net.tls</a>&nbsp;/&nbsp;<a href="index.html">VertxTrustOptions</a>&nbsp;/&nbsp;<a href="./record-client-fingerprints.html">recordClientFingerprints</a><br/>
+<br/>
+<h1>recordClientFingerprints</h1>
+<a name="org.apache.tuweni.net.tls.VertxTrustOptions$recordClientFingerprints(java.nio.file.Path)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">recordClientFingerprints</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.VertxTrustOptions$recordClientFingerprints(java.nio.file.Path)/knownClientsFile">knownClientsFile</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TrustOptions</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/net/src/main/java/org/apache/tuweni/net/tls/VertxTrustOptions.java#L335">(source)</a>
+<p>Accept all client certificates, recording certificate fingerprints for those that are not CA-signed. </p>
+<p> Excepting when a client presents a CA-signed certificate, the certificate common name and fingerprint will be written to <code>knownClientsFile</code>. </p>
+<p> Important: this provides no security as it is vulnerable to man-in-the-middle attacks.</p>
+<h3>Parameters</h3>
+<p><a name="knownClientsFile"></a>
+<code>knownClientsFile</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> The path to a file in which to record fingerprints by common name.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">TrustOptions</span><span class="symbol">!</span><span class="symbol">:</span> A Vert.x <code><a href="#">TrustOptions</a></code>.</p>
+<a name="org.apache.tuweni.net.tls.VertxTrustOptions$recordClientFingerprints(org.apache.tuweni.net.tls.FingerprintRepository)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">recordClientFingerprints</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.VertxTrustOptions$recordClientFingerprints(org.apache.tuweni.net.tls.FingerprintRepository)/repository">repository</span><span class="symbol">:</span>&nbsp;<a href="../-fingerprint-repository/index.html"><span class="identifier">FingerprintRepository</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TrustOptions</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/net/src/main/java/org/apache/tuweni/net/tls/VertxTrustOptions.java#L352">(source)</a>
+<p>Accept all client certificates, recording certificate fingerprints for those that are not CA-signed. </p>
+<p> Excepting when a client presents a CA-signed certificate, the certificate common name and fingerprint will be written to <code>knownClientsFile</code>. </p>
+<p> Important: this provides no security as it is vulnerable to man-in-the-middle attacks.</p>
+<h3>Parameters</h3>
+<p><a name="repository"></a>
+<code>repository</code> - <a href="../-fingerprint-repository/index.html"><span class="identifier">FingerprintRepository</span></a><span class="symbol">!</span><span class="symbol">:</span> The repository in which to record fingerprints by common name.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">TrustOptions</span><span class="symbol">!</span><span class="symbol">:</span> A Vert.x <code><a href="#">TrustOptions</a></code>.</p>
+<a name="org.apache.tuweni.net.tls.VertxTrustOptions$recordClientFingerprints(java.nio.file.Path, kotlin.Boolean)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">recordClientFingerprints</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.VertxTrustOptions$recordClientFingerprints(java.nio.file.Path, kotlin.Boolean)/knownClientsFile">knownClientsFile</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.net.tls.VertxTrustOptions$recordClientFingerprints(java.nio.file.Path, kotlin.Boolean)/skipCASigned">skipCASigned</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TrustOptions</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/net/src/main/java/org/apache/tuweni/net/tls/VertxTrustOptions.java#L370">(source)</a>
+<p>Accept all client certificates, recording certificate fingerprints. </p>
+<p> For all connections, the common name and fingerprint of the presented certificate will be written to <code>knownClientsFile</code>. </p>
+<p> Important: this provides no security as it is vulnerable to man-in-the-middle attacks.</p>
+<h3>Parameters</h3>
+<p><a name="knownClientsFile"></a>
+<code>knownClientsFile</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> The path to a file in which to record fingerprints by common name.</p>
+<p><a name="skipCASigned"></a>
+<code>skipCASigned</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> If <code>true</code>, CA-signed certificates are not recorded.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">TrustOptions</span><span class="symbol">!</span><span class="symbol">:</span> A Vert.x <code><a href="#">TrustOptions</a></code>.</p>
+<a name="org.apache.tuweni.net.tls.VertxTrustOptions$recordClientFingerprints(org.apache.tuweni.net.tls.FingerprintRepository, kotlin.Boolean)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">recordClientFingerprints</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.VertxTrustOptions$recordClientFingerprints(org.apache.tuweni.net.tls.FingerprintRepository, kotlin.Boolean)/repository">repository</span><span class="symbol">:</span>&nbsp;<a href="../-fingerprint-repository/index.html"><span class="identifier">FingerprintRepository</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.net.tls.VertxTrustOptions$recordClientFingerprints(org.apache.tuweni.net.tls.FingerprintRepository, kotlin.Boolean)/skipCASigned">skipCASigned</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TrustOptions</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/net/src/main/java/org/apache/tuweni/net/tls/VertxTrustOptions.java#L389">(source)</a>
+<p>Accept all client certificates, recording certificate fingerprints. </p>
+<p> For all connections, the common name and fingerprint of the presented certificate will be written to <code>knownClientsFile</code>. </p>
+<p> Important: this provides no security as it is vulnerable to man-in-the-middle attacks.</p>
+<h3>Parameters</h3>
+<p><a name="repository"></a>
+<code>repository</code> - <a href="../-fingerprint-repository/index.html"><span class="identifier">FingerprintRepository</span></a><span class="symbol">!</span><span class="symbol">:</span> The repository in which to record fingerprints by common name.</p>
+<p><a name="skipCASigned"></a>
+<code>skipCASigned</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> If <code>true</code>, CA-signed certificates are not recorded.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">TrustOptions</span><span class="symbol">!</span><span class="symbol">:</span> A Vert.x <code><a href="#">TrustOptions</a></code>.</p>
+<a name="org.apache.tuweni.net.tls.VertxTrustOptions$recordClientFingerprints(java.nio.file.Path, javax.net.ssl.TrustManagerFactory)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">recordClientFingerprints</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.VertxTrustOptions$recordClientFingerprints(java.nio.file.Path, javax.net.ssl.TrustManagerFactory)/knownClientsFile">knownClientsFile</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.net.tls.VertxTrustOptions$recordClientFingerprints(java.nio.file.Path, javax.net.ssl.TrustManagerFactory)/tmf">tmf</span><span class="symbol">:</span>&nbsp;<span class="identifier">TrustManagerFactory</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TrustOptions</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/net/src/main/java/org/apache/tuweni/net/tls/VertxTrustOptions.java#L407">(source)</a>
+<p>Accept all client certificates, recording certificate fingerprints for those that are not CA-signed. </p>
+<p> Excepting when a client presents a CA-signed certificate, the certificate common name and fingerprint will be written to <code>knownClientsFile</code>. </p>
+<p> Important: this provides no security as it is vulnerable to man-in-the-middle attacks.</p>
+<h3>Parameters</h3>
+<p><a name="knownClientsFile"></a>
+<code>knownClientsFile</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> The path to a file in which to record fingerprints by common name.</p>
+<p><a name="tmf"></a>
+<code>tmf</code> - <span class="identifier">TrustManagerFactory</span><span class="symbol">!</span><span class="symbol">:</span> A <code><a href="#">TrustManagerFactory</a></code> for checking client certificates against a CA.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">TrustOptions</span><span class="symbol">!</span><span class="symbol">:</span> A Vert.x <code><a href="#">TrustOptions</a></code>.</p>
+<a name="org.apache.tuweni.net.tls.VertxTrustOptions$recordClientFingerprints(org.apache.tuweni.net.tls.FingerprintRepository, javax.net.ssl.TrustManagerFactory)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">recordClientFingerprints</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.VertxTrustOptions$recordClientFingerprints(org.apache.tuweni.net.tls.FingerprintRepository, javax.net.ssl.TrustManagerFactory)/repository">repository</span><span class="symbol">:</span>&nbsp;<a href="../-fingerprint-repository/index.html"><span class="identifier">FingerprintRepository</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.net.tls.VertxTrustOptions$recordClientFingerprints(org.apache.tuweni.net.tls.FingerprintRepository, javax.net.ssl.TrustManagerFactory)/tmf">tmf</span><span class="symbol">:</span>&nbsp;<span class="identifier">TrustManagerFactory</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TrustOptions</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/net/src/main/java/org/apache/tuweni/net/tls/VertxTrustOptions.java#L425">(source)</a>
+<p>Accept all client certificates, recording certificate fingerprints for those that are not CA-signed. </p>
+<p> Excepting when a client presents a CA-signed certificate, the certificate common name and fingerprint will be written to <code>knownClientsFile</code>. </p>
+<p> Important: this provides no security as it is vulnerable to man-in-the-middle attacks.</p>
+<h3>Parameters</h3>
+<p><a name="repository"></a>
+<code>repository</code> - <a href="../-fingerprint-repository/index.html"><span class="identifier">FingerprintRepository</span></a><span class="symbol">!</span><span class="symbol">:</span> The repository in which to record fingerprints by common name.</p>
+<p><a name="tmf"></a>
+<code>tmf</code> - <span class="identifier">TrustManagerFactory</span><span class="symbol">!</span><span class="symbol">:</span> A <code><a href="#">TrustManagerFactory</a></code> for checking client certificates against a CA.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">TrustOptions</span><span class="symbol">!</span><span class="symbol">:</span> A Vert.x <code><a href="#">TrustOptions</a></code>.</p>
+</BODY>
+</HTML>

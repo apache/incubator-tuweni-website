@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Wallet - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.wallet</a>&nbsp;/&nbsp;<a href="./index.html">Wallet</a><br/>
+<br/>
+<h1>Wallet</h1>
+<code><span class="keyword">class </span><span class="identifier">Wallet</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/wallet/src/main/kotlin/org/apache/tuweni/wallet/Wallet.kt#L45">(source)</a>
+<p>Wallet containing a private key that is secured with symmetric encryption.</p>
+<p>This is vastly insecure - do not use in anything remotely close to production.</p>
+<p>This wallet encrypts the key pair at rest, but keeps the keypair in memory, which may be dumped.</p>
+<p>Nonce is also based on the password, should be instead stored in the wallet and unique.</p>
+<p>The wallet loads from a file.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Wallet containing a private key that is secured with symmetric encryption.</p>
+<code><span class="identifier">Wallet</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.wallet.Wallet$<init>(java.nio.file.Path, kotlin.String)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.wallet.Wallet$<init>(java.nio.file.Path, kotlin.String)/password">password</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="address.html">address</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">address</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sign.html">sign</a></h4>
+</td>
+<td>
+<p>Creates and signs a transaction</p>
+<code><span class="keyword">fun </span><span class="identifier">sign</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.wallet.Wallet$sign(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.wallet.Wallet$sign(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int)/gasPrice">gasPrice</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.wallet.Wallet$sign(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int)/gasLimit">gasLimit</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-gas/index.html"><span class="identifier">Gas</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.wallet.Wallet$sign(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.wallet.Wallet$sign(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.wallet.Wallet$sign(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int)/payload">payload</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.wallet.Wallet$sign(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int)/chainId">chainId</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-transaction/index.html"><span class="identifier">Transaction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="verify.html">verify</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">verify</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.wallet.Wallet$verify(org.apache.tuweni.eth.Transaction)/tx">tx</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-transaction/index.html"><span class="identifier">Transaction</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="create.html">create</a></h4>
+</td>
+<td>
+<p>Creates a new wallet with that file, generating a private key and encrypting it with the password passed in.</p>
+<code><span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.wallet.Wallet.Companion$create(java.nio.file.Path, kotlin.String)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.wallet.Wallet.Companion$create(java.nio.file.Path, kotlin.String)/password">password</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Wallet</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open.html">open</a></h4>
+</td>
+<td>
+<p>Opens a new wallet with the file. If the file is missing, it throws an IllegalArgumentException.</p>
+<code><span class="keyword">fun </span><span class="identifier">open</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.wallet.Wallet.Companion$open(java.nio.file.Path, kotlin.String)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.wallet.Wallet.Companion$open(java.nio.file.Path, kotlin.String)/password">password</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Wallet</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

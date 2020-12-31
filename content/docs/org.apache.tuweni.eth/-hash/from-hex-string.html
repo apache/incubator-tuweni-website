@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Hash.fromHexString - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth</a>&nbsp;/&nbsp;<a href="index.html">Hash</a>&nbsp;/&nbsp;<a href="./from-hex-string.html">fromHexString</a><br/>
+<br/>
+<h1>fromHexString</h1>
+<a name="org.apache.tuweni.eth.Hash$fromHexString(kotlin.String)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromHexString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Hash$fromHexString(kotlin.String)/str">str</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth/src/main/java/org/apache/tuweni/eth/Hash.java#L67">(source)</a>
+<p>Parse a hexadecimal string into a <code><a href="index.html">Hash</a></code>.</p>
+<h3>Parameters</h3>
+<p><a name="str"></a>
+<code>str</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> The hexadecimal string to parse, which may or may not start with "0x". That representation may contain less than 32 bytes, in which case the result is left padded with zeros.</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if <code>str</code> does not correspond to a valid hexadecimal representation or contains more than 32 bytes.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span><span class="symbol">:</span> The value corresponding to <code>str</code>.</p>
+</BODY>
+</HTML>

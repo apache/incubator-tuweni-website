@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BLS12381.verify - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.mikuli</a>&nbsp;/&nbsp;<a href="index.html">BLS12381</a>&nbsp;/&nbsp;<a href="./verify.html">verify</a><br/>
+<br/>
+<h1>verify</h1>
+<a name="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.PublicKey, org.apache.tuweni.crypto.mikuli.Signature, kotlin.ByteArray, kotlin.Int)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">verify</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.PublicKey, org.apache.tuweni.crypto.mikuli.Signature, kotlin.ByteArray, kotlin.Int)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<a href="../-public-key/index.html"><span class="identifier">PublicKey</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.PublicKey, org.apache.tuweni.crypto.mikuli.Signature, kotlin.ByteArray, kotlin.Int)/signature">signature</span><span class="symbol">:</span>&nbsp;<a href="../-signature/index.html"><span class="identifier">Signature</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.PublicKey, org.apache.tuweni.crypto.mikuli.Signature, kotlin.ByteArray, kotlin.Int)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.PublicKey, org.apache.tuweni.crypto.mikuli.Signature, kotlin.ByteArray, kotlin.Int)/domain">domain</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/mikuli/BLS12381.java#L81">(source)</a>
+<p>Verifies the given BLS signature against the message bytes using the public key.</p>
+<h3>Parameters</h3>
+<p><a name="publicKey"></a>
+<code>publicKey</code> - <a href="../-public-key/index.html"><span class="identifier">PublicKey</span></a><span class="symbol">!</span><span class="symbol">:</span> The public key, not null</p>
+<p><a name="signature"></a>
+<code>signature</code> - <a href="../-signature/index.html"><span class="identifier">Signature</span></a><span class="symbol">!</span><span class="symbol">:</span> The signature, not null</p>
+<p><a name="message"></a>
+<code>message</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The message data to verify, not null</p>
+<p><a name="domain"></a>
+<code>domain</code> - <span class="identifier">Int</span><span class="symbol">:</span> The domain value added to the message</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> True if the verification is successful.</p>
+<a name="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.PublicKey, org.apache.tuweni.crypto.mikuli.Signature, org.apache.tuweni.bytes.Bytes, kotlin.Int)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">verify</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.PublicKey, org.apache.tuweni.crypto.mikuli.Signature, org.apache.tuweni.bytes.Bytes, kotlin.Int)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<a href="../-public-key/index.html"><span class="identifier">PublicKey</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.PublicKey, org.apache.tuweni.crypto.mikuli.Signature, org.apache.tuweni.bytes.Bytes, kotlin.Int)/signature">signature</span><span class="symbol">:</span>&nbsp;<a href="../-signature/index.html"><span class="identifier">Signature</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.PublicKey, org.apache.tuweni.crypto.mikuli.Signature, org.apache.tuweni.bytes.Bytes, kotlin.Int)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.PublicKey, org.apache.tuweni.crypto.mikuli.Signature, org.apache.tuweni.bytes.Bytes, kotlin.Int)/domain">domain</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/mikuli/BLS12381.java#L101">(source)</a>
+<p>Verifies the given BLS signature against the message bytes using the public key.</p>
+<h3>Parameters</h3>
+<p><a name="publicKey"></a>
+<code>publicKey</code> - <a href="../-public-key/index.html"><span class="identifier">PublicKey</span></a><span class="symbol">!</span><span class="symbol">:</span> The public key, not null</p>
+<p><a name="signature"></a>
+<code>signature</code> - <a href="../-signature/index.html"><span class="identifier">Signature</span></a><span class="symbol">!</span><span class="symbol">:</span> The signature, not null</p>
+<p><a name="message"></a>
+<code>message</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The message data to verify, not null</p>
+<p><a name="domain"></a>
+<code>domain</code> - <span class="identifier">Int</span><span class="symbol">:</span> The domain value added to the message</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> True if the verification is successful.</p>
+<a name="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.SignatureAndPublicKey, kotlin.ByteArray, kotlin.Int)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">verify</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.SignatureAndPublicKey, kotlin.ByteArray, kotlin.Int)/sigAndPubKey">sigAndPubKey</span><span class="symbol">:</span>&nbsp;<a href="../-signature-and-public-key/index.html"><span class="identifier">SignatureAndPublicKey</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.SignatureAndPublicKey, kotlin.ByteArray, kotlin.Int)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.SignatureAndPublicKey, kotlin.ByteArray, kotlin.Int)/domain">domain</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/mikuli/BLS12381.java#L114">(source)</a>
+<p>Verifies the given BLS signature against the message bytes using the public key.</p>
+<h3>Parameters</h3>
+<p><a name="sigAndPubKey"></a>
+<code>sigAndPubKey</code> - <a href="../-signature-and-public-key/index.html"><span class="identifier">SignatureAndPublicKey</span></a><span class="symbol">!</span><span class="symbol">:</span> The signature and public key, not null</p>
+<p><a name="message"></a>
+<code>message</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The message data to verify, not null</p>
+<p><a name="domain"></a>
+<code>domain</code> - <span class="identifier">Int</span><span class="symbol">:</span> The domain value added to the message</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> True if the verification is successful, not null</p>
+<a name="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.SignatureAndPublicKey, org.apache.tuweni.bytes.Bytes, kotlin.Int)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">verify</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.SignatureAndPublicKey, org.apache.tuweni.bytes.Bytes, kotlin.Int)/sigAndPubKey">sigAndPubKey</span><span class="symbol">:</span>&nbsp;<a href="../-signature-and-public-key/index.html"><span class="identifier">SignatureAndPublicKey</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.SignatureAndPublicKey, org.apache.tuweni.bytes.Bytes, kotlin.Int)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$verify(org.apache.tuweni.crypto.mikuli.SignatureAndPublicKey, org.apache.tuweni.bytes.Bytes, kotlin.Int)/domain">domain</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/mikuli/BLS12381.java#L127">(source)</a>
+<p>Verifies the given BLS signature against the message bytes using the public key.</p>
+<h3>Parameters</h3>
+<p><a name="sigAndPubKey"></a>
+<code>sigAndPubKey</code> - <a href="../-signature-and-public-key/index.html"><span class="identifier">SignatureAndPublicKey</span></a><span class="symbol">!</span><span class="symbol">:</span> The public key, not null</p>
+<p><a name="message"></a>
+<code>message</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The message data to verify, not null</p>
+<p><a name="domain"></a>
+<code>domain</code> - <span class="identifier">Int</span><span class="symbol">:</span> The domain value added to the message</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> True if the verification is successful.</p>
+</BODY>
+</HTML>

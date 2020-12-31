@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>org.apache.tuweni.scuttlebutt.rpc.mux - tuweni</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">tuweni</a>&nbsp;/&nbsp;<a href="./index.html">org.apache.tuweni.scuttlebutt.rpc.mux</a><br/>
+<br/>
+<h2>Package org.apache.tuweni.scuttlebutt.rpc.mux</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-multiplexer/index.html">Multiplexer</a></h4>
+</td>
+<td>
+<p>Multiplexes asynchronous requests and streams across a connection to a node. Handles multiple active requests and streams across one connection.</p>
+<code><span class="keyword">interface </span><span class="identifier">Multiplexer</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-p-c-handler/index.html">RPCHandler</a></h4>
+</td>
+<td>
+<p>Handles RPC requests and responses from an active connection to a scuttlebutt node.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RPCHandler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-multiplexer/index.html"><span class="identifier">Multiplexer</span></a><span class="symbol">, </span><a href="../org.apache.tuweni.scuttlebutt.handshake.vertx/-client-handler/index.html"><span class="identifier">ClientHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-scuttlebutt-stream-handler/index.html">ScuttlebuttStreamHandler</a></h4>
+</td>
+<td>
+<p>Handles incoming items from a result stream</p>
+<code><span class="keyword">interface </span><span class="identifier">ScuttlebuttStreamHandler</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

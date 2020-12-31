@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ProgPoW.createDagCache - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.progpow</a>&nbsp;/&nbsp;<a href="index.html">ProgPoW</a>&nbsp;/&nbsp;<a href="./create-dag-cache.html">createDagCache</a><br/>
+<br/>
+<h1>createDagCache</h1>
+<a name="org.apache.tuweni.progpow.ProgPoW$createDagCache(kotlin.Long, java.util.function.Function((org.apache.tuweni.units.bigints.UInt32, org.apache.tuweni.bytes.Bytes)))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">createDagCache</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.progpow.ProgPoW$createDagCache(kotlin.Long, java.util.function.Function((org.apache.tuweni.units.bigints.UInt32, org.apache.tuweni.bytes.Bytes)))/blockNumber">blockNumber</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.progpow.ProgPoW$createDagCache(kotlin.Long, java.util.function.Function((org.apache.tuweni.units.bigints.UInt32, org.apache.tuweni.bytes.Bytes)))/datasetLookup">datasetLookup</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int32/index.html"><span class="identifier">UInt32</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Array</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int32/index.html"><span class="identifier">UInt32</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/pow/src/main/java/org/apache/tuweni/progpow/ProgPoW.java#L108">(source)</a>
+<p>Creates a cache for the DAG at a given block number</p>
+<h3>Parameters</h3>
+<p><a name="blockNumber"></a>
+<code>blockNumber</code> - <span class="identifier">Long</span><span class="symbol">:</span> the block number</p>
+<p><a name="datasetLookup"></a>
+<code>datasetLookup</code> - <span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int32/index.html"><span class="identifier">UInt32</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> the function generating elements of the DAG</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Array</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int32/index.html"><span class="identifier">UInt32</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> a cache of the DAG up to the block number</p>
+</BODY>
+</HTML>

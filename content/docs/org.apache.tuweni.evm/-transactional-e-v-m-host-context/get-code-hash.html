@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TransactionalEVMHostContext.getCodeHash - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.evm</a>&nbsp;/&nbsp;<a href="index.html">TransactionalEVMHostContext</a>&nbsp;/&nbsp;<a href="./get-code-hash.html">getCodeHash</a><br/>
+<br/>
+<h1>getCodeHash</h1>
+<a name="org.apache.tuweni.evm.TransactionalEVMHostContext$getCodeHash(kotlin.ByteArray)"></a>
+<code><span class="keyword">fun </span><span class="identifier">getCodeHash</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getCodeHash(kotlin.ByteArray)/address">address</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteBuffer</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/evm/src/main/kotlin/org/apache/tuweni/evm/TransactionalEVMHostContext.kt#L212">(source)</a>
+<p>Get code hash function.</p>
+<p>This function is used by a VM to get the keccak256 hash of the code stored in the account at
+the given address. For existing accounts not having a code, this function returns keccak256
+hash of empty data.</p>
+<h3>Parameters</h3>
+<p><a name="address"></a>
+<code>address</code> - The address of the account.</p>
+<p><strong>Return</strong><br/>
+The hash of the code in the account or null bytes if the account does not exist.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,150 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Identity - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt</a>&nbsp;/&nbsp;<a href="./index.html">Identity</a><br/>
+<br/>
+<h1>Identity</h1>
+<code><span class="keyword">interface </span><span class="identifier">Identity</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt/src/main/java/org/apache/tuweni/scuttlebutt/Identity.java#L24">(source)</a>
+<p>A Scuttlebutt identity, backed by a public key. Currently supported: Ed25519 and SECP256K1.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-curve/index.html">Curve</a></h4>
+</td>
+<td>
+<p>Curves supported by those identities.</p>
+<code><span class="keyword">class </span><span class="identifier">Curve</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="curve.html">curve</a></h4>
+</td>
+<td>
+<p>Provides the curve associated with this identity</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">curve</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Curve</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="curve-name.html">curveName</a></h4>
+</td>
+<td>
+<p>Provides the name of the curve associated with this identity</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">curveName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ed25519-public-key.html">ed25519PublicKey</a></h4>
+</td>
+<td>
+<p>Provides the identity's associated Ed25519 public key.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">ed25519PublicKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">PublicKey</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-key-pair.html">fromKeyPair</a></h4>
+</td>
+<td>
+<p>Creates a new Ed25519 identity backed by this key pair.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromKeyPair</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.Identity$fromKeyPair(org.apache.tuweni.crypto.sodium.Signature.KeyPair)/keyPair">keyPair</span><span class="symbol">:</span>&nbsp;<span class="identifier">KeyPair</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Identity</span></a><span class="symbol">!</span></code>
+<p>Creates a new SECP256K1 identity backed by this key pair.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromKeyPair</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.Identity$fromKeyPair(org.apache.tuweni.crypto.SECP256K1.KeyPair)/keyPair">keyPair</span><span class="symbol">:</span>&nbsp;<span class="identifier">KeyPair</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Identity</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-public-key.html">fromPublicKey</a></h4>
+</td>
+<td>
+<p>Creates a new SECP256K1 identity backed by this public key.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromPublicKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.Identity$fromPublicKey(org.apache.tuweni.crypto.SECP256K1.PublicKey)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Identity</span></a><span class="symbol">!</span></code>
+<p>Creates a new Ed25519 identity backed by this public key.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromPublicKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.Identity$fromPublicKey(org.apache.tuweni.crypto.sodium.Signature.PublicKey)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Identity</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-secret-key.html">fromSecretKey</a></h4>
+</td>
+<td>
+<p>Creates a new Ed25519 identity backed by this secret key.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromSecretKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.Identity$fromSecretKey(org.apache.tuweni.crypto.sodium.Signature.SecretKey)/secretKey">secretKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Identity</span></a><span class="symbol">!</span></code>
+<p>Creates a new SECP256K1 identity backed by this secret key.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromSecretKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.Identity$fromSecretKey(org.apache.tuweni.crypto.SECP256K1.SecretKey)/secretKey">secretKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Identity</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="public-key-as-base64-string.html">publicKeyAsBase64String</a></h4>
+</td>
+<td>
+<p>Provides the base64 encoded representation of the public key of the identity</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">publicKeyAsBase64String</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="random.html">random</a></h4>
+</td>
+<td>
+<p>Creates a new random Ed25519 identity.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">random</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Identity</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="random-ed25519.html">randomEd25519</a></h4>
+</td>
+<td>
+<p>Creates a new random Ed25519 identity.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">randomEd25519</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Identity</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="random-s-e-c-p256-k1.html">randomSECP256K1</a></h4>
+</td>
+<td>
+<p>Creates a new random secp251k1 identity.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">randomSECP256K1</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Identity</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="secp256k1-public-key.html">secp256k1PublicKey</a></h4>
+</td>
+<td>
+<p>Provides the identity's associated SECP256K1 public key.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">secp256k1PublicKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">PublicKey</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sign.html">sign</a></h4>
+</td>
+<td>
+<p>Hashes data using the secret key of the identity.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">sign</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.Identity$sign(org.apache.tuweni.bytes.Bytes)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-canonical-form.html">toCanonicalForm</a></h4>
+</td>
+<td>
+<p>Encodes the identity into a canonical Scuttlebutt identity string</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toCanonicalForm</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="verify.html">verify</a></h4>
+</td>
+<td>
+<p>Verifies a signature matches a message according to the public key of the identity.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">verify</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.Identity$verify(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/signature">signature</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.Identity$verify(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

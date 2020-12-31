@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RPCCodec - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.rpc</a>&nbsp;/&nbsp;<a href="./index.html">RPCCodec</a><br/>
+<br/>
+<h1>RPCCodec</h1>
+<code><span class="keyword">class </span><span class="identifier">RPCCodec</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-rpc/src/main/java/org/apache/tuweni/scuttlebutt/rpc/RPCCodec.java#L29">(source)</a>
+<p>Encoder responsible for encoding requests. </p>
+<p> This encoder is stateful as it maintains a counter to provide different request ids over time.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Encoder responsible for encoding requests. </p>
+<code><span class="identifier">RPCCodec</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="encode-request.html">encodeRequest</a></h4>
+</td>
+<td>
+<p>Encode a message as a RPC request.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeRequest</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeRequest(kotlin.String, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/body">body</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeRequest(kotlin.String, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/flags">flags</span><span class="symbol">:</span>&nbsp;<a href="../-r-p-c-flag/index.html"><span class="identifier">RPCFlag</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeRequest</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeRequest(org.apache.tuweni.bytes.Bytes, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/body">body</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeRequest(org.apache.tuweni.bytes.Bytes, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/flags">flags</span><span class="symbol">:</span>&nbsp;<a href="../-r-p-c-flag/index.html"><span class="identifier">RPCFlag</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeRequest</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeRequest(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/body">body</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeRequest(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/requestNumber">requestNumber</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeRequest(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/flags">flags</span><span class="symbol">:</span>&nbsp;<a href="../-r-p-c-flag/index.html"><span class="identifier">RPCFlag</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code>
+<p>Encode a message as an RPC request.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeRequest</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeRequest(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte)/body">body</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeRequest(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte)/requestNumber">requestNumber</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeRequest(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte)/flags">flags</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-response.html">encodeResponse</a></h4>
+</td>
+<td>
+<p>Encode a message as a response to a RPC request.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeResponse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte)/body">body</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte)/requestNumber">requestNumber</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte)/flagByte">flagByte</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeResponse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/body">body</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/requestNumber">requestNumber</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/flagByte">flagByte</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/flags">flags</span><span class="symbol">:</span>&nbsp;<a href="../-r-p-c-flag/index.html"><span class="identifier">RPCFlag</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeResponse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/body">body</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/requestNumber">requestNumber</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/flags">flags</span><span class="symbol">:</span>&nbsp;<a href="../-r-p-c-flag/index.html"><span class="identifier">RPCFlag</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-stream-end-request.html">encodeStreamEndRequest</a></h4>
+</td>
+<td>
+<p>Encodes a message with the body and headers set in the appropriate way to end a stream.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeStreamEndRequest</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeStreamEndRequest(kotlin.Int)/requestNumber">requestNumber</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSZWriter.writeLongIntList - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ssz</a>&nbsp;/&nbsp;<a href="index.html">SSZWriter</a>&nbsp;/&nbsp;<a href="./write-long-int-list.html">writeLongIntList</a><br/>
+<br/>
+<h1>writeLongIntList</h1>
+<a name="org.apache.tuweni.ssz.SSZWriter$writeLongIntList(kotlin.Int, kotlin.LongArray)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeLongIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeLongIntList(kotlin.Int, kotlin.LongArray)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeLongIntList(kotlin.Int, kotlin.LongArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZWriter.java#L373">(source)</a>
+<p>Write a list of two's compliment long integers.</p>
+<h3>Parameters</h3>
+<p><a name="bitLength"></a>
+<code>bitLength</code> - <span class="identifier">Int</span><span class="symbol">:</span> the bit length of the encoded integers (must be a multiple of 8)</p>
+<p><a name="elements"></a>
+<code>elements</code> - <span class="identifier">Long</span><span class="symbol">:</span> the long integers to write as a list</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if any values are too large for the specified bit length</p>
+<a name="org.apache.tuweni.ssz.SSZWriter$writeLongIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Long)))"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeLongIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeLongIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Long)))/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeLongIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Long)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZWriter.java#L384">(source)</a>
+<p>Write a list of two's compliment long integers.</p>
+<h3>Parameters</h3>
+<p><a name="bitLength"></a>
+<code>bitLength</code> - <span class="identifier">Int</span><span class="symbol">:</span> the bit length of the encoded integers (must be a multiple of 8)</p>
+<p><a name="elements"></a>
+<code>elements</code> - <span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> the long integers to write as a list</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if any values are too large for the specified bit length</p>
+</BODY>
+</HTML>

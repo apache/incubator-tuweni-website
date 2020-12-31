@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RLPWriter.writeList - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlp</a>&nbsp;/&nbsp;<a href="index.html">RLPWriter</a>&nbsp;/&nbsp;<a href="./write-list.html">writeList</a><br/>
+<br/>
+<h1>writeList</h1>
+<a name="org.apache.tuweni.rlp.RLPWriter$writeList(java.util.function.Consumer((org.apache.tuweni.rlp.RLPWriter)))"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">writeList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLPWriter$writeList(java.util.function.Consumer((org.apache.tuweni.rlp.RLPWriter)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="index.html"><span class="identifier">RLPWriter</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlp/src/main/java/org/apache/tuweni/rlp/RLPWriter.java#L124">(source)</a>
+<p>Write a list of values.</p>
+<h3>Parameters</h3>
+<p><a name="fn"></a>
+<code>fn</code> - <span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="index.html"><span class="identifier">RLPWriter</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A consumer that will be provided with a <code><a href="index.html">RLPWriter</a></code> that can consume values.</p>
+<a name="org.apache.tuweni.rlp.RLPWriter$writeList(kotlin.collections.MutableList((org.apache.tuweni.rlp.RLPWriter.writeList.T)), java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPWriter, org.apache.tuweni.rlp.RLPWriter.writeList.T)))"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">writeList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLPWriter$writeList(kotlin.collections.MutableList((org.apache.tuweni.rlp.RLPWriter.writeList.T)), java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPWriter, org.apache.tuweni.rlp.RLPWriter.writeList.T)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLPWriter$writeList(kotlin.collections.MutableList((org.apache.tuweni.rlp.RLPWriter.writeList.T)), java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPWriter, org.apache.tuweni.rlp.RLPWriter.writeList.T)))/elementWriter">elementWriter</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><a href="index.html"><span class="identifier">RLPWriter</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlp/src/main/java/org/apache/tuweni/rlp/RLPWriter.java#L133">(source)</a>
+<p>Write a list of values, sending each value to a function to be interpreted.</p>
+<h3>Parameters</h3>
+<p><a name="elements"></a>
+<code>elements</code> - <span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> the list of elements to write</p>
+<p><a name="elementWriter"></a>
+<code>elementWriter</code> - <span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><a href="index.html"><span class="identifier">RLPWriter</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> the function called for each element in the list</p>
+<p><a name="&lt;T&gt;"></a>
+<code><T></code> - The type of the list elements.</p>
+</BODY>
+</HTML>

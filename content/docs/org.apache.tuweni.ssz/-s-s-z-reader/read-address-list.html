@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSZReader.readAddressList - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ssz</a>&nbsp;/&nbsp;<a href="index.html">SSZReader</a>&nbsp;/&nbsp;<a href="./read-address-list.html">readAddressList</a><br/>
+<br/>
+<h1>readAddressList</h1>
+<a name="org.apache.tuweni.ssz.SSZReader$readAddressList()"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readAddressList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZReader.java#L716">(source)</a>
+<p>Read a list of 20-byte addresses from the SSZ source.</p>
+<h3>Exceptions</h3>
+<p><a name="InvalidSSZTypeException"></a>
+<code>InvalidSSZTypeException</code> - If the next SSZ value is not a list, there are insufficient encoded bytes for any address in the list.</p>
+<p><a name="EndOfSSZException"></a>
+<code>EndOfSSZException</code> - If there are no more SSZ values to read.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A list of 20-byte addresses.</p>
+</BODY>
+</HTML>

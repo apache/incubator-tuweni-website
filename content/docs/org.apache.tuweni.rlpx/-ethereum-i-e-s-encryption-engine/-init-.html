@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EthereumIESEncryptionEngine.<init> - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlpx</a>&nbsp;/&nbsp;<a href="index.html">EthereumIESEncryptionEngine</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="org.apache.tuweni.rlpx.EthereumIESEncryptionEngine$&lt;init&gt;(org.bouncycastle.crypto.BasicAgreement, org.bouncycastle.crypto.DerivationFunction, org.bouncycastle.crypto.Mac, kotlin.ByteArray, org.bouncycastle.crypto.BufferedBlockCipher)"></a>
+<code><span class="identifier">EthereumIESEncryptionEngine</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.EthereumIESEncryptionEngine$<init>(org.bouncycastle.crypto.BasicAgreement, org.bouncycastle.crypto.DerivationFunction, org.bouncycastle.crypto.Mac, kotlin.ByteArray, org.bouncycastle.crypto.BufferedBlockCipher)/agree">agree</span><span class="symbol">:</span>&nbsp;<span class="identifier">BasicAgreement</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.EthereumIESEncryptionEngine$<init>(org.bouncycastle.crypto.BasicAgreement, org.bouncycastle.crypto.DerivationFunction, org.bouncycastle.crypto.Mac, kotlin.ByteArray, org.bouncycastle.crypto.BufferedBlockCipher)/kdf">kdf</span><span class="symbol">:</span>&nbsp;<span class="identifier">DerivationFunction</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.EthereumIESEncryptionEngine$<init>(org.bouncycastle.crypto.BasicAgreement, org.bouncycastle.crypto.DerivationFunction, org.bouncycastle.crypto.Mac, kotlin.ByteArray, org.bouncycastle.crypto.BufferedBlockCipher)/mac">mac</span><span class="symbol">:</span>&nbsp;<span class="identifier">Mac</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.EthereumIESEncryptionEngine$<init>(org.bouncycastle.crypto.BasicAgreement, org.bouncycastle.crypto.DerivationFunction, org.bouncycastle.crypto.Mac, kotlin.ByteArray, org.bouncycastle.crypto.BufferedBlockCipher)/commonMac">commonMac</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.EthereumIESEncryptionEngine$<init>(org.bouncycastle.crypto.BasicAgreement, org.bouncycastle.crypto.DerivationFunction, org.bouncycastle.crypto.Mac, kotlin.ByteArray, org.bouncycastle.crypto.BufferedBlockCipher)/cipher">cipher</span><span class="symbol">:</span>&nbsp;<span class="identifier">BufferedBlockCipher</span><span class="symbol">!</span><span class="symbol">)</span></code>
+<p>Set up for use in conjunction with a block cipher to handle the message. It is <strong>strongly</strong> recommended that the cipher is not in ECB mode.</p>
+<h3>Parameters</h3>
+<p><a name="agree"></a>
+<code>agree</code> - <span class="identifier">BasicAgreement</span><span class="symbol">!</span><span class="symbol">:</span> the key agreement used as the basis for the encryption</p>
+<p><a name="kdf"></a>
+<code>kdf</code> - <span class="identifier">DerivationFunction</span><span class="symbol">!</span><span class="symbol">:</span> the key derivation function used for byte generation</p>
+<p><a name="mac"></a>
+<code>mac</code> - <span class="identifier">Mac</span><span class="symbol">!</span><span class="symbol">:</span> the message authentication code generator for the message</p>
+<p><a name="commonMac"></a>
+<code>commonMac</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> the common MAC bytes to append to the mac</p>
+<p><a name="cipher"></a>
+<code>cipher</code> - <span class="identifier">BufferedBlockCipher</span><span class="symbol">!</span><span class="symbol">:</span> the cipher to used for encrypting the message</p>
+</BODY>
+</HTML>

@@ -1,0 +1,214 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ExpiringMap - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.concurrent</a>&nbsp;/&nbsp;<a href="./index.html">ExpiringMap</a><br/>
+<br/>
+<h1>ExpiringMap</h1>
+<code><span class="keyword">class </span><span class="identifier">ExpiringMap</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">MutableMap</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent/src/main/java/org/apache/tuweni/concurrent/ExpiringMap.java#L39">(source)</a>
+<p>A concurrent hash map that stores values along with an expiry. Values are stored in the map until their expiry is reached, after which they will no longer be available and will appear as if removed. The actual removal is done lazily whenever the map is accessed, or when the <code><a href="purge-expired.html">#purgeExpired()</a></code> method is invoked.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Construct an empty map.</p>
+<code><span class="identifier">ExpiringMap</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="entries.html">entries</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">entries</span><span class="symbol">: </span><span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">MutableEntry</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="keys.html">keys</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">keys</span><span class="symbol">: </span><span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="size.html">size</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">size</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="values.html">values</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">values</span><span class="symbol">: </span><span class="identifier">MutableCollection</span><span class="symbol">&lt;</span><span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="clear.html">clear</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="compute.html">compute</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">compute</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$compute(org.apache.tuweni.concurrent.ExpiringMap.K, java.util.function.BiFunction((org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, )))/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$compute(org.apache.tuweni.concurrent.ExpiringMap.K, java.util.function.BiFunction((org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, )))/remappingFunction">remappingFunction</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiFunction</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="keyword">in</span>&nbsp;<span class="identifier">V</span><span class="symbol">?</span><span class="symbol">,</span>&nbsp;<span class="keyword">out</span>&nbsp;<span class="identifier">V</span><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="compute-if-absent.html">computeIfAbsent</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">computeIfAbsent</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$computeIfAbsent(org.apache.tuweni.concurrent.ExpiringMap.K, java.util.function.Function((org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)))/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$computeIfAbsent(org.apache.tuweni.concurrent.ExpiringMap.K, java.util.function.Function((org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)))/mappingFunction">mappingFunction</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="keyword">out</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="compute-if-present.html">computeIfPresent</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">computeIfPresent</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$computeIfPresent(org.apache.tuweni.concurrent.ExpiringMap.K, java.util.function.BiFunction((org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, org.apache.tuweni.concurrent.ExpiringMap.V)))/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$computeIfPresent(org.apache.tuweni.concurrent.ExpiringMap.K, java.util.function.BiFunction((org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, org.apache.tuweni.concurrent.ExpiringMap.V)))/remappingFunction">remappingFunction</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiFunction</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="keyword">in</span>&nbsp;<span class="identifier">V</span><span class="symbol">,</span>&nbsp;<span class="keyword">out</span>&nbsp;<span class="identifier">V</span><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains-key.html">containsKey</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">containsKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$containsKey(org.apache.tuweni.concurrent.ExpiringMap.K)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains-value.html">containsValue</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">containsValue</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$containsValue(org.apache.tuweni.concurrent.ExpiringMap.V)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="for-each.html">forEach</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">forEach</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$forEach(java.util.function.BiConsumer((org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)))/action">action</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="keyword">in</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$get(org.apache.tuweni.concurrent.ExpiringMap.K)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-or-default.html">getOrDefault</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getOrDefault</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$getOrDefault(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$getOrDefault(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-empty.html">isEmpty</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="merge.html">merge</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">merge</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$merge(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, java.util.function.BiFunction((org.apache.tuweni.concurrent.ExpiringMap.V, , org.apache.tuweni.concurrent.ExpiringMap.V)))/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$merge(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, java.util.function.BiFunction((org.apache.tuweni.concurrent.ExpiringMap.V, , org.apache.tuweni.concurrent.ExpiringMap.V)))/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$merge(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, java.util.function.BiFunction((org.apache.tuweni.concurrent.ExpiringMap.V, , org.apache.tuweni.concurrent.ExpiringMap.V)))/remappingFunction">remappingFunction</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiFunction</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">V</span><span class="symbol">,</span>&nbsp;<span class="keyword">in</span>&nbsp;<span class="identifier">V</span><span class="symbol">,</span>&nbsp;<span class="keyword">out</span>&nbsp;<span class="identifier">V</span><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="purge-expired.html">purgeExpired</a></h4>
+</td>
+<td>
+<p>Force immediate expiration of any key/value pairs that have reached their expiry.</p>
+<code><span class="keyword">fun </span><span class="identifier">purgeExpired</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="put.html">put</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">put</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$put(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$put(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span><span class="symbol">?</span></code>
+<p>Associates the specified value with the specified key in this map, and expires the entry when the specified expiry time is reached. If the map previously contained a mapping for the key, the old value is replaced by the specified value.</p>
+<code><span class="keyword">fun </span><span class="identifier">put</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$put(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, kotlin.Long)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$put(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$put(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, kotlin.Long)/expiry">expiry</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span><span class="symbol">?</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">put</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$put(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, kotlin.Long, java.util.function.BiConsumer((org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)))/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$put(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, kotlin.Long, java.util.function.BiConsumer((org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)))/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$put(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, kotlin.Long, java.util.function.BiConsumer((org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)))/expiry">expiry</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$put(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, kotlin.Long, java.util.function.BiConsumer((org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)))/expiryListener">expiryListener</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="put-all.html">putAll</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">putAll</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$putAll(kotlin.collections.Map((org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)))/from">from</span><span class="symbol">:</span>&nbsp;<span class="identifier">Map</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="put-if-absent.html">putIfAbsent</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">putIfAbsent</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$putIfAbsent(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$putIfAbsent(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span><span class="symbol">?</span></code>
+<p>If the specified key is not already associated with a value, associates the specified value with the specified key in this map, and expires the entry when the specified expiry time is reached.</p>
+<code><span class="keyword">fun </span><span class="identifier">putIfAbsent</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$putIfAbsent(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, kotlin.Long)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$putIfAbsent(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$putIfAbsent(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, kotlin.Long)/expiry">expiry</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span><span class="symbol">?</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">putIfAbsent</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$putIfAbsent(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, kotlin.Long, java.util.function.BiConsumer((org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)))/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$putIfAbsent(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, kotlin.Long, java.util.function.BiConsumer((org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)))/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$putIfAbsent(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, kotlin.Long, java.util.function.BiConsumer((org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)))/expiry">expiry</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$putIfAbsent(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, kotlin.Long, java.util.function.BiConsumer((org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)))/expiryListener">expiryListener</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove.html">remove</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">remove</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$remove(org.apache.tuweni.concurrent.ExpiringMap.K)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span><span class="symbol">?</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">remove</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$remove(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$remove(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="replace.html">replace</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">replace</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$replace(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$replace(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span><span class="symbol">?</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">replace</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$replace(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, org.apache.tuweni.concurrent.ExpiringMap.V)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$replace(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, org.apache.tuweni.concurrent.ExpiringMap.V)/oldValue">oldValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$replace(org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, org.apache.tuweni.concurrent.ExpiringMap.V)/newValue">newValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="replace-all.html">replaceAll</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">replaceAll</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringMap$replaceAll(java.util.function.BiFunction((org.apache.tuweni.concurrent.ExpiringMap.K, org.apache.tuweni.concurrent.ExpiringMap.V, )))/function">function</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiFunction</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="keyword">in</span>&nbsp;<span class="identifier">V</span><span class="symbol">,</span>&nbsp;<span class="keyword">out</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

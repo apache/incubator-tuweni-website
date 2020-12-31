@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RLPxConnectionFactory.readResponse - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlpx</a>&nbsp;/&nbsp;<a href="index.html">RLPxConnectionFactory</a>&nbsp;/&nbsp;<a href="./read-response.html">readResponse</a><br/>
+<br/>
+<h1>readResponse</h1>
+<a name="org.apache.tuweni.rlpx.RLPxConnectionFactory$readResponse(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.SecretKey)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">readResponse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxConnectionFactory$readResponse(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.SecretKey)/response">response</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxConnectionFactory$readResponse(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.SecretKey)/privateKey">privateKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-handshake-message/index.html"><span class="identifier">HandshakeMessage</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlpx/src/main/java/org/apache/tuweni/rlpx/RLPxConnectionFactory.java#L151">(source)</a>
+<p>Decrypts the handshake response using our private key.</p>
+<h3>Parameters</h3>
+<p><a name="response"></a>
+<code>response</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the raw response bytes</p>
+<p><a name="privateKey"></a>
+<code>privateKey</code> - <span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">:</span> our private key</p>
+<p><strong>Return</strong><br/>
+<a href="../-handshake-message/index.html"><span class="identifier">HandshakeMessage</span></a><span class="symbol">!</span><span class="symbol">:</span> a decrypted handshake response message</p>
+</BODY>
+</HTML>

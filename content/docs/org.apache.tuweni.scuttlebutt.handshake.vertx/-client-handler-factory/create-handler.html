@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ClientHandlerFactory.createHandler - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.handshake.vertx</a>&nbsp;/&nbsp;<a href="index.html">ClientHandlerFactory</a>&nbsp;/&nbsp;<a href="./create-handler.html">createHandler</a><br/>
+<br/>
+<h1>createHandler</h1>
+<a name="org.apache.tuweni.scuttlebutt.handshake.vertx.ClientHandlerFactory$createHandler(java.util.function.Consumer((org.apache.tuweni.bytes.Bytes)), java.lang.Runnable)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">createHandler</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.handshake.vertx.ClientHandlerFactory$createHandler(java.util.function.Consumer((org.apache.tuweni.bytes.Bytes)), java.lang.Runnable)/sender">sender</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.handshake.vertx.ClientHandlerFactory$createHandler(java.util.function.Consumer((org.apache.tuweni.bytes.Bytes)), java.lang.Runnable)/terminationFunction">terminationFunction</span><span class="symbol">:</span>&nbsp;<span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-handshake/src/main/java/org/apache/tuweni/scuttlebutt/handshake/vertx/ClientHandlerFactory.java#L31">(source)</a>
+<p>Creates a new handler associated with a valid streaming connection.</p>
+<h3>Parameters</h3>
+<p><a name="sender"></a>
+<code>sender</code> - <span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> the function to send bytes to the server</p>
+<p><a name="terminationFunction"></a>
+<code>terminationFunction</code> - <span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">:</span> a function to terminate the stream properly</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">T</span><span class="symbol">:</span> the created ClientHandler</p>
+</BODY>
+</HTML>

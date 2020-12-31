@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>WireConnectionRepository - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlpx</a>&nbsp;/&nbsp;<a href="./index.html">WireConnectionRepository</a><br/>
+<br/>
+<h1>WireConnectionRepository</h1>
+<code><span class="keyword">interface </span><span class="identifier">WireConnectionRepository</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlpx/src/main/java/org/apache/tuweni/rlpx/WireConnectionRepository.java#L24">(source)</a>
+<p>A repository managing wire connections.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-listener/index.html">Listener</a></h4>
+</td>
+<td>
+<p>Connection listener</p>
+<code><span class="keyword">interface </span><span class="identifier">Listener</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add.html">add</a></h4>
+</td>
+<td>
+<p>Adds a new wire connection to the repository.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.WireConnectionRepository$add(org.apache.tuweni.rlpx.wire.WireConnection)/wireConnection">wireConnection</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-connection-listener.html">addConnectionListener</a></h4>
+</td>
+<td>
+<p>Adds a listener called when connection occurs, ie when the connection is established and capabilities are exchanged.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">addConnectionListener</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.WireConnectionRepository$addConnectionListener(org.apache.tuweni.rlpx.WireConnectionRepository.Listener)/listener">listener</span><span class="symbol">:</span>&nbsp;<span class="identifier">Listener</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-disconnection-listener.html">addDisconnectionListener</a></h4>
+</td>
+<td>
+<p>Adds a listener called when disconnection occurs, either from us or the peer initiative.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">addDisconnectionListener</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.WireConnectionRepository$addDisconnectionListener(org.apache.tuweni.rlpx.WireConnectionRepository.Listener)/listener">listener</span><span class="symbol">:</span>&nbsp;<span class="identifier">Listener</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="as-iterable.html">asIterable</a></h4>
+</td>
+<td>
+<p>Provides a view of the wire connections as an iterable. There is no guarantee of sorting wire connections.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">asIterable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Provides a subset of wire connections with a particular capabilities.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">asIterable</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.WireConnectionRepository$asIterable(org.apache.tuweni.rlpx.wire.SubProtocolIdentifier)/identifier">identifier</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-sub-protocol-identifier/index.html"><span class="identifier">SubProtocolIdentifier</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="close.html">close</a></h4>
+</td>
+<td>
+<p>Closes the repository. After it has been closed, the repository should no longer be able to add or retrieve connections.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<p>Gets a wire connection by its identifier, as provided by <code>org.apache.tuweni.rlpx.wire.DefaultWireConnection#id</code></p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.WireConnectionRepository$get(kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-memory-wire-connections-repository/index.html">MemoryWireConnectionsRepository</a></h4>
+</td>
+<td>
+<p>In-memory implementation of the wire connections repository.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MemoryWireConnectionsRepository</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">WireConnectionRepository</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../org.apache.tuweni.ethclient/-wire-connection-peer-repository-adapter/index.html">WireConnectionPeerRepositoryAdapter</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">WireConnectionPeerRepositoryAdapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">WireConnectionRepository</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

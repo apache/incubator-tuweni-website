@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>org.apache.tuweni.config - tuweni</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">tuweni</a>&nbsp;/&nbsp;<a href="./index.html">org.apache.tuweni.config</a><br/>
+<br/>
+<h2>Package org.apache.tuweni.config</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-configuration/index.html">Configuration</a></h4>
+</td>
+<td>
+<p>Represents collection of configuration properties, optionally validated against a schema.</p>
+<code><span class="keyword">interface </span><span class="identifier">Configuration</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-configuration-errors/index.html">ConfigurationErrors</a></h4>
+</td>
+<td>
+<p>Factory methods for collections of <code><a href="-configuration-error/index.html">ConfigurationError</a></code>.</p>
+<code><span class="keyword">class </span><span class="identifier">ConfigurationErrors</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-configuration-validator/index.html">ConfigurationValidator</a></h4>
+</td>
+<td>
+<p>A validator for a configuration. </p>
+<code><span class="keyword">interface </span><span class="identifier">ConfigurationValidator</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-document-position/index.html">DocumentPosition</a></h4>
+</td>
+<td>
+<p>A position in an input document.</p>
+<code><span class="keyword">class </span><span class="identifier">DocumentPosition</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-property-validator/index.html">PropertyValidator</a></h4>
+</td>
+<td>
+<p>A validator associated with a specific configuration property.</p>
+<code><span class="keyword">interface </span><span class="identifier">PropertyValidator</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-schema/index.html">Schema</a></h4>
+</td>
+<td>
+<p>A schema for a configuration, providing default values and validation rules.</p>
+<code><span class="keyword">class </span><span class="identifier">Schema</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-schema-builder/index.html">SchemaBuilder</a></h4>
+</td>
+<td>
+<p>This interface allows customers to determine a schema to associate with a configuration to validate the entries read from configuration files, and provide default values if no value is present in the configuration file.</p>
+<code><span class="keyword">class </span><span class="identifier">SchemaBuilder</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-configuration-error/index.html">ConfigurationError</a></h4>
+</td>
+<td>
+<p>Provides details regarding an error in the configuration.</p>
+<code><span class="keyword">class </span><span class="identifier">ConfigurationError</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-invalid-configuration-property-type-exception/index.html">InvalidConfigurationPropertyTypeException</a></h4>
+</td>
+<td>
+<p>An exception thrown when an invalid type is encountered.</p>
+<code><span class="keyword">class </span><span class="identifier">InvalidConfigurationPropertyTypeException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-no-configuration-property-exception.html">NoConfigurationPropertyException</a></h4>
+</td>
+<td>
+<p>An exception thrown when a requested configuration property is not found. </p>
+<code><span class="keyword">class </span><span class="identifier">NoConfigurationPropertyException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

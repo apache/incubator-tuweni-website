@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSZ.encodeULongIntList - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ssz</a>&nbsp;/&nbsp;<a href="index.html">SSZ</a>&nbsp;/&nbsp;<a href="./encode-u-long-int-list.html">encodeULongIntList</a><br/>
+<br/>
+<h1>encodeULongIntList</h1>
+<a name="org.apache.tuweni.ssz.SSZ$encodeULongIntList(kotlin.Int, kotlin.LongArray)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeULongIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeULongIntList(kotlin.Int, kotlin.LongArray)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeULongIntList(kotlin.Int, kotlin.LongArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZ.java#L892">(source)</a>
+<p>Encode a list of unsigned long integers. Note that the <code>elements</code> are native signed longs, but will be interpreted as an unsigned values.</p>
+<h3>Parameters</h3>
+<p><a name="bitLength"></a>
+<code>bitLength</code> - <span class="identifier">Int</span><span class="symbol">:</span> the bit length of the encoded integers (must be a multiple of 8)</p>
+<p><a name="elements"></a>
+<code>elements</code> - <span class="identifier">Long</span><span class="symbol">:</span> the integers to write</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if any values are too large for the specified <code>bitLength</code></p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> SSZ encoding in a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value</p>
+<a name="org.apache.tuweni.ssz.SSZ$encodeULongIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Long)))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeULongIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeULongIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Long)))/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeULongIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Long)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZ.java#L908">(source)</a>
+<p>Encode a list of unsigned long integers. Note that the <code>elements</code> are native signed longs, but will be interpreted as an unsigned values.</p>
+<h3>Parameters</h3>
+<p><a name="bitLength"></a>
+<code>bitLength</code> - <span class="identifier">Int</span><span class="symbol">:</span> the bit length of the encoded integers (must be a multiple of 8)</p>
+<p><a name="elements"></a>
+<code>elements</code> - <span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> the integers to write</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if any values are too large for the specified <code>bitLength</code></p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> SSZ encoding in a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value</p>
+</BODY>
+</HTML>

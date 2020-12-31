@@ -1,0 +1,18 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>XChaCha20Poly1305.Nonce.increment - tuweni</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="../index.html">XChaCha20Poly1305</a>&nbsp;/&nbsp;<a href="index.html">Nonce</a>&nbsp;/&nbsp;<a href="./increment.html">increment</a><br/>
+<br/>
+<h1>increment</h1>
+<a name="org.apache.tuweni.crypto.sodium.XChaCha20Poly1305.Nonce$increment()"></a>
+<code><span class="keyword">fun </span><span class="identifier">increment</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Nonce</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/XChaCha20Poly1305.java#L323">(source)</a>
+<p>Increment this nonce. </p>
+<p> Note that this is not synchronized. If multiple threads are creating encrypted messages and incrementing this nonce, then external synchronization is required to ensure no two encrypt operations use the same nonce.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Nonce</span><span class="symbol">!</span><span class="symbol">:</span> A new <code><a href="index.html">Nonce</a></code>.</p>
+</BODY>
+</HTML>

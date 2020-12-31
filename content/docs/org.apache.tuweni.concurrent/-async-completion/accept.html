@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AsyncCompletion.accept - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.concurrent</a>&nbsp;/&nbsp;<a href="index.html">AsyncCompletion</a>&nbsp;/&nbsp;<a href="./accept.html">accept</a><br/>
+<br/>
+<h1>accept</h1>
+<a name="org.apache.tuweni.concurrent.AsyncCompletion$accept(java.util.function.Consumer((kotlin.Throwable)))"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">accept</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncCompletion$accept(java.util.function.Consumer((kotlin.Throwable)))/consumer">consumer</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">Throwable</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent/src/main/java/org/apache/tuweni/concurrent/AsyncCompletion.java#L478">(source)</a>
+<p>Returns a new completion that completes successfully, after executing the given function with this completion's exception (if any). </p>
+<p> The exception supplied to the function will be <code>null</code> if this completion completes successfully.</p>
+<h3>Parameters</h3>
+<p><a name="consumer"></a>
+<code>consumer</code> - <span class="identifier">Consumer</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">Throwable</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> The action to execute.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span><span class="symbol">:</span> A new result.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,120 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RLPxService - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlpx</a>&nbsp;/&nbsp;<a href="./index.html">RLPxService</a><br/>
+<br/>
+<h1>RLPxService</h1>
+<code><span class="keyword">interface </span><span class="identifier">RLPxService</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlpx/src/main/java/org/apache/tuweni/rlpx/RLPxService.java#L29">(source)</a>
+<p>Service allowing connections to remote peers over RLPx connections.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="actual-port.html">actualPort</a></h4>
+</td>
+<td>
+<p>Provides the actual port in use.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">actualPort</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="actual-socket-address.html">actualSocketAddress</a></h4>
+</td>
+<td>
+<p>Provides the actual socket address (network interface and port) in use.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">actualSocketAddress</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">InetSocketAddress</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-to-keep-alive-list.html">addToKeepAliveList</a></h4>
+</td>
+<td>
+<p>Adds a peer public key to the list of peers to keep alive.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">addToKeepAliveList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxService$addToKeepAliveList(org.apache.tuweni.crypto.SECP256K1.PublicKey)/peerPublicKey">peerPublicKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="advertised-port.html">advertisedPort</a></h4>
+</td>
+<td>
+<p>Provides the advertised port.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">advertisedPort</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="connect-to.html">connectTo</a></h4>
+</td>
+<td>
+<p>Connects to a remote peer.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">connectTo</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxService$connectTo(org.apache.tuweni.crypto.SECP256K1.PublicKey, java.net.InetSocketAddress)/peerPublicKey">peerPublicKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxService$connectTo(org.apache.tuweni.crypto.SECP256K1.PublicKey, java.net.InetSocketAddress)/peerAddress">peerAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">InetSocketAddress</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="disconnect.html">disconnect</a></h4>
+</td>
+<td>
+<p>Sends a message to the peer explaining that we are about to disconnect.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">disconnect</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxService$disconnect(org.apache.tuweni.rlpx.wire.WireConnection, org.apache.tuweni.rlpx.wire.DisconnectReason)/connection">connection</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxService$disconnect(org.apache.tuweni.rlpx.wire.WireConnection, org.apache.tuweni.rlpx.wire.DisconnectReason)/reason">reason</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-disconnect-reason/index.html"><span class="identifier">DisconnectReason</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-client.html">getClient</a></h4>
+</td>
+<td>
+<p>Gets a subprotocol client associated with the given subprotocol.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getClient</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxService$getClient(org.apache.tuweni.rlpx.wire.SubProtocolIdentifier)/subProtocolIdentifier">subProtocolIdentifier</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-sub-protocol-identifier/index.html"><span class="identifier">SubProtocolIdentifier</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.rlpx.wire/-sub-protocol-client.html"><span class="identifier">SubProtocolClient</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="repository.html">repository</a></h4>
+</td>
+<td>
+<p>Gets the wire connections repository associated with this service.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">repository</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-wire-connection-repository/index.html"><span class="identifier">WireConnectionRepository</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="send.html">send</a></h4>
+</td>
+<td>
+<p>Sends a wire message to a peer.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">send</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxService$send(org.apache.tuweni.rlpx.wire.SubProtocolIdentifier, kotlin.Int, org.apache.tuweni.rlpx.wire.WireConnection, org.apache.tuweni.bytes.Bytes)/subProtocolIdentifier">subProtocolIdentifier</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-sub-protocol-identifier/index.html"><span class="identifier">SubProtocolIdentifier</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxService$send(org.apache.tuweni.rlpx.wire.SubProtocolIdentifier, kotlin.Int, org.apache.tuweni.rlpx.wire.WireConnection, org.apache.tuweni.bytes.Bytes)/messageType">messageType</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxService$send(org.apache.tuweni.rlpx.wire.SubProtocolIdentifier, kotlin.Int, org.apache.tuweni.rlpx.wire.WireConnection, org.apache.tuweni.bytes.Bytes)/connection">connection</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxService$send(org.apache.tuweni.rlpx.wire.SubProtocolIdentifier, kotlin.Int, org.apache.tuweni.rlpx.wire.WireConnection, org.apache.tuweni.bytes.Bytes)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start.html">start</a></h4>
+</td>
+<td>
+<p>Starts the service.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">start</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stop.html">stop</a></h4>
+</td>
+<td>
+<p>Stops the service.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">stop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../../org.apache.tuweni.rlpx.vertx/-vertx-r-l-px-service/index.html">VertxRLPxService</a></h4>
+</td>
+<td>
+<p>Implementation of RLPx service using Vert.x.</p>
+<code><span class="keyword">class </span><span class="identifier">VertxRLPxService</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">RLPxService</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

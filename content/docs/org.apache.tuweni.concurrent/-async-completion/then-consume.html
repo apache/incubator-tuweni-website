@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AsyncCompletion.thenConsume - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.concurrent</a>&nbsp;/&nbsp;<a href="index.html">AsyncCompletion</a>&nbsp;/&nbsp;<a href="./then-consume.html">thenConsume</a><br/>
+<br/>
+<h1>thenConsume</h1>
+<a name="org.apache.tuweni.concurrent.AsyncCompletion$thenConsume(org.apache.tuweni.concurrent.AsyncResult((org.apache.tuweni.concurrent.AsyncCompletion.thenConsume.U)), java.util.function.Consumer((org.apache.tuweni.concurrent.AsyncCompletion.thenConsume.U)))"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">U</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">thenConsume</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncCompletion$thenConsume(org.apache.tuweni.concurrent.AsyncResult((org.apache.tuweni.concurrent.AsyncCompletion.thenConsume.U)), java.util.function.Consumer((org.apache.tuweni.concurrent.AsyncCompletion.thenConsume.U)))/other">other</span><span class="symbol">:</span>&nbsp;<a href="../-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncCompletion$thenConsume(org.apache.tuweni.concurrent.AsyncResult((org.apache.tuweni.concurrent.AsyncCompletion.thenConsume.U)), java.util.function.Consumer((org.apache.tuweni.concurrent.AsyncCompletion.thenConsume.U)))/consumer">consumer</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent/src/main/java/org/apache/tuweni/concurrent/AsyncCompletion.java#L414">(source)</a>
+<p>Returns a completion that, when this completion and the supplied result both complete normally, completes after executing the supplied function with the value from the supplied result as an argument.</p>
+<h3>Parameters</h3>
+<p><a name="other"></a>
+<code>other</code> - <a href="../-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> The other result.</p>
+<p><a name="consumer"></a>
+<code>consumer</code> - <span class="identifier">Consumer</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> The function to execute.</p>
+<p><a name="&lt;U&gt;"></a>
+<code><U></code> - The type of the other's value.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span><span class="symbol">:</span> A new result.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Files.atomicReplace - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.io.file</a>&nbsp;/&nbsp;<a href="index.html">Files</a>&nbsp;/&nbsp;<a href="./atomic-replace.html">atomicReplace</a><br/>
+<br/>
+<h1>atomicReplace</h1>
+<a name="org.apache.tuweni.io.file.Files$atomicReplace(java.nio.file.Path, kotlin.ByteArray)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">atomicReplace</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.io.file.Files$atomicReplace(java.nio.file.Path, kotlin.ByteArray)/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.io.file.Files$atomicReplace(java.nio.file.Path, kotlin.ByteArray)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/io/src/main/java/org/apache/tuweni/io/file/Files.java#L173">(source)</a>
+<p>Write a temporary file and then replace target.</p>
+<h3>Parameters</h3>
+<p><a name="path"></a>
+<code>path</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> The target file to be replaced (if it exists).</p>
+<p><a name="bytes"></a>
+<code>bytes</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The bytes to be written.</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - If an I/O error occurs.</p>
+<a name="org.apache.tuweni.io.file.Files$atomicReplace(java.nio.file.Path, org.apache.tuweni.io.IOConsumer((java.io.Writer)))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">atomicReplace</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.io.file.Files$atomicReplace(java.nio.file.Path, org.apache.tuweni.io.IOConsumer((java.io.Writer)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.io.file.Files$atomicReplace(java.nio.file.Path, org.apache.tuweni.io.IOConsumer((java.io.Writer)))/fn">fn</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.io/-i-o-consumer/index.html"><span class="identifier">IOConsumer</span></a><span class="symbol">&lt;</span><span class="identifier">Writer</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/io/src/main/java/org/apache/tuweni/io/file/Files.java#L198">(source)</a>
+<p>Write a temporary file and then replace target.</p>
+<h3>Parameters</h3>
+<p><a name="path"></a>
+<code>path</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> The target file to be replaced (if it exists).</p>
+<p><a name="fn"></a>
+<code>fn</code> - <a href="../../org.apache.tuweni.io/-i-o-consumer/index.html"><span class="identifier">IOConsumer</span></a><span class="symbol">&lt;</span><span class="identifier">Writer</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A consumer that will be provided a buffered <code><a href="#">Writer</a></code> instance that will write to the file.</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - If an I/O error occurs.</p>
+<a name="org.apache.tuweni.io.file.Files$atomicReplace(java.nio.file.Path, java.nio.charset.Charset, org.apache.tuweni.io.IOConsumer((java.io.Writer)))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">atomicReplace</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.io.file.Files$atomicReplace(java.nio.file.Path, java.nio.charset.Charset, org.apache.tuweni.io.IOConsumer((java.io.Writer)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.io.file.Files$atomicReplace(java.nio.file.Path, java.nio.charset.Charset, org.apache.tuweni.io.IOConsumer((java.io.Writer)))/charset">charset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Charset</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.io.file.Files$atomicReplace(java.nio.file.Path, java.nio.charset.Charset, org.apache.tuweni.io.IOConsumer((java.io.Writer)))/fn">fn</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.io/-i-o-consumer/index.html"><span class="identifier">IOConsumer</span></a><span class="symbol">&lt;</span><span class="identifier">Writer</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/io/src/main/java/org/apache/tuweni/io/file/Files.java#L210">(source)</a>
+<p>Write a temporary file and then replace target.</p>
+<h3>Parameters</h3>
+<p><a name="path"></a>
+<code>path</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> The target file to be replaced (if it exists).</p>
+<p><a name="charset"></a>
+<code>charset</code> - <span class="identifier">Charset</span><span class="symbol">!</span><span class="symbol">:</span> The charset of the file.</p>
+<p><a name="fn"></a>
+<code>fn</code> - <a href="../../org.apache.tuweni.io/-i-o-consumer/index.html"><span class="identifier">IOConsumer</span></a><span class="symbol">&lt;</span><span class="identifier">Writer</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A consumer that will be provided a buffered <code><a href="#">Writer</a></code> instance that will write to the file.</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - If an I/O error occurs.</p>
+</BODY>
+</HTML>

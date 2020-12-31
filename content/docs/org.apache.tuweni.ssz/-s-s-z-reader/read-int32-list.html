@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSZReader.readInt32List - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ssz</a>&nbsp;/&nbsp;<a href="index.html">SSZReader</a>&nbsp;/&nbsp;<a href="./read-int32-list.html">readInt32List</a><br/>
+<br/>
+<h1>readInt32List</h1>
+<a name="org.apache.tuweni.ssz.SSZReader$readInt32List()"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readInt32List</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZReader.java#L585">(source)</a>
+<p>Read a list of 32-bit two's-compliment int values from the SSZ source.</p>
+<h3>Exceptions</h3>
+<p><a name="InvalidSSZTypeException"></a>
+<code>InvalidSSZTypeException</code> - If the next SSZ value is not a list, there are insufficient encoded bytes for the desired bit length or any value in the list, or any decoded value was too large to fit into an int.</p>
+<p><a name="EndOfSSZException"></a>
+<code>EndOfSSZException</code> - If there are no more SSZ values to read.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A list of ints.</p>
+</BODY>
+</HTML>

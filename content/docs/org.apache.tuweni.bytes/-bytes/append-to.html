@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Bytes.appendTo - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.bytes</a>&nbsp;/&nbsp;<a href="index.html">Bytes</a>&nbsp;/&nbsp;<a href="./append-to.html">appendTo</a><br/>
+<br/>
+<h1>appendTo</h1>
+<a name="org.apache.tuweni.bytes.Bytes$appendTo(java.nio.ByteBuffer)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">appendTo</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes$appendTo(java.nio.ByteBuffer)/byteBuffer">byteBuffer</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteBuffer</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/bytes/src/main/java/org/apache/tuweni/bytes/Bytes.java#L1334">(source)</a>
+<p>Append the bytes of this value to the <code><a href="#">ByteBuffer</a></code>.</p>
+<h3>Parameters</h3>
+<p><a name="byteBuffer"></a>
+<code>byteBuffer</code> - <span class="identifier">ByteBuffer</span><span class="symbol">!</span><span class="symbol">:</span> The <code><a href="#">ByteBuffer</a></code> to which to append this value.</p>
+<h3>Exceptions</h3>
+<p><a name="BufferOverflowException"></a>
+<code>BufferOverflowException</code> - If the writer attempts to write more than the provided buffer can hold.</p>
+<p><a name="ReadOnlyBufferException"></a>
+<code>ReadOnlyBufferException</code> - If the provided buffer is read-only.</p>
+<a name="org.apache.tuweni.bytes.Bytes$appendTo(io.vertx.core.buffer.Buffer)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">appendTo</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes$appendTo(io.vertx.core.buffer.Buffer)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<span class="identifier">Buffer</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/bytes/src/main/java/org/apache/tuweni/bytes/Bytes.java#L1349">(source)</a>
+<p>Append the bytes of this value to the provided Vert.x <code><a href="#">Buffer</a></code>. </p>
+<p> Note that since a Vert.x <code><a href="#">Buffer</a></code> will grow as necessary, this method never fails.</p>
+<h3>Parameters</h3>
+<p><a name="buffer"></a>
+<code>buffer</code> - <span class="identifier">Buffer</span><span class="symbol">!</span><span class="symbol">:</span> The <code><a href="#">Buffer</a></code> to which to append this value.</p>
+</BODY>
+</HTML>

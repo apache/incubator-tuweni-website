@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EVMResult - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.evm</a>&nbsp;/&nbsp;<a href="./index.html">EVMResult</a><br/>
+<br/>
+<h1>EVMResult</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">EVMResult</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/evm/src/main/kotlin/org/apache/tuweni/evm/EthereumVirtualMachine.kt#L100">(source)</a>
+<p>Result of EVM execution</p>
+<h3>Parameters</h3>
+<p><a name="statusCode"></a>
+<code>statusCode</code> - the execution result status</p>
+<p><a name="gasLeft"></a>
+<code>gasLeft</code> - how much gas is left</p>
+<p><a name="hostContext"></a>
+<code>hostContext</code> - the context of changes</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Result of EVM execution</p>
+<code><span class="identifier">EVMResult</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.EVMResult$<init>(org.apache.tuweni.evm.EVMExecutionStatusCode, kotlin.Long, org.apache.tuweni.evm.TransactionalEVMHostContext)/statusCode">statusCode</span><span class="symbol">:</span>&nbsp;<a href="../-e-v-m-execution-status-code/index.html"><span class="identifier">EVMExecutionStatusCode</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.EVMResult$<init>(org.apache.tuweni.evm.EVMExecutionStatusCode, kotlin.Long, org.apache.tuweni.evm.TransactionalEVMHostContext)/gasLeft">gasLeft</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.EVMResult$<init>(org.apache.tuweni.evm.EVMExecutionStatusCode, kotlin.Long, org.apache.tuweni.evm.TransactionalEVMHostContext)/hostContext">hostContext</span><span class="symbol">:</span>&nbsp;<a href="../-transactional-e-v-m-host-context/index.html"><span class="identifier">TransactionalEVMHostContext</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="gas-left.html">gasLeft</a></h4>
+</td>
+<td>
+<p>how much gas is left</p>
+<code><span class="keyword">val </span><span class="identifier">gasLeft</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="host-context.html">hostContext</a></h4>
+</td>
+<td>
+<p>the context of changes</p>
+<code><span class="keyword">val </span><span class="identifier">hostContext</span><span class="symbol">: </span><a href="../-transactional-e-v-m-host-context/index.html"><span class="identifier">TransactionalEVMHostContext</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="status-code.html">statusCode</a></h4>
+</td>
+<td>
+<p>the execution result status</p>
+<code><span class="keyword">val </span><span class="identifier">statusCode</span><span class="symbol">: </span><a href="../-e-v-m-execution-status-code/index.html"><span class="identifier">EVMExecutionStatusCode</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="to-bytes.html">toBytes</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="from-bytes.html">fromBytes</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">fromBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.EVMResult.Companion$fromBytes(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.evm.TransactionalEVMHostContext)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.EVMResult.Companion$fromBytes(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.evm.TransactionalEVMHostContext)/hostContext">hostContext</span><span class="symbol">:</span>&nbsp;<a href="../-transactional-e-v-m-host-context/index.html"><span class="identifier">TransactionalEVMHostContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EVMResult</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

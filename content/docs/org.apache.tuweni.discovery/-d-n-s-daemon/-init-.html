@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DNSDaemon.<init> - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.discovery</a>&nbsp;/&nbsp;<a href="index.html">DNSDaemon</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="org.apache.tuweni.discovery.DNSDaemon$&lt;init&gt;(kotlin.String, org.apache.tuweni.discovery.DNSDaemonListener, kotlin.Long, kotlin.Long, kotlin.String, org.xbill.DNS.Resolver)"></a>
+<code><span class="identifier">DNSDaemon</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.discovery.DNSDaemon$<init>(kotlin.String, org.apache.tuweni.discovery.DNSDaemonListener, kotlin.Long, kotlin.Long, kotlin.String, org.xbill.DNS.Resolver)/enrLink">enrLink</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.discovery.DNSDaemon$<init>(kotlin.String, org.apache.tuweni.discovery.DNSDaemonListener, kotlin.Long, kotlin.Long, kotlin.String, org.xbill.DNS.Resolver)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../-d-n-s-daemon-listener/index.html"><span class="identifier">DNSDaemonListener</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.discovery.DNSDaemon$<init>(kotlin.String, org.apache.tuweni.discovery.DNSDaemonListener, kotlin.Long, kotlin.Long, kotlin.String, org.xbill.DNS.Resolver)/seq">seq</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.discovery.DNSDaemon$<init>(kotlin.String, org.apache.tuweni.discovery.DNSDaemonListener, kotlin.Long, kotlin.Long, kotlin.String, org.xbill.DNS.Resolver)/period">period</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span>&nbsp;<span class="symbol">=</span>&nbsp;60000L<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.discovery.DNSDaemon$<init>(kotlin.String, org.apache.tuweni.discovery.DNSDaemonListener, kotlin.Long, kotlin.Long, kotlin.String, org.xbill.DNS.Resolver)/dnsServer">dnsServer</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.discovery.DNSDaemon$<init>(kotlin.String, org.apache.tuweni.discovery.DNSDaemonListener, kotlin.Long, kotlin.Long, kotlin.String, org.xbill.DNS.Resolver)/resolver">resolver</span><span class="symbol">:</span>&nbsp;<span class="identifier">Resolver</span>&nbsp;<span class="symbol">=</span>&nbsp;SimpleResolver(dnsServer)<span class="symbol">)</span></code>
+<p>Resolves DNS records over time, refreshing records.</p>
+<h3>Parameters</h3>
+<p><a name="enrLink"></a>
+<code>enrLink</code> - the ENR link to start with, of the form enrtree://PUBKEY@domain</p>
+<p><a name="listener"></a>
+<code>listener</code> - Listener notified when records are read and whenever they are updated.</p>
+<p><a name="dnsServer"></a>
+<code>dnsServer</code> - the DNS server to use for DNS query. If null, the default DNS server will be used.</p>
+<p><a name="seq"></a>
+<code>seq</code> - the sequence number of the root record. If the root record seq is higher, proceed with visit.</p>
+<p><a name="period"></a>
+<code>period</code> - the period at which to poll DNS records</p>
+<p><a name="resolver"></a>
+<code>resolver</code> - </p>
+</BODY>
+</HTML>

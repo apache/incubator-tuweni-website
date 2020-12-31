@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DiscoveryV5Service.addPeer - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.devp2p.v5</a>&nbsp;/&nbsp;<a href="index.html">DiscoveryV5Service</a>&nbsp;/&nbsp;<a href="./add-peer.html">addPeer</a><br/>
+<br/>
+<h1>addPeer</h1>
+<a name="org.apache.tuweni.devp2p.v5.DiscoveryV5Service$addPeer(org.apache.tuweni.bytes.Bytes)"></a>
+<code><span class="keyword">open</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">addPeer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.v5.DiscoveryV5Service$addPeer(org.apache.tuweni.bytes.Bytes)/rlpENR">rlpENR</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/devp2p/src/main/kotlin/org/apache/tuweni/devp2p/v5/DiscoveryV5Service.kt#L141">(source)</a>
+<p>Adds a peer to the routing table.</p>
+<h3>Parameters</h3>
+<p><a name="rlpENR"></a>
+<code>rlpENR</code> - the RLP representation of the peer ENR.</p>
+<a name="org.apache.tuweni.devp2p.v5.DiscoveryV5Service$addPeer(org.apache.tuweni.devp2p.EthereumNodeRecord, io.vertx.core.net.SocketAddress)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">addPeer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.v5.DiscoveryV5Service$addPeer(org.apache.tuweni.devp2p.EthereumNodeRecord, io.vertx.core.net.SocketAddress)/enr">enr</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.devp2p/-ethereum-node-record/index.html"><span class="identifier">EthereumNodeRecord</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.v5.DiscoveryV5Service$addPeer(org.apache.tuweni.devp2p.EthereumNodeRecord, io.vertx.core.net.SocketAddress)/address">address</span><span class="symbol">:</span>&nbsp;<span class="identifier">SocketAddress</span>&nbsp;<span class="symbol">=</span>&nbsp;SocketAddress.inetSocketAddress(enr.udp()!!, enr.ip().hostAddress)<span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/devp2p/src/main/kotlin/org/apache/tuweni/devp2p/v5/DiscoveryV5Service.kt#L152">(source)</a>
+<p>Adds a peer to the routing table.</p>
+<h3>Parameters</h3>
+<p><a name="enr"></a>
+<code>enr</code> - the peer Ethereum Node Record</p>
+<p><a name="address"></a>
+<code>address</code> - optionally, the UDP address to call for this peer.</p>
+</BODY>
+</HTML>

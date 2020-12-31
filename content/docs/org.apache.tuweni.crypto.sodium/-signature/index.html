@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Signature - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="./index.html">Signature</a><br/>
+<br/>
+<h1>Signature</h1>
+<code><span class="keyword">class </span><span class="identifier">Signature</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/Signature.java#L54">(source)</a>
+<p>Public-key signatures. </p>
+<p> In this system, a signer generates a key pair: </p>
+<ul> <li>a secret key, that will be used to append a signature to any number of messages</li>
+ <li>a public key, that anybody can use to verify that the signature appended to a message was actually issued by the creator of the public key.</li>
+ </ul>
+ 
+<p> Verifiers need to already know and ultimately trust a public key before messages signed using it can be verified. </p>
+<p> Warning: this is different from authenticated encryption. Appending a signature does not change the representation of the message itself. </p>
+<p> This class depends upon the JNR-FFI library being available on the classpath, along with its dependencies. See https://github.com/jnr/jnr-ffi. JNR-FFI can be included using the gradle dependency 'com.github.jnr:jnr-ffi'.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-key-pair/index.html">KeyPair</a></h4>
+</td>
+<td>
+<p>A Signature key pair.</p>
+<code><span class="keyword">class </span><span class="identifier">KeyPair</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-public-key/index.html">PublicKey</a></h4>
+</td>
+<td>
+<p>A signing public key.</p>
+<code><span class="keyword">class </span><span class="identifier">PublicKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Destroyable</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-secret-key/index.html">SecretKey</a></h4>
+</td>
+<td>
+<p>A Signature secret key.</p>
+<code><span class="keyword">class </span><span class="identifier">SecretKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Destroyable</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-seed/index.html">Seed</a></h4>
+</td>
+<td>
+<p>A Signature key pair seed.</p>
+<code><span class="keyword">class </span><span class="identifier">Seed</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="sign.html">sign</a></h4>
+</td>
+<td>
+<p>Signs a message for a given key.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">sign</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$sign(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$sign(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/secretKey">secretKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">sign</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$sign(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$sign(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/secretKey">secretKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sign-detached.html">signDetached</a></h4>
+</td>
+<td>
+<p>Signs a message for a given key.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">signDetached</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$signDetached(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$signDetached(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/secretKey">secretKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">signDetached</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$signDetached(org.apache.tuweni.crypto.sodium.Allocated, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../-allocated/index.html"><span class="identifier">Allocated</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$signDetached(org.apache.tuweni.crypto.sodium.Allocated, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/secretKey">secretKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-allocated/index.html"><span class="identifier">Allocated</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">signDetached</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$signDetached(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$signDetached(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/secretKey">secretKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="verify.html">verify</a></h4>
+</td>
+<td>
+<p>Verifies the signature of the signed message using the public key and returns the message.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">verify</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$verify(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.Signature.PublicKey)/signed">signed</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$verify(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.Signature.PublicKey)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">verify</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$verify(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.Signature.PublicKey)/signed">signed</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$verify(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.Signature.PublicKey)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="verify-detached.html">verifyDetached</a></h4>
+</td>
+<td>
+<p>Decrypt a message using a given key.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">verifyDetached</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$verifyDetached(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.Signature.PublicKey)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$verifyDetached(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.Signature.PublicKey)/signature">signature</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$verifyDetached(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.Signature.PublicKey)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">verifyDetached</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$verifyDetached(org.apache.tuweni.crypto.sodium.Allocated, org.apache.tuweni.crypto.sodium.Allocated, org.apache.tuweni.crypto.sodium.Signature.PublicKey)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../-allocated/index.html"><span class="identifier">Allocated</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$verifyDetached(org.apache.tuweni.crypto.sodium.Allocated, org.apache.tuweni.crypto.sodium.Allocated, org.apache.tuweni.crypto.sodium.Signature.PublicKey)/signature">signature</span><span class="symbol">:</span>&nbsp;<a href="../-allocated/index.html"><span class="identifier">Allocated</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$verifyDetached(org.apache.tuweni.crypto.sodium.Allocated, org.apache.tuweni.crypto.sodium.Allocated, org.apache.tuweni.crypto.sodium.Signature.PublicKey)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">verifyDetached</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$verifyDetached(kotlin.ByteArray, kotlin.ByteArray, org.apache.tuweni.crypto.sodium.Signature.PublicKey)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$verifyDetached(kotlin.ByteArray, kotlin.ByteArray, org.apache.tuweni.crypto.sodium.Signature.PublicKey)/signature">signature</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$verifyDetached(kotlin.ByteArray, kotlin.ByteArray, org.apache.tuweni.crypto.sodium.Signature.PublicKey)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

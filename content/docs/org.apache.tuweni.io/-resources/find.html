@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Resources.find - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.io</a>&nbsp;/&nbsp;<a href="index.html">Resources</a>&nbsp;/&nbsp;<a href="./find.html">find</a><br/>
+<br/>
+<h1>find</h1>
+<a name="org.apache.tuweni.io.Resources$find(kotlin.String)"></a>
+<code><span class="identifier">@MustBeClosed</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">find</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.io.Resources$find(kotlin.String)/glob">glob</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Stream</span><span class="symbol">&lt;</span><span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/io/src/main/java/org/apache/tuweni/io/Resources.java#L83">(source)</a>
+<p>Resolve resources using the default class loader.</p>
+<h3>Parameters</h3>
+<p><a name="glob"></a>
+<code>glob</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> The glob pattern for matching resource paths against.</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - If an I/O error occurs.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Stream</span><span class="symbol">&lt;</span><span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A stream of URLs to all resources.</p>
+<a name="org.apache.tuweni.io.Resources$find(java.lang.ClassLoader, kotlin.String)"></a>
+<code><span class="identifier">@MustBeClosed</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">find</span><span class="symbol">(</span><span class="identifier">@Nullable</span> <span class="identifier" id="org.apache.tuweni.io.Resources$find(java.lang.ClassLoader, kotlin.String)/classLoader">classLoader</span><span class="symbol">:</span>&nbsp;<span class="identifier">ClassLoader</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.io.Resources$find(java.lang.ClassLoader, kotlin.String)/glob">glob</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Stream</span><span class="symbol">&lt;</span><span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/io/src/main/java/org/apache/tuweni/io/Resources.java#L97">(source)</a>
+<p>Resolve resources using the default class loader.</p>
+<h3>Parameters</h3>
+<p><a name="classLoader"></a>
+<code>classLoader</code> - <span class="identifier">ClassLoader</span><span class="symbol">?</span><span class="symbol">:</span> The class loader to use for resolving resources.</p>
+<p><a name="glob"></a>
+<code>glob</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> The glob pattern for matching resource paths against.</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - If an I/O error occurs.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Stream</span><span class="symbol">&lt;</span><span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A stream of URLs to all resources.</p>
+</BODY>
+</HTML>

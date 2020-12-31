@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Multiplexer.openStream - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.rpc.mux</a>&nbsp;/&nbsp;<a href="index.html">Multiplexer</a>&nbsp;/&nbsp;<a href="./open-stream.html">openStream</a><br/>
+<br/>
+<h1>openStream</h1>
+<a name="org.apache.tuweni.scuttlebutt.rpc.mux.Multiplexer$openStream(org.apache.tuweni.scuttlebutt.rpc.RPCStreamRequest, java.util.function.Function((java.lang.Runnable, org.apache.tuweni.scuttlebutt.rpc.mux.ScuttlebuttStreamHandler)))"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">openStream</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.mux.Multiplexer$openStream(org.apache.tuweni.scuttlebutt.rpc.RPCStreamRequest, java.util.function.Function((java.lang.Runnable, org.apache.tuweni.scuttlebutt.rpc.mux.ScuttlebuttStreamHandler)))/request">request</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.rpc/-r-p-c-stream-request/index.html"><span class="identifier">RPCStreamRequest</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.mux.Multiplexer$openStream(org.apache.tuweni.scuttlebutt.rpc.RPCStreamRequest, java.util.function.Function((java.lang.Runnable, org.apache.tuweni.scuttlebutt.rpc.mux.ScuttlebuttStreamHandler)))/streamFactory">streamFactory</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="../-scuttlebutt-stream-handler/index.html"><span class="identifier">ScuttlebuttStreamHandler</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-rpc/src/main/java/org/apache/tuweni/scuttlebutt/rpc/mux/Multiplexer.java#L49">(source)</a>
+<p>Creates a request which opens a stream (e.g. a 'source' in the protocol docs.)</p>
+<h3>Parameters</h3>
+<p><a name="request"></a>
+<code>request</code> - <a href="../../org.apache.tuweni.scuttlebutt.rpc/-r-p-c-stream-request/index.html"><span class="identifier">RPCStreamRequest</span></a><span class="symbol">!</span><span class="symbol">:</span> the request details</p>
+<p><a name="streamFactory"></a>
+<code>streamFactory</code> - <span class="identifier">Function</span><span class="symbol">&lt;</span><span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="../-scuttlebutt-stream-handler/index.html"><span class="identifier">ScuttlebuttStreamHandler</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> a function which takes a 'Runnable' which closes the stream when ran, and returns a stream handler to pass messages to</p>
+<h3>Exceptions</h3>
+<p><a name="JsonProcessingException"></a>
+<code>JsonProcessingException</code> - if JSON marshalling fails.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Hash.digestUsingAlgorithm - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto</a>&nbsp;/&nbsp;<a href="index.html">Hash</a>&nbsp;/&nbsp;<a href="./digest-using-algorithm.html">digestUsingAlgorithm</a><br/>
+<br/>
+<h1>digestUsingAlgorithm</h1>
+<a name="org.apache.tuweni.crypto.Hash$digestUsingAlgorithm(kotlin.ByteArray, kotlin.String)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">digestUsingAlgorithm</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.Hash$digestUsingAlgorithm(kotlin.ByteArray, kotlin.String)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.Hash$digestUsingAlgorithm(kotlin.ByteArray, kotlin.String)/alg">alg</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/Hash.java#L53">(source)</a>
+<p>Helper method to generate a digest using the provided algorithm.</p>
+<h3>Parameters</h3>
+<p><a name="input"></a>
+<code>input</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The input bytes to produce the digest for.</p>
+<p><a name="alg"></a>
+<code>alg</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> The name of the digest algorithm to use.</p>
+<h3>Exceptions</h3>
+<p><a name="NoSuchAlgorithmException"></a>
+<code>NoSuchAlgorithmException</code> - If no Provider supports a MessageDigestSpi implementation for the specified algorithm.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> A digest.</p>
+<a name="org.apache.tuweni.crypto.Hash$digestUsingAlgorithm(org.apache.tuweni.bytes.Bytes, kotlin.String)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">digestUsingAlgorithm</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.Hash$digestUsingAlgorithm(org.apache.tuweni.bytes.Bytes, kotlin.String)/input">input</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.Hash$digestUsingAlgorithm(org.apache.tuweni.bytes.Bytes, kotlin.String)/alg">alg</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/Hash.java#L70">(source)</a>
+<p>Helper method to generate a digest using the provided algorithm.</p>
+<h3>Parameters</h3>
+<p><a name="input"></a>
+<code>input</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The input bytes to produce the digest for.</p>
+<p><a name="alg"></a>
+<code>alg</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> The name of the digest algorithm to use.</p>
+<h3>Exceptions</h3>
+<p><a name="NoSuchAlgorithmException"></a>
+<code>NoSuchAlgorithmException</code> - If no Provider supports a MessageDigestSpi implementation for the specified algorithm.</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> A digest.</p>
+</BODY>
+</HTML>

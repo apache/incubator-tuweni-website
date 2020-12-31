@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RLPxConnectionFactory.respondToHandshake - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlpx</a>&nbsp;/&nbsp;<a href="index.html">RLPxConnectionFactory</a>&nbsp;/&nbsp;<a href="./respond-to-handshake.html">respondToHandshake</a><br/>
+<br/>
+<h1>respondToHandshake</h1>
+<a name="org.apache.tuweni.rlpx.RLPxConnectionFactory$respondToHandshake(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair, java.util.function.Consumer((org.apache.tuweni.bytes.Bytes)))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">respondToHandshake</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxConnectionFactory$respondToHandshake(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair, java.util.function.Consumer((org.apache.tuweni.bytes.Bytes)))/initiatorMessageBytes">initiatorMessageBytes</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxConnectionFactory$respondToHandshake(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair, java.util.function.Consumer((org.apache.tuweni.bytes.Bytes)))/keyPair">keyPair</span><span class="symbol">:</span>&nbsp;<span class="identifier">KeyPair</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxConnectionFactory$respondToHandshake(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair, java.util.function.Consumer((org.apache.tuweni.bytes.Bytes)))/responseHandler">responseHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-r-l-px-connection/index.html"><span class="identifier">RLPxConnection</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlpx/src/main/java/org/apache/tuweni/rlpx/RLPxConnectionFactory.java#L97">(source)</a>
+<p>Creates a RLPxConnection in response to a handshake initiation message.</p>
+<h3>Parameters</h3>
+<p><a name="initiatorMessageBytes"></a>
+<code>initiatorMessageBytes</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the initiation message raw bytes</p>
+<p><a name="keyPair"></a>
+<code>keyPair</code> - <span class="identifier">KeyPair</span><span class="symbol">!</span><span class="symbol">:</span> our key pair</p>
+<p><a name="responseHandler"></a>
+<code>responseHandler</code> - <span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> a function to respond back to the peer that we acknowledged the connection</p>
+<p><strong>Return</strong><br/>
+<a href="../-r-l-px-connection/index.html"><span class="identifier">RLPxConnection</span></a><span class="symbol">!</span><span class="symbol">:</span> a valid RLPxConnection</p>
+</BODY>
+</HTML>

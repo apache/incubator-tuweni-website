@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>org.apache.tuweni.plumtree - tuweni</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">tuweni</a>&nbsp;/&nbsp;<a href="./index.html">org.apache.tuweni.plumtree</a><br/>
+<br/>
+<h2>Package org.apache.tuweni.plumtree</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-ephemeral-peer-repository/index.html">EphemeralPeerRepository</a></h4>
+</td>
+<td>
+<p>In-memory peer repository.</p>
+<code><span class="keyword">class </span><span class="identifier">EphemeralPeerRepository</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-peer-repository/index.html"><span class="identifier">PeerRepository</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-message-hashing/index.html">MessageHashing</a></h4>
+</td>
+<td>
+<p>Produces an identifiable footprint for a message (generally a hash) that can be passed on to other peers to identify uniquely a message being propagated.</p>
+<code><span class="keyword">interface </span><span class="identifier">MessageHashing</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-message-listener/index.html">MessageListener</a></h4>
+</td>
+<td>
+<p>Listens to an incoming message, along with its attributes.</p>
+<code><span class="keyword">interface </span><span class="identifier">MessageListener</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-message-sender/index.html">MessageSender</a></h4>
+</td>
+<td>
+<p>Interface to sending messages to other peers.</p>
+<code><span class="keyword">interface </span><span class="identifier">MessageSender</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-message-validator/index.html">MessageValidator</a></h4>
+</td>
+<td>
+<p>Validator for a message and a peer. This validator is called prior to gossiping the message from that peer to other peers.</p>
+<code><span class="keyword">interface </span><span class="identifier">MessageValidator</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-peer.html">Peer</a></h4>
+</td>
+<td>
+<p>A peer part of the gossip system.</p>
+<code><span class="keyword">interface </span><span class="identifier">Peer</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-peer-pruning/index.html">PeerPruning</a></h4>
+</td>
+<td>
+<p>Interface to decide whether to prune peers when they send messages late. Pruned peers become "lazy peers". They send message attestations (IHAVE).</p>
+<code><span class="keyword">interface </span><span class="identifier">PeerPruning</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-peer-repository/index.html">PeerRepository</a></h4>
+</td>
+<td>
+<p>Repository of active peers associating with a gossip tree.</p>
+<code><span class="keyword">interface </span><span class="identifier">PeerRepository</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-state/index.html">State</a></h4>
+</td>
+<td>
+<p>Local state to our peer, representing the make-up of the tree of peers.</p>
+<code><span class="keyword">class </span><span class="identifier">State</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

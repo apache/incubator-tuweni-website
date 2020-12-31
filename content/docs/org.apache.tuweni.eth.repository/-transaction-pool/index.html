@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TransactionPool - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth.repository</a>&nbsp;/&nbsp;<a href="./index.html">TransactionPool</a><br/>
+<br/>
+<h1>TransactionPool</h1>
+<code><span class="keyword">interface </span><span class="identifier">TransactionPool</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth-repository/src/main/kotlin/org/apache/tuweni/eth/repository/TransactionPool.kt#L23">(source)</a>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add.html">add</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.TransactionPool$add(org.apache.tuweni.eth.Transaction)/transaction">transaction</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-transaction/index.html"><span class="identifier">Transaction</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains.html">contains</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">contains</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.TransactionPool$contains(org.apache.tuweni.eth.Hash)/hash">hash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.TransactionPool$get(org.apache.tuweni.eth.Hash)/hash">hash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-transaction/index.html"><span class="identifier">Transaction</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-memory-transaction-pool/index.html">MemoryTransactionPool</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">MemoryTransactionPool</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">TransactionPool</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

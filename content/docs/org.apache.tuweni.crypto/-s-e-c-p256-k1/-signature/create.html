@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SECP256K1.Signature.create - tuweni</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../../index.html">org.apache.tuweni.crypto</a>&nbsp;/&nbsp;<a href="../index.html">SECP256K1</a>&nbsp;/&nbsp;<a href="index.html">Signature</a>&nbsp;/&nbsp;<a href="./create.html">create</a><br/>
+<br/>
+<h1>create</h1>
+<a name="org.apache.tuweni.crypto.SECP256K1.Signature$create(kotlin.Byte, java.math.BigInteger, java.math.BigInteger)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.Signature$create(kotlin.Byte, java.math.BigInteger, java.math.BigInteger)/v">v</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.Signature$create(kotlin.Byte, java.math.BigInteger, java.math.BigInteger)/r">r</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.Signature$create(kotlin.Byte, java.math.BigInteger, java.math.BigInteger)/s">s</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Signature</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/SECP256K1.java#L875">(source)</a>
+<p>Create a signature from parameters.</p>
+<h3>Parameters</h3>
+<p><a name="v"></a>
+<code>v</code> - <span class="identifier">Byte</span><span class="symbol">:</span> The v-value (recovery id).</p>
+<p><a name="r"></a>
+<code>r</code> - <span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">:</span> The r-value.</p>
+<p><a name="s"></a>
+<code>s</code> - <span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">:</span> The s-value.</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - If any argument has an invalid range.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Signature</span><span class="symbol">!</span><span class="symbol">:</span> The signature.</p>
+</BODY>
+</HTML>

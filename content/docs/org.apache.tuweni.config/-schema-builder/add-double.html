@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SchemaBuilder.addDouble - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.config</a>&nbsp;/&nbsp;<a href="index.html">SchemaBuilder</a>&nbsp;/&nbsp;<a href="./add-double.html">addDouble</a><br/>
+<br/>
+<h1>addDouble</h1>
+<a name="org.apache.tuweni.config.SchemaBuilder$addDouble(kotlin.String, kotlin.Double, kotlin.String, org.apache.tuweni.config.PropertyValidator((kotlin.Double)))"></a>
+<code><span class="keyword">fun </span><span class="identifier">addDouble</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.SchemaBuilder$addDouble(kotlin.String, kotlin.Double, kotlin.String, org.apache.tuweni.config.PropertyValidator((kotlin.Double)))/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier" id="org.apache.tuweni.config.SchemaBuilder$addDouble(kotlin.String, kotlin.Double, kotlin.String, org.apache.tuweni.config.PropertyValidator((kotlin.Double)))/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier" id="org.apache.tuweni.config.SchemaBuilder$addDouble(kotlin.String, kotlin.Double, kotlin.String, org.apache.tuweni.config.PropertyValidator((kotlin.Double)))/description">description</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier" id="org.apache.tuweni.config.SchemaBuilder$addDouble(kotlin.String, kotlin.Double, kotlin.String, org.apache.tuweni.config.PropertyValidator((kotlin.Double)))/validator">validator</span><span class="symbol">:</span>&nbsp;<a href="../-property-validator/index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">Double</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">SchemaBuilder</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/config/src/main/java/org/apache/tuweni/config/SchemaBuilder.java#L272">(source)</a>
+<p>Add a double property to the schema. </p>
+<p> Even if no <code>validator</code> is provided, the schema will validate that the configuration property, if present, contains a double. </p>
+<p> If a <code>defaultValue</code> is provided, then the provided validator, if any, will only be invoked if the value is present (i.e. it will not be provided a <code>null</code> value to validate).</p>
+<h3>Parameters</h3>
+<p><a name="key"></a>
+<code>key</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> The configuration property key.</p>
+<p><a name="defaultValue"></a>
+<code>defaultValue</code> - <span class="identifier">Double</span><span class="symbol">?</span><span class="symbol">:</span> A default value for the property or null if no default is provided.</p>
+<p><a name="description"></a>
+<code>description</code> - <span class="identifier">String</span><span class="symbol">?</span><span class="symbol">:</span> The description to associate with this property, or null if no documentation is provided.</p>
+<p><a name="validator"></a>
+<code>validator</code> - <a href="../-property-validator/index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">Double</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">:</span> A validator for the property, or null if no validator is provided.</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - If the key cannot be parsed.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">SchemaBuilder</span></a><span class="symbol">!</span><span class="symbol">:</span> This builder.</p>
+</BODY>
+</HTML>

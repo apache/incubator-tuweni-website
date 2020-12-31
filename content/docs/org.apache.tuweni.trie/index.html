@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>org.apache.tuweni.trie - tuweni</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">tuweni</a>&nbsp;/&nbsp;<a href="./index.html">org.apache.tuweni.trie</a><br/>
+<br/>
+<h2>Package org.apache.tuweni.trie</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-async-merkle-storage/index.html">AsyncMerkleStorage</a></h4>
+</td>
+<td>
+<p>A <a href="-merkle-storage/index.html">MerkleStorage</a> implementation using <a href="../org.apache.tuweni.concurrent/-async-result/index.html">AsyncResult</a>'s.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AsyncMerkleStorage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-merkle-storage/index.html"><span class="identifier">MerkleStorage</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-compact-encoding/index.html">CompactEncoding</a></h4>
+</td>
+<td>
+<p>Compact (Hex-prefix) encoding and decoding. </p>
+<code><span class="keyword">class </span><span class="identifier">CompactEncoding</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-merkle-patricia-trie/index.html">MerklePatriciaTrie</a></h4>
+</td>
+<td>
+<p>An in-memory <a href="-merkle-trie/index.html">MerkleTrie</a>.</p>
+<code><span class="keyword">class </span><span class="identifier">MerklePatriciaTrie</span><span class="symbol">&lt;</span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-merkle-trie/index.html"><span class="identifier">MerkleTrie</span></a><span class="symbol">&lt;</span><a href="../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-merkle-storage/index.html">MerkleStorage</a></h4>
+</td>
+<td>
+<p>Storage for use in a <a href="-stored-merkle-patricia-trie/index.html">StoredMerklePatriciaTrie</a>.</p>
+<code><span class="keyword">interface </span><span class="identifier">MerkleStorage</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-merkle-trie/index.html">MerkleTrie</a></h4>
+</td>
+<td>
+<p>A Merkle Trie.</p>
+<code><span class="keyword">interface </span><span class="identifier">MerkleTrie</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-stored-merkle-patricia-trie/index.html">StoredMerklePatriciaTrie</a></h4>
+</td>
+<td>
+<p>A <a href="-merkle-trie/index.html">MerkleTrie</a> that persists trie nodes to a <a href="-merkle-storage/index.html">MerkleStorage</a> key/value store.</p>
+<code><span class="keyword">class </span><span class="identifier">StoredMerklePatriciaTrie</span><span class="symbol">&lt;</span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-merkle-trie/index.html"><span class="identifier">MerkleTrie</span></a><span class="symbol">&lt;</span><a href="../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-merkle-storage-exception/index.html">MerkleStorageException</a></h4>
+</td>
+<td>
+<p>This exception is thrown when there is an issue retrieving or decoding values from <a href="-merkle-storage/index.html">MerkleStorage</a>.</p>
+<code><span class="keyword">class </span><span class="identifier">MerkleStorageException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

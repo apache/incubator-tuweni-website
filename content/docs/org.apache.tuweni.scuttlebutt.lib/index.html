@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>org.apache.tuweni.scuttlebutt.lib - tuweni</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">tuweni</a>&nbsp;/&nbsp;<a href="./index.html">org.apache.tuweni.scuttlebutt.lib</a><br/>
+<br/>
+<h2>Package org.apache.tuweni.scuttlebutt.lib</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-feed-service/index.html">FeedService</a></h4>
+</td>
+<td>
+<p>A service for operations that concern scuttlebutt feeds. Should be accessed via a ScuttlebuttClient instance.</p>
+<code><span class="keyword">class </span><span class="identifier">FeedService</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-key-file-loader/index.html">KeyFileLoader</a></h4>
+</td>
+<td>
+<p>Utility class for loading scuttlebutt keys from the file system.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">KeyFileLoader</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-network-service/index.html">NetworkService</a></h4>
+</td>
+<td>
+<p>A service for operations that connect nodes together and other network related operations </p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NetworkService</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-raw-request-service/index.html">RawRequestService</a></h4>
+</td>
+<td>
+<p>Intended to make RPC requests which aren't supported by the higher level services possible. We cannot support every desired RPC request with higher level abstractions because it's possible to define custom plugins with custom endpoints.</p>
+<code><span class="keyword">class </span><span class="identifier">RawRequestService</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-scuttlebutt-client/index.html">ScuttlebuttClient</a></h4>
+</td>
+<td>
+<p>A client for making requests to a scuttlebutt instance with. This is the entry point for accessing service classes which perform operations related to different logical areas. Should be constructed using the ScuttlebuttClientFactory factory class.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ScuttlebuttClient</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-scuttlebutt-client-factory/index.html">ScuttlebuttClientFactory</a></h4>
+</td>
+<td>
+<p>A factory for constructing a new instance of ScuttlebuttClient with the given configuration parameters</p>
+<code><span class="keyword">class </span><span class="identifier">ScuttlebuttClientFactory</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-social-service/index.html">SocialService</a></h4>
+</td>
+<td>
+<p>Operations for querying the follow graph, and fetching the profiles of users. Assumes that the standard 'ssb-about' and 'ssb-friends' plugins are installed on the target instance (or that RPC functions meeting their manifests' contracts are available.) Should not be instantiated directly - an instance should be acquired via the ScuttlebuttClient instance</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SocialService</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

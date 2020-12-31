@@ -1,0 +1,213 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>org.apache.tuweni.crypto.sodium - tuweni</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">tuweni</a>&nbsp;/&nbsp;<a href="./index.html">org.apache.tuweni.crypto.sodium</a><br/>
+<br/>
+<h2>Package org.apache.tuweni.crypto.sodium</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-a-e-s256-g-c-m/index.html">AES256GCM</a></h4>
+</td>
+<td>
+<p>Authenticated Encryption with Additional Data using AES-GCM. </p>
+<code><span class="keyword">class </span><span class="identifier">AES256GCM</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AutoCloseable</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-allocated/index.html">Allocated</a></h4>
+</td>
+<td>
+<p>Allocated objects track allocation of memory using Sodium.</p>
+<code><span class="keyword">class </span><span class="identifier">Allocated</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Destroyable</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-auth/index.html">Auth</a></h4>
+</td>
+<td>
+<p>Secret-key authentication. </p>
+<code><span class="keyword">class </span><span class="identifier">Auth</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-box/index.html">Box</a></h4>
+</td>
+<td>
+<p>Public-key authenticated encryption. </p>
+<code><span class="keyword">class </span><span class="identifier">Box</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AutoCloseable</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-concatenate/index.html">Concatenate</a></h4>
+</td>
+<td>
+<p>Concatenate elements allocated to Sodium memory.</p>
+<code><span class="keyword">class </span><span class="identifier">Concatenate</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-detached-encryption-result/index.html">DetachedEncryptionResult</a></h4>
+</td>
+<td>
+<p>The result from a detached encryption.</p>
+<code><span class="keyword">interface </span><span class="identifier">DetachedEncryptionResult</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-diffie-helman/index.html">DiffieHelman</a></h4>
+</td>
+<td>
+<p>Sodium provides an API to perform scalar multiplication of elliptic curve points. </p>
+<code><span class="keyword">class </span><span class="identifier">DiffieHelman</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-generic-hash/index.html">GenericHash</a></h4>
+</td>
+<td>
+<p>Generic hashing utility (BLAKE2b).</p>
+<code><span class="keyword">class </span><span class="identifier">GenericHash</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-h-m-a-c-s-h-a256/index.html">HMACSHA256</a></h4>
+</td>
+<td>
+<p>Message authentication code support for HMAC-SHA-256.</p>
+<code><span class="keyword">class </span><span class="identifier">HMACSHA256</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-h-m-a-c-s-h-a512/index.html">HMACSHA512</a></h4>
+</td>
+<td>
+<p>Message authentication code support for HMAC-SHA-512.</p>
+<code><span class="keyword">class </span><span class="identifier">HMACSHA512</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-h-m-a-c-s-h-a512256/index.html">HMACSHA512256</a></h4>
+</td>
+<td>
+<p>Message authentication code support for HMAC-SHA-512-256. </p>
+<code><span class="keyword">class </span><span class="identifier">HMACSHA512256</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-key-derivation/index.html">KeyDerivation</a></h4>
+</td>
+<td>
+<p>Key derivation. </p>
+<code><span class="keyword">class </span><span class="identifier">KeyDerivation</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-key-exchange/index.html">KeyExchange</a></h4>
+</td>
+<td>
+<p>Key exchange. </p>
+<code><span class="keyword">class </span><span class="identifier">KeyExchange</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-lib-sodium/index.html">LibSodium</a></h4>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">LibSodium</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-password-hash/index.html">PasswordHash</a></h4>
+</td>
+<td>
+<p>The Argon2 memory-hard hashing function. </p>
+<code><span class="keyword">class </span><span class="identifier">PasswordHash</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-secret-box/index.html">SecretBox</a></h4>
+</td>
+<td>
+<p>Secret-key authenticated encryption. </p>
+<code><span class="keyword">class </span><span class="identifier">SecretBox</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-secret-decryption-stream/index.html">SecretDecryptionStream</a></h4>
+</td>
+<td>
+<p>Used to decrypt a sequence of messages, or a single message split into arbitrary chunks.</p>
+<code><span class="keyword">interface </span><span class="identifier">SecretDecryptionStream</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Destroyable</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-secret-encryption-stream/index.html">SecretEncryptionStream</a></h4>
+</td>
+<td>
+<p>Used to encrypt a sequence of messages, or a single message split into arbitrary chunks.</p>
+<code><span class="keyword">interface </span><span class="identifier">SecretEncryptionStream</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Destroyable</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-s-h-a256-hash/index.html">SHA256Hash</a></h4>
+</td>
+<td>
+<p>SHA-256 hashing. The SHA-256 and SHA-512 functions are provided for interoperability with other applications. If you are looking for a generic hash function and not specifically SHA-2, using crypto_generichash() (BLAKE2b) might be a better choice. </p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SHA256Hash</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-signature/index.html">Signature</a></h4>
+</td>
+<td>
+<p>Public-key signatures. </p>
+<code><span class="keyword">class </span><span class="identifier">Signature</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-sodium/index.html">Sodium</a></h4>
+</td>
+<td>
+<p>Access to the sodium native library. </p>
+<code><span class="keyword">class </span><span class="identifier">Sodium</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-sodium-version/index.html">SodiumVersion</a></h4>
+</td>
+<td>
+<p>Details of a sodium native library version.</p>
+<code><span class="keyword">class </span><span class="identifier">SodiumVersion</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Comparable</span><span class="symbol">&lt;</span><a href="-sodium-version/index.html"><span class="identifier">SodiumVersion</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-x-cha-cha20-poly1305/index.html">XChaCha20Poly1305</a></h4>
+</td>
+<td>
+<p>Authenticated Encryption with Additional Data using XChaCha20-Poly1305. </p>
+<code><span class="keyword">class </span><span class="identifier">XChaCha20Poly1305</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-sodium-exception/index.html">SodiumException</a></h4>
+</td>
+<td>
+<p>An exception that is thrown when an error occurs using the native sodium library.</p>
+<code><span class="keyword">class </span><span class="identifier">SodiumException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PropertyValidator - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.config</a>&nbsp;/&nbsp;<a href="./index.html">PropertyValidator</a><br/>
+<br/>
+<h1>PropertyValidator</h1>
+<code><span class="keyword">interface </span><span class="identifier">PropertyValidator</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/config/src/main/java/org/apache/tuweni/config/PropertyValidator.java#L30">(source)</a>
+<p>A validator associated with a specific configuration property.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="all-in-list.html">allInList</a></h4>
+</td>
+<td>
+<p>A validator that applies a validator to all elements of list, if the list is present.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">allInList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.PropertyValidator$allInList(org.apache.tuweni.config.PropertyValidator((org.apache.tuweni.config.PropertyValidator.allInList.T)))/validator">validator</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="any-of.html">anyOf</a></h4>
+</td>
+<td>
+<p>A validator that ensures a property, if present, has a value within a given set.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">anyOf</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.config.PropertyValidator$anyOf(kotlin.Array((kotlin.String)))/values">values</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">anyOf</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.PropertyValidator$anyOf(kotlin.collections.MutableCollection((kotlin.String)))/values">values</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableCollection</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>A validator that ensures a property, if present, has a comparable value within a given set.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">anyOf</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.PropertyValidator$anyOf(kotlin.collections.MutableCollection((kotlin.String)), java.util.Comparator((kotlin.String)))/values">values</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableCollection</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.config.PropertyValidator$anyOf(kotlin.collections.MutableCollection((kotlin.String)), java.util.Comparator((kotlin.String)))/comparator">comparator</span><span class="symbol">:</span>&nbsp;<span class="identifier">Comparator</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="any-of-ignore-case.html">anyOfIgnoreCase</a></h4>
+</td>
+<td>
+<p>A validator that ensures a property, if present, has a value within a given set.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">anyOfIgnoreCase</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.config.PropertyValidator$anyOfIgnoreCase(kotlin.Array((kotlin.String)))/values">values</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">anyOfIgnoreCase</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.PropertyValidator$anyOfIgnoreCase(kotlin.collections.MutableCollection((kotlin.String)))/values">values</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableCollection</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="combine.html">combine</a></h4>
+</td>
+<td>
+<p>Returns a single validator that combines the results of several validators.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">combine</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.PropertyValidator$combine(org.apache.tuweni.config.PropertyValidator((org.apache.tuweni.config.PropertyValidator.combine.T)), org.apache.tuweni.config.PropertyValidator((org.apache.tuweni.config.PropertyValidator.combine.T)))/first">first</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.config.PropertyValidator$combine(org.apache.tuweni.config.PropertyValidator((org.apache.tuweni.config.PropertyValidator.combine.T)), org.apache.tuweni.config.PropertyValidator((org.apache.tuweni.config.PropertyValidator.combine.T)))/second">second</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">combine</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.PropertyValidator$combine(kotlin.collections.MutableList((org.apache.tuweni.config.PropertyValidator((org.apache.tuweni.config.PropertyValidator.combine.T)))))/validators">validators</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="in-range.html">inRange</a></h4>
+</td>
+<td>
+<p>A validator that ensures a property, if present, is within a long integer range.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">inRange</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.PropertyValidator$inRange(kotlin.Long, kotlin.Long)/from">from</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.config.PropertyValidator$inRange(kotlin.Long, kotlin.Long)/to">to</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="identifier">Number</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-present.html">isPresent</a></h4>
+</td>
+<td>
+<p>A validator that ensures a property is present.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isPresent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-u-r-l.html">isURL</a></h4>
+</td>
+<td>
+<p>A validator that ensures a property, if present, is a well-formed URL.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isURL</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="validate.html">validate</a></h4>
+</td>
+<td>
+<p>Validate a configuration property.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.PropertyValidator$validate(kotlin.String, org.apache.tuweni.config.DocumentPosition, org.apache.tuweni.config.PropertyValidator.T)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.config.PropertyValidator$validate(kotlin.String, org.apache.tuweni.config.DocumentPosition, org.apache.tuweni.config.PropertyValidator.T)/position">position</span><span class="symbol">:</span>&nbsp;<a href="../-document-position/index.html"><span class="identifier">DocumentPosition</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.config.PropertyValidator$validate(kotlin.String, org.apache.tuweni.config.DocumentPosition, org.apache.tuweni.config.PropertyValidator.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../-configuration-error/index.html"><span class="identifier">ConfigurationError</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

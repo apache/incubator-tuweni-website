@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DNSResolver - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.discovery</a>&nbsp;/&nbsp;<a href="./index.html">DNSResolver</a><br/>
+<br/>
+<h1>DNSResolver</h1>
+<code><span class="keyword">class </span><span class="identifier">DNSResolver</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/dns-discovery/src/main/kotlin/org/apache/tuweni/discovery/DNSResolver.kt#L56">(source)</a>
+<p>Resolves a set of ENR nodes from a host name.</p>
+<h3>Parameters</h3>
+<p><a name="dnsServer"></a>
+<code>dnsServer</code> - the DNS server to use for DNS query. If null, the default DNS server will be used.</p>
+<p><a name="seq"></a>
+<code>seq</code> - the sequence number of the root record. If the root record seq is higher, proceed with visit.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Resolves a set of ENR nodes from a host name.</p>
+<code><span class="identifier">DNSResolver</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.discovery.DNSResolver$<init>(kotlin.String, kotlin.Long, org.xbill.DNS.Resolver)/dnsServer">dnsServer</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.discovery.DNSResolver$<init>(kotlin.String, kotlin.Long, org.xbill.DNS.Resolver)/seq">seq</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.discovery.DNSResolver$<init>(kotlin.String, kotlin.Long, org.xbill.DNS.Resolver)/resolver">resolver</span><span class="symbol">:</span>&nbsp;<span class="identifier">Resolver</span>&nbsp;<span class="symbol">=</span>&nbsp;SimpleResolver(dnsServer)<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="seq.html">seq</a></h4>
+</td>
+<td>
+<p>the sequence number of the root record. If the root record seq is higher, proceed with visit.</p>
+<code><span class="keyword">var </span><span class="identifier">seq</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="collect-all.html">collectAll</a></h4>
+</td>
+<td>
+<p>Convenience method to read all ENRs, from a top-level record.</p>
+<code><span class="keyword">fun </span><span class="identifier">collectAll</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.discovery.DNSResolver$collectAll(kotlin.String)/enrLink">enrLink</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.devp2p/-ethereum-node-record/index.html"><span class="identifier">EthereumNodeRecord</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="resolve-record.html">resolveRecord</a></h4>
+</td>
+<td>
+<p>Resolves one DNS record associated with the given domain name.</p>
+<code><span class="keyword">fun </span><span class="identifier">resolveRecord</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.discovery.DNSResolver$resolveRecord(kotlin.String)/domainName">domainName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-d-n-s-entry/index.html"><span class="identifier">DNSEntry</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="resolve-record-raw.html">resolveRecordRaw</a></h4>
+</td>
+<td>
+<p>Resolves the first TXT record associated with a domain name,
+and returns it, or null if no such record exists or the record cannot be read.</p>
+<code><span class="keyword">fun </span><span class="identifier">resolveRecordRaw</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.discovery.DNSResolver$resolveRecordRaw(kotlin.String)/domainName">domainName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="visit-tree.html">visitTree</a></h4>
+</td>
+<td>
+<p>Reads a complete tree of record, starting with the top-level record.</p>
+<code><span class="keyword">fun </span><span class="identifier">visitTree</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.discovery.DNSResolver$visitTree(kotlin.String, org.apache.tuweni.discovery.DNSVisitor)/enrLink">enrLink</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.discovery.DNSResolver$visitTree(kotlin.String, org.apache.tuweni.discovery.DNSVisitor)/visitor">visitor</span><span class="symbol">:</span>&nbsp;<a href="../-d-n-s-visitor/index.html"><span class="identifier">DNSVisitor</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

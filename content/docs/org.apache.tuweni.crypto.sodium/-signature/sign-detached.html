@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Signature.signDetached - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="index.html">Signature</a>&nbsp;/&nbsp;<a href="./sign-detached.html">signDetached</a><br/>
+<br/>
+<h1>signDetached</h1>
+<a name="org.apache.tuweni.crypto.sodium.Signature$signDetached(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.Signature.SecretKey)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">signDetached</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$signDetached(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$signDetached(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/secretKey">secretKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/Signature.java#L537">(source)</a>
+<p>Signs a message for a given key.</p>
+<h3>Parameters</h3>
+<p><a name="message"></a>
+<code>message</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The message to sign.</p>
+<p><a name="secretKey"></a>
+<code>secretKey</code> - <span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">:</span> The secret key to sign the message with.</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The signature of the message.</p>
+<a name="org.apache.tuweni.crypto.sodium.Signature$signDetached(org.apache.tuweni.crypto.sodium.Allocated, org.apache.tuweni.crypto.sodium.Signature.SecretKey)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">signDetached</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$signDetached(org.apache.tuweni.crypto.sodium.Allocated, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../-allocated/index.html"><span class="identifier">Allocated</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$signDetached(org.apache.tuweni.crypto.sodium.Allocated, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/secretKey">secretKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-allocated/index.html"><span class="identifier">Allocated</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/Signature.java#L548">(source)</a>
+<p>Signs a message for a given key.</p>
+<h3>Parameters</h3>
+<p><a name="message"></a>
+<code>message</code> - <a href="../-allocated/index.html"><span class="identifier">Allocated</span></a><span class="symbol">!</span><span class="symbol">:</span> The message to sign.</p>
+<p><a name="secretKey"></a>
+<code>secretKey</code> - <span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">:</span> The secret key to sign the message with.</p>
+<p><strong>Return</strong><br/>
+<a href="../-allocated/index.html"><span class="identifier">Allocated</span></a><span class="symbol">!</span><span class="symbol">:</span> The signature of the message.</p>
+<a name="org.apache.tuweni.crypto.sodium.Signature$signDetached(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.Signature.SecretKey)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">signDetached</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$signDetached(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature$signDetached(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/secretKey">secretKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/Signature.java#L572">(source)</a>
+<p>Signs a message for a given key.</p>
+<h3>Parameters</h3>
+<p><a name="message"></a>
+<code>message</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The message to sign.</p>
+<p><a name="secretKey"></a>
+<code>secretKey</code> - <span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">:</span> The secret key to sign the message with.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The signature of the message.</p>
+</BODY>
+</HTML>

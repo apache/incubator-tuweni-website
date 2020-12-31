@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSZ.decodeInt64List - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ssz</a>&nbsp;/&nbsp;<a href="index.html">SSZ</a>&nbsp;/&nbsp;<a href="./decode-int64-list.html">decodeInt64List</a><br/>
+<br/>
+<h1>decodeInt64List</h1>
+<a name="org.apache.tuweni.ssz.SSZ$decodeInt64List(org.apache.tuweni.bytes.Bytes)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeInt64List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeInt64List(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZ.java#L1730">(source)</a>
+<p>Read a list of 64-bit two's-compliment int values from the SSZ source.</p>
+<h3>Parameters</h3>
+<p><a name="source"></a>
+<code>source</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the SSZ encoded bytes</p>
+<h3>Exceptions</h3>
+<p><a name="InvalidSSZTypeException"></a>
+<code>InvalidSSZTypeException</code> - if the next SSZ value is not a list, there are insufficient encoded bytes for the desired bit length or any value in the list, or any decoded value was too large to fit into an int</p>
+<p><a name="EndOfSSZException"></a>
+<code>EndOfSSZException</code> - if there are no more SSZ values to read</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> a list of ints</p>
+</BODY>
+</HTML>

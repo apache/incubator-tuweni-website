@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSZ.encodeULong - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ssz</a>&nbsp;/&nbsp;<a href="index.html">SSZ</a>&nbsp;/&nbsp;<a href="./encode-u-long.html">encodeULong</a><br/>
+<br/>
+<h1>encodeULong</h1>
+<a name="org.apache.tuweni.ssz.SSZ$encodeULong(kotlin.Long, kotlin.Int)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeULong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeULong(kotlin.Long, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeULong(kotlin.Long, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZ.java#L354">(source)</a>
+<p>Encode an unsigned long integer to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value. Note that <code>value</code> is a native signed long, but will be interpreted as an unsigned value.</p>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <span class="identifier">Long</span><span class="symbol">:</span> the long to encode</p>
+<p><a name="bitLength"></a>
+<code>bitLength</code> - <span class="identifier">Int</span><span class="symbol">:</span> the bit length of the integer value (must be a multiple of 8)</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if the value is too large for the specified <code>bitLength</code></p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the SSZ encoding in a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value</p>
+</BODY>
+</HTML>

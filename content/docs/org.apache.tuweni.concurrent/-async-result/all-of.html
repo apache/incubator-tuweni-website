@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AsyncResult.allOf - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.concurrent</a>&nbsp;/&nbsp;<a href="index.html">AsyncResult</a>&nbsp;/&nbsp;<a href="./all-of.html">allOf</a><br/>
+<br/>
+<h1>allOf</h1>
+<a name="org.apache.tuweni.concurrent.AsyncResult$allOf(kotlin.Array((org.apache.tuweni.concurrent.AsyncResult((kotlin.Any)))))"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">allOf</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$allOf(kotlin.Array((org.apache.tuweni.concurrent.AsyncResult((kotlin.Any)))))/rs">rs</span><span class="symbol">:</span>&nbsp;<a href="index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent/src/main/java/org/apache/tuweni/concurrent/AsyncResult.java#L81">(source)</a>
+<p>Returns an <code><a href="../-async-completion/index.html">AsyncCompletion</a></code> that completes when all of the given results complete. If any results complete exceptionally, then the resulting completion also completes exceptionally.</p>
+<h3>Parameters</h3>
+<p><a name="rs"></a>
+<code>rs</code> - <a href="index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> The results to combine.</p>
+<p><strong>Return</strong><br/>
+<a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span><span class="symbol">:</span> A completion.</p>
+<a name="org.apache.tuweni.concurrent.AsyncResult$allOf(kotlin.collections.MutableCollection((org.apache.tuweni.concurrent.AsyncResult((kotlin.Any)))))"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">allOf</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$allOf(kotlin.collections.MutableCollection((org.apache.tuweni.concurrent.AsyncResult((kotlin.Any)))))/rs">rs</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableCollection</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent/src/main/java/org/apache/tuweni/concurrent/AsyncResult.java#L92">(source)</a>
+<p>Returns an <code><a href="../-async-completion/index.html">AsyncCompletion</a></code> that completes when all of the given results complete. If any results complete exceptionally, then the resulting completion also completes exceptionally.</p>
+<h3>Parameters</h3>
+<p><a name="rs"></a>
+<code>rs</code> - <span class="identifier">MutableCollection</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> The results to combine.</p>
+<p><strong>Return</strong><br/>
+<a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span><span class="symbol">:</span> A completion.</p>
+<a name="org.apache.tuweni.concurrent.AsyncResult$allOf(java.util.stream.Stream((org.apache.tuweni.concurrent.AsyncResult((kotlin.Any)))))"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">allOf</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$allOf(java.util.stream.Stream((org.apache.tuweni.concurrent.AsyncResult((kotlin.Any)))))/rs">rs</span><span class="symbol">:</span>&nbsp;<span class="identifier">Stream</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent/src/main/java/org/apache/tuweni/concurrent/AsyncResult.java#L103">(source)</a>
+<p>Returns an <code><a href="../-async-completion/index.html">AsyncCompletion</a></code> that completes when all of the given results complete. If any results complete exceptionally, then the resulting completion also completes exceptionally.</p>
+<h3>Parameters</h3>
+<p><a name="rs"></a>
+<code>rs</code> - <span class="identifier">Stream</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> The results to combine.</p>
+<p><strong>Return</strong><br/>
+<a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span><span class="symbol">:</span> A completion.</p>
+</BODY>
+</HTML>

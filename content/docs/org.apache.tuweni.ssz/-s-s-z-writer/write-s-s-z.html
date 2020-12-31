@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSZWriter.writeSSZ - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ssz</a>&nbsp;/&nbsp;<a href="index.html">SSZWriter</a>&nbsp;/&nbsp;<a href="./write-s-s-z.html">writeSSZ</a><br/>
+<br/>
+<h1>writeSSZ</h1>
+<a name="org.apache.tuweni.ssz.SSZWriter$writeSSZ(org.apache.tuweni.bytes.Bytes)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">writeSSZ</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeSSZ(org.apache.tuweni.bytes.Bytes)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZWriter.java#L35">(source)</a>
+<p>Append an already SSZ encoded value. Note that this method <strong>may not</strong> validate that <code>value</code> is a valid SSZ sequence. Appending an invalid SSZ sequence will cause the entire SSZ encoding produced by this writer to also be invalid.</p>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the SSZ encoded bytes to append</p>
+<a name="org.apache.tuweni.ssz.SSZWriter$writeSSZ(kotlin.ByteArray)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeSSZ</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeSSZ(kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZWriter.java#L45">(source)</a>
+<p>Append an already SSZ encoded value. Note that this method <strong>may not</strong> validate that <code>value</code> is a valid SSZ sequence. Appending an invalid SSZ sequence will cause the entire SSZ encoding produced by this writer to also be invalid.</p>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> the SSZ encoded bytes to append</p>
+</BODY>
+</HTML>

@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SecretDecryptionStream - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="./index.html">SecretDecryptionStream</a><br/>
+<br/>
+<h1>SecretDecryptionStream</h1>
+<code><span class="keyword">interface </span><span class="identifier">SecretDecryptionStream</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Destroyable</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/SecretDecryptionStream.java#L22">(source)</a>
+<p>Used to decrypt a sequence of messages, or a single message split into arbitrary chunks.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="is-complete.html">isComplete</a></h4>
+</td>
+<td>
+<p>Returns true if the stream is complete</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">isComplete</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="pull.html">pull</a></h4>
+</td>
+<td>
+<p>Pull a message from this secret stream.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">pull</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SecretDecryptionStream$pull(org.apache.tuweni.bytes.Bytes)/cipherText">cipherText</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">pull</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SecretDecryptionStream$pull(kotlin.ByteArray)/cipherText">cipherText</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

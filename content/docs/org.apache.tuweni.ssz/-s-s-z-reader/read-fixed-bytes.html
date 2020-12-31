@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSZReader.readFixedBytes - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ssz</a>&nbsp;/&nbsp;<a href="index.html">SSZReader</a>&nbsp;/&nbsp;<a href="./read-fixed-bytes.html">readFixedBytes</a><br/>
+<br/>
+<h1>readFixedBytes</h1>
+<a name="org.apache.tuweni.ssz.SSZReader$readFixedBytes(kotlin.Int)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readFixedBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readFixedBytes(kotlin.Int)/byteLength">byteLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZReader.java#L65">(source)</a>
+<p>Read a known size fixed-length bytes value from the SSZ source. Note: prefer to use <code><a href="./read-fixed-bytes.html">#readFixedBytes(int, int)</a></code> instead, especially when reading untrusted data.</p>
+<h3>Parameters</h3>
+<p><a name="byteLength"></a>
+<code>byteLength</code> - <span class="identifier">Int</span><span class="symbol">:</span> The number of fixed-length Bytes (no length mixin) to read.</p>
+<h3>Exceptions</h3>
+<p><a name="InvalidSSZTypeException"></a>
+<code>InvalidSSZTypeException</code> - If the next SSZ value is not a byte array, or is too large (greater than 2^32 bytes).</p>
+<p><a name="EndOfSSZException"></a>
+<code>EndOfSSZException</code> - If there are no more SSZ values to read.</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The bytes for the next value.</p>
+<a name="org.apache.tuweni.ssz.SSZReader$readFixedBytes(kotlin.Int, kotlin.Int)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readFixedBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readFixedBytes(kotlin.Int, kotlin.Int)/byteLength">byteLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readFixedBytes(kotlin.Int, kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZReader.java#L78">(source)</a>
+<p>Read a known size fixed-length bytes value from the SSZ source.</p>
+<h3>Parameters</h3>
+<p><a name="byteLength"></a>
+<code>byteLength</code> - <span class="identifier">Int</span><span class="symbol">:</span> The number of fixed-length Bytes (no length mixin) to read.</p>
+<p><a name="limit"></a>
+<code>limit</code> - <span class="identifier">Int</span><span class="symbol">:</span> The maximum number of bytes to read.</p>
+<h3>Exceptions</h3>
+<p><a name="InvalidSSZTypeException"></a>
+<code>InvalidSSZTypeException</code> - If the next SSZ value is not a byte array, or would exceed the limit.</p>
+<p><a name="EndOfSSZException"></a>
+<code>EndOfSSZException</code> - If there are no more SSZ values to read.</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The bytes for the next value.</p>
+</BODY>
+</HTML>

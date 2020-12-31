@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Bytes48.fromHexString - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.bytes</a>&nbsp;/&nbsp;<a href="index.html">Bytes48</a>&nbsp;/&nbsp;<a href="./from-hex-string.html">fromHexString</a><br/>
+<br/>
+<h1>fromHexString</h1>
+<a name="org.apache.tuweni.bytes.Bytes48$fromHexString(kotlin.CharSequence)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromHexString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes48$fromHexString(kotlin.CharSequence)/str">str</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharSequence</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Bytes48</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/bytes/src/main/java/org/apache/tuweni/bytes/Bytes48.java#L186">(source)</a>
+<p>Parse a hexadecimal string into a <code><a href="index.html">Bytes48</a></code>. </p>
+<p> This method is strict in that <code>str</code> must of an even length.</p>
+<h3>Parameters</h3>
+<p><a name="str"></a>
+<code>str</code> - <span class="identifier">CharSequence</span><span class="symbol">!</span><span class="symbol">:</span> The hexadecimal string to parse, which may or may not start with "0x". That representation may contain less than 48 bytes, in which case the result is left padded with zeros (see <code><a href="from-hex-string-strict.html">#fromHexStringStrict</a></code> if this is not what you want).</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if <code>str</code> does not correspond to a valid hexadecimal representation, is of an odd length, or contains more than 48 bytes.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">Bytes48</span></a><span class="symbol">!</span><span class="symbol">:</span> The value corresponding to <code>str</code>.</p>
+</BODY>
+</HTML>

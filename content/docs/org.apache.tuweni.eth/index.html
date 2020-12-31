@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>org.apache.tuweni.eth - tuweni</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">tuweni</a>&nbsp;/&nbsp;<a href="./index.html">org.apache.tuweni.eth</a><br/>
+<br/>
+<h2>Package org.apache.tuweni.eth</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-account-state/index.html">AccountState</a></h4>
+</td>
+<td>
+<p>State of an account as stored on chain.</p>
+<code><span class="keyword">class </span><span class="identifier">AccountState</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-address/index.html">Address</a></h4>
+</td>
+<td>
+<p>An Ethereum account address.</p>
+<code><span class="keyword">class </span><span class="identifier">Address</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../org.apache.tuweni.bytes/-delegating-bytes/index.html"><span class="identifier">DelegatingBytes</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-block/index.html">Block</a></h4>
+</td>
+<td>
+<p>An Ethereum block.</p>
+<code><span class="keyword">class </span><span class="identifier">Block</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-block-body/index.html">BlockBody</a></h4>
+</td>
+<td>
+<p>An Ethereum block body.</p>
+<code><span class="keyword">class </span><span class="identifier">BlockBody</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-block-header/index.html">BlockHeader</a></h4>
+</td>
+<td>
+<p>An Ethereum block header.</p>
+<code><span class="keyword">class </span><span class="identifier">BlockHeader</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-eth-json-module/index.html">EthJsonModule</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EthJsonModule</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">SimpleModule</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-hash/index.html">Hash</a></h4>
+</td>
+<td>
+<p>An Ethereum hash.</p>
+<code><span class="keyword">class </span><span class="identifier">Hash</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../org.apache.tuweni.bytes/-delegating-bytes32/index.html"><span class="identifier">DelegatingBytes32</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-log/index.html">Log</a></h4>
+</td>
+<td>
+<p>A log entry is a tuple of a logger’s address (the address of the contract that added the logs), a series of 32-bytes log topics, and some number of bytes of data.</p>
+<code><span class="keyword">class </span><span class="identifier">Log</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-logs-bloom-filter/index.html">LogsBloomFilter</a></h4>
+</td>
+<td>
+<p>Bloom filter implementation for storing persistent logs, describes a 2048-bit representation of all log entries of a transaction, except data. Sets the bits of the 2048 byte array, where indices are given by: The lower order 11-bits, of the first three double-bytes, of the SHA3, of each value. For instance the address "0x0F572E5295C57F15886F9B263E2F6D2D6C7B5EC6" results in the KECCAK256 hash "bd2b01afcd27800b54d2179edc49e2bffde5078bb6d0b204694169b1643fb108", of which the corresponding double-bytes are: bd2b, 01af, cd27, corresponding to the following bits in the bloom filter: 1323, 431, 1319</p>
+<code><span class="keyword">class </span><span class="identifier">LogsBloomFilter</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-transaction/index.html">Transaction</a></h4>
+</td>
+<td>
+<p>An Ethereum transaction.</p>
+<code><span class="keyword">class </span><span class="identifier">Transaction</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-transaction-receipt/index.html">TransactionReceipt</a></h4>
+</td>
+<td>
+<p>A transaction receipt, containing information pertaining a transaction execution. </p>
+<code><span class="keyword">class </span><span class="identifier">TransactionReceipt</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

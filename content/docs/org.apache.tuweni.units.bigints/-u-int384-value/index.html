@@ -1,0 +1,240 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UInt384Value - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.units.bigints</a>&nbsp;/&nbsp;<a href="./index.html">UInt384Value</a><br/>
+<br/>
+<h1>UInt384Value</h1>
+<code><span class="keyword">interface </span><span class="identifier">UInt384Value</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">UInt384Value</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Comparable</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/units/src/main/java/org/apache/tuweni/units/bigints/UInt384Value.java#L42">(source)</a>
+<p>Represents a 384-bit (48 bytes) unsigned integer value. </p>
+<p> A <code><a href="./index.html">UInt384Value</a></code> is an unsigned integer value stored with 48 bytes, so whose value can range between 0 and 2^384-1. </p>
+<p> This interface defines operations for value types with a 384-bit precision range. The methods provided by this interface take parameters of the same type (and also <code>long</code>. This provides type safety by ensuring calculations cannot mix different <code>UInt384Value</code> types. </p>
+<p> Where only a pure numerical 384-bit value is required, <code><a href="../-u-int384/index.html">UInt384</a></code> should be used. </p>
+<p> It is strongly advised to extend <code><a href="../-base-u-int384-value/index.html">BaseUInt384Value</a></code> rather than implementing this interface directly. Doing so provides type safety in that quantities of different units cannot be mixed accidentally.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add.html">add</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this + value)</code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$add(org.apache.tuweni.units.bigints.UInt384Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$add(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-exact.html">addExact</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this + value)</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addExact</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$addExact(org.apache.tuweni.units.bigints.UInt384Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addExact</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$addExact(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-mod.html">addMod</a></h4>
+</td>
+<td>
+<p>Returns a value equivalent to <code>((this + value) mod modulus)</code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">addMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$addMod(org.apache.tuweni.units.bigints.UInt384Value.T, org.apache.tuweni.units.bigints.UInt384)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$addMod(org.apache.tuweni.units.bigints.UInt384Value.T, org.apache.tuweni.units.bigints.UInt384)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">addMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$addMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt384)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$addMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt384)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">addMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$addMod(kotlin.Long, kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$addMod(kotlin.Long, kotlin.Long)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="bit-length.html">bitLength</a></h4>
+</td>
+<td>
+<p>Returns the number of bits following and including the highest-order ("leftmost") one-bit</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">bitLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="divide.html">divide</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this / value)</code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">divide</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$divide(org.apache.tuweni.units.bigints.UInt384Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">divide</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$divide(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="fits-int.html">fitsInt</a></h4>
+</td>
+<td>
+<p>Returns true if this value fits an int</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">fitsInt</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="fits-long.html">fitsLong</a></h4>
+</td>
+<td>
+<p>Returns true if this value fits in a long.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">fitsLong</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="int-value.html">intValue</a></h4>
+</td>
+<td>
+<p>Returns the value as an int.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">intValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-zero.html">isZero</a></h4>
+</td>
+<td>
+<p>Returns true is this is 0.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isZero</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mod.html">mod</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this mod modulus)</code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">mod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$mod(org.apache.tuweni.units.bigints.UInt384)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">mod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$mod(kotlin.Long)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="multiply.html">multiply</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this * value)</code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">multiply</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$multiply(org.apache.tuweni.units.bigints.UInt384Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">multiply</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$multiply(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="multiply-mod.html">multiplyMod</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>((this * value) mod modulus)</code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">multiplyMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$multiplyMod(org.apache.tuweni.units.bigints.UInt384Value.T, org.apache.tuweni.units.bigints.UInt384)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$multiplyMod(org.apache.tuweni.units.bigints.UInt384Value.T, org.apache.tuweni.units.bigints.UInt384)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">multiplyMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$multiplyMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt384)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$multiplyMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt384)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">multiplyMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$multiplyMod(kotlin.Long, kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$multiplyMod(kotlin.Long, kotlin.Long)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="number-of-leading-zeros.html">numberOfLeadingZeros</a></h4>
+</td>
+<td>
+<p>Returns the number of zero bits preceding the highest-order ("leftmost") one-bit</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">numberOfLeadingZeros</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="pow.html">pow</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this&lt;sup&gt;exponent&lt;/sup&gt; mod 2&lt;sup&gt;384&lt;/sup&gt;)</code> </p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">pow</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$pow(org.apache.tuweni.units.bigints.UInt384)/exponent">exponent</span><span class="symbol">:</span>&nbsp;<a href="../-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">pow</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$pow(kotlin.Long)/exponent">exponent</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="subtract.html">subtract</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this - value)</code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">subtract</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$subtract(org.apache.tuweni.units.bigints.UInt384Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">subtract</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$subtract(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="subtract-exact.html">subtractExact</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this - value)</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">subtractExact</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$subtractExact(org.apache.tuweni.units.bigints.UInt384Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">subtractExact</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt384Value$subtractExact(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-big-integer.html">toBigInteger</a></h4>
+</td>
+<td>
+<p>Returns this value as a <code><a href="#">BigInteger</a></code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toBigInteger</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-bytes.html">toBytes</a></h4>
+</td>
+<td>
+<p>Returns the value as bytes</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">toBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes48/index.html"><span class="identifier">Bytes48</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-hex-string.html">toHexString</a></h4>
+</td>
+<td>
+<p>This value represented as an hexadecimal string. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toHexString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-long.html">toLong</a></h4>
+</td>
+<td>
+<p>Returns this value as a long.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toLong</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-minimal-bytes.html">toMinimalBytes</a></h4>
+</td>
+<td>
+<p>Retuns the value as bytes without any leading zero bytes.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">toMinimalBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-short-hex-string.html">toShortHexString</a></h4>
+</td>
+<td>
+<p>Returns this value represented as a minimal hexadecimal string (without any leading zero).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toShortHexString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-u-int384.html">toUInt384</a></h4>
+</td>
+<td>
+<p>Convert this value to a <code><a href="../-u-int384/index.html">UInt384</a></code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">toUInt384</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-base-u-int384-value/index.html">BaseUInt384Value</a></h4>
+</td>
+<td>
+<p>Base class for <code><a href="./index.html">UInt384Value</a></code>. </p>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">BaseUInt384Value</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">UInt384Value</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">UInt384Value</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-u-int384/index.html">UInt384</a></h4>
+</td>
+<td>
+<p>An unsigned 384-bit precision number. This is a raw <code><a href="./index.html">UInt384Value</a></code> - a 384-bit precision unsigned number of no particular unit.</p>
+<code><span class="keyword">class </span><span class="identifier">UInt384</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">UInt384Value</span></a><span class="symbol">&lt;</span><a href="../-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,168 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RLPReader - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlp</a>&nbsp;/&nbsp;<a href="./index.html">RLPReader</a><br/>
+<br/>
+<h1>RLPReader</h1>
+<code><span class="keyword">interface </span><span class="identifier">RLPReader</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlp/src/main/java/org/apache/tuweni/rlp/RLPReader.java#L30">(source)</a>
+<p>A reader for consuming values from an RLP encoded source.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="is-complete.html">isComplete</a></h4>
+</td>
+<td>
+<p>Check if all values have been read.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">isComplete</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-lenient.html">isLenient</a></h4>
+</td>
+<td>
+<p>Determine if this reader is lenient by default. </p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">isLenient</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="next-is-empty.html">nextIsEmpty</a></h4>
+</td>
+<td>
+<p>Check if the next item to be read is empty.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">nextIsEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="next-is-list.html">nextIsList</a></h4>
+</td>
+<td>
+<p>Check if the next item to be read is a list.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">nextIsList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="position.html">position</a></h4>
+</td>
+<td>
+<p>Returns reader's index</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">position</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-big-integer.html">readBigInteger</a></h4>
+</td>
+<td>
+<p>Read a big integer value from the RLP source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readBigInteger</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readBigInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLPReader$readBigInteger(kotlin.Boolean)/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-byte.html">readByte</a></h4>
+</td>
+<td>
+<p>Read a byte from the RLP source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readByte</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Byte</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readByte</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLPReader$readByte(kotlin.Boolean)/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Byte</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-byte-array.html">readByteArray</a></h4>
+</td>
+<td>
+<p>Read a byte array from the RLP source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readByteArray</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-int.html">readInt</a></h4>
+</td>
+<td>
+<p>Read an integer value from the RLP source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readInt</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLPReader$readInt(kotlin.Boolean)/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-list.html">readList</a></h4>
+</td>
+<td>
+<p>Read a list of values from the RLP source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">readList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLPReader$readList(java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLPReader.readList.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">readList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLPReader$readList(kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLPReader.readList.T)))/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLPReader$readList(kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLPReader.readList.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code>
+<p>Read a list of values from the RLP source, populating a mutable output list.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLPReader$readList(java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPReader, kotlin.collections.MutableList((kotlin.Any)))))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLPReader$readList(kotlin.Boolean, java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPReader, kotlin.collections.MutableList((kotlin.Any)))))/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLPReader$readList(kotlin.Boolean, java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPReader, kotlin.collections.MutableList((kotlin.Any)))))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-list-contents.html">readListContents</a></h4>
+</td>
+<td>
+<p>Read a list of values from the RLP source, populating a list using a function interpreting each value.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">readListContents</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLPReader$readListContents(java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLPReader.readListContents.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">readListContents</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLPReader$readListContents(kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLPReader.readListContents.T)))/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLPReader$readListContents(kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLPReader.readListContents.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-long.html">readLong</a></h4>
+</td>
+<td>
+<p>Read a long value from the RLP source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readLong</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLPReader$readLong(kotlin.Boolean)/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-string.html">readString</a></h4>
+</td>
+<td>
+<p>Read a string value from the RLP source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLPReader$readString(kotlin.Boolean)/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-u-int256.html">readUInt256</a></h4>
+</td>
+<td>
+<p>Read a <code><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html">UInt256</a></code> value from the RLP source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readUInt256</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readUInt256</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLPReader$readUInt256(kotlin.Boolean)/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-value.html">readValue</a></h4>
+</td>
+<td>
+<p>Read the next value from the RLP source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readValue</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLPReader$readValue(kotlin.Boolean)/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remaining.html">remaining</a></h4>
+</td>
+<td>
+<p>The number of remaining values to read.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">remaining</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="skip-next.html">skipNext</a></h4>
+</td>
+<td>
+<p>Skip the next value or list in the RLP source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">skipNext</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">skipNext</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLPReader$skipNext(kotlin.Boolean)/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

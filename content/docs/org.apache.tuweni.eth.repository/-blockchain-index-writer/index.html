@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BlockchainIndexWriter - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth.repository</a>&nbsp;/&nbsp;<a href="./index.html">BlockchainIndexWriter</a><br/>
+<br/>
+<h1>BlockchainIndexWriter</h1>
+<code><span class="keyword">interface </span><span class="identifier">BlockchainIndexWriter</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth-repository/src/main/kotlin/org/apache/tuweni/eth/repository/BlockchainIndex.kt#L257">(source)</a>
+<p>Indexer for blockchain elements.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="index-block-header.html">indexBlockHeader</a></h4>
+</td>
+<td>
+<p>Indexes a block header.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">indexBlockHeader</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainIndexWriter$indexBlockHeader(org.apache.tuweni.eth.BlockHeader)/blockHeader">blockHeader</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-block-header/index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="index-transaction.html">indexTransaction</a></h4>
+</td>
+<td>
+<p>Indexes a transaction.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">indexTransaction</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainIndexWriter$indexTransaction(org.apache.tuweni.eth.Transaction)/transaction">transaction</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-transaction/index.html"><span class="identifier">Transaction</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="index-transaction-receipt.html">indexTransactionReceipt</a></h4>
+</td>
+<td>
+<p>Indexes a transaction receipt.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">indexTransactionReceipt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainIndexWriter$indexTransactionReceipt(org.apache.tuweni.eth.TransactionReceipt, kotlin.Int, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/txReceipt">txReceipt</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-transaction-receipt/index.html"><span class="identifier">TransactionReceipt</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainIndexWriter$indexTransactionReceipt(org.apache.tuweni.eth.TransactionReceipt, kotlin.Int, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/txIndex">txIndex</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainIndexWriter$indexTransactionReceipt(org.apache.tuweni.eth.TransactionReceipt, kotlin.Int, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/txHash">txHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainIndexWriter$indexTransactionReceipt(org.apache.tuweni.eth.TransactionReceipt, kotlin.Int, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/blockHash">blockHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-blockchain-index/index.html">BlockchainIndex</a></h4>
+</td>
+<td>
+<p>A Lucene-backed indexer capable of indexing blocks and block headers.</p>
+<code><span class="keyword">class </span><span class="identifier">BlockchainIndex</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BlockchainIndexWriter</span></a><span class="symbol">, </span><a href="../-blockchain-index-reader/index.html"><span class="identifier">BlockchainIndexReader</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

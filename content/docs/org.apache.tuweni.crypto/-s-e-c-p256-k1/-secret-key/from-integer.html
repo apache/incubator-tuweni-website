@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SECP256K1.SecretKey.fromInteger - tuweni</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../../index.html">org.apache.tuweni.crypto</a>&nbsp;/&nbsp;<a href="../index.html">SECP256K1</a>&nbsp;/&nbsp;<a href="index.html">SecretKey</a>&nbsp;/&nbsp;<a href="./from-integer.html">fromInteger</a><br/>
+<br/>
+<h1>fromInteger</h1>
+<a name="org.apache.tuweni.crypto.SECP256K1.SecretKey$fromInteger(java.math.BigInteger)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.SecretKey$fromInteger(java.math.BigInteger)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">SecretKey</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/SECP256K1.java#L415">(source)</a>
+<p>Create the private key from a <code><a href="#">BigInteger</a></code>.</p>
+<h3>Parameters</h3>
+<p><a name="key"></a>
+<code>key</code> - <span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">:</span> The integer describing the key.</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - If the integer would overflow 32 bytes.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">:</span> The private key.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Files - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.io.file</a>&nbsp;/&nbsp;<a href="./index.html">Files</a><br/>
+<br/>
+<h1>Files</h1>
+<code><span class="keyword">class </span><span class="identifier">Files</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/io/src/main/java/org/apache/tuweni/io/file/Files.java#L42">(source)</a>
+<p>Utility methods for working with files.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="atomic-replace.html">atomicReplace</a></h4>
+</td>
+<td>
+<p>Write a temporary file and then replace target.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">atomicReplace</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.io.file.Files$atomicReplace(java.nio.file.Path, kotlin.ByteArray)/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.io.file.Files$atomicReplace(java.nio.file.Path, kotlin.ByteArray)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">atomicReplace</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.io.file.Files$atomicReplace(java.nio.file.Path, org.apache.tuweni.io.IOConsumer((java.io.Writer)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.io.file.Files$atomicReplace(java.nio.file.Path, org.apache.tuweni.io.IOConsumer((java.io.Writer)))/fn">fn</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.io/-i-o-consumer/index.html"><span class="identifier">IOConsumer</span></a><span class="symbol">&lt;</span><span class="identifier">Writer</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">atomicReplace</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.io.file.Files$atomicReplace(java.nio.file.Path, java.nio.charset.Charset, org.apache.tuweni.io.IOConsumer((java.io.Writer)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.io.file.Files$atomicReplace(java.nio.file.Path, java.nio.charset.Charset, org.apache.tuweni.io.IOConsumer((java.io.Writer)))/charset">charset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Charset</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.io.file.Files$atomicReplace(java.nio.file.Path, java.nio.charset.Charset, org.apache.tuweni.io.IOConsumer((java.io.Writer)))/fn">fn</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.io/-i-o-consumer/index.html"><span class="identifier">IOConsumer</span></a><span class="symbol">&lt;</span><span class="identifier">Writer</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="copy-resource.html">copyResource</a></h4>
+</td>
+<td>
+<p>Copies the content of a resource to a file.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">copyResource</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.io.file.Files$copyResource(kotlin.String, java.nio.file.Path, kotlin.Array((java.nio.file.OpenOption)))/resourceName">resourceName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.io.file.Files$copyResource(kotlin.String, java.nio.file.Path, kotlin.Array((java.nio.file.OpenOption)))/destination">destination</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.io.file.Files$copyResource(kotlin.String, java.nio.file.Path, kotlin.Array((java.nio.file.OpenOption)))/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">OpenOption</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Path</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">copyResource</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.io.file.Files$copyResource(java.lang.ClassLoader, kotlin.String, java.nio.file.Path, kotlin.Array((java.nio.file.OpenOption)))/classloader">classloader</span><span class="symbol">:</span>&nbsp;<span class="identifier">ClassLoader</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.io.file.Files$copyResource(java.lang.ClassLoader, kotlin.String, java.nio.file.Path, kotlin.Array((java.nio.file.OpenOption)))/resourceName">resourceName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.io.file.Files$copyResource(java.lang.ClassLoader, kotlin.String, java.nio.file.Path, kotlin.Array((java.nio.file.OpenOption)))/destination">destination</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.io.file.Files$copyResource(java.lang.ClassLoader, kotlin.String, java.nio.file.Path, kotlin.Array((java.nio.file.OpenOption)))/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">OpenOption</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Path</span><span class="symbol">!</span></code>
+<p>Copies the content of a resource to an output stream.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">copyResource</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.io.file.Files$copyResource(kotlin.String, java.io.OutputStream)/resourceName">resourceName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.io.file.Files$copyResource(kotlin.String, java.io.OutputStream)/out">out</span><span class="symbol">:</span>&nbsp;<span class="identifier">OutputStream</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">copyResource</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.io.file.Files$copyResource(java.lang.ClassLoader, kotlin.String, java.io.OutputStream)/classloader">classloader</span><span class="symbol">:</span>&nbsp;<span class="identifier">ClassLoader</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.io.file.Files$copyResource(java.lang.ClassLoader, kotlin.String, java.io.OutputStream)/resourceName">resourceName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.io.file.Files$copyResource(java.lang.ClassLoader, kotlin.String, java.io.OutputStream)/out">out</span><span class="symbol">:</span>&nbsp;<span class="identifier">OutputStream</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="create-file-if-missing.html">createFileIfMissing</a></h4>
+</td>
+<td>
+<p>Create a file, if it does not already exist.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">createFileIfMissing</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.io.file.Files$createFileIfMissing(java.nio.file.Path, kotlin.Array((java.nio.file.attribute.FileAttribute((kotlin.Any)))))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.io.file.Files$createFileIfMissing(java.nio.file.Path, kotlin.Array((java.nio.file.attribute.FileAttribute((kotlin.Any)))))/attrs">attrs</span><span class="symbol">:</span>&nbsp;<span class="identifier">FileAttribute</span><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="delete-recursively.html">deleteRecursively</a></h4>
+</td>
+<td>
+<p>Delete a directory and all files contained within it.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">deleteRecursively</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.io.file.Files$deleteRecursively(java.nio.file.Path)/directory">directory</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

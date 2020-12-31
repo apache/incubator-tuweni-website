@@ -1,0 +1,17 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SECP256K1.Signature.isCanonical - tuweni</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../../index.html">org.apache.tuweni.crypto</a>&nbsp;/&nbsp;<a href="../index.html">SECP256K1</a>&nbsp;/&nbsp;<a href="index.html">Signature</a>&nbsp;/&nbsp;<a href="./is-canonical.html">isCanonical</a><br/>
+<br/>
+<h1>isCanonical</h1>
+<a name="org.apache.tuweni.crypto.SECP256K1.Signature$isCanonical()"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isCanonical</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/SECP256K1.java#L930">(source)</a>
+<p>Check if the signature is canonical. Every signature (r,s) has an equivalent signature (r, -s (mod N)) that is also valid for the same message. The canonical signature is considered the signature with the s-value less than or equal to half the curve order.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> <code>true</code> if this is the canonical form of the signature, and <code>false</code> otherwise.</p>
+</BODY>
+</HTML>

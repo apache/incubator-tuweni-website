@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TomlParseResult - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.toml</a>&nbsp;/&nbsp;<a href="./index.html">TomlParseResult</a><br/>
+<br/>
+<h1>TomlParseResult</h1>
+<code><span class="keyword">interface </span><span class="identifier">TomlParseResult</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-toml-table/index.html"><span class="identifier">TomlTable</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/TomlParseResult.java#L20">(source)</a>
+<p>The result from parsing a TOML document.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="errors.html">errors</a></h4>
+</td>
+<td>
+<p>The errors that occurred during parsing.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">errors</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../-toml-parse-error/index.html"><span class="identifier">TomlParseError</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="has-errors.html">hasErrors</a></h4>
+</td>
+<td>
+<p>Returns true if the TOML document contained errors.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasErrors</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

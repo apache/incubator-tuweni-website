@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>org.apache.tuweni.evm - tuweni</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">tuweni</a>&nbsp;/&nbsp;<a href="./index.html">org.apache.tuweni.evm</a><br/>
+<br/>
+<h2>Package org.apache.tuweni.evm</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-call-kind/index.html">CallKind</a></h4>
+</td>
+<td>
+<p>Types of EVM calls</p>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">CallKind</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-ethereum-virtual-machine/index.html">EthereumVirtualMachine</a></h4>
+</td>
+<td>
+<p>An Ethereum Virtual Machine.</p>
+<code><span class="keyword">class </span><span class="identifier">EthereumVirtualMachine</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-e-v-m-execution-status-code/index.html">EVMExecutionStatusCode</a></h4>
+</td>
+<td>
+<p>EVM execution status codes</p>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">EVMExecutionStatusCode</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-e-v-m-result/index.html">EVMResult</a></h4>
+</td>
+<td>
+<p>Result of EVM execution</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">EVMResult</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-hard-fork/index.html">HardFork</a></h4>
+</td>
+<td>
+<p>Known hard fork revisions to execute against.</p>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">HardFork</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-transactional-e-v-m-host-context/index.html">TransactionalEVMHostContext</a></h4>
+</td>
+<td>
+<p>EVM context that records changes to the world state, so they can be applied atomically.</p>
+<code><span class="keyword">class </span><span class="identifier">TransactionalEVMHostContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">HostContext</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="from-code.html">fromCode</a></h4>
+</td>
+<td>
+<p>Finds a code matching a number, or throw an exception if no matching code exists.</p>
+<code><span class="keyword">fun </span><span class="identifier">fromCode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm$fromCode(kotlin.Int)/code">code</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="-e-v-m-execution-status-code/index.html"><span class="identifier">EVMExecutionStatusCode</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TrustManagerFactories.whitelistServers - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.net.tls</a>&nbsp;/&nbsp;<a href="index.html">TrustManagerFactories</a>&nbsp;/&nbsp;<a href="./whitelist-servers.html">whitelistServers</a><br/>
+<br/>
+<h1>whitelistServers</h1>
+<a name="org.apache.tuweni.net.tls.TrustManagerFactories$whitelistServers(java.nio.file.Path)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">whitelistServers</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.TrustManagerFactories$whitelistServers(java.nio.file.Path)/knownServersFile">knownServersFile</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TrustManagerFactory</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/net/src/main/java/org/apache/tuweni/net/tls/TrustManagerFactories.java#L261">(source)</a>
+<p>Require servers to present known certificates, or CA-signed certificates. </p>
+<p> If a certificate is not CA-signed, then its fingerprint must be present in the <code>knownServersFile</code>, associated with the server (identified by host+port).</p>
+<h3>Parameters</h3>
+<p><a name="knownServersFile"></a>
+<code>knownServersFile</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> The path to the file containing fingerprints by host.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">TrustManagerFactory</span><span class="symbol">!</span><span class="symbol">:</span> A trust manager factory.</p>
+<a name="org.apache.tuweni.net.tls.TrustManagerFactories$whitelistServers(org.apache.tuweni.net.tls.FingerprintRepository)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">whitelistServers</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.TrustManagerFactories$whitelistServers(org.apache.tuweni.net.tls.FingerprintRepository)/repository">repository</span><span class="symbol">:</span>&nbsp;<a href="../-fingerprint-repository/index.html"><span class="identifier">FingerprintRepository</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TrustManagerFactory</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/net/src/main/java/org/apache/tuweni/net/tls/TrustManagerFactories.java#L276">(source)</a>
+<p>Require servers to present known certificates, or CA-signed certificates. </p>
+<p> If a certificate is not CA-signed, then its fingerprint must be present in the <code>knownServersFile</code>, associated with the server (identified by host+port).</p>
+<h3>Parameters</h3>
+<p><a name="repository"></a>
+<code>repository</code> - <a href="../-fingerprint-repository/index.html"><span class="identifier">FingerprintRepository</span></a><span class="symbol">!</span><span class="symbol">:</span> The repository in which to record fingerprints by host.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">TrustManagerFactory</span><span class="symbol">!</span><span class="symbol">:</span> A trust manager factory.</p>
+<a name="org.apache.tuweni.net.tls.TrustManagerFactories$whitelistServers(java.nio.file.Path, kotlin.Boolean)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">whitelistServers</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.TrustManagerFactories$whitelistServers(java.nio.file.Path, kotlin.Boolean)/knownServersFile">knownServersFile</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.net.tls.TrustManagerFactories$whitelistServers(java.nio.file.Path, kotlin.Boolean)/acceptCASigned">acceptCASigned</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TrustManagerFactory</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/net/src/main/java/org/apache/tuweni/net/tls/TrustManagerFactories.java#L292">(source)</a>
+<p>Require servers to present known certificates. </p>
+<p> The fingerprint for a server certificate must be present in the <code>knownServersFile</code>, associated with the server (identified by host+port).</p>
+<h3>Parameters</h3>
+<p><a name="knownServersFile"></a>
+<code>knownServersFile</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> The path to the file containing fingerprints by host.</p>
+<p><a name="acceptCASigned"></a>
+<code>acceptCASigned</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> If <code>true</code>, CA-signed certificates will always be accepted.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">TrustManagerFactory</span><span class="symbol">!</span><span class="symbol">:</span> A trust manager factory.</p>
+<a name="org.apache.tuweni.net.tls.TrustManagerFactories$whitelistServers(org.apache.tuweni.net.tls.FingerprintRepository, kotlin.Boolean)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">whitelistServers</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.TrustManagerFactories$whitelistServers(org.apache.tuweni.net.tls.FingerprintRepository, kotlin.Boolean)/repository">repository</span><span class="symbol">:</span>&nbsp;<a href="../-fingerprint-repository/index.html"><span class="identifier">FingerprintRepository</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.net.tls.TrustManagerFactories$whitelistServers(org.apache.tuweni.net.tls.FingerprintRepository, kotlin.Boolean)/acceptCASigned">acceptCASigned</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TrustManagerFactory</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/net/src/main/java/org/apache/tuweni/net/tls/TrustManagerFactories.java#L308">(source)</a>
+<p>Require servers to present known certificates. </p>
+<p> The fingerprint for a server certificate must be present in the <code>knownServersFile</code>, associated with the server (identified by host+port).</p>
+<h3>Parameters</h3>
+<p><a name="repository"></a>
+<code>repository</code> - <a href="../-fingerprint-repository/index.html"><span class="identifier">FingerprintRepository</span></a><span class="symbol">!</span><span class="symbol">:</span> The repository in which to record fingerprints by host.</p>
+<p><a name="acceptCASigned"></a>
+<code>acceptCASigned</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> If <code>true</code>, CA-signed certificates will always be accepted.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">TrustManagerFactory</span><span class="symbol">!</span><span class="symbol">:</span> A trust manager factory.</p>
+<a name="org.apache.tuweni.net.tls.TrustManagerFactories$whitelistServers(java.nio.file.Path, javax.net.ssl.TrustManagerFactory)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">whitelistServers</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.TrustManagerFactories$whitelistServers(java.nio.file.Path, javax.net.ssl.TrustManagerFactory)/knownServersFile">knownServersFile</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.net.tls.TrustManagerFactories$whitelistServers(java.nio.file.Path, javax.net.ssl.TrustManagerFactory)/tmf">tmf</span><span class="symbol">:</span>&nbsp;<span class="identifier">TrustManagerFactory</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TrustManagerFactory</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/net/src/main/java/org/apache/tuweni/net/tls/TrustManagerFactories.java#L324">(source)</a>
+<p>Require servers to present known certificates, or CA-signed certificates. </p>
+<p> If a certificate is not CA-signed, then its fingerprint must be present in the <code>knownServersFile</code>, associated with the server (identified by host+port).</p>
+<h3>Parameters</h3>
+<p><a name="knownServersFile"></a>
+<code>knownServersFile</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> The path to the file containing fingerprints by host.</p>
+<p><a name="tmf"></a>
+<code>tmf</code> - <span class="identifier">TrustManagerFactory</span><span class="symbol">!</span><span class="symbol">:</span> A <code><a href="#">TrustManagerFactory</a></code> for checking server certificates against a CA.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">TrustManagerFactory</span><span class="symbol">!</span><span class="symbol">:</span> A trust manager factory.</p>
+<a name="org.apache.tuweni.net.tls.TrustManagerFactories$whitelistServers(org.apache.tuweni.net.tls.FingerprintRepository, javax.net.ssl.TrustManagerFactory)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">whitelistServers</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.TrustManagerFactories$whitelistServers(org.apache.tuweni.net.tls.FingerprintRepository, javax.net.ssl.TrustManagerFactory)/repository">repository</span><span class="symbol">:</span>&nbsp;<a href="../-fingerprint-repository/index.html"><span class="identifier">FingerprintRepository</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.net.tls.TrustManagerFactories$whitelistServers(org.apache.tuweni.net.tls.FingerprintRepository, javax.net.ssl.TrustManagerFactory)/tmf">tmf</span><span class="symbol">:</span>&nbsp;<span class="identifier">TrustManagerFactory</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TrustManagerFactory</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/net/src/main/java/org/apache/tuweni/net/tls/TrustManagerFactories.java#L341">(source)</a>
+<p>Require servers to present known certificates, or CA-signed certificates. </p>
+<p> If a certificate is not CA-signed, then its fingerprint must be present in the <code>knownServersFile</code>, associated with the server (identified by host+port).</p>
+<h3>Parameters</h3>
+<p><a name="repository"></a>
+<code>repository</code> - <a href="../-fingerprint-repository/index.html"><span class="identifier">FingerprintRepository</span></a><span class="symbol">!</span><span class="symbol">:</span> The repository in which to record fingerprints by host.</p>
+<p><a name="tmf"></a>
+<code>tmf</code> - <span class="identifier">TrustManagerFactory</span><span class="symbol">!</span><span class="symbol">:</span> A <code><a href="#">TrustManagerFactory</a></code> for checking server certificates against a CA.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">TrustManagerFactory</span><span class="symbol">!</span><span class="symbol">:</span> A trust manager factory.</p>
+</BODY>
+</HTML>

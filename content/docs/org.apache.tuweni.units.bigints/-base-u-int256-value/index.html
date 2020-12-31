@@ -1,0 +1,211 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BaseUInt256Value - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.units.bigints</a>&nbsp;/&nbsp;<a href="./index.html">BaseUInt256Value</a><br/>
+<br/>
+<h1>BaseUInt256Value</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">BaseUInt256Value</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-u-int256-value/index.html"><span class="identifier">UInt256Value</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-u-int256-value/index.html"><span class="identifier">UInt256Value</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/units/src/main/java/org/apache/tuweni/units/bigints/BaseUInt256Value.java#L39">(source)</a>
+<p>Base class for <code><a href="../-u-int256-value/index.html">UInt256Value</a></code>. </p>
+<p> This class is abstract as it is not meant to be used directly, but it has no abstract methods. As mentioned in <code><a href="../-u-int256-value/index.html">UInt256Value</a></code>, this is used to create strongly-typed type aliases of <code><a href="../-u-int256/index.html">UInt256</a></code>. In other words, this allow to "tag" numbers with the unit of what they represent for the type-system, which can help clarity, but also forbid mixing numbers that are mean to be of different units (the strongly-typed part). </p>
+<p> This class implements <code><a href="../-u-int256-value/index.html">UInt256Value</a></code>, but also adds a few operations that take a <code><a href="../-u-int256/index.html">UInt256</a></code> directly, for instance <code><a href="multiply.html">#multiply(UInt256)</a></code>. The rational is that multiplying a given quantity of something by a "raw" number is always meaningful, and return a new quantity of the same thing.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">BaseUInt256Value</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$<init>(org.apache.tuweni.units.bigints.UInt256, java.util.function.Function((org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.BaseUInt256Value.T)))/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$<init>(org.apache.tuweni.units.bigints.UInt256, java.util.function.Function((org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.BaseUInt256Value.T)))/ctor">ctor</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">BaseUInt256Value</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$<init>(kotlin.Long, java.util.function.Function((org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.BaseUInt256Value.T)))/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$<init>(kotlin.Long, java.util.function.Function((org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.BaseUInt256Value.T)))/ctor">ctor</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">BaseUInt256Value</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$<init>(java.math.BigInteger, java.util.function.Function((org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.BaseUInt256Value.T)))/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$<init>(java.math.BigInteger, java.util.function.Function((org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.BaseUInt256Value.T)))/ctor">ctor</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add.html">add</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$add(org.apache.tuweni.units.bigints.BaseUInt256Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$add(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code>
+<p>Returns a value that is <code>(this + value)</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$add(org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-mod.html">addMod</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(org.apache.tuweni.units.bigints.BaseUInt256Value.T, org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(org.apache.tuweni.units.bigints.BaseUInt256Value.T, org.apache.tuweni.units.bigints.UInt256)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt256)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(kotlin.Long, kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(kotlin.Long, kotlin.Long)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code>
+<p>Returns a value equivalent to <code>((this + value) mod modulus)</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$addMod(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="compare-to.html">compareTo</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">compareTo</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$compareTo(org.apache.tuweni.units.bigints.BaseUInt256Value.T)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Compare two <code><a href="../-u-int256/index.html">UInt256</a></code> values.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">compareTo</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$compareTo(org.apache.tuweni.units.bigints.UInt256)/other">other</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="copy.html">copy</a></h4>
+</td>
+<td>
+<p>Return a copy of this value, or itself if immutable. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="divide.html">divide</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">divide</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$divide(org.apache.tuweni.units.bigints.BaseUInt256Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">divide</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$divide(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code>
+<p>Returns a value that is <code>(this / value)</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">divide</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$divide(org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="divide-ceil.html">divideCeil</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">divideCeil</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$divideCeil(org.apache.tuweni.units.bigints.BaseUInt256Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">divideCeil</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$divideCeil(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code>
+<p>Returns a value that is <code>(this / value)</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">divideCeil</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$divideCeil(org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mod.html">mod</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">mod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$mod(org.apache.tuweni.units.bigints.UInt256)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">mod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$mod(kotlin.Long)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mod0.html">mod0</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">mod0</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$mod0(org.apache.tuweni.units.bigints.UInt256)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">mod0</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$mod0(kotlin.Long)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="multiply.html">multiply</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiply</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$multiply(org.apache.tuweni.units.bigints.BaseUInt256Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiply</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$multiply(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code>
+<p>Returns a value that is <code>(this * value)</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiply</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$multiply(org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="multiply-mod.html">multiplyMod</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiplyMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$multiplyMod(org.apache.tuweni.units.bigints.BaseUInt256Value.T, org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$multiplyMod(org.apache.tuweni.units.bigints.BaseUInt256Value.T, org.apache.tuweni.units.bigints.UInt256)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiplyMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$multiplyMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$multiplyMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt256)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiplyMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$multiplyMod(kotlin.Long, kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$multiplyMod(kotlin.Long, kotlin.Long)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code>
+<p>Returns a value that is <code>((this * value) mod modulus)</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiplyMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$multiplyMod(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$multiplyMod(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="pow.html">pow</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">pow</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$pow(org.apache.tuweni.units.bigints.UInt256)/exponent">exponent</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">pow</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$pow(kotlin.Long)/exponent">exponent</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="subtract.html">subtract</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">subtract</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$subtract(org.apache.tuweni.units.bigints.BaseUInt256Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">subtract</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$subtract(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code>
+<p>Returns a value that is <code>(this - value)</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">subtract</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.BaseUInt256Value$subtract(org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-bytes.html">toBytes</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-minimal-bytes.html">toMinimalBytes</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toMinimalBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-u-int256.html">toUInt256</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toUInt256</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="zero.html">zero</a></h4>
+</td>
+<td>
+<p>Return the zero value for this type. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">zero</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../../org.apache.tuweni.units.ethereum/-wei/index.html">Wei</a></h4>
+</td>
+<td>
+<p>A unit measure of Wei as used by the Ethereum VM.</p>
+<code><span class="keyword">class </span><span class="identifier">Wei</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BaseUInt256Value</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

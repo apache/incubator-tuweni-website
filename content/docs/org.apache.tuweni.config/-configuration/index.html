@@ -1,0 +1,235 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Configuration - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.config</a>&nbsp;/&nbsp;<a href="./index.html">Configuration</a><br/>
+<br/>
+<h1>Configuration</h1>
+<code><span class="keyword">interface </span><span class="identifier">Configuration</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/config/src/main/java/org/apache/tuweni/config/Configuration.java#L35">(source)</a>
+<p>Represents collection of configuration properties, optionally validated against a schema.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="canonical-key.html">canonicalKey</a></h4>
+</td>
+<td>
+<p>Get the canonical form of a configuration key.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">canonicalKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$canonicalKey(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains.html">contains</a></h4>
+</td>
+<td>
+<p>Check if a key is set in this configuration.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">contains</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$contains(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="empty.html">empty</a></h4>
+</td>
+<td>
+<p>Get an empty configuration, with no values.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">empty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">!</span></code>
+<p>Get an empty configuration, associated with a validation schema.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">empty</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$empty(org.apache.tuweni.config.Schema)/schema">schema</span><span class="symbol">:</span>&nbsp;<a href="../-schema/index.html"><span class="identifier">Schema</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="errors.html">errors</a></h4>
+</td>
+<td>
+<p>The errors that occurred during parsing.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">errors</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../-configuration-error/index.html"><span class="identifier">ConfigurationError</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-toml.html">fromToml</a></h4>
+</td>
+<td>
+<p>Read a configuration from a TOML-formatted string.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromToml</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$fromToml(kotlin.String)/toml">toml</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">!</span></code>
+<p>Read a configuration from a TOML-formatted string, associated with a validation schema.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromToml</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$fromToml(kotlin.String, org.apache.tuweni.config.Schema)/toml">toml</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.config.Configuration$fromToml(kotlin.String, org.apache.tuweni.config.Schema)/schema">schema</span><span class="symbol">:</span>&nbsp;<a href="../-schema/index.html"><span class="identifier">Schema</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">!</span></code>
+<p>Loads a configuration from a TOML-formatted file.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromToml</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$fromToml(java.nio.file.Path)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromToml</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$fromToml(java.io.InputStream)/is">is</span><span class="symbol">:</span>&nbsp;<span class="identifier">InputStream</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">!</span></code>
+<p>Loads a configuration from a file, associated with a validation schema.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromToml</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$fromToml(java.nio.file.Path, org.apache.tuweni.config.Schema)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.config.Configuration$fromToml(java.nio.file.Path, org.apache.tuweni.config.Schema)/schema">schema</span><span class="symbol">:</span>&nbsp;<a href="../-schema/index.html"><span class="identifier">Schema</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromToml</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$fromToml(java.io.InputStream, org.apache.tuweni.config.Schema)/is">is</span><span class="symbol">:</span>&nbsp;<span class="identifier">InputStream</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.config.Configuration$fromToml(java.io.InputStream, org.apache.tuweni.config.Schema)/schema">schema</span><span class="symbol">:</span>&nbsp;<a href="../-schema/index.html"><span class="identifier">Schema</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<p>Get an object from this configuration.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$get(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-boolean.html">getBoolean</a></h4>
+</td>
+<td>
+<p>Get a boolean from this configuration.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getBoolean</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$getBoolean(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-configuration-section.html">getConfigurationSection</a></h4>
+</td>
+<td>
+<p>Provides a section of the configuration</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getConfigurationSection</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$getConfigurationSection(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-double.html">getDouble</a></h4>
+</td>
+<td>
+<p>Get a double from this configuration.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getDouble</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$getDouble(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-integer.html">getInteger</a></h4>
+</td>
+<td>
+<p>Get an integer from this configuration.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$getInteger(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-list.html">getList</a></h4>
+</td>
+<td>
+<p>Get a list from this configuration.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$getList(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-list-of-boolean.html">getListOfBoolean</a></h4>
+</td>
+<td>
+<p>Get a list of booleans from this configuration.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getListOfBoolean</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$getListOfBoolean(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Boolean</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-list-of-double.html">getListOfDouble</a></h4>
+</td>
+<td>
+<p>Get a list of doubles from this configuration.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getListOfDouble</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$getListOfDouble(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Double</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-list-of-integer.html">getListOfInteger</a></h4>
+</td>
+<td>
+<p>Get a list of integers from this configuration.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getListOfInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$getListOfInteger(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-list-of-long.html">getListOfLong</a></h4>
+</td>
+<td>
+<p>Get a list of longs from this configuration.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getListOfLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$getListOfLong(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-list-of-map.html">getListOfMap</a></h4>
+</td>
+<td>
+<p>Get a list of maps from this configuration.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getListOfMap</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$getListOfMap(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">MutableMap</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-list-of-string.html">getListOfString</a></h4>
+</td>
+<td>
+<p>Get a list of strings from this configuration.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getListOfString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$getListOfString(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-long.html">getLong</a></h4>
+</td>
+<td>
+<p>Get a long from this configuration.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$getLong(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-map.html">getMap</a></h4>
+</td>
+<td>
+<p>Get a map from this configuration.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getMap</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$getMap(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableMap</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-string.html">getString</a></h4>
+</td>
+<td>
+<p>Get a string from this configuration.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$getString(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="has-errors.html">hasErrors</a></h4>
+</td>
+<td>
+<p>Returns true if the document has errors.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasErrors</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="input-position-of.html">inputPositionOf</a></h4>
+</td>
+<td>
+<p>Get the position where a key is defined in the TOML document.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">inputPositionOf</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$inputPositionOf(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-document-position/index.html"><span class="identifier">DocumentPosition</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="key-set.html">keySet</a></h4>
+</td>
+<td>
+<p>The keys of all entries present in this configuration.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">keySet</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>The keys of all entries present in this configuration under a given prefix.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">keySet</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$keySet(kotlin.String)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sections.html">sections</a></h4>
+</td>
+<td>
+<p>The names of the sections defined under a given prefix.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">sections</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$sections(kotlin.String)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-toml.html">toToml</a></h4>
+</td>
+<td>
+<p>Get a TOML-formatted representation of this configuration.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toToml</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Save a configuration to a TOML-formatted file. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toToml</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$toToml(java.nio.file.Path)/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Writes a configuration in TOML format.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">toToml</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$toToml(java.lang.Appendable)/appendable">appendable</span><span class="symbol">:</span>&nbsp;<span class="identifier">Appendable</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

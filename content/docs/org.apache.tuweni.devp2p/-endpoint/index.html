@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Endpoint - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.devp2p</a>&nbsp;/&nbsp;<a href="./index.html">Endpoint</a><br/>
+<br/>
+<h1>Endpoint</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Endpoint</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/devp2p/src/main/kotlin/org/apache/tuweni/devp2p/Endpoint.kt#L43">(source)</a>
+<p>An Ethereum node endpoint.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Create a new endpoint.</p>
+<code><span class="identifier">Endpoint</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.Endpoint$<init>(io.vertx.core.net.SocketAddress, kotlin.Int)/address">address</span><span class="symbol">:</span>&nbsp;<span class="identifier">SocketAddress</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.Endpoint$<init>(io.vertx.core.net.SocketAddress, kotlin.Int)/tcpPort">tcpPort</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code><br/>
+<code><span class="identifier">Endpoint</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.Endpoint$<init>(kotlin.String, kotlin.Int, kotlin.Int)/address">address</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.Endpoint$<init>(kotlin.String, kotlin.Int, kotlin.Int)/udpPort">udpPort</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_PORT<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.Endpoint$<init>(kotlin.String, kotlin.Int, kotlin.Int)/tcpPort">tcpPort</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="address.html">address</a></h4>
+</td>
+<td>
+<p>the InetAddress</p>
+<code><span class="keyword">val </span><span class="identifier">address</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="tcp-port.html">tcpPort</a></h4>
+</td>
+<td>
+<p>the TCP port for the endpoint or <code>null</code> if no TCP port is known</p>
+<code><span class="keyword">val </span><span class="identifier">tcpPort</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="tcp-socket-address.html">tcpSocketAddress</a></h4>
+</td>
+<td>
+<p>TCP socket address of the endpoint, if set</p>
+<code><span class="keyword">val </span><span class="identifier">tcpSocketAddress</span><span class="symbol">: </span><span class="identifier">InetSocketAddress</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="udp-port.html">udpPort</a></h4>
+</td>
+<td>
+<p>the UDP port for the endpoint</p>
+<code><span class="keyword">val </span><span class="identifier">udpPort</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="udp-socket-address.html">udpSocketAddress</a></h4>
+</td>
+<td>
+<p>UDP socket address of the endpoint</p>
+<code><span class="keyword">val </span><span class="identifier">udpSocketAddress</span><span class="symbol">: </span><span class="identifier">SocketAddress</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-d-e-f-a-u-l-t_-p-o-r-t.html">DEFAULT_PORT</a></h4>
+</td>
+<td>
+<p>The default port used by Ethereum DevP2P.</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">DEFAULT_PORT</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="read-from.html">readFrom</a></h4>
+</td>
+<td>
+<p>Create an Endpoint by reading fields from the RLP input stream.</p>
+<code><span class="keyword">fun </span><span class="identifier">readFrom</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.Endpoint.Companion$readFrom(org.apache.tuweni.rlp.RLPReader)/reader">reader</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlp/-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Endpoint</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MerkleStorage - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.trie</a>&nbsp;/&nbsp;<a href="./index.html">MerkleStorage</a><br/>
+<br/>
+<h1>MerkleStorage</h1>
+<code><span class="keyword">interface </span><span class="identifier">MerkleStorage</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/merkle-trie/src/main/kotlin/org/apache/tuweni/trie/MerkleStorage.kt#L28">(source)</a>
+<p>Storage for use in a <a href="../-stored-merkle-patricia-trie/index.html">StoredMerklePatriciaTrie</a>.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<p>Get the stored content under the given hash.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerkleStorage$get(org.apache.tuweni.bytes.Bytes32)/hash">hash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="put.html">put</a></h4>
+</td>
+<td>
+<p>Store content with a given hash.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">put</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerkleStorage$put(org.apache.tuweni.bytes.Bytes32, org.apache.tuweni.bytes.Bytes)/hash">hash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.trie.MerkleStorage$put(org.apache.tuweni.bytes.Bytes32, org.apache.tuweni.bytes.Bytes)/content">content</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-async-merkle-storage/index.html">AsyncMerkleStorage</a></h4>
+</td>
+<td>
+<p>A <a href="./index.html">MerkleStorage</a> implementation using <a href="../../org.apache.tuweni.concurrent/-async-result/index.html">AsyncResult</a>'s.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AsyncMerkleStorage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">MerkleStorage</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SECP256K1.SecretKey.load - tuweni</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../../index.html">org.apache.tuweni.crypto</a>&nbsp;/&nbsp;<a href="../index.html">SECP256K1</a>&nbsp;/&nbsp;<a href="index.html">SecretKey</a>&nbsp;/&nbsp;<a href="./load.html">load</a><br/>
+<br/>
+<h1>load</h1>
+<a name="org.apache.tuweni.crypto.SECP256K1.SecretKey$load(java.nio.file.Path)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">load</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.SecretKey$load(java.nio.file.Path)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">SecretKey</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/SECP256K1.java#L446">(source)</a>
+<p>Load a private key from a file.</p>
+<h3>Parameters</h3>
+<p><a name="file"></a>
+<code>file</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> The file to read the key from.</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - On a filesystem error.</p>
+<p><a name="InvalidSEC256K1SecretKeyStoreException"></a>
+<code>InvalidSEC256K1SecretKeyStoreException</code> - If the file does not contain a valid key.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">:</span> The private key.</p>
+</BODY>
+</HTML>

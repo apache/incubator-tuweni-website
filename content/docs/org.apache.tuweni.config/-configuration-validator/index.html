@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ConfigurationValidator - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.config</a>&nbsp;/&nbsp;<a href="./index.html">ConfigurationValidator</a><br/>
+<br/>
+<h1>ConfigurationValidator</h1>
+<code><span class="keyword">interface </span><span class="identifier">ConfigurationValidator</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/config/src/main/java/org/apache/tuweni/config/ConfigurationValidator.java#L25">(source)</a>
+<p>A validator for a configuration. </p>
+<p> Validators of this type are invoked during verification after all property validators. However, errors returned by property validators do not prevent this validator being evaluated, so properties of the configuration may be missing or invalid.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="validate.html">validate</a></h4>
+</td>
+<td>
+<p>Validate a configuration.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.ConfigurationValidator$validate(org.apache.tuweni.config.Configuration)/configuration">configuration</span><span class="symbol">:</span>&nbsp;<a href="../-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../-configuration-error/index.html"><span class="identifier">ConfigurationError</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

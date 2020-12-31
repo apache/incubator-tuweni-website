@@ -1,0 +1,439 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSZReader - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ssz</a>&nbsp;/&nbsp;<a href="./index.html">SSZReader</a><br/>
+<br/>
+<h1>SSZReader</h1>
+<code><span class="keyword">interface </span><span class="identifier">SSZReader</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZReader.java#L28">(source)</a>
+<p>A reader for consuming values from an SSZ encoded source.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="is-complete.html">isComplete</a></h4>
+</td>
+<td>
+<p>Check if all values have been read.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">isComplete</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-address.html">readAddress</a></h4>
+</td>
+<td>
+<p>Read a 20-byte address from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readAddress</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-address-list.html">readAddressList</a></h4>
+</td>
+<td>
+<p>Read a list of 20-byte addresses from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readAddressList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-big-integer.html">readBigInteger</a></h4>
+</td>
+<td>
+<p>Read a big integer value from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readBigInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readBigInteger(kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-big-integer-list.html">readBigIntegerList</a></h4>
+</td>
+<td>
+<p>Read a list of two's-compliment big integer values from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readBigIntegerList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readBigIntegerList(kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-boolean.html">readBoolean</a></h4>
+</td>
+<td>
+<p>Read a boolean from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readBoolean</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-boolean-list.html">readBooleanList</a></h4>
+</td>
+<td>
+<p>Read a list of booleans from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readBooleanList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Boolean</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-byte-array.html">readByteArray</a></h4>
+</td>
+<td>
+<p>Read a byte array from the SSZ source. Note: prefer to use <code><a href="read-byte-array.html">#readByteArray(int)</a></code> instead, especially when reading untrusted data.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readByteArray</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code>
+<p>Read a byte array from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readByteArray</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readByteArray(kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-byte-array-list.html">readByteArrayList</a></h4>
+</td>
+<td>
+<p>Read a list of byte arrays from the SSZ source. Note: prefer to use <code><a href="read-byte-array-list.html">#readByteArrayList(int)</a></code> instead, especially when reading untrusted data.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readByteArrayList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Read a list of byte arrays from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readByteArrayList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readByteArrayList(kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-bytes.html">readBytes</a></h4>
+</td>
+<td>
+<p>Read bytes from the SSZ source. Note: prefer to use <code><a href="read-bytes.html">#readBytes(int)</a></code> instead, especially when reading untrusted data.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code>
+<p>Read bytes from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readBytes(kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-bytes-list.html">readBytesList</a></h4>
+</td>
+<td>
+<p>Read a list of <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> from the SSZ source. Note: prefer to use <code><a href="read-bytes-list.html">#readBytesList(int)</a></code> instead, especially when reading untrusted data.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readBytesList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Read a list of <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readBytesList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readBytesList(kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-fixed-byte-array.html">readFixedByteArray</a></h4>
+</td>
+<td>
+<p>Read an array of fixed-length homogenous Bytes from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readFixedByteArray</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readFixedByteArray(kotlin.Int, kotlin.Int)/byteLength">byteLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readFixedByteArray(kotlin.Int, kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-fixed-bytes.html">readFixedBytes</a></h4>
+</td>
+<td>
+<p>Read a known size fixed-length bytes value from the SSZ source. Note: prefer to use <code><a href="read-fixed-bytes.html">#readFixedBytes(int, int)</a></code> instead, especially when reading untrusted data.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readFixedBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readFixedBytes(kotlin.Int)/byteLength">byteLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code>
+<p>Read a known size fixed-length bytes value from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readFixedBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readFixedBytes(kotlin.Int, kotlin.Int)/byteLength">byteLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readFixedBytes(kotlin.Int, kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-fixed-bytes-list.html">readFixedBytesList</a></h4>
+</td>
+<td>
+<p>Read a list of known-size fixed length <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> from the SSZ source. A length mixin IS expected for the list, but IS NOT expected for the list elements.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readFixedBytesList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readFixedBytesList(kotlin.Int, kotlin.Int)/byteLength">byteLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readFixedBytesList(kotlin.Int, kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Read a variable-length list of known-size fixed length <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> from the SSZ source. Note: prefer to use <code><a href="read-fixed-bytes-list.html">#readFixedBytesList(int, int)</a></code> instead, especially when reading untrusted data.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readFixedBytesList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readFixedBytesList(kotlin.Int)/byteLength">byteLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-fixed-bytes-vector.html">readFixedBytesVector</a></h4>
+</td>
+<td>
+<p>Read a known-size fixed length list of known-size fixed length <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readFixedBytesVector</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readFixedBytesVector(kotlin.Int, kotlin.Int, kotlin.Int)/listSize">listSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readFixedBytesVector(kotlin.Int, kotlin.Int, kotlin.Int)/byteLength">byteLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readFixedBytesVector(kotlin.Int, kotlin.Int, kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Read a known-size fixed length list of known-size fixed length <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> from the SSZ source. Note: prefer to use <code><a href="read-fixed-bytes-vector.html">#readFixedBytesVector(int, int, int)</a></code> instead, especially when reading untrusted data.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readFixedBytesVector</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readFixedBytesVector(kotlin.Int, kotlin.Int)/listSize">listSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readFixedBytesVector(kotlin.Int, kotlin.Int)/byteLength">byteLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-hash.html">readHash</a></h4>
+</td>
+<td>
+<p>Read a hash from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readHash</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readHash(kotlin.Int)/hashLength">hashLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-hash-list.html">readHashList</a></h4>
+</td>
+<td>
+<p>Read a list of hashes from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readHashList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readHashList(kotlin.Int)/hashLength">hashLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-int.html">readInt</a></h4>
+</td>
+<td>
+<p>Read a two's-compliment int value from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readInt(kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-int16.html">readInt16</a></h4>
+</td>
+<td>
+<p>Read a 16-bit two's-compliment integer from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readInt16</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-int16-list.html">readInt16List</a></h4>
+</td>
+<td>
+<p>Read a list of 16-bit two's-compliment int values from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readInt16List</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-int32.html">readInt32</a></h4>
+</td>
+<td>
+<p>Read a 32-bit two's-compliment integer from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readInt32</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-int32-list.html">readInt32List</a></h4>
+</td>
+<td>
+<p>Read a list of 32-bit two's-compliment int values from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readInt32List</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-int64.html">readInt64</a></h4>
+</td>
+<td>
+<p>Read a 64-bit two's-compliment integer from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readInt64</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-int64-list.html">readInt64List</a></h4>
+</td>
+<td>
+<p>Read a list of 64-bit two's-compliment int values from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readInt64List</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-int8.html">readInt8</a></h4>
+</td>
+<td>
+<p>Read an 8-bit two's-compliment integer from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readInt8</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-int8-list.html">readInt8List</a></h4>
+</td>
+<td>
+<p>Read a list of 8-bit two's-compliment int values from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readInt8List</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-int-list.html">readIntList</a></h4>
+</td>
+<td>
+<p>Read a list of two's-compliment int values from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readIntList(kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-long.html">readLong</a></h4>
+</td>
+<td>
+<p>Read a two's-compliment long value from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readLong(kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-long-int-list.html">readLongIntList</a></h4>
+</td>
+<td>
+<p>Read a list of two's-compliment long int values from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readLongIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readLongIntList(kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-string.html">readString</a></h4>
+</td>
+<td>
+<p>Read a string value from the SSZ source. Note: prefer to use <code><a href="read-string.html">#readString(int)</a></code> instead, especially when reading untrusted data.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Read a string value from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readString(kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-string-list.html">readStringList</a></h4>
+</td>
+<td>
+<p>Read a list of strings from the SSZ source. Note: prefer to use <code><a href="read-string-list.html">#readStringList(int)</a></code> instead, especially when reading untrusted data.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readStringList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Read a list of strings from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readStringList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readStringList(kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-u-int.html">readUInt</a></h4>
+</td>
+<td>
+<p>Read an unsigned int value from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readUInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readUInt(kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-u-int16.html">readUInt16</a></h4>
+</td>
+<td>
+<p>Read a 16-bit unsigned integer from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readUInt16</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-u-int16-list.html">readUInt16List</a></h4>
+</td>
+<td>
+<p>Read a list of 16-bit unsigned int values from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readUInt16List</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-u-int256.html">readUInt256</a></h4>
+</td>
+<td>
+<p>Read a <code><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html">UInt256</a></code> from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readUInt256</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-u-int256-list.html">readUInt256List</a></h4>
+</td>
+<td>
+<p>Read a list of 256-bit unsigned int values from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readUInt256List</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-u-int32.html">readUInt32</a></h4>
+</td>
+<td>
+<p>Read a 32-bit unsigned integer from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readUInt32</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-u-int32-list.html">readUInt32List</a></h4>
+</td>
+<td>
+<p>Read a list of 32-bit unsigned int values from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readUInt32List</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-u-int384.html">readUInt384</a></h4>
+</td>
+<td>
+<p>Read a <code><a href="../../org.apache.tuweni.units.bigints/-u-int384/index.html">UInt384</a></code> from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readUInt384</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-u-int384-list.html">readUInt384List</a></h4>
+</td>
+<td>
+<p>Read a list of 384-bit unsigned int values from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readUInt384List</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-u-int64.html">readUInt64</a></h4>
+</td>
+<td>
+<p>Read a 64-bit unsigned integer from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readUInt64</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-u-int64-list.html">readUInt64List</a></h4>
+</td>
+<td>
+<p>Read a list of 64-bit unsigned int values from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readUInt64List</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-u-int8.html">readUInt8</a></h4>
+</td>
+<td>
+<p>Read an 8-bit unsigned integer from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readUInt8</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-u-int8-list.html">readUInt8List</a></h4>
+</td>
+<td>
+<p>Read a list of 8-bit unsigned int values from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readUInt8List</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-u-int-list.html">readUIntList</a></h4>
+</td>
+<td>
+<p>Read a list of unsigned int values from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readUIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readUIntList(kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-u-long.html">readULong</a></h4>
+</td>
+<td>
+<p>Read an unsigned long value from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readULong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readULong(kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-u-long-int-list.html">readULongIntList</a></h4>
+</td>
+<td>
+<p>Read a list of unsigned long int values from the SSZ source.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readULongIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readULongIntList(kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-unsigned-big-integer.html">readUnsignedBigInteger</a></h4>
+</td>
+<td>
+<p>Read an unsigned big integer value from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readUnsignedBigInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readUnsignedBigInteger(kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-unsigned-big-integer-list.html">readUnsignedBigIntegerList</a></h4>
+</td>
+<td>
+<p>Read a list of unsigned big integer values from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readUnsignedBigIntegerList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readUnsignedBigIntegerList(kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-vector.html">readVector</a></h4>
+</td>
+<td>
+<p>Read a known-size fixed-length list of <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> from the SSZ source. The list WILL NOT have a length mixin, where as the elements WILL. Note: prefer to use <code><a href="read-vector.html">#readVector(long, int)</a></code> instead, especially when reading untrusted data.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readVector</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readVector(kotlin.Long)/listSize">listSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Read a known-size fixed-length list of <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> from the SSZ source.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readVector</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readVector(kotlin.Long, kotlin.Int)/listSize">listSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readVector(kotlin.Long, kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

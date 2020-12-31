@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>FingerprintRepository.contains - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.net.tls</a>&nbsp;/&nbsp;<a href="index.html">FingerprintRepository</a>&nbsp;/&nbsp;<a href="./contains.html">contains</a><br/>
+<br/>
+<h1>contains</h1>
+<a name="org.apache.tuweni.net.tls.FingerprintRepository$contains(kotlin.String)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">contains</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.FingerprintRepository$contains(kotlin.String)/identifier">identifier</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/net/src/main/java/org/apache/tuweni/net/tls/FingerprintRepository.java#L29">(source)</a>
+<p>Checks whether the identifier of the remote peer is present in the repository.</p>
+<h3>Parameters</h3>
+<p><a name="identifier"></a>
+<code>identifier</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> the identifier of a remote peer</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> true if the remote peer identifier is present in the repository</p>
+<a name="org.apache.tuweni.net.tls.FingerprintRepository$contains(kotlin.String, org.apache.tuweni.bytes.Bytes)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">contains</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.FingerprintRepository$contains(kotlin.String, org.apache.tuweni.bytes.Bytes)/identifier">identifier</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.net.tls.FingerprintRepository$contains(kotlin.String, org.apache.tuweni.bytes.Bytes)/fingerprint">fingerprint</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/net/src/main/java/org/apache/tuweni/net/tls/FingerprintRepository.java#L39">(source)</a>
+<p>Checks whether the identifier of the remote peer is present in the repository, and its fingerprint matches the fingerprint present.</p>
+<h3>Parameters</h3>
+<p><a name="identifier"></a>
+<code>identifier</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> the identifier of a remote peer</p>
+<p><a name="fingerprint"></a>
+<code>fingerprint</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the fingerprint of a remote peer</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> true if there is a peer in the repository associated with that fingerprint</p>
+</BODY>
+</HTML>

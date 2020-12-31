@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RPCResponse.asJSON - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.rpc</a>&nbsp;/&nbsp;<a href="index.html">RPCResponse</a>&nbsp;/&nbsp;<a href="./as-j-s-o-n.html">asJSON</a><br/>
+<br/>
+<h1>asJSON</h1>
+<a name="org.apache.tuweni.scuttlebutt.rpc.RPCResponse$asJSON(com.fasterxml.jackson.databind.ObjectMapper, java.lang.Class((org.apache.tuweni.scuttlebutt.rpc.RPCResponse.asJSON.T)))"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">asJSON</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCResponse$asJSON(com.fasterxml.jackson.databind.ObjectMapper, java.lang.Class((org.apache.tuweni.scuttlebutt.rpc.RPCResponse.asJSON.T)))/objectMapper">objectMapper</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCResponse$asJSON(com.fasterxml.jackson.databind.ObjectMapper, java.lang.Class((org.apache.tuweni.scuttlebutt.rpc.RPCResponse.asJSON.T)))/clazz">clazz</span><span class="symbol">:</span>&nbsp;<span class="identifier">Class</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-rpc/src/main/java/org/apache/tuweni/scuttlebutt/rpc/RPCResponse.java#L81">(source)</a>
+<p>Provides the body of the message, marshalled as a JSON object.</p>
+<h3>Parameters</h3>
+<p><a name="objectMapper"></a>
+<code>objectMapper</code> - <span class="identifier">ObjectMapper</span><span class="symbol">!</span><span class="symbol">:</span> the object mapper to deserialize with</p>
+<p><a name="clazz"></a>
+<code>clazz</code> - <span class="identifier">Class</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> the JSON object class</p>
+<p><a name="&lt;T&gt;"></a>
+<code><T></code> - the matching JSON object class</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - if an error occurs during marshalling</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">T</span><span class="symbol">:</span> a new instance of the JSON object class</p>
+<a name="org.apache.tuweni.scuttlebutt.rpc.RPCResponse$asJSON(com.fasterxml.jackson.databind.ObjectMapper, com.fasterxml.jackson.core.type.TypeReference((org.apache.tuweni.scuttlebutt.rpc.RPCResponse.asJSON.T)))"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">asJSON</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCResponse$asJSON(com.fasterxml.jackson.databind.ObjectMapper, com.fasterxml.jackson.core.type.TypeReference((org.apache.tuweni.scuttlebutt.rpc.RPCResponse.asJSON.T)))/objectMapper">objectMapper</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCResponse$asJSON(com.fasterxml.jackson.databind.ObjectMapper, com.fasterxml.jackson.core.type.TypeReference((org.apache.tuweni.scuttlebutt.rpc.RPCResponse.asJSON.T)))/typeReference">typeReference</span><span class="symbol">:</span>&nbsp;<span class="identifier">TypeReference</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-rpc/src/main/java/org/apache/tuweni/scuttlebutt/rpc/RPCResponse.java#L85">(source)</a>
+</BODY>
+</HTML>

@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSZReader.readLong - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ssz</a>&nbsp;/&nbsp;<a href="index.html">SSZReader</a>&nbsp;/&nbsp;<a href="./read-long.html">readLong</a><br/>
+<br/>
+<h1>readLong</h1>
+<a name="org.apache.tuweni.ssz.SSZReader$readLong(kotlin.Int)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZReader$readLong(kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZReader.java#L165">(source)</a>
+<p>Read a two's-compliment long value from the SSZ source.</p>
+<h3>Parameters</h3>
+<p><a name="bitLength"></a>
+<code>bitLength</code> - <span class="identifier">Int</span><span class="symbol">:</span> The bit length of the integer to read (a multiple of 8).</p>
+<h3>Exceptions</h3>
+<p><a name="InvalidSSZTypeException"></a>
+<code>InvalidSSZTypeException</code> - If there are insufficient encoded bytes for the desired bit length, or the decoded value was too large to fit into a long.</p>
+<p><a name="EndOfSSZException"></a>
+<code>EndOfSSZException</code> - If there are no more SSZ values to read.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Long</span><span class="symbol">:</span> A long.</p>
+</BODY>
+</HTML>

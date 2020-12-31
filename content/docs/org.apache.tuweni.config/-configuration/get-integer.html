@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Configuration.getInteger - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.config</a>&nbsp;/&nbsp;<a href="index.html">Configuration</a>&nbsp;/&nbsp;<a href="./get-integer.html">getInteger</a><br/>
+<br/>
+<h1>getInteger</h1>
+<a name="org.apache.tuweni.config.Configuration$getInteger(kotlin.String)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Configuration$getInteger(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/config/src/main/java/org/apache/tuweni/config/Configuration.java#L265">(source)</a>
+<p>Get an integer from this configuration.</p>
+<h3>Parameters</h3>
+<p><a name="key"></a>
+<code>key</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> A configuration key (e.g. <code>"server.address.port"</code>).</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - If the key cannot be parsed.</p>
+<p><a name="InvalidConfigurationPropertyTypeException"></a>
+<code>InvalidConfigurationPropertyTypeException</code> - If the value is not an integer.</p>
+<p><a name="NoConfigurationPropertyException"></a>
+<code>NoConfigurationPropertyException</code> - If the key was not set in the configuration.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Int</span><span class="symbol">:</span> The value.</p>
+</BODY>
+</HTML>

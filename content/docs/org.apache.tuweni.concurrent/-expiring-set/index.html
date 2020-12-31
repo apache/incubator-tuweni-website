@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ExpiringSet - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.concurrent</a>&nbsp;/&nbsp;<a href="./index.html">ExpiringSet</a><br/>
+<br/>
+<h1>ExpiringSet</h1>
+<code><span class="keyword">class </span><span class="identifier">ExpiringSet</span><span class="symbol">&lt;</span><span class="identifier">E</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">E</span><span class="symbol">&gt;</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent/src/main/java/org/apache/tuweni/concurrent/ExpiringSet.java#L37">(source)</a>
+<p>A concurrent hash set that stores values along with an expiry. Elements are stored in the set until their expiry is reached, after which they will no longer be available and will appear as if removed. The actual removal is done lazily whenever the set is accessed, or when the <code><a href="purge-expired.html">#purgeExpired()</a></code> method is invoked.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Construct an empty expiring set.</p>
+<code><span class="identifier">ExpiringSet</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringSet$<init>(kotlin.Long)/evictionTimeout">evictionTimeout</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span></code>
+<p>Construct an empty set.</p>
+<code><span class="identifier">ExpiringSet</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="size.html">size</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">size</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add.html">add</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringSet$add(org.apache.tuweni.concurrent.ExpiringSet.E)/element">element</span><span class="symbol">:</span>&nbsp;<span class="identifier">E</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Adds the specified element to this set if it is not already present, and expires the entry when the specified expiry time is reached.</p>
+<code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringSet$add(org.apache.tuweni.concurrent.ExpiringSet.E, kotlin.Long)/element">element</span><span class="symbol">:</span>&nbsp;<span class="identifier">E</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringSet$add(org.apache.tuweni.concurrent.ExpiringSet.E, kotlin.Long)/expiry">expiry</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringSet$add(org.apache.tuweni.concurrent.ExpiringSet.E, kotlin.Long, java.util.function.Consumer((org.apache.tuweni.concurrent.ExpiringSet.E)))/element">element</span><span class="symbol">:</span>&nbsp;<span class="identifier">E</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringSet$add(org.apache.tuweni.concurrent.ExpiringSet.E, kotlin.Long, java.util.function.Consumer((org.apache.tuweni.concurrent.ExpiringSet.E)))/expiry">expiry</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringSet$add(org.apache.tuweni.concurrent.ExpiringSet.E, kotlin.Long, java.util.function.Consumer((org.apache.tuweni.concurrent.ExpiringSet.E)))/expiryListener">expiryListener</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><span class="identifier">E</span><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-all.html">addAll</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addAll</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringSet$addAll(kotlin.collections.Collection((org.apache.tuweni.concurrent.ExpiringSet.E)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Collection</span><span class="symbol">&lt;</span><span class="identifier">E</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="clear.html">clear</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains.html">contains</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">contains</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringSet$contains(org.apache.tuweni.concurrent.ExpiringSet.E)/element">element</span><span class="symbol">:</span>&nbsp;<span class="identifier">E</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains-all.html">containsAll</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">containsAll</span><span class="symbol">(</span><span class="identifier" id="kotlin.collections.Collection$containsAll(kotlin.collections.Collection((kotlin.collections.Collection.E)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Collection</span><span class="symbol">&lt;</span><span class="identifier">E</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringSet$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-empty.html">isEmpty</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="iterator.html">iterator</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">iterator</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableIterator</span><span class="symbol">&lt;</span><span class="identifier">E</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="purge-expired.html">purgeExpired</a></h4>
+</td>
+<td>
+<p>Force immediate expiration of any key/value pairs that have reached their expiry.</p>
+<code><span class="keyword">fun </span><span class="identifier">purgeExpired</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove.html">remove</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">remove</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringSet$remove(org.apache.tuweni.concurrent.ExpiringSet.E)/element">element</span><span class="symbol">:</span>&nbsp;<span class="identifier">E</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-all.html">removeAll</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">removeAll</span><span class="symbol">(</span><span class="identifier" id="kotlin.collections.MutableCollection$removeAll(kotlin.collections.Collection((kotlin.collections.MutableCollection.E)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Collection</span><span class="symbol">&lt;</span><span class="identifier">E</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="retain-all.html">retainAll</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">retainAll</span><span class="symbol">(</span><span class="identifier" id="kotlin.collections.MutableCollection$retainAll(kotlin.collections.Collection((kotlin.collections.MutableCollection.E)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Collection</span><span class="symbol">&lt;</span><span class="identifier">E</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-array.html">toArray</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toArray</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Array</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">toArray</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.ExpiringSet$toArray(kotlin.Array((org.apache.tuweni.concurrent.ExpiringSet.toArray.T)))/a">a</span><span class="symbol">:</span>&nbsp;<span class="identifier">Array</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Array</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

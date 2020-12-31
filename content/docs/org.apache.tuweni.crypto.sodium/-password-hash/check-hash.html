@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PasswordHash.checkHash - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="index.html">PasswordHash</a>&nbsp;/&nbsp;<a href="./check-hash.html">checkHash</a><br/>
+<br/>
+<h1>checkHash</h1>
+<a name="org.apache.tuweni.crypto.sodium.PasswordHash$checkHash(kotlin.String, kotlin.String)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">checkHash</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.PasswordHash$checkHash(kotlin.String, kotlin.String)/hash">hash</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.PasswordHash$checkHash(kotlin.String, kotlin.String)/password">password</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">VerificationResult</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/PasswordHash.java#L762">(source)</a>
+<p>Verify a password against a hash and check the hash is suitable for normal use-cases. </p>
+<p> Equivalent to <code>verify(hash, password, moderateOpsLimit(), moderateMemLimit())</code>. </p>
+<p> Note: only supported when the sodium native library version &gt;= 10.0.14 is available.</p>
+<h3>Parameters</h3>
+<p><a name="hash"></a>
+<code>hash</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> The hash.</p>
+<p><a name="password"></a>
+<code>password</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> The password to verify.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">VerificationResult</span><span class="symbol">!</span><span class="symbol">:</span> The result of verification.</p>
+<a name="org.apache.tuweni.crypto.sodium.PasswordHash$checkHash(kotlin.String, kotlin.String, kotlin.Long, kotlin.Long)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">checkHash</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.PasswordHash$checkHash(kotlin.String, kotlin.String, kotlin.Long, kotlin.Long)/hash">hash</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.PasswordHash$checkHash(kotlin.String, kotlin.String, kotlin.Long, kotlin.Long)/password">password</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.PasswordHash$checkHash(kotlin.String, kotlin.String, kotlin.Long, kotlin.Long)/opsLimit">opsLimit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.PasswordHash$checkHash(kotlin.String, kotlin.String, kotlin.Long, kotlin.Long)/memLimit">memLimit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">VerificationResult</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/PasswordHash.java#L812">(source)</a>
+<p>Verify a password against a hash. </p>
+<p> Note: only supported when the sodium native library version &gt;= 10.0.14 is available.</p>
+<h3>Parameters</h3>
+<p><a name="hash"></a>
+<code>hash</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> The hash.</p>
+<p><a name="password"></a>
+<code>password</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> The password to verify.</p>
+<p><a name="opsLimit"></a>
+<code>opsLimit</code> - <span class="identifier">Long</span><span class="symbol">:</span> The operations limit, which must be in the range <code><a href="min-ops-limit.html">#minOpsLimit()</a></code> to <code><a href="max-ops-limit.html">#maxOpsLimit()</a></code>.</p>
+<p><a name="memLimit"></a>
+<code>memLimit</code> - <span class="identifier">Long</span><span class="symbol">:</span> The memory limit, which must be in the range <code><a href="min-mem-limit.html">#minMemLimit()</a></code> to <code><a href="max-mem-limit.html">#maxMemLimit()</a></code>.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">VerificationResult</span><span class="symbol">!</span><span class="symbol">:</span> The result of verification.</p>
+</BODY>
+</HTML>

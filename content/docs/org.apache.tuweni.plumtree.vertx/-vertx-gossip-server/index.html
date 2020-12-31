@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>VertxGossipServer - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.plumtree.vertx</a>&nbsp;/&nbsp;<a href="./index.html">VertxGossipServer</a><br/>
+<br/>
+<h1>VertxGossipServer</h1>
+<code><span class="keyword">class </span><span class="identifier">VertxGossipServer</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/plumtree/src/main/java/org/apache/tuweni/plumtree/vertx/VertxGossipServer.java#L46">(source)</a>
+<p>Vert.x implementation of the plumtree gossip. This implementation is provided as an example and relies on a simplistic JSON serialization of messages.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">VertxGossipServer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.plumtree.vertx.VertxGossipServer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.Int, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Int, kotlin.Int)/vertx">vertx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Vertx</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.vertx.VertxGossipServer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.Int, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Int, kotlin.Int)/networkInterface">networkInterface</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.vertx.VertxGossipServer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.Int, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Int, kotlin.Int)/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.vertx.VertxGossipServer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.Int, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Int, kotlin.Int)/messageHashing">messageHashing</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.plumtree/-message-hashing/index.html"><span class="identifier">MessageHashing</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.vertx.VertxGossipServer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.Int, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Int, kotlin.Int)/peerRepository">peerRepository</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.plumtree/-peer-repository/index.html"><span class="identifier">PeerRepository</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.vertx.VertxGossipServer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.Int, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Int, kotlin.Int)/payloadListener">payloadListener</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.plumtree/-message-listener/index.html"><span class="identifier">MessageListener</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.vertx.VertxGossipServer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.Int, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Int, kotlin.Int)/payloadValidator">payloadValidator</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.plumtree/-message-validator/index.html"><span class="identifier">MessageValidator</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.vertx.VertxGossipServer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.Int, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Int, kotlin.Int)/peerPruningFunction">peerPruningFunction</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.plumtree/-peer-pruning/index.html"><span class="identifier">PeerPruning</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.vertx.VertxGossipServer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.Int, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Int, kotlin.Int)/graftDelay">graftDelay</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.vertx.VertxGossipServer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.Int, org.apache.tuweni.plumtree.MessageHashing, org.apache.tuweni.plumtree.PeerRepository, org.apache.tuweni.plumtree.MessageListener, org.apache.tuweni.plumtree.MessageValidator, org.apache.tuweni.plumtree.PeerPruning, kotlin.Int, kotlin.Int)/lazyQueueInterval">lazyQueueInterval</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="connect-to.html">connectTo</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">connectTo</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.plumtree.vertx.VertxGossipServer$connectTo(kotlin.String, kotlin.Int)/host">host</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.vertx.VertxGossipServer$connectTo(kotlin.String, kotlin.Int)/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="gossip.html">gossip</a></h4>
+</td>
+<td>
+<p>Gossip a message to all known peers.</p>
+<code><span class="keyword">fun </span><span class="identifier">gossip</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.plumtree.vertx.VertxGossipServer$gossip(kotlin.String, org.apache.tuweni.bytes.Bytes)/attributes">attributes</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.plumtree.vertx.VertxGossipServer$gossip(kotlin.String, org.apache.tuweni.bytes.Bytes)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start.html">start</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">start</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stop.html">stop</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">stop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

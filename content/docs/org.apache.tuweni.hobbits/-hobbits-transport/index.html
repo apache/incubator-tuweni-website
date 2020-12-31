@@ -1,0 +1,119 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>HobbitsTransport - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.hobbits</a>&nbsp;/&nbsp;<a href="./index.html">HobbitsTransport</a><br/>
+<br/>
+<h1>HobbitsTransport</h1>
+<code><span class="keyword">class </span><span class="identifier">HobbitsTransport</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineScope</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/hobbits/src/main/kotlin/org/apache/tuweni/hobbits/HobbitsTransport.kt#L51">(source)</a>
+<p>Hobbits is a peer-to-peer transport stack specified at https://www.github.com/deltap2p/hobbits.</p>
+<p>This class works as a transport mechanism that can leverage a variety of network transport
+protocols, such as TCP, HTTP, UDP and Web sockets.</p>
+<p>It can be used to contact other Hobbits endpoints, or to expose endpoints to the network.</p>
+<h3>Parameters</h3>
+<p><a name="vertx"></a>
+<code>vertx</code> - Vert.x instance</p>
+<p><a name="incompleteMessageHandler"></a>
+<code>incompleteMessageHandler</code> - a handler to manage incomplete or invalid messages</p>
+<p><a name="coroutineContext"></a>
+<code>coroutineContext</code> - the co-routine context for the transport</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Hobbits is a peer-to-peer transport stack specified at https://www.github.com/deltap2p/hobbits.</p>
+<code><span class="identifier">HobbitsTransport</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$<init>(io.vertx.core.Vertx, kotlin.Function1((org.apache.tuweni.bytes.Bytes, kotlin.Unit)), kotlin.coroutines.CoroutineContext)/vertx">vertx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Vertx</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$<init>(io.vertx.core.Vertx, kotlin.Function1((org.apache.tuweni.bytes.Bytes, kotlin.Unit)), kotlin.coroutines.CoroutineContext)/incompleteMessageHandler">incompleteMessageHandler</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$<init>(io.vertx.core.Vertx, kotlin.Function1((org.apache.tuweni.bytes.Bytes, kotlin.Unit)), kotlin.coroutines.CoroutineContext)/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineContext</span>&nbsp;<span class="symbol">=</span>&nbsp;Dispatchers.Default<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="coroutine-context.html">coroutineContext</a></h4>
+</td>
+<td>
+<p>the co-routine context for the transport</p>
+<code><span class="keyword">val </span><span class="identifier">coroutineContext</span><span class="symbol">: </span><span class="identifier">CoroutineContext</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="create-h-t-t-p-endpoint.html">createHTTPEndpoint</a></h4>
+</td>
+<td>
+<p>Creates a new endpoint over http.</p>
+<code><span class="keyword">fun </span><span class="identifier">createHTTPEndpoint</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createHTTPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"default"<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createHTTPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/networkInterface">networkInterface</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"0.0.0.0"<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createHTTPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;9337<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createHTTPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/requestURI">requestURI</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createHTTPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/tls">tls</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createHTTPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../-message/index.html"><span class="identifier">Message</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createHTTPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/portUpdateListener">portUpdateListener</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">Int</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="create-t-c-p-endpoint.html">createTCPEndpoint</a></h4>
+</td>
+<td>
+<p>Creates a new endpoint over tcp persistent connections.</p>
+<code><span class="keyword">fun </span><span class="identifier">createTCPEndpoint</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createTCPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"default"<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createTCPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/networkInterface">networkInterface</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"0.0.0.0"<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createTCPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;9237<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createTCPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/tls">tls</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createTCPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../-message/index.html"><span class="identifier">Message</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createTCPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/portUpdateListener">portUpdateListener</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">Int</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="create-u-d-p-endpoint.html">createUDPEndpoint</a></h4>
+</td>
+<td>
+<p>Creates a new endpoint over UDP connections.</p>
+<code><span class="keyword">fun </span><span class="identifier">createUDPEndpoint</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createUDPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)))/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"default"<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createUDPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)))/networkInterface">networkInterface</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"0.0.0.0"<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createUDPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)))/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;9137<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createUDPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../-message/index.html"><span class="identifier">Message</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="create-w-s-endpoint.html">createWSEndpoint</a></h4>
+</td>
+<td>
+<p>Creates a new endpoint over websocket connections.</p>
+<code><span class="keyword">fun </span><span class="identifier">createWSEndpoint</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createWSEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"default"<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createWSEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/networkInterface">networkInterface</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"0.0.0.0"<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createWSEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;9037<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createWSEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/requestURI">requestURI</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createWSEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/tls">tls</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createWSEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../-message/index.html"><span class="identifier">Message</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createWSEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/portUpdateListener">portUpdateListener</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">Int</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exception-handler.html">exceptionHandler</a></h4>
+</td>
+<td>
+<p>Sets an exception handler that will be called whenever an exception occurs during transport.</p>
+<code><span class="keyword">fun </span><span class="identifier">exceptionHandler</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$exceptionHandler(kotlin.Function1((kotlin.Throwable, kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">Throwable</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="send-message.html">sendMessage</a></h4>
+</td>
+<td>
+<p>Sends a message using the transport specified.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">sendMessage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$sendMessage(org.apache.tuweni.hobbits.Message, org.apache.tuweni.hobbits.Transport, kotlin.String, kotlin.Int, kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../-message/index.html"><span class="identifier">Message</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$sendMessage(org.apache.tuweni.hobbits.Message, org.apache.tuweni.hobbits.Transport, kotlin.String, kotlin.Int, kotlin.String)/transport">transport</span><span class="symbol">:</span>&nbsp;<a href="../-transport/index.html"><span class="identifier">Transport</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$sendMessage(org.apache.tuweni.hobbits.Message, org.apache.tuweni.hobbits.Transport, kotlin.String, kotlin.Int, kotlin.String)/host">host</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$sendMessage(org.apache.tuweni.hobbits.Message, org.apache.tuweni.hobbits.Transport, kotlin.String, kotlin.Int, kotlin.String)/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$sendMessage(org.apache.tuweni.hobbits.Message, org.apache.tuweni.hobbits.Transport, kotlin.String, kotlin.Int, kotlin.String)/requestURI">requestURI</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start.html">start</a></h4>
+</td>
+<td>
+<p>Starts the hobbits transport.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">start</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stop.html">stop</a></h4>
+</td>
+<td>
+<p>Stops the hobbits transport.</p>
+<code><span class="keyword">fun </span><span class="identifier">stop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

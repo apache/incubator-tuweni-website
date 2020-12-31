@@ -1,0 +1,205 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BlockHeader - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth</a>&nbsp;/&nbsp;<a href="./index.html">BlockHeader</a><br/>
+<br/>
+<h1>BlockHeader</h1>
+<code><span class="keyword">class </span><span class="identifier">BlockHeader</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth/src/main/java/org/apache/tuweni/eth/BlockHeader.java#L35">(source)</a>
+<p>An Ethereum block header.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Creates a new block header.</p>
+<code><span class="identifier">BlockHeader</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$<init>(org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Address, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.units.ethereum.Gas, java.time.Instant, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.eth.Hash, org.apache.tuweni.units.bigints.UInt64)/parentHash">parentHash</span><span class="symbol">:</span>&nbsp;<a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$<init>(org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Address, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.units.ethereum.Gas, java.time.Instant, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.eth.Hash, org.apache.tuweni.units.bigints.UInt64)/ommersHash">ommersHash</span><span class="symbol">:</span>&nbsp;<a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$<init>(org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Address, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.units.ethereum.Gas, java.time.Instant, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.eth.Hash, org.apache.tuweni.units.bigints.UInt64)/coinbase">coinbase</span><span class="symbol">:</span>&nbsp;<a href="../-address/index.html"><span class="identifier">Address</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$<init>(org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Address, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.units.ethereum.Gas, java.time.Instant, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.eth.Hash, org.apache.tuweni.units.bigints.UInt64)/stateRoot">stateRoot</span><span class="symbol">:</span>&nbsp;<a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$<init>(org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Address, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.units.ethereum.Gas, java.time.Instant, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.eth.Hash, org.apache.tuweni.units.bigints.UInt64)/transactionsRoot">transactionsRoot</span><span class="symbol">:</span>&nbsp;<a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$<init>(org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Address, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.units.ethereum.Gas, java.time.Instant, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.eth.Hash, org.apache.tuweni.units.bigints.UInt64)/receiptsRoot">receiptsRoot</span><span class="symbol">:</span>&nbsp;<a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$<init>(org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Address, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.units.ethereum.Gas, java.time.Instant, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.eth.Hash, org.apache.tuweni.units.bigints.UInt64)/logsBloom">logsBloom</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$<init>(org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Address, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.units.ethereum.Gas, java.time.Instant, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.eth.Hash, org.apache.tuweni.units.bigints.UInt64)/difficulty">difficulty</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$<init>(org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Address, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.units.ethereum.Gas, java.time.Instant, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.eth.Hash, org.apache.tuweni.units.bigints.UInt64)/number">number</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$<init>(org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Address, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.units.ethereum.Gas, java.time.Instant, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.eth.Hash, org.apache.tuweni.units.bigints.UInt64)/gasLimit">gasLimit</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-gas/index.html"><span class="identifier">Gas</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$<init>(org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Address, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.units.ethereum.Gas, java.time.Instant, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.eth.Hash, org.apache.tuweni.units.bigints.UInt64)/gasUsed">gasUsed</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-gas/index.html"><span class="identifier">Gas</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$<init>(org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Address, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.units.ethereum.Gas, java.time.Instant, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.eth.Hash, org.apache.tuweni.units.bigints.UInt64)/timestamp">timestamp</span><span class="symbol">:</span>&nbsp;<span class="identifier">Instant</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$<init>(org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Address, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.units.ethereum.Gas, java.time.Instant, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.eth.Hash, org.apache.tuweni.units.bigints.UInt64)/extraData">extraData</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$<init>(org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Address, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.units.ethereum.Gas, java.time.Instant, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.eth.Hash, org.apache.tuweni.units.bigints.UInt64)/mixHash">mixHash</span><span class="symbol">:</span>&nbsp;<a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$<init>(org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Address, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.Hash, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.units.ethereum.Gas, java.time.Instant, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.eth.Hash, org.apache.tuweni.units.bigints.UInt64)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int64/index.html"><span class="identifier">UInt64</span></a><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-bytes.html">fromBytes</a></h4>
+</td>
+<td>
+<p>Deserialize a block header from RLP encoded bytes.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$fromBytes(org.apache.tuweni.bytes.Bytes)/encoded">encoded</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-coinbase.html">getCoinbase</a></h4>
+</td>
+<td>
+<p>Provides the block's beneficiary's address.</p>
+<code><span class="keyword">fun </span><span class="identifier">getCoinbase</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-address/index.html"><span class="identifier">Address</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-difficulty.html">getDifficulty</a></h4>
+</td>
+<td>
+<p>Provides the difficulty of the block.</p>
+<code><span class="keyword">fun </span><span class="identifier">getDifficulty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-extra-data.html">getExtraData</a></h4>
+</td>
+<td>
+<p>Provides the extra data stored with the block.</p>
+<code><span class="keyword">fun </span><span class="identifier">getExtraData</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-gas-limit.html">getGasLimit</a></h4>
+</td>
+<td>
+<p>Provides the gas limit of the block.</p>
+<code><span class="keyword">fun </span><span class="identifier">getGasLimit</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.ethereum/-gas/index.html"><span class="identifier">Gas</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-gas-used.html">getGasUsed</a></h4>
+</td>
+<td>
+<p>Provides the gas used for the block.</p>
+<code><span class="keyword">fun </span><span class="identifier">getGasUsed</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.ethereum/-gas/index.html"><span class="identifier">Gas</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-hash.html">getHash</a></h4>
+</td>
+<td>
+<p>Provides the hash of the block header.</p>
+<code><span class="keyword">fun </span><span class="identifier">getHash</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-logs-bloom.html">getLogsBloom</a></h4>
+</td>
+<td>
+<p>Provides the bloom filter of the logs of the block.</p>
+<code><span class="keyword">fun </span><span class="identifier">getLogsBloom</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-mix-hash.html">getMixHash</a></h4>
+</td>
+<td>
+<p>Provides the hash associated with computational work on the block.</p>
+<code><span class="keyword">fun </span><span class="identifier">getMixHash</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-nonce.html">getNonce</a></h4>
+</td>
+<td>
+<p>Provides the nonce of the block.</p>
+<code><span class="keyword">fun </span><span class="identifier">getNonce</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int64/index.html"><span class="identifier">UInt64</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-number.html">getNumber</a></h4>
+</td>
+<td>
+<p>Provides the number of the block.</p>
+<code><span class="keyword">fun </span><span class="identifier">getNumber</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-ommers-hash.html">getOmmersHash</a></h4>
+</td>
+<td>
+<p>Provides the ommer hash.</p>
+<code><span class="keyword">fun </span><span class="identifier">getOmmersHash</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-parent-hash.html">getParentHash</a></h4>
+</td>
+<td>
+<p>Provides the parent hash, or null if none was available.</p>
+<code><span class="keyword">fun </span><span class="identifier">getParentHash</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-receipts-root.html">getReceiptsRoot</a></h4>
+</td>
+<td>
+<p>Provides the hash associated with the transaction receipts tree.</p>
+<code><span class="keyword">fun </span><span class="identifier">getReceiptsRoot</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-state-root.html">getStateRoot</a></h4>
+</td>
+<td>
+<p>Provides the hash associated with the state tree.</p>
+<code><span class="keyword">fun </span><span class="identifier">getStateRoot</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-timestamp.html">getTimestamp</a></h4>
+</td>
+<td>
+<p>Provides the timestamp of the block</p>
+<code><span class="keyword">fun </span><span class="identifier">getTimestamp</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Instant</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-transactions-root.html">getTransactionsRoot</a></h4>
+</td>
+<td>
+<p>Provides the root hash of the transactions tree</p>
+<code><span class="keyword">fun </span><span class="identifier">getTransactionsRoot</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-from.html">readFrom</a></h4>
+</td>
+<td>
+<p>Deserialize a block header from an RLP input.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">readFrom</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.BlockHeader$readFrom(org.apache.tuweni.rlp.RLPReader)/reader">reader</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlp/-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-bytes.html">toBytes</a></h4>
+</td>
+<td>
+<p>Provides this block header as bytes.</p>
+<code><span class="keyword">fun </span><span class="identifier">toBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

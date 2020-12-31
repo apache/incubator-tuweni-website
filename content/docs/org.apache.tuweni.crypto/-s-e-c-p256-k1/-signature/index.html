@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SECP256K1.Signature - tuweni</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../../index.html">org.apache.tuweni.crypto</a>&nbsp;/&nbsp;<a href="../index.html">SECP256K1</a>&nbsp;/&nbsp;<a href="./index.html">Signature</a><br/>
+<br/>
+<h1>Signature</h1>
+<code><span class="keyword">class </span><span class="identifier">Signature</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/SECP256K1.java#L840">(source)</a>
+<p>A SECP256K1 digital signature.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="bytes.html">bytes</a></h4>
+</td>
+<td>
+<p>Provides the bytes of the signature.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">bytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="create.html">create</a></h4>
+</td>
+<td>
+<p>Create a signature from parameters.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.Signature$create(kotlin.Byte, java.math.BigInteger, java.math.BigInteger)/v">v</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.Signature$create(kotlin.Byte, java.math.BigInteger, java.math.BigInteger)/r">r</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.Signature$create(kotlin.Byte, java.math.BigInteger, java.math.BigInteger)/s">s</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Signature</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.Signature$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-bytes.html">fromBytes</a></h4>
+</td>
+<td>
+<p>Create a signature from bytes.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.Signature$fromBytes(org.apache.tuweni.bytes.Bytes)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="../../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Signature</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-canonical.html">isCanonical</a></h4>
+</td>
+<td>
+<p>Check if the signature is canonical. Every signature (r,s) has an equivalent signature (r, -s (mod N)) that is also valid for the same message. The canonical signature is considered the signature with the s-value less than or equal to half the curve order.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isCanonical</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="r.html">r</a></h4>
+</td>
+<td>
+<p>Provides the r-value of the signature.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">r</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="s.html">s</a></h4>
+</td>
+<td>
+<p>Provides the s-value of the signature.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">s</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="v.html">v</a></h4>
+</td>
+<td>
+<p>Provides the v-value of the signature.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">v</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Byte</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

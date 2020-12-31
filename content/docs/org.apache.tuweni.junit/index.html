@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>org.apache.tuweni.junit - tuweni</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">tuweni</a>&nbsp;/&nbsp;<a href="./index.html">org.apache.tuweni.junit</a><br/>
+<br/>
+<h2>Package org.apache.tuweni.junit</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-bouncy-castle-extension/index.html">BouncyCastleExtension</a></h4>
+</td>
+<td>
+<p>A junit5 extension, that installs a BouncyCastle security provider.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BouncyCastleExtension</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">BeforeAllCallback</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-lucene-index-writer-extension/index.html">LuceneIndexWriterExtension</a></h4>
+</td>
+<td>
+<p>A junit5 extension, that provides a memory-backed Lucene index writer for tests. The index writer is created for the test suite and injected into any tests with parameters annotated by <code><a href="-lucene-index-writer/index.html">LuceneIndexWriter</a></code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LuceneIndexWriterExtension</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParameterResolver</span><span class="symbol">, </span><span class="identifier">AfterAllCallback</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-redis-server-extension/index.html">RedisServerExtension</a></h4>
+</td>
+<td>
+<p>A junit5 extension, that sets up an ephemeral Redis server for tests. The ephemeral Redis server is created with a random free port for the test suite and injected into any tests with parameters of type <code><a href="#">Integer</a></code> annotated with <code><a href="-redis-port/index.html">RedisPort</a></code> NOTE: Redis does not support picking a random port on its own. This extension tries its best to test free ports and avoid collisions.</p>
+<code><span class="keyword">class </span><span class="identifier">RedisServerExtension</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParameterResolver</span><span class="symbol">, </span><span class="identifier">AfterAllCallback</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-temp-directory-extension/index.html">TempDirectoryExtension</a></h4>
+</td>
+<td>
+<p>A junit5 extension, that provides a temporary directory for tests. The temporary directory is created for the test suite and injected into any tests with parameters annotated by <code><a href="-temp-directory/index.html">TempDirectory</a></code>.</p>
+<code><span class="keyword">class </span><span class="identifier">TempDirectoryExtension</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParameterResolver</span><span class="symbol">, </span><span class="identifier">AfterAllCallback</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-vertx-extension/index.html">VertxExtension</a></h4>
+</td>
+<td>
+<p>A junit5 extension, that provides a Vert.X instance for tests. The Vert.X instance created for the test suite and injected into any tests with parameters annotated by <code><a href="-vertx-instance/index.html">VertxInstance</a></code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">VertxExtension</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParameterResolver</span><span class="symbol">, </span><span class="identifier">AfterAllCallback</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Annotations</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-lucene-index/index.html">LuceneIndex</a></h4>
+</td>
+<td>
+<p>A parameter annotation for injecting a Lucene index directory into junit5 tests.</p>
+<code><span class="keyword">class </span><span class="identifier">LuceneIndex</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-lucene-index-writer/index.html">LuceneIndexWriter</a></h4>
+</td>
+<td>
+<p>A parameter annotation for injecting a Lucene index writer into junit5 tests.</p>
+<code><span class="keyword">class </span><span class="identifier">LuceneIndexWriter</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-redis-port/index.html">RedisPort</a></h4>
+</td>
+<td>
+<p>A parameter annotation for injecting the running Redis server port into junit5 tests.</p>
+<code><span class="keyword">class </span><span class="identifier">RedisPort</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-temp-directory/index.html">TempDirectory</a></h4>
+</td>
+<td>
+<p>A parameter annotation for injecting a temporary directory into junit5 tests.</p>
+<code><span class="keyword">class </span><span class="identifier">TempDirectory</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-vertx-instance/index.html">VertxInstance</a></h4>
+</td>
+<td>
+<p>A parameter annotation for injecting a temporary Vert.X instance into junit5 tests.</p>
+<code><span class="keyword">class </span><span class="identifier">VertxInstance</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

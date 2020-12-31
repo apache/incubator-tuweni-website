@@ -1,0 +1,97 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>org.apache.tuweni.kv - tuweni</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">tuweni</a>&nbsp;/&nbsp;<a href="./index.html">org.apache.tuweni.kv</a><br/>
+<br/>
+<h2>Package org.apache.tuweni.kv</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-entity-manager-key-value-store/index.html">EntityManagerKeyValueStore</a></h4>
+</td>
+<td>
+<p>JPA-backed key value store.</p>
+<code><span class="keyword">class </span><span class="identifier">EntityManagerKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-infinispan-key-value-store/index.html">InfinispanKeyValueStore</a></h4>
+</td>
+<td>
+<p>A key-value store backed by <a href="https://infinispan.org">Infinispan</a></p>
+<code><span class="keyword">class </span><span class="identifier">InfinispanKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-key-value-store/index.html">KeyValueStore</a></h4>
+</td>
+<td>
+<p>A key-value store.</p>
+<code><span class="keyword">interface </span><span class="identifier">KeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Closeable</span><span class="symbol">, </span><span class="identifier">CoroutineScope</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-level-d-b-key-value-store/index.html">LevelDBKeyValueStore</a></h4>
+</td>
+<td>
+<p>A key-value store backed by LevelDB.</p>
+<code><span class="keyword">class </span><span class="identifier">LevelDBKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-map-d-b-key-value-store/index.html">MapDBKeyValueStore</a></h4>
+</td>
+<td>
+<p>A key-value store backed by a MapDB instance.</p>
+<code><span class="keyword">class </span><span class="identifier">MapDBKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-map-key-value-store/index.html">MapKeyValueStore</a></h4>
+</td>
+<td>
+<p>A key-value store backed by an in-memory Map.</p>
+<code><span class="keyword">class </span><span class="identifier">MapKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-proxy-key-value-store/index.html">ProxyKeyValueStore</a></h4>
+</td>
+<td>
+<p>A store used as a proxy for another store.</p>
+<code><span class="keyword">class </span><span class="identifier">ProxyKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">, </span><span class="identifier">E</span><span class="symbol">, </span><span class="identifier">R</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-redis-key-value-store/index.html">RedisKeyValueStore</a></h4>
+</td>
+<td>
+<p>A key-value store backed by Redis.</p>
+<code><span class="keyword">class </span><span class="identifier">RedisKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-rocks-d-b-key-value-store/index.html">RocksDBKeyValueStore</a></h4>
+</td>
+<td>
+<p>A key-value store backed by RocksDB.</p>
+<code><span class="keyword">class </span><span class="identifier">RocksDBKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-s-q-l-key-value-store/index.html">SQLKeyValueStore</a></h4>
+</td>
+<td>
+<p>A key-value store backed by a relational database.</p>
+<code><span class="keyword">class </span><span class="identifier">SQLKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

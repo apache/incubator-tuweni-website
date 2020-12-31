@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>HMACSHA256.authenticate - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="index.html">HMACSHA256</a>&nbsp;/&nbsp;<a href="./authenticate.html">authenticate</a><br/>
+<br/>
+<h1>authenticate</h1>
+<a name="org.apache.tuweni.crypto.sodium.HMACSHA256$authenticate(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.HMACSHA256.Key)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">authenticate</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.HMACSHA256$authenticate(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.HMACSHA256.Key)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.HMACSHA256$authenticate(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.HMACSHA256.Key)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/HMACSHA256.java#L145">(source)</a>
+<p>Authenticates a message using a secret into a HMAC-SHA-256 authenticator.</p>
+<h3>Parameters</h3>
+<p><a name="message"></a>
+<code>message</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the message to authenticate</p>
+<p><a name="key"></a>
+<code>key</code> - <span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">:</span> the secret key to use for authentication</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the authenticator of the message</p>
+<a name="org.apache.tuweni.crypto.sodium.HMACSHA256$authenticate(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.HMACSHA256.Key)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">authenticate</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.HMACSHA256$authenticate(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.HMACSHA256.Key)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.HMACSHA256$authenticate(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.HMACSHA256.Key)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/HMACSHA256.java#L156">(source)</a>
+<p>Authenticates a message using a secret into a HMAC-SHA-256 authenticator.</p>
+<h3>Parameters</h3>
+<p><a name="message"></a>
+<code>message</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> the message to authenticate</p>
+<p><a name="key"></a>
+<code>key</code> - <span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">:</span> the secret key to use for authentication</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> the authenticator of the message</p>
+</BODY>
+</HTML>

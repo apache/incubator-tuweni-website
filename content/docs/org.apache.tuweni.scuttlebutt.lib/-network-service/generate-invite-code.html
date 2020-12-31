@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>NetworkService.generateInviteCode - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.lib</a>&nbsp;/&nbsp;<a href="index.html">NetworkService</a>&nbsp;/&nbsp;<a href="./generate-invite-code.html">generateInviteCode</a><br/>
+<br/>
+<h1>generateInviteCode</h1>
+<a name="org.apache.tuweni.scuttlebutt.lib.NetworkService$generateInviteCode(kotlin.Int)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">generateInviteCode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.NetworkService$generateInviteCode(kotlin.Int)/validForUses">validForUses</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt/-invite/index.html"><span class="identifier">Invite</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-client-lib/src/main/java/org/apache/tuweni/scuttlebutt/lib/NetworkService.java#L70">(source)</a>
+<p>Generates an invite code which can be used by another node to connect to our node, and have each node will befriend each other.</p>
+<h3>Parameters</h3>
+<p><a name="validForUses"></a>
+<code>validForUses</code> - <span class="identifier">Int</span><span class="symbol">:</span> the number of times this should be usable by different people (0 if an infinite number of times.)</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt/-invite/index.html"><span class="identifier">Invite</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> the invite that was generated.</p>
+</BODY>
+</HTML>

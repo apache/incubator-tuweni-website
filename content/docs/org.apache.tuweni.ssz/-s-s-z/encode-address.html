@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSZ.encodeAddress - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ssz</a>&nbsp;/&nbsp;<a href="index.html">SSZ</a>&nbsp;/&nbsp;<a href="./encode-address.html">encodeAddress</a><br/>
+<br/>
+<h1>encodeAddress</h1>
+<a name="org.apache.tuweni.ssz.SSZ$encodeAddress(org.apache.tuweni.bytes.Bytes)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeAddress</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeAddress(org.apache.tuweni.bytes.Bytes)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZ.java#L476">(source)</a>
+<p>Encode a 20-byte address to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<h3>Parameters</h3>
+<p><a name="address"></a>
+<code>address</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the address (must be exactly 20 bytes)</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if <code>address.size != 20</code></p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the SSZ encoding in a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value</p>
+</BODY>
+</HTML>

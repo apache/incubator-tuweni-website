@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RLP.encodeList - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlp</a>&nbsp;/&nbsp;<a href="index.html">RLP</a>&nbsp;/&nbsp;<a href="./encode-list.html">encodeList</a><br/>
+<br/>
+<h1>encodeList</h1>
+<a name="org.apache.tuweni.rlp.RLP$encodeList(java.util.function.Consumer((org.apache.tuweni.rlp.RLPWriter)))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$encodeList(java.util.function.Consumer((org.apache.tuweni.rlp.RLPWriter)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../-r-l-p-writer/index.html"><span class="identifier">RLPWriter</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlp/src/main/java/org/apache/tuweni/rlp/RLP.java#L80">(source)</a>
+<p>Encode a list of values to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<h3>Parameters</h3>
+<p><a name="fn"></a>
+<code>fn</code> - <span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../-r-l-p-writer/index.html"><span class="identifier">RLPWriter</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A consumer that will be provided with a <code><a href="../-r-l-p-writer/index.html">RLPWriter</a></code> that can consume values.</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The RLP encoding in a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<a name="org.apache.tuweni.rlp.RLP$encodeList(kotlin.collections.MutableList((org.apache.tuweni.rlp.RLP.encodeList.T)), java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPWriter, org.apache.tuweni.rlp.RLP.encodeList.T)))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">encodeList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$encodeList(kotlin.collections.MutableList((org.apache.tuweni.rlp.RLP.encodeList.T)), java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPWriter, org.apache.tuweni.rlp.RLP.encodeList.T)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$encodeList(kotlin.collections.MutableList((org.apache.tuweni.rlp.RLP.encodeList.T)), java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPWriter, org.apache.tuweni.rlp.RLP.encodeList.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><a href="../-r-l-p-writer/index.html"><span class="identifier">RLPWriter</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlp/src/main/java/org/apache/tuweni/rlp/RLP.java#L95">(source)</a>
+<p>Encode a list of values to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<h3>Parameters</h3>
+<p><a name="elements"></a>
+<code>elements</code> - <span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A list of values to be encoded.</p>
+<p><a name="fn"></a>
+<code>fn</code> - <span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><a href="../-r-l-p-writer/index.html"><span class="identifier">RLPWriter</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A consumer that will be provided with a <code><a href="../-r-l-p-writer/index.html">RLPWriter</a></code> and an element of the list.</p>
+<p><a name="&lt;T&gt;"></a>
+<code><T></code> - The type of the list elements.</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The RLP encoding in a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+</BODY>
+</HTML>

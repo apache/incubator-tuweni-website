@@ -1,0 +1,143 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>KademliaRoutingTable - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.kademlia</a>&nbsp;/&nbsp;<a href="./index.html">KademliaRoutingTable</a><br/>
+<br/>
+<h1>KademliaRoutingTable</h1>
+<code><span class="keyword">class </span><span class="identifier">KademliaRoutingTable</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Set</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/kademlia/src/main/kotlin/org/apache/tuweni/kademlia/KademliaRoutingTable.kt#L93">(source)</a>
+<p>A Kademlia Routing Table</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Create a new routing table.</p>
+<code><span class="identifier">KademliaRoutingTable</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable$<init>(kotlin.ByteArray, kotlin.Int, kotlin.Int, kotlin.Function1((org.apache.tuweni.kademlia.KademliaRoutingTable.T, kotlin.ByteArray)), kotlin.Function1((org.apache.tuweni.kademlia.KademliaRoutingTable.T, kotlin.Int)))/selfId">selfId</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable$<init>(kotlin.ByteArray, kotlin.Int, kotlin.Int, kotlin.Function1((org.apache.tuweni.kademlia.KademliaRoutingTable.T, kotlin.ByteArray)), kotlin.Function1((org.apache.tuweni.kademlia.KademliaRoutingTable.T, kotlin.Int)))/k">k</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable$<init>(kotlin.ByteArray, kotlin.Int, kotlin.Int, kotlin.Function1((org.apache.tuweni.kademlia.KademliaRoutingTable.T, kotlin.ByteArray)), kotlin.Function1((org.apache.tuweni.kademlia.KademliaRoutingTable.T, kotlin.Int)))/maxReplacements">maxReplacements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;k<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable$<init>(kotlin.ByteArray, kotlin.Int, kotlin.Int, kotlin.Function1((org.apache.tuweni.kademlia.KademliaRoutingTable.T, kotlin.ByteArray)), kotlin.Function1((org.apache.tuweni.kademlia.KademliaRoutingTable.T, kotlin.Int)))/nodeId">nodeId</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">T</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable$<init>(kotlin.ByteArray, kotlin.Int, kotlin.Int, kotlin.Function1((org.apache.tuweni.kademlia.KademliaRoutingTable.T, kotlin.ByteArray)), kotlin.Function1((org.apache.tuweni.kademlia.KademliaRoutingTable.T, kotlin.Int)))/distanceToSelf">distanceToSelf</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">T</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;{ nodeId(it) xorDist selfId }<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="size.html">size</a></h4>
+</td>
+<td>
+<p>Provides the size of the table as the sum of the size of the buckets</p>
+<code><span class="keyword">val </span><span class="identifier">size</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add.html">add</a></h4>
+</td>
+<td>
+<p>Add a node to the table.</p>
+<code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable$add(org.apache.tuweni.kademlia.KademliaRoutingTable.T)/node">node</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="clear.html">clear</a></h4>
+</td>
+<td>
+<p>Clear all nodes (and replacements) from the table.</p>
+<code><span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains.html">contains</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">contains</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable$contains(org.apache.tuweni.kademlia.KademliaRoutingTable.T)/element">element</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains-all.html">containsAll</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">containsAll</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable$containsAll(kotlin.collections.Collection((org.apache.tuweni.kademlia.KademliaRoutingTable.T)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Collection</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="evict.html">evict</a></h4>
+</td>
+<td>
+<p>Remove a node from the table, potentially adding an alternative from the replacement cache.</p>
+<code><span class="keyword">fun </span><span class="identifier">evict</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable$evict(org.apache.tuweni.kademlia.KademliaRoutingTable.T)/node">node</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-random.html">getRandom</a></h4>
+</td>
+<td>
+<p>Provides a peer at random</p>
+<code><span class="keyword">fun </span><span class="identifier">getRandom</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-empty.html">isEmpty</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="iterator.html">iterator</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">iterator</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Iterator</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="log-dist-to-self.html">logDistToSelf</a></h4>
+</td>
+<td>
+<p>Provides the distance between our identity and the peer</p>
+<code><span class="keyword">fun </span><span class="identifier">logDistToSelf</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable$logDistToSelf(org.apache.tuweni.kademlia.KademliaRoutingTable.T)/node">node</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="nearest.html">nearest</a></h4>
+</td>
+<td>
+<p>Return the nearest nodes to a target id, in order from closest to furthest.</p>
+<code><span class="keyword">fun </span><span class="identifier">nearest</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable$nearest(kotlin.ByteArray, kotlin.Int)/targetId">targetId</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable$nearest(kotlin.ByteArray, kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="peers-of-distance.html">peersOfDistance</a></h4>
+</td>
+<td>
+<p>Returns all peers at a given distance of the original ID.</p>
+<code><span class="keyword">fun </span><span class="identifier">peersOfDistance</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable$peersOfDistance(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="create.html">create</a></h4>
+</td>
+<td>
+<p>Create a new routing table.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">create</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable.Companion$create(kotlin.ByteArray, kotlin.Int, java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.ByteArray)), java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.Int)))/selfId">selfId</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable.Companion$create(kotlin.ByteArray, kotlin.Int, java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.ByteArray)), java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.Int)))/k">k</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable.Companion$create(kotlin.ByteArray, kotlin.Int, java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.ByteArray)), java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.Int)))/nodeId">nodeId</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">,</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable.Companion$create(kotlin.ByteArray, kotlin.Int, java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.ByteArray)), java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.Int)))/distanceToSelf">distanceToSelf</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">,</span>&nbsp;<span class="identifier">Int</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">KademliaRoutingTable</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code><br/>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">create</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable.Companion$create(kotlin.ByteArray, kotlin.Int, kotlin.Int, java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.ByteArray)), java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.Int)))/selfId">selfId</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable.Companion$create(kotlin.ByteArray, kotlin.Int, kotlin.Int, java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.ByteArray)), java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.Int)))/k">k</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable.Companion$create(kotlin.ByteArray, kotlin.Int, kotlin.Int, java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.ByteArray)), java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.Int)))/maxReplacements">maxReplacements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable.Companion$create(kotlin.ByteArray, kotlin.Int, kotlin.Int, java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.ByteArray)), java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.Int)))/nodeId">nodeId</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">,</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.kademlia.KademliaRoutingTable.Companion$create(kotlin.ByteArray, kotlin.Int, kotlin.Int, java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.ByteArray)), java.util.function.Function((org.apache.tuweni.kademlia.KademliaRoutingTable.Companion.create.T, kotlin.Int)))/distanceToSelf">distanceToSelf</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">,</span>&nbsp;<span class="identifier">Int</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">KademliaRoutingTable</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

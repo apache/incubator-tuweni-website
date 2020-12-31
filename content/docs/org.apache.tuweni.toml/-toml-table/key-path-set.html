@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TomlTable.keyPathSet - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.toml</a>&nbsp;/&nbsp;<a href="index.html">TomlTable</a>&nbsp;/&nbsp;<a href="./key-path-set.html">keyPathSet</a><br/>
+<br/>
+<h1>keyPathSet</h1>
+<a name="org.apache.tuweni.toml.TomlTable$keyPathSet()"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">keyPathSet</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/TomlTable.java#L122">(source)</a>
+<p>Get all the paths in this table. </p>
+<p> Paths to intermediary and empty tables are not returned. To include these, use <code><a href="./key-path-set.html">#keyPathSet(boolean)</a></code>.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A set containing all the key paths of this table.</p>
+<a name="org.apache.tuweni.toml.TomlTable$keyPathSet(kotlin.Boolean)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">keyPathSet</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$keyPathSet(kotlin.Boolean)/includeTables">includeTables</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/TomlTable.java#L132">(source)</a>
+<p>Get all the paths in this table.</p>
+<h3>Parameters</h3>
+<p><a name="includeTables"></a>
+<code>includeTables</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> If <code>true</code>, also include paths to intermediary and empty tables.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A set containing all the key paths of this table.</p>
+</BODY>
+</HTML>

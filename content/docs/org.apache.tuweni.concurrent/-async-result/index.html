@@ -1,0 +1,271 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AsyncResult - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.concurrent</a>&nbsp;/&nbsp;<a href="./index.html">AsyncResult</a><br/>
+<br/>
+<h1>AsyncResult</h1>
+<code><span class="keyword">interface </span><span class="identifier">AsyncResult</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent/src/main/java/org/apache/tuweni/concurrent/AsyncResult.java#L35">(source)</a>
+<p>A result that will be available at a future time.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="accept.html">accept</a></h4>
+</td>
+<td>
+<p>Returns a new completion that, when this result completes either normally or exceptionally, completes after executing the supplied function with this result's value and exception as arguments. </p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">accept</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$accept(java.util.function.BiConsumer((org.apache.tuweni.concurrent.AsyncResult.T, kotlin.Throwable)))/consumer">consumer</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">,</span>&nbsp;<span class="identifier">Throwable</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="all-of.html">allOf</a></h4>
+</td>
+<td>
+<p>Returns an <code><a href="../-async-completion/index.html">AsyncCompletion</a></code> that completes when all of the given results complete. If any results complete exceptionally, then the resulting completion also completes exceptionally.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">allOf</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$allOf(kotlin.Array((org.apache.tuweni.concurrent.AsyncResult((kotlin.Any)))))/rs">rs</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">allOf</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$allOf(kotlin.collections.MutableCollection((org.apache.tuweni.concurrent.AsyncResult((kotlin.Any)))))/rs">rs</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableCollection</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">allOf</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$allOf(java.util.stream.Stream((org.apache.tuweni.concurrent.AsyncResult((kotlin.Any)))))/rs">rs</span><span class="symbol">:</span>&nbsp;<span class="identifier">Stream</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="cancel.html">cancel</a></h4>
+</td>
+<td>
+<p>Attempt to cancel execution of this task. </p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">cancel</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="combine.html">combine</a></h4>
+</td>
+<td>
+<p>Returns a result that completes when all of the given results complete. If any results complete exceptionally, then the resulting completion also completes exceptionally.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">combine</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$combine(kotlin.collections.MutableCollection((org.apache.tuweni.concurrent.AsyncResult((org.apache.tuweni.concurrent.AsyncResult.combine.T)))))/rs">rs</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableCollection</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">combine</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$combine(java.util.stream.Stream((org.apache.tuweni.concurrent.AsyncResult((org.apache.tuweni.concurrent.AsyncResult.combine.T)))))/rs">rs</span><span class="symbol">:</span>&nbsp;<span class="identifier">Stream</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="completed.html">completed</a></h4>
+</td>
+<td>
+<p>Return an already completed result containing the given value.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">completed</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$completed(org.apache.tuweni.concurrent.AsyncResult.completed.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exceptional.html">exceptional</a></h4>
+</td>
+<td>
+<p>Return an already failed result, caused by the given exception.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">exceptional</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$exceptional(kotlin.Throwable)/ex">ex</span><span class="symbol">:</span>&nbsp;<span class="identifier">Throwable</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exceptionally.html">exceptionally</a></h4>
+</td>
+<td>
+<p>Returns a new result that, when this result completes exceptionally, completes with the value obtained from executing the supplied function with this result's exception as an argument. Otherwise, if this result completes normally, then the returned result also completes normally with the same value.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">exceptionally</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$exceptionally(java.util.function.Function((kotlin.Throwable, org.apache.tuweni.concurrent.AsyncResult.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="identifier">Throwable</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="keyword">out</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="execute-blocking.html">executeBlocking</a></h4>
+</td>
+<td>
+<p>Returns a result that, after the given blocking function executes asynchronously on <code><a href="#">ForkJoinPool#commonPool()</a></code> and returns a result, completes when the returned result completes, with the same value or exception.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">executeBlocking</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$executeBlocking(java.util.function.Supplier((org.apache.tuweni.concurrent.AsyncResult.executeBlocking.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Returns a result that, after the given blocking function executes asynchronously on an <code><a href="#">Executor</a></code> and returns a result, completes when the returned result completes, with the same value or exception.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">executeBlocking</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$executeBlocking(java.util.concurrent.Executor, java.util.function.Supplier((org.apache.tuweni.concurrent.AsyncResult.executeBlocking.T)))/executor">executor</span><span class="symbol">:</span>&nbsp;<span class="identifier">Executor</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$executeBlocking(java.util.concurrent.Executor, java.util.function.Supplier((org.apache.tuweni.concurrent.AsyncResult.executeBlocking.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Returns a result that, after the given blocking function executes asynchronously on a vertx context and returns a result, completes when the returned result completes, with the same value or exception.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">executeBlocking</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$executeBlocking(io.vertx.core.Vertx, java.util.function.Supplier((org.apache.tuweni.concurrent.AsyncResult.executeBlocking.T)))/vertx">vertx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Vertx</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$executeBlocking(io.vertx.core.Vertx, java.util.function.Supplier((org.apache.tuweni.concurrent.AsyncResult.executeBlocking.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Returns a result that, after the given blocking function executes asynchronously on a vertx executor and returns a result, completes when the returned result completes, with the same value or exception.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">executeBlocking</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$executeBlocking(io.vertx.core.WorkerExecutor, java.util.function.Supplier((org.apache.tuweni.concurrent.AsyncResult.executeBlocking.T)))/executor">executor</span><span class="symbol">:</span>&nbsp;<span class="identifier">WorkerExecutor</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$executeBlocking(io.vertx.core.WorkerExecutor, java.util.function.Supplier((org.apache.tuweni.concurrent.AsyncResult.executeBlocking.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<p>Waits if necessary for the computation to complete, and then retrieves its result.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span><span class="symbol">?</span></code>
+<p>Waits if necessary for at most the given time for the computation to complete, and then retrieves its result.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$get(kotlin.Long, java.util.concurrent.TimeUnit)/timeout">timeout</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$get(kotlin.Long, java.util.concurrent.TimeUnit)/unit">unit</span><span class="symbol">:</span>&nbsp;<span class="identifier">TimeUnit</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="handle.html">handle</a></h4>
+</td>
+<td>
+<p>Returns a new result that, when this result completes either normally or exceptionally, completes with the value obtained from executing the supplied function with this result's value and exception as arguments. </p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">U</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">handle</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$handle(java.util.function.BiFunction((org.apache.tuweni.concurrent.AsyncResult.T, kotlin.Throwable, org.apache.tuweni.concurrent.AsyncResult.handle.U)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiFunction</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">,</span>&nbsp;<span class="identifier">Throwable</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="keyword">out</span>&nbsp;<span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="incomplete.html">incomplete</a></h4>
+</td>
+<td>
+<p>Return an incomplete result, that can be later completed or failed.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">incomplete</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-completable-async-result/index.html"><span class="identifier">CompletableAsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-cancelled.html">isCancelled</a></h4>
+</td>
+<td>
+<p>Returns <code>true</code> if this task was cancelled before it completed normally.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">isCancelled</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-completed-exceptionally.html">isCompletedExceptionally</a></h4>
+</td>
+<td>
+<p>Returns <code>true</code> if completed exceptionally or cancelled.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">isCompletedExceptionally</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-done.html">isDone</a></h4>
+</td>
+<td>
+<p>Returns <code>true</code> if completed normally, completed exceptionally or cancelled.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">isDone</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="run-on-context.html">runOnContext</a></h4>
+</td>
+<td>
+<p>Returns a result that, after the given function executes on a vertx context and returns a result, completes when the returned result completes, with the same value or exception. </p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">runOnContext</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$runOnContext(io.vertx.core.Vertx, java.util.function.Supplier((org.apache.tuweni.concurrent.AsyncResult((org.apache.tuweni.concurrent.AsyncResult.runOnContext.T)))))/vertx">vertx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Vertx</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$runOnContext(io.vertx.core.Vertx, java.util.function.Supplier((org.apache.tuweni.concurrent.AsyncResult((org.apache.tuweni.concurrent.AsyncResult.runOnContext.T)))))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="then.html">then</a></h4>
+</td>
+<td>
+<p>Returns a new result that, when this result completes normally, completes with the same value or exception as the result returned after executing the given function with this results value as an argument.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">U</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">then</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$then(java.util.function.Function((org.apache.tuweni.concurrent.AsyncResult.T, org.apache.tuweni.concurrent.AsyncResult((org.apache.tuweni.concurrent.AsyncResult.then.U)))))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">,</span>&nbsp;<span class="keyword">out</span>&nbsp;<a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="then-accept.html">thenAccept</a></h4>
+</td>
+<td>
+<p>Returns a completion that, when this result completes normally, completes after executing the supplied consumer with this result's value as an argument.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">thenAccept</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenAccept(java.util.function.Consumer((org.apache.tuweni.concurrent.AsyncResult.T)))/consumer">consumer</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="then-accept-both.html">thenAcceptBoth</a></h4>
+</td>
+<td>
+<p>Returns a completion that, when this result and the other result both complete normally, completes after executing the supplied consumer with both this result's value and the value from the other result as arguments.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">U</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">thenAcceptBoth</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenAcceptBoth(org.apache.tuweni.concurrent.AsyncResult((org.apache.tuweni.concurrent.AsyncResult.thenAcceptBoth.U)), java.util.function.BiConsumer((org.apache.tuweni.concurrent.AsyncResult.T, org.apache.tuweni.concurrent.AsyncResult.thenAcceptBoth.U)))/other">other</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenAcceptBoth(org.apache.tuweni.concurrent.AsyncResult((org.apache.tuweni.concurrent.AsyncResult.thenAcceptBoth.U)), java.util.function.BiConsumer((org.apache.tuweni.concurrent.AsyncResult.T, org.apache.tuweni.concurrent.AsyncResult.thenAcceptBoth.U)))/consumer">consumer</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">,</span>&nbsp;<span class="keyword">in</span>&nbsp;<span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="then-apply.html">thenApply</a></h4>
+</td>
+<td>
+<p>Returns a result that, when this result completes normally, completes with the value obtained from executing the supplied function with this result's value as an argument.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">U</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">thenApply</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenApply(java.util.function.Function((org.apache.tuweni.concurrent.AsyncResult.T, org.apache.tuweni.concurrent.AsyncResult.thenApply.U)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">,</span>&nbsp;<span class="keyword">out</span>&nbsp;<span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="then-combine.html">thenCombine</a></h4>
+</td>
+<td>
+<p>Returns a result that, when this result and the other result both complete normally, completes with the value obtained from executing the supplied function with both this result's value and the value from the other result as arguments.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">U</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">thenCombine</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenCombine(org.apache.tuweni.concurrent.AsyncResult((org.apache.tuweni.concurrent.AsyncResult.thenCombine.U)), java.util.function.BiFunction((org.apache.tuweni.concurrent.AsyncResult.T, org.apache.tuweni.concurrent.AsyncResult.thenCombine.U, org.apache.tuweni.concurrent.AsyncResult.thenCombine.V)))/other">other</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenCombine(org.apache.tuweni.concurrent.AsyncResult((org.apache.tuweni.concurrent.AsyncResult.thenCombine.U)), java.util.function.BiFunction((org.apache.tuweni.concurrent.AsyncResult.T, org.apache.tuweni.concurrent.AsyncResult.thenCombine.U, org.apache.tuweni.concurrent.AsyncResult.thenCombine.V)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiFunction</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">,</span>&nbsp;<span class="keyword">in</span>&nbsp;<span class="identifier">U</span><span class="symbol">,</span>&nbsp;<span class="keyword">out</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">V</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="then-compose.html">thenCompose</a></h4>
+</td>
+<td>
+<p>When this result completes normally, invokes the given function with the resulting value and obtains a new <code><a href="../-async-completion/index.html">AsyncCompletion</a></code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">thenCompose</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenCompose(java.util.function.Function((org.apache.tuweni.concurrent.AsyncResult.T, org.apache.tuweni.concurrent.AsyncCompletion)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">,</span>&nbsp;<span class="keyword">out</span>&nbsp;<a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="then-run.html">thenRun</a></h4>
+</td>
+<td>
+<p>Returns a new completion that, when this result completes normally, completes after given action is executed.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">thenRun</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenRun(java.lang.Runnable)/runnable">runnable</span><span class="symbol">:</span>&nbsp;<span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="then-schedule.html">thenSchedule</a></h4>
+</td>
+<td>
+<p>Returns a new result that, when this result completes normally, completes with the same value or exception as the completion returned after executing the given function on the vertx context with this results value as an argument.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">U</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">thenSchedule</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenSchedule(io.vertx.core.Vertx, java.util.function.Function((org.apache.tuweni.concurrent.AsyncResult.T, org.apache.tuweni.concurrent.AsyncResult((org.apache.tuweni.concurrent.AsyncResult.thenSchedule.U)))))/vertx">vertx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Vertx</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenSchedule(io.vertx.core.Vertx, java.util.function.Function((org.apache.tuweni.concurrent.AsyncResult.T, org.apache.tuweni.concurrent.AsyncResult((org.apache.tuweni.concurrent.AsyncResult.thenSchedule.U)))))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">,</span>&nbsp;<span class="keyword">out</span>&nbsp;<a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="then-schedule-apply.html">thenScheduleApply</a></h4>
+</td>
+<td>
+<p>Returns a result that, when this result completes normally, completes with the value obtained from executing the supplied function on the vertx context with this result's value as an argument.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">U</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">thenScheduleApply</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenScheduleApply(io.vertx.core.Vertx, java.util.function.Function((org.apache.tuweni.concurrent.AsyncResult.T, org.apache.tuweni.concurrent.AsyncResult.thenScheduleApply.U)))/vertx">vertx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Vertx</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenScheduleApply(io.vertx.core.Vertx, java.util.function.Function((org.apache.tuweni.concurrent.AsyncResult.T, org.apache.tuweni.concurrent.AsyncResult.thenScheduleApply.U)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">,</span>&nbsp;<span class="keyword">out</span>&nbsp;<span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="then-schedule-blocking-apply.html">thenScheduleBlockingApply</a></h4>
+</td>
+<td>
+<p>Returns a result that, when this result completes normally, completes with the value obtained from executing the supplied blocking function on the vertx context with this result's value as an argument.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">U</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">thenScheduleBlockingApply</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenScheduleBlockingApply(io.vertx.core.Vertx, java.util.function.Function((org.apache.tuweni.concurrent.AsyncResult.T, org.apache.tuweni.concurrent.AsyncResult.thenScheduleBlockingApply.U)))/vertx">vertx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Vertx</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenScheduleBlockingApply(io.vertx.core.Vertx, java.util.function.Function((org.apache.tuweni.concurrent.AsyncResult.T, org.apache.tuweni.concurrent.AsyncResult.thenScheduleBlockingApply.U)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">,</span>&nbsp;<span class="keyword">out</span>&nbsp;<span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Returns a result that, when this result completes normally, completes with the value obtained from executing the supplied blocking function on the vertx executor with this result's value as an argument.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">U</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">thenScheduleBlockingApply</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenScheduleBlockingApply(io.vertx.core.WorkerExecutor, java.util.function.Function((org.apache.tuweni.concurrent.AsyncResult.T, org.apache.tuweni.concurrent.AsyncResult.thenScheduleBlockingApply.U)))/executor">executor</span><span class="symbol">:</span>&nbsp;<span class="identifier">WorkerExecutor</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenScheduleBlockingApply(io.vertx.core.WorkerExecutor, java.util.function.Function((org.apache.tuweni.concurrent.AsyncResult.T, org.apache.tuweni.concurrent.AsyncResult.thenScheduleBlockingApply.U)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">,</span>&nbsp;<span class="keyword">out</span>&nbsp;<span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">U</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="then-schedule-blocking-run.html">thenScheduleBlockingRun</a></h4>
+</td>
+<td>
+<p>Returns a new completion that, when this result completes normally, completes after the given blocking action is executed on the vertx context.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">thenScheduleBlockingRun</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenScheduleBlockingRun(io.vertx.core.Vertx, java.lang.Runnable)/vertx">vertx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Vertx</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenScheduleBlockingRun(io.vertx.core.Vertx, java.lang.Runnable)/runnable">runnable</span><span class="symbol">:</span>&nbsp;<span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code>
+<p>Returns a new completion that, when this result completes normally, completes after the given blocking action is executed on the vertx executor.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">thenScheduleBlockingRun</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenScheduleBlockingRun(io.vertx.core.WorkerExecutor, java.lang.Runnable)/executor">executor</span><span class="symbol">:</span>&nbsp;<span class="identifier">WorkerExecutor</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenScheduleBlockingRun(io.vertx.core.WorkerExecutor, java.lang.Runnable)/runnable">runnable</span><span class="symbol">:</span>&nbsp;<span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="then-schedule-run.html">thenScheduleRun</a></h4>
+</td>
+<td>
+<p>Returns a new completion that, when this result completes normally, completes after the given action is executed on the vertx context.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">thenScheduleRun</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenScheduleRun(io.vertx.core.Vertx, java.lang.Runnable)/vertx">vertx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Vertx</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenScheduleRun(io.vertx.core.Vertx, java.lang.Runnable)/runnable">runnable</span><span class="symbol">:</span>&nbsp;<span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="when-complete.html">whenComplete</a></h4>
+</td>
+<td>
+<p>Returns a new result that completes with the same value or exception as this result, after executing the given action with this result's value or exception. </p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">whenComplete</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$whenComplete(java.util.function.BiConsumer((org.apache.tuweni.concurrent.AsyncResult.T, kotlin.Throwable)))/action">action</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">,</span>&nbsp;<span class="keyword">in</span>&nbsp;<span class="identifier">Throwable</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-completable-async-result/index.html">CompletableAsyncResult</a></h4>
+</td>
+<td>
+<p>An <code><a href="./index.html">AsyncResult</a></code> that can be later completed successfully with a provided value, or completed with an exception.</p>
+<code><span class="keyword">interface </span><span class="identifier">CompletableAsyncResult</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

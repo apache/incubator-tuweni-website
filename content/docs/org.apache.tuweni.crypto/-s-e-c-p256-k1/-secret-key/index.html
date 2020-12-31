@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SECP256K1.SecretKey - tuweni</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../../index.html">org.apache.tuweni.crypto</a>&nbsp;/&nbsp;<a href="../index.html">SECP256K1</a>&nbsp;/&nbsp;<a href="./index.html">SecretKey</a><br/>
+<br/>
+<h1>SecretKey</h1>
+<code><span class="keyword">class </span><span class="identifier">SecretKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Destroyable</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/SECP256K1.java#L390">(source)</a>
+<p>A SECP256K1 private key.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="bytes.html">bytes</a></h4>
+</td>
+<td>
+<p>Provides the bytes of the key.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">bytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="bytes-array.html">bytesArray</a></h4>
+</td>
+<td>
+<p>Provides the bytes of the key.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">bytesArray</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="destroy.html">destroy</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">destroy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.SecretKey$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="finalize.html">finalize</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">finalize</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-bytes.html">fromBytes</a></h4>
+</td>
+<td>
+<p>Create the private key from bytes.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.SecretKey$fromBytes(org.apache.tuweni.bytes.Bytes32)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="../../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">SecretKey</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-integer.html">fromInteger</a></h4>
+</td>
+<td>
+<p>Create the private key from a <code><a href="#">BigInteger</a></code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.SecretKey$fromInteger(java.math.BigInteger)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">SecretKey</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load.html">load</a></h4>
+</td>
+<td>
+<p>Load a private key from a file.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">load</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.SecretKey$load(java.nio.file.Path)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">SecretKey</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store.html">store</a></h4>
+</td>
+<td>
+<p>Write the secret key to a file.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">store</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1.SecretKey$store(java.nio.file.Path)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

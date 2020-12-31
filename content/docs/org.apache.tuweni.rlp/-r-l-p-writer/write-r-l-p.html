@@ -1,0 +1,19 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RLPWriter.writeRLP - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlp</a>&nbsp;/&nbsp;<a href="index.html">RLPWriter</a>&nbsp;/&nbsp;<a href="./write-r-l-p.html">writeRLP</a><br/>
+<br/>
+<h1>writeRLP</h1>
+<a name="org.apache.tuweni.rlp.RLPWriter$writeRLP(org.apache.tuweni.bytes.Bytes)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">writeRLP</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLPWriter$writeRLP(org.apache.tuweni.bytes.Bytes)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlp/src/main/java/org/apache/tuweni/rlp/RLPWriter.java#L40">(source)</a>
+<p>Append an already RLP encoded value. </p>
+<p> Note that this method <strong>may not</strong> validate that <code>value</code> is a valid RLP sequence. Appending an invalid RLP sequence will cause the entire RLP encoding produced by this writer to also be invalid.</p>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The RLP encoded bytes to append.</p>
+</BODY>
+</HTML>

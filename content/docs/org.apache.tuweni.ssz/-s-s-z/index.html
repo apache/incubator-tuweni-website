@@ -1,0 +1,776 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSZ - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ssz</a>&nbsp;/&nbsp;<a href="./index.html">SSZ</a><br/>
+<br/>
+<h1>SSZ</h1>
+<code><span class="keyword">class </span><span class="identifier">SSZ</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZ.java#L40">(source)</a>
+<p>Simple Serialize (SSZ) encoding and decoding.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="decode.html">decode</a></h4>
+</td>
+<td>
+<p>Read and decode SSZ from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">decode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decode(org.apache.tuweni.bytes.Bytes, java.util.function.Function((org.apache.tuweni.ssz.SSZReader, org.apache.tuweni.ssz.SSZ.decode.T)))/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decode(org.apache.tuweni.bytes.Bytes, java.util.function.Function((org.apache.tuweni.ssz.SSZReader, org.apache.tuweni.ssz.SSZ.decode.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-s-s-z-reader/index.html"><span class="identifier">SSZReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-address.html">decodeAddress</a></h4>
+</td>
+<td>
+<p>Read a 20-byte address from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeAddress</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeAddress(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-address-list.html">decodeAddressList</a></h4>
+</td>
+<td>
+<p>Read a list of 20-byte addresses from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeAddressList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeAddressList(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-big-integer.html">decodeBigInteger</a></h4>
+</td>
+<td>
+<p>Read a SSZ encoded two's-compliment big integer from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeBigInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeBigInteger(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeBigInteger(org.apache.tuweni.bytes.Bytes, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-big-integer-list.html">decodeBigIntegerList</a></h4>
+</td>
+<td>
+<p>Read a list of two's-compliment big integer values from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeBigIntegerList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeBigIntegerList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeBigIntegerList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-boolean.html">decodeBoolean</a></h4>
+</td>
+<td>
+<p>Read a boolean value from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeBoolean</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeBoolean(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-boolean-list.html">decodeBooleanList</a></h4>
+</td>
+<td>
+<p>Read a list of booleans from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeBooleanList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeBooleanList(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Boolean</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-byte-array-list.html">decodeByteArrayList</a></h4>
+</td>
+<td>
+<p>Read a list of byte arrays from the SSZ source. Note: prefer to use <code><a href="decode-byte-array-list.html">#decodeByteArrayList(Bytes, int)</a></code> instead, especially when reading untrusted data.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeByteArrayList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeByteArrayList(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Read a list of byte arrays from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeByteArrayList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeByteArrayList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeByteArrayList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-bytes.html">decodeBytes</a></h4>
+</td>
+<td>
+<p>Read a SSZ encoded bytes from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value. Note: prefer to use <code><a href="decode-bytes.html">#decodeBytes(Bytes, int)</a></code> instead, especially when reading untrusted data.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeBytes(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code>
+<p>Read a SSZ encoded bytes from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeBytes(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeBytes(org.apache.tuweni.bytes.Bytes, kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-bytes-list.html">decodeBytesList</a></h4>
+</td>
+<td>
+<p>Read a list of <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> from the SSZ source. Note: prefer to use <code><a href="decode-bytes-list.html">#decodeBytesList(Bytes, int)</a></code> instead, especially when reading untrusted data.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeBytesList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeBytesList(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Read a list of <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeBytesList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeBytesList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeBytesList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-hash.html">decodeHash</a></h4>
+</td>
+<td>
+<p>Read a 32-byte hash from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeHash</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeHash(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeHash(org.apache.tuweni.bytes.Bytes, kotlin.Int)/hashLength">hashLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-hash-list.html">decodeHashList</a></h4>
+</td>
+<td>
+<p>Read a list of 32-byte hashes from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeHashList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeHashList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeHashList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/hashLength">hashLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-int.html">decodeInt</a></h4>
+</td>
+<td>
+<p>Read a SSZ encoded two's-compliment integer from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeInt(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeInt(org.apache.tuweni.bytes.Bytes, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-int16.html">decodeInt16</a></h4>
+</td>
+<td>
+<p>Read a 16-bit two's-compliment integer from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeInt16</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeInt16(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-int16-list.html">decodeInt16List</a></h4>
+</td>
+<td>
+<p>Read a list of 16-bit two's-compliment int values from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeInt16List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeInt16List(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-int32.html">decodeInt32</a></h4>
+</td>
+<td>
+<p>Read a 32-bit two's-compliment integer from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeInt32</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeInt32(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-int32-list.html">decodeInt32List</a></h4>
+</td>
+<td>
+<p>Read a list of 32-bit two's-compliment int values from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeInt32List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeInt32List(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-int64.html">decodeInt64</a></h4>
+</td>
+<td>
+<p>Read a 64-bit two's-compliment integer from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeInt64</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeInt64(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-int64-list.html">decodeInt64List</a></h4>
+</td>
+<td>
+<p>Read a list of 64-bit two's-compliment int values from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeInt64List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeInt64List(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-int8.html">decodeInt8</a></h4>
+</td>
+<td>
+<p>Read an 8-bit two's-compliment integer from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeInt8</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeInt8(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-int8-list.html">decodeInt8List</a></h4>
+</td>
+<td>
+<p>Read a list of 8-bit two's-compliment int values from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeInt8List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeInt8List(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-int-list.html">decodeIntList</a></h4>
+</td>
+<td>
+<p>Read a list of two's-compliment int values from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeIntList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeIntList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-long.html">decodeLong</a></h4>
+</td>
+<td>
+<p>Read a SSZ encoded two's-compliment long integer from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeLong(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeLong(org.apache.tuweni.bytes.Bytes, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-long-int-list.html">decodeLongIntList</a></h4>
+</td>
+<td>
+<p>Read a list of two's-compliment long int values from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeLongIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeLongIntList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeLongIntList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-string.html">decodeString</a></h4>
+</td>
+<td>
+<p>Read a SSZ encoded string from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value. Note: prefer to use <code><a href="decode-string.html">#decodeString(Bytes, int)</a></code> instead, especially when reading untrusted data.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeString(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Read a SSZ encoded string from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeString(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeString(org.apache.tuweni.bytes.Bytes, kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-string-list.html">decodeStringList</a></h4>
+</td>
+<td>
+<p>Read a list of strings from the SSZ source. Note: prefer to use <code><a href="decode-string-list.html">#decodeStringList(Bytes, int)</a></code> instead, especially when reading untrusted data.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeStringList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeStringList(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Read a list of strings from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeStringList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeStringList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeStringList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-u-int.html">decodeUInt</a></h4>
+</td>
+<td>
+<p>Read a SSZ encoded unsigned integer from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeUInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUInt(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUInt(org.apache.tuweni.bytes.Bytes, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-u-int16.html">decodeUInt16</a></h4>
+</td>
+<td>
+<p>Read a 16-bit unsigned integer from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeUInt16</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUInt16(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-u-int16-list.html">decodeUInt16List</a></h4>
+</td>
+<td>
+<p>Read a list of 16-bit unsigned int values from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeUInt16List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUInt16List(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-u-int256.html">decodeUInt256</a></h4>
+</td>
+<td>
+<p>Read a 256-bit unsigned integer from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeUInt256</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUInt256(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-u-int256-list.html">decodeUInt256List</a></h4>
+</td>
+<td>
+<p>Read a list of 256-bit unsigned int values from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeUInt256List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUInt256List(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-u-int32.html">decodeUInt32</a></h4>
+</td>
+<td>
+<p>Read a 32-bit unsigned integer from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeUInt32</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUInt32(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-u-int32-list.html">decodeUInt32List</a></h4>
+</td>
+<td>
+<p>Read a list of 32-bit unsigned int values from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeUInt32List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUInt32List(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-u-int384.html">decodeUInt384</a></h4>
+</td>
+<td>
+<p>Read a 384-bit unsigned integer from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeUInt384</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUInt384(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-u-int384-list.html">decodeUInt384List</a></h4>
+</td>
+<td>
+<p>Read a list of 384-bit unsigned int values from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeUInt384List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUInt384List(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-u-int64.html">decodeUInt64</a></h4>
+</td>
+<td>
+<p>Read a 64-bit unsigned integer from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeUInt64</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUInt64(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-u-int64-list.html">decodeUInt64List</a></h4>
+</td>
+<td>
+<p>Read a list of 64-bit unsigned int values from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeUInt64List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUInt64List(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-u-int8.html">decodeUInt8</a></h4>
+</td>
+<td>
+<p>Read an 8-bit unsigned integer from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeUInt8</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUInt8(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-u-int8-list.html">decodeUInt8List</a></h4>
+</td>
+<td>
+<p>Read a list of 8-bit unsigned int values from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeUInt8List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUInt8List(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-u-int-list.html">decodeUIntList</a></h4>
+</td>
+<td>
+<p>Read a list of unsigned int values from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeUIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUIntList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUIntList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-u-long.html">decodeULong</a></h4>
+</td>
+<td>
+<p>Read a SSZ encoded unsigned long integer from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeULong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeULong(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeULong(org.apache.tuweni.bytes.Bytes, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-u-long-int-list.html">decodeULongIntList</a></h4>
+</td>
+<td>
+<p>Read a list of unsigned long int values from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeULongIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeULongIntList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeULongIntList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-unsigned-big-integer.html">decodeUnsignedBigInteger</a></h4>
+</td>
+<td>
+<p>Read a SSZ encoded unsigned big integer from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeUnsignedBigInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUnsignedBigInteger(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUnsignedBigInteger(org.apache.tuweni.bytes.Bytes, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-unsigned-big-integer-list.html">decodeUnsignedBigIntegerList</a></h4>
+</td>
+<td>
+<p>Read a list of unsigned big integer values from the SSZ source.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeUnsignedBigIntegerList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUnsignedBigIntegerList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$decodeUnsignedBigIntegerList(org.apache.tuweni.bytes.Bytes, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode.html">encode</a></h4>
+</td>
+<td>
+<p>Encode values to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encode(java.util.function.Consumer((org.apache.tuweni.ssz.SSZWriter)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../-s-s-z-writer/index.html"><span class="identifier">SSZWriter</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-address.html">encodeAddress</a></h4>
+</td>
+<td>
+<p>Encode a 20-byte address to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeAddress</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeAddress(org.apache.tuweni.bytes.Bytes)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-address-list.html">encodeAddressList</a></h4>
+</td>
+<td>
+<p>Encode a list of addresses.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeAddressList</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeAddressList(kotlin.Array((org.apache.tuweni.bytes.Bytes)))/elements">elements</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeAddressList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeAddressList(kotlin.collections.MutableList((org.apache.tuweni.bytes.Bytes)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-big-integer.html">encodeBigInteger</a></h4>
+</td>
+<td>
+<p>Encode a big integer to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeBigInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeBigInteger(java.math.BigInteger, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeBigInteger(java.math.BigInteger, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-big-integer-list.html">encodeBigIntegerList</a></h4>
+</td>
+<td>
+<p>Encode a list of big integers.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeBigIntegerList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeBigIntegerList(kotlin.Int, kotlin.Array((java.math.BigInteger)))/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeBigIntegerList(kotlin.Int, kotlin.Array((java.math.BigInteger)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeBigIntegerList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeBigIntegerList(kotlin.Int, kotlin.collections.MutableList((java.math.BigInteger)))/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeBigIntegerList(kotlin.Int, kotlin.collections.MutableList((java.math.BigInteger)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-big-integer-to-byte-array.html">encodeBigIntegerToByteArray</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeBigIntegerToByteArray</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeBigIntegerToByteArray(java.math.BigInteger, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeBigIntegerToByteArray(java.math.BigInteger, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-boolean.html">encodeBoolean</a></h4>
+</td>
+<td>
+<p>Encode a boolean to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeBoolean</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeBoolean(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-boolean-list.html">encodeBooleanList</a></h4>
+</td>
+<td>
+<p>Encode a list of booleans.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeBooleanList</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeBooleanList(kotlin.BooleanArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeBooleanList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeBooleanList(kotlin.collections.MutableList((kotlin.Boolean)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Boolean</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-byte-array.html">encodeByteArray</a></h4>
+</td>
+<td>
+<p>Encode a value to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeByteArray</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeByteArray(kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-bytes.html">encodeBytes</a></h4>
+</td>
+<td>
+<p>Encode <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code>.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeBytes(org.apache.tuweni.bytes.Bytes)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-bytes-list.html">encodeBytesList</a></h4>
+</td>
+<td>
+<p>Encode a list of bytes.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeBytesList</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeBytesList(kotlin.Array((org.apache.tuweni.bytes.Bytes)))/elements">elements</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeBytesList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeBytesList(kotlin.collections.MutableList((org.apache.tuweni.bytes.Bytes)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-hash.html">encodeHash</a></h4>
+</td>
+<td>
+<p>Encode a hash to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeHash</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeHash(org.apache.tuweni.bytes.Bytes)/hash">hash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-hash-list.html">encodeHashList</a></h4>
+</td>
+<td>
+<p>Encode a list of hashes.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeHashList</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeHashList(kotlin.Array((org.apache.tuweni.bytes.Bytes)))/elements">elements</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeHashList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeHashList(kotlin.collections.MutableList((org.apache.tuweni.bytes.Bytes)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-int.html">encodeInt</a></h4>
+</td>
+<td>
+<p>Encode a two's-compliment integer to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeInt(kotlin.Int, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeInt(kotlin.Int, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-int16.html">encodeInt16</a></h4>
+</td>
+<td>
+<p>Encode a 16-bit two's-compliment integer to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeInt16</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeInt16(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-int16-list.html">encodeInt16List</a></h4>
+</td>
+<td>
+<p>Encode a list of 16-bit two's compliment integers.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeInt16List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeInt16List(kotlin.IntArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeInt16List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeInt16List(kotlin.collections.MutableList((kotlin.Int)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-int32.html">encodeInt32</a></h4>
+</td>
+<td>
+<p>Encode a 32-bit two's-compliment integer to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeInt32</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeInt32(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-int32-list.html">encodeInt32List</a></h4>
+</td>
+<td>
+<p>Encode a list of 32-bit two's compliment integers.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeInt32List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeInt32List(kotlin.IntArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeInt32List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeInt32List(kotlin.collections.MutableList((kotlin.Int)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-int64.html">encodeInt64</a></h4>
+</td>
+<td>
+<p>Encode a 64-bit two's-compliment integer to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeInt64</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeInt64(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-int64-list.html">encodeInt64List</a></h4>
+</td>
+<td>
+<p>Encode a list of 64-bit two's compliment integers.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeInt64List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeInt64List(kotlin.LongArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeInt64List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeInt64List(kotlin.collections.MutableList((kotlin.Long)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-int8.html">encodeInt8</a></h4>
+</td>
+<td>
+<p>Encode an 8-bit two's-compliment integer to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeInt8</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeInt8(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-int8-list.html">encodeInt8List</a></h4>
+</td>
+<td>
+<p>Encode a list of 8-bit two's compliment integers.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeInt8List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeInt8List(kotlin.IntArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeInt8List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeInt8List(kotlin.collections.MutableList((kotlin.Int)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-int-list.html">encodeIntList</a></h4>
+</td>
+<td>
+<p>Encode a list of two's compliment integers.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeIntList(kotlin.Int, kotlin.IntArray)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeIntList(kotlin.Int, kotlin.IntArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Int)))/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Int)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-long.html">encodeLong</a></h4>
+</td>
+<td>
+<p>Encode a two's-compliment long integer to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeLong(kotlin.Long, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeLong(kotlin.Long, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-long-int-list.html">encodeLongIntList</a></h4>
+</td>
+<td>
+<p>Encode a list of two's compliment long integers.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeLongIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeLongIntList(kotlin.Int, kotlin.LongArray)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeLongIntList(kotlin.Int, kotlin.LongArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeLongIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeLongIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Long)))/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeLongIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Long)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-string.html">encodeString</a></h4>
+</td>
+<td>
+<p>Encode a string to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeString(kotlin.String)/str">str</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-string-list.html">encodeStringList</a></h4>
+</td>
+<td>
+<p>Encode a list of strings.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeStringList</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeStringList(kotlin.Array((kotlin.String)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code>
+<p>Encode a list of strings</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeStringList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeStringList(kotlin.collections.MutableList((kotlin.String)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-to.html">encodeTo</a></h4>
+</td>
+<td>
+<p>Encode values to a <code><a href="#">ByteBuffer</a></code>.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ByteBuffer</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">encodeTo</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeTo(org.apache.tuweni.ssz.SSZ.encodeTo.T, java.util.function.Consumer((org.apache.tuweni.ssz.SSZWriter)))/buffer">buffer</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeTo(org.apache.tuweni.ssz.SSZ.encodeTo.T, java.util.function.Consumer((org.apache.tuweni.ssz.SSZWriter)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../-s-s-z-writer/index.html"><span class="identifier">SSZWriter</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-big-integer.html">encodeUBigInteger</a></h4>
+</td>
+<td>
+<p>Encode an unsigned big integer to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUBigInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUBigInteger(java.math.BigInteger, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUBigInteger(java.math.BigInteger, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-big-integer-to-byte-array.html">encodeUBigIntegerToByteArray</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUBigIntegerToByteArray</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUBigIntegerToByteArray(java.math.BigInteger, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUBigIntegerToByteArray(java.math.BigInteger, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-int.html">encodeUInt</a></h4>
+</td>
+<td>
+<p>Encode an unsigned integer to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value. Note that <code>value</code> is a native signed int, but will be interpreted as an unsigned value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt(kotlin.Int, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt(kotlin.Int, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-int16.html">encodeUInt16</a></h4>
+</td>
+<td>
+<p>Encode a 16-bit unsigned integer to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt16</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt16(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-int16-list.html">encodeUInt16List</a></h4>
+</td>
+<td>
+<p>Encode a list of 16-bit unsigned integers.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt16List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt16List(kotlin.IntArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt16List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt16List(kotlin.collections.MutableList((kotlin.Int)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-int256.html">encodeUInt256</a></h4>
+</td>
+<td>
+<p>Encode a 256-bit unsigned integer to a little-endian <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt256</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt256(org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-int256-list.html">encodeUInt256List</a></h4>
+</td>
+<td>
+<p>Encode a list of <code><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html">UInt256</a></code>.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt256List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt256List(kotlin.Array((org.apache.tuweni.units.bigints.UInt256)))/elements">elements</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt256List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt256List(kotlin.collections.MutableList((org.apache.tuweni.units.bigints.UInt256)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-int32.html">encodeUInt32</a></h4>
+</td>
+<td>
+<p>Encode a 32-bit unsigned integer to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt32</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt32(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-int32-list.html">encodeUInt32List</a></h4>
+</td>
+<td>
+<p>Encode a list of 32-bit unsigned integers.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt32List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt32List(kotlin.LongArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt32List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt32List(kotlin.collections.MutableList((kotlin.Long)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-int384.html">encodeUInt384</a></h4>
+</td>
+<td>
+<p>Encode a 384-bit unsigned integer to a little-endian <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt384</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt384(org.apache.tuweni.units.bigints.UInt384)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-int384-list.html">encodeUInt384List</a></h4>
+</td>
+<td>
+<p>Encode a list of <code><a href="../../org.apache.tuweni.units.bigints/-u-int384/index.html">UInt384</a></code>.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt384List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt384List(kotlin.Array((org.apache.tuweni.units.bigints.UInt384)))/elements">elements</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt384List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt384List(kotlin.collections.MutableList((org.apache.tuweni.units.bigints.UInt384)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int384/index.html"><span class="identifier">UInt384</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-int64.html">encodeUInt64</a></h4>
+</td>
+<td>
+<p>Encode a 64-bit unsigned integer to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value. Note that <code>value</code> is a native signed long, but will be interpreted as an unsigned value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt64</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt64(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-int64-list.html">encodeUInt64List</a></h4>
+</td>
+<td>
+<p>Encode a list of 64-bit unsigned integers. Note that the <code>elements</code> are native signed longs, but will be interpreted as an unsigned values.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt64List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt64List(kotlin.LongArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt64List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt64List(kotlin.collections.MutableList((kotlin.Long)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-int8.html">encodeUInt8</a></h4>
+</td>
+<td>
+<p>Encode an 8-bit unsigned integer to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt8</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt8(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-int8-list.html">encodeUInt8List</a></h4>
+</td>
+<td>
+<p>Encode a list of 8-bit unsigned integers.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt8List</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt8List(kotlin.IntArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUInt8List</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUInt8List(kotlin.collections.MutableList((kotlin.Int)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-int-list.html">encodeUIntList</a></h4>
+</td>
+<td>
+<p>Encode a list of unsigned integers. Note that the <code>elements</code> are native signed ints, but will be interpreted as an unsigned values.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUIntList(kotlin.Int, kotlin.IntArray)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUIntList(kotlin.Int, kotlin.IntArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeUIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Int)))/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeUIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Int)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-long.html">encodeULong</a></h4>
+</td>
+<td>
+<p>Encode an unsigned long integer to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value. Note that <code>value</code> is a native signed long, but will be interpreted as an unsigned value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeULong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeULong(kotlin.Long, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeULong(kotlin.Long, kotlin.Int)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-u-long-int-list.html">encodeULongIntList</a></h4>
+</td>
+<td>
+<p>Encode a list of unsigned long integers. Note that the <code>elements</code> are native signed longs, but will be interpreted as an unsigned values.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeULongIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeULongIntList(kotlin.Int, kotlin.LongArray)/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeULongIntList(kotlin.Int, kotlin.LongArray)/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeULongIntList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeULongIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Long)))/bitLength">bitLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeULongIntList(kotlin.Int, kotlin.collections.MutableList((kotlin.Long)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-tree-root.html">hashTreeRoot</a></h4>
+</td>
+<td>
+<p>Create the hash tree root of a set of values</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">hashTreeRoot</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.ssz.SSZ$hashTreeRoot(kotlin.Array((org.apache.tuweni.bytes.Bytes)))/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

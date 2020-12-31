@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Invite - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt</a>&nbsp;/&nbsp;<a href="./index.html">Invite</a><br/>
+<br/>
+<h1>Invite</h1>
+<code><span class="keyword">class </span><span class="identifier">Invite</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt/src/main/java/org/apache/tuweni/scuttlebutt/Invite.java#L27">(source)</a>
+<p>An invite code as defined by the Secure Scuttlebutt protocol guide. </p>
+<p> See https://ssbc.github.io/scuttlebutt-protocol-guide/ for a detailed description of invites.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Default constructor</p>
+<code><span class="identifier">Invite</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.Invite$<init>(kotlin.String, kotlin.Int, org.apache.tuweni.scuttlebutt.Identity, org.apache.tuweni.crypto.sodium.Signature.Seed)/host">host</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.Invite$<init>(kotlin.String, kotlin.Int, org.apache.tuweni.scuttlebutt.Identity, org.apache.tuweni.crypto.sodium.Signature.Seed)/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.Invite$<init>(kotlin.String, kotlin.Int, org.apache.tuweni.scuttlebutt.Identity, org.apache.tuweni.crypto.sodium.Signature.Seed)/identity">identity</span><span class="symbol">:</span>&nbsp;<a href="../-identity/index.html"><span class="identifier">Identity</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.Invite$<init>(kotlin.String, kotlin.Int, org.apache.tuweni.scuttlebutt.Identity, org.apache.tuweni.crypto.sodium.Signature.Seed)/seedKey">seedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">Seed</span><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="from-canonical-form.html">fromCanonicalForm</a></h4>
+</td>
+<td>
+<p>Takes an invite string in its canonical form and parses it into an Invite object, throwing an error if it is not of the expected format.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromCanonicalForm</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.Invite$fromCanonicalForm(kotlin.String)/inviteCode">inviteCode</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Invite</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="host.html">host</a></h4>
+</td>
+<td>
+<p>The host to connect to</p>
+<code><span class="keyword">fun </span><span class="identifier">host</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="identity.html">identity</a></h4>
+</td>
+<td>
+<p>The identity of the invite</p>
+<code><span class="keyword">fun </span><span class="identifier">identity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-identity/index.html"><span class="identifier">Identity</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="port.html">port</a></h4>
+</td>
+<td>
+<p>The port of the host to connect to</p>
+<code><span class="keyword">fun </span><span class="identifier">port</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="seed-key.html">seedKey</a></h4>
+</td>
+<td>
+<p>The secret key the user may use while redeeming the invite to make the publisher follow them back.</p>
+<code><span class="keyword">fun </span><span class="identifier">seedKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Seed</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-canonical-form.html">toCanonicalForm</a></h4>
+</td>
+<td>
+<p>Provides the invite as a string that is understood by other Secure Scuttlebutt clients.</p>
+<code><span class="keyword">fun </span><span class="identifier">toCanonicalForm</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

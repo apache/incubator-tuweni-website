@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Bytes.ofUnsignedLong - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.bytes</a>&nbsp;/&nbsp;<a href="index.html">Bytes</a>&nbsp;/&nbsp;<a href="./of-unsigned-long.html">ofUnsignedLong</a><br/>
+<br/>
+<h1>ofUnsignedLong</h1>
+<a name="org.apache.tuweni.bytes.Bytes$ofUnsignedLong(kotlin.Long)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">ofUnsignedLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes$ofUnsignedLong(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/bytes/src/main/java/org/apache/tuweni/bytes/Bytes.java#L395">(source)</a>
+<p>Return an 8-byte value corresponding to the provided value interpreted as an unsigned long.</p>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <span class="identifier">Long</span><span class="symbol">:</span> The value, which will be interpreted as an unsigned long.</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if <code>value &lt; 0</code> or <code>value</code> is too big to fit an unsigned 8-byte int (that is, if <code>value &gt;= (1L &lt;&lt; 64)</code>).</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> A 8 bytes value corresponding to <code>value</code>.</p>
+<a name="org.apache.tuweni.bytes.Bytes$ofUnsignedLong(kotlin.Long, java.nio.ByteOrder)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">ofUnsignedLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes$ofUnsignedLong(kotlin.Long, java.nio.ByteOrder)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.Bytes$ofUnsignedLong(kotlin.Long, java.nio.ByteOrder)/order">order</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteOrder</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/bytes/src/main/java/org/apache/tuweni/bytes/Bytes.java#L408">(source)</a>
+<p>Return an 8-byte value corresponding to the provided value interpreted as an unsigned long.</p>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <span class="identifier">Long</span><span class="symbol">:</span> The value, which will be interpreted as an unsigned long.</p>
+<p><a name="order"></a>
+<code>order</code> - <span class="identifier">ByteOrder</span><span class="symbol">!</span><span class="symbol">:</span> The byte-order for the integer encoding.</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if <code>value &lt; 0</code> or <code>value</code> is too big to fit an unsigned 8-byte int (that is, if <code>value &gt;= (1L &lt;&lt; 64)</code>).</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> A 8 bytes value corresponding to <code>value</code>.</p>
+</BODY>
+</HTML>

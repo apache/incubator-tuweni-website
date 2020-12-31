@@ -1,0 +1,140 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>WireConnection - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlpx.wire</a>&nbsp;/&nbsp;<a href="./index.html">WireConnection</a><br/>
+<br/>
+<h1>WireConnection</h1>
+<code><span class="keyword">interface </span><span class="identifier">WireConnection</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlpx/src/main/java/org/apache/tuweni/rlpx/wire/WireConnection.java#L23">(source)</a>
+<p>A stateful connection between two peers under the Devp2p wire protocol.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-event/index.html">Event</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Event</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-event-listener/index.html">EventListener</a></h4>
+</td>
+<td>
+<p>Listener of events occurring on the connection.</p>
+<code><span class="keyword">interface </span><span class="identifier">EventListener</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="agreed-subprotocols.html">agreedSubprotocols</a></h4>
+</td>
+<td>
+<p>Provides the subprotocols the connection supports in common with the service.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">agreedSubprotocols</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableCollection</span><span class="symbol">&lt;</span><a href="../-sub-protocol-identifier/index.html"><span class="identifier">SubProtocolIdentifier</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-disconnect-reason.html">getDisconnectReason</a></h4>
+</td>
+<td>
+<p>If the connection is disconnected, the reason for which the connection is disconnected.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getDisconnectReason</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-disconnect-reason/index.html"><span class="identifier">DisconnectReason</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-peer-hello.html">getPeerHello</a></h4>
+</td>
+<td>
+<p>Peer hello message sent during the handshake.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getPeerHello</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-hello-message/index.html"><span class="identifier">HelloMessage</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-disconnect-received.html">isDisconnectReceived</a></h4>
+</td>
+<td>
+<p>Whether the peer asked to disconnect</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">isDisconnectReceived</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-disconnect-requested.html">isDisconnectRequested</a></h4>
+</td>
+<td>
+<p>Whether this service asked to disconnect</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">isDisconnectRequested</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="peer-host.html">peerHost</a></h4>
+</td>
+<td>
+<p>Network interface associated with the wire connection</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">peerHost</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="peer-port.html">peerPort</a></h4>
+</td>
+<td>
+<p>Port associated with the wire connection</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">peerPort</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="peer-public-key.html">peerPublicKey</a></h4>
+</td>
+<td>
+<p>Public key of the peer associated with the wire connection</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">peerPublicKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">PublicKey</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="register-listener.html">registerListener</a></h4>
+</td>
+<td>
+<p>Registers a listener to consume events sent by this connection.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">registerListener</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.wire.WireConnection$registerListener(org.apache.tuweni.rlpx.wire.WireConnection.EventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<span class="identifier">EventListener</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="supports.html">supports</a></h4>
+</td>
+<td>
+<p>Returns true if the connection supports the subprotocol</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">supports</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.wire.WireConnection$supports(org.apache.tuweni.rlpx.wire.SubProtocolIdentifier)/subProtocolIdentifier">subProtocolIdentifier</span><span class="symbol">:</span>&nbsp;<a href="../-sub-protocol-identifier/index.html"><span class="identifier">SubProtocolIdentifier</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="uri.html">uri</a></h4>
+</td>
+<td>
+<p>Provides the identity of the connection</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">uri</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-default-wire-connection/index.html">DefaultWireConnection</a></h4>
+</td>
+<td>
+<p>A stateful connection between two peers under the Devp2p wire protocol.</p>
+<code><span class="keyword">class </span><span class="identifier">DefaultWireConnection</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">WireConnection</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

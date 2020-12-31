@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SocialService - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.lib</a>&nbsp;/&nbsp;<a href="./index.html">SocialService</a><br/>
+<br/>
+<h1>SocialService</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SocialService</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-client-lib/src/main/java/org/apache/tuweni/scuttlebutt/lib/SocialService.java#L49">(source)</a>
+<p>Operations for querying the follow graph, and fetching the profiles of users. Assumes that the standard 'ssb-about' and 'ssb-friends' plugins are installed on the target instance (or that RPC functions meeting their manifests' contracts are available.) Should not be instantiated directly - an instance should be acquired via the ScuttlebuttClient instance</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">SocialService</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.SocialService$<init>(org.apache.tuweni.scuttlebutt.rpc.mux.Multiplexer, org.apache.tuweni.scuttlebutt.lib.FeedService)/multiplexer">multiplexer</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.rpc.mux/-multiplexer/index.html"><span class="identifier">Multiplexer</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.SocialService$<init>(org.apache.tuweni.scuttlebutt.rpc.mux.Multiplexer, org.apache.tuweni.scuttlebutt.lib.FeedService)/feedService">feedService</span><span class="symbol">:</span>&nbsp;<a href="../-feed-service/index.html"><span class="identifier">FeedService</span></a><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-followed-by.html">getFollowedBy</a></h4>
+</td>
+<td>
+<p>Get the profiles of all the instances that are following the instance.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getFollowedBy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.lib.model/-profile/index.html"><span class="identifier">Profile</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-following.html">getFollowing</a></h4>
+</td>
+<td>
+<p>Get the profiles of all the users that the instance is following.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getFollowing</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.lib.model/-profile/index.html"><span class="identifier">Profile</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-friends.html">getFriends</a></h4>
+</td>
+<td>
+<p>Get the profiles of all the users that the instance is following that also follow the instance.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getFriends</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.lib.model/-profile/index.html"><span class="identifier">Profile</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-own-identity.html">getOwnIdentity</a></h4>
+</td>
+<td>
+<p>Get the instance's public key (the key used for its identity.)</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOwnIdentity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-own-profile.html">getOwnProfile</a></h4>
+</td>
+<td>
+<p>Get the instance's current profile</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOwnProfile</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.lib.model/-profile/index.html"><span class="identifier">Profile</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-profile.html">getProfile</a></h4>
+</td>
+<td>
+<p>Gets the profile of a given user</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getProfile</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.SocialService$getProfile(kotlin.String)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.lib.model/-profile/index.html"><span class="identifier">Profile</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-display-name.html">setDisplayName</a></h4>
+</td>
+<td>
+<p>Set the display name of the instance by posting an 'about' message to the feed.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDisplayName</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.SocialService$setDisplayName(kotlin.String)/displayName">displayName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.lib.model/-profile/index.html"><span class="identifier">Profile</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

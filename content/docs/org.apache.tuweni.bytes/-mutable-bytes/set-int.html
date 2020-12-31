@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MutableBytes.setInt - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.bytes</a>&nbsp;/&nbsp;<a href="index.html">MutableBytes</a>&nbsp;/&nbsp;<a href="./set-int.html">setInt</a><br/>
+<br/>
+<h1>setInt</h1>
+<a name="org.apache.tuweni.bytes.MutableBytes$setInt(kotlin.Int, kotlin.Int)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$setInt(kotlin.Int, kotlin.Int)/i">i</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.MutableBytes$setInt(kotlin.Int, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/bytes/src/main/java/org/apache/tuweni/bytes/MutableBytes.java#L263">(source)</a>
+<p>Set the 4 bytes starting at the specified index to the specified integer value.</p>
+<h3>Parameters</h3>
+<p><a name="i"></a>
+<code>i</code> - <span class="identifier">Int</span><span class="symbol">:</span> The index, which must less than or equal to <code>size() - 4</code>.</p>
+<p><a name="value"></a>
+<code>value</code> - <span class="identifier">Int</span><span class="symbol">:</span> The integer value.</p>
+<h3>Exceptions</h3>
+<p><a name="IndexOutOfBoundsException"></a>
+<code>IndexOutOfBoundsException</code> - if <code>i &lt; 0</code> or <code>i &gt; size() - 4</code>.</p>
+</BODY>
+</HTML>

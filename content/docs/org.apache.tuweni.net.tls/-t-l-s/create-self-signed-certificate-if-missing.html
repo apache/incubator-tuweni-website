@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TLS.createSelfSignedCertificateIfMissing - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.net.tls</a>&nbsp;/&nbsp;<a href="index.html">TLS</a>&nbsp;/&nbsp;<a href="./create-self-signed-certificate-if-missing.html">createSelfSignedCertificateIfMissing</a><br/>
+<br/>
+<h1>createSelfSignedCertificateIfMissing</h1>
+<a name="org.apache.tuweni.net.tls.TLS$createSelfSignedCertificateIfMissing(java.nio.file.Path, java.nio.file.Path)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">createSelfSignedCertificateIfMissing</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.TLS$createSelfSignedCertificateIfMissing(java.nio.file.Path, java.nio.file.Path)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.net.tls.TLS$createSelfSignedCertificateIfMissing(java.nio.file.Path, java.nio.file.Path)/certificate">certificate</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/net/src/main/java/org/apache/tuweni/net/tls/TLS.java#L77">(source)</a>
+<p>Create a self-signed certificate, if it is not already present. </p>
+<p> If both the key or the certificate file are missing, they will be re-created as a self-signed certificate.</p>
+<h3>Parameters</h3>
+<p><a name="key"></a>
+<code>key</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> The key path.</p>
+<p><a name="certificate"></a>
+<code>certificate</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> The certificate path.</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - If an IO error occurs creating the certificate.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> <code>true</code> if a self-signed certificate was created.</p>
+<a name="org.apache.tuweni.net.tls.TLS$createSelfSignedCertificateIfMissing(java.nio.file.Path, java.nio.file.Path, kotlin.String)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">createSelfSignedCertificateIfMissing</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.TLS$createSelfSignedCertificateIfMissing(java.nio.file.Path, java.nio.file.Path, kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.net.tls.TLS$createSelfSignedCertificateIfMissing(java.nio.file.Path, java.nio.file.Path, kotlin.String)/certificate">certificate</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.net.tls.TLS$createSelfSignedCertificateIfMissing(java.nio.file.Path, java.nio.file.Path, kotlin.String)/commonName">commonName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/net/src/main/java/org/apache/tuweni/net/tls/TLS.java#L95">(source)</a>
+<p>Create a self-signed certificate, if it is not already present. </p>
+<p> If both the key or the certificate file are missing, they will be re-created as a self-signed certificate.</p>
+<h3>Parameters</h3>
+<p><a name="key"></a>
+<code>key</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> The key path.</p>
+<p><a name="certificate"></a>
+<code>certificate</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> The certificate path.</p>
+<p><a name="commonName"></a>
+<code>commonName</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> the name to use for the CN attribute of the certificate. If null or empty, a random value is used.</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - If an IO error occurs creating the certificate.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> <code>true</code> if a self-signed certificate was created.</p>
+</BODY>
+</HTML>
