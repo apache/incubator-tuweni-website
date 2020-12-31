@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RPCFlag - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.rpc</a>&nbsp;/&nbsp;<a href="./index.html">RPCFlag</a><br/>
+<br/>
+<h1>RPCFlag</h1>
+<code><span class="keyword">interface </span><span class="identifier">RPCFlag</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-rpc/src/main/java/org/apache/tuweni/scuttlebutt/rpc/RPCFlag.java#L18">(source)</a>
+<p>Defines constants for dealing with SecureScuttlebutt RPC flags.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-body-type/index.html">BodyType</a></h4>
+</td>
+<td>
+<p>Flag to set a RPC body type.</p>
+<code><span class="keyword">class </span><span class="identifier">BodyType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">RPCFlag</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-end-or-error/index.html">EndOrError</a></h4>
+</td>
+<td>
+<p>Flag to set an end or error message.</p>
+<code><span class="keyword">class </span><span class="identifier">EndOrError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">RPCFlag</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-stream/index.html">Stream</a></h4>
+</td>
+<td>
+<p>Flag to set a stream message.</p>
+<code><span class="keyword">class </span><span class="identifier">Stream</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">RPCFlag</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="apply.html">apply</a></h4>
+</td>
+<td>
+<p>Applies the flag to the byte</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">apply</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCFlag$apply(kotlin.Byte)/flagsByte">flagsByte</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Byte</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-applied.html">isApplied</a></h4>
+</td>
+<td>
+<p>Checks if the flag bit is applied to this byte</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isApplied</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCFlag$isApplied(kotlin.Byte)/flagsByte">flagsByte</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="value.html">value</a></h4>
+</td>
+<td>
+<p>The value of the flag</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">value</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

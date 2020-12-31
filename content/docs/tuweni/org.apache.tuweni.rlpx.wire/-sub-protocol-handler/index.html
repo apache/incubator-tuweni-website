@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SubProtocolHandler - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlpx.wire</a>&nbsp;/&nbsp;<a href="./index.html">SubProtocolHandler</a><br/>
+<br/>
+<h1>SubProtocolHandler</h1>
+<code><span class="keyword">interface </span><span class="identifier">SubProtocolHandler</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlpx/src/main/java/org/apache/tuweni/rlpx/wire/SubProtocolHandler.java#L21">(source)</a>
+<p>Handler managing messages and new connections of peers related for a given subprotocol.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="handle.html">handle</a></h4>
+</td>
+<td>
+<p>Handle an incoming wire protocol message</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">handle</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.wire.SubProtocolHandler$handle(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.Int, org.apache.tuweni.bytes.Bytes)/connection">connection</span><span class="symbol">:</span>&nbsp;<a href="../-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.wire.SubProtocolHandler$handle(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.Int, org.apache.tuweni.bytes.Bytes)/messageType">messageType</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.wire.SubProtocolHandler$handle(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.Int, org.apache.tuweni.bytes.Bytes)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="handle-new-peer-connection.html">handleNewPeerConnection</a></h4>
+</td>
+<td>
+<p>Handle a new peer connection</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">handleNewPeerConnection</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.wire.SubProtocolHandler$handleNewPeerConnection(org.apache.tuweni.rlpx.wire.WireConnection)/connection">connection</span><span class="symbol">:</span>&nbsp;<a href="../-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stop.html">stop</a></h4>
+</td>
+<td>
+<p>Stops a subprotocol operations.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">stop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SECP256K1.calculateKeyAgreement - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto</a>&nbsp;/&nbsp;<a href="index.html">SECP256K1</a>&nbsp;/&nbsp;<a href="./calculate-key-agreement.html">calculateKeyAgreement</a><br/>
+<br/>
+<h1>calculateKeyAgreement</h1>
+<a name="org.apache.tuweni.crypto.SECP256K1$calculateKeyAgreement(org.apache.tuweni.crypto.SECP256K1.SecretKey, org.apache.tuweni.crypto.SECP256K1.PublicKey)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">calculateKeyAgreement</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1$calculateKeyAgreement(org.apache.tuweni.crypto.SECP256K1.SecretKey, org.apache.tuweni.crypto.SECP256K1.PublicKey)/privKey">privKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.SECP256K1$calculateKeyAgreement(org.apache.tuweni.crypto.SECP256K1.SecretKey, org.apache.tuweni.crypto.SECP256K1.PublicKey)/theirPubKey">theirPubKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/SECP256K1.java#L368">(source)</a>
+<p>Calculates an ECDH key agreement between the private and the public key of another party, formatted as a 32 bytes array.</p>
+<h3>Parameters</h3>
+<p><a name="privKey"></a>
+<code>privKey</code> - <span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">:</span> the private key</p>
+<p><a name="theirPubKey"></a>
+<code>theirPubKey</code> - <span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">:</span> the public key</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span><span class="symbol">:</span> shared secret as 32 bytes</p>
+</BODY>
+</HTML>

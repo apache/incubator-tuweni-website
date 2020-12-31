@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>NetworkService - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.lib</a>&nbsp;/&nbsp;<a href="./index.html">NetworkService</a><br/>
+<br/>
+<h1>NetworkService</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NetworkService</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-client-lib/src/main/java/org/apache/tuweni/scuttlebutt/lib/NetworkService.java#L49">(source)</a>
+<p>A service for operations that connect nodes together and other network related operations </p>
+<p> Assumes the standard 'ssb-gossip' plugin is installed and enabled on the node that we're connected to (or that RPC functions meeting its manifest's contract are available.). </p>
+<p> Should not be constructed directly, should be used via an ScuttlebuttClient instance.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">NetworkService</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.NetworkService$<init>(org.apache.tuweni.scuttlebutt.rpc.mux.Multiplexer)/multiplexer">multiplexer</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.rpc.mux/-multiplexer/index.html"><span class="identifier">Multiplexer</span></a><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="create-changes-stream.html">createChangesStream</a></h4>
+</td>
+<td>
+<p>Opens a stream of peer connection state changes.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">createChangesStream</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.NetworkService$createChangesStream(java.util.function.Function((java.lang.Runnable, org.apache.tuweni.scuttlebutt.lib.model.StreamHandler((org.apache.tuweni.scuttlebutt.lib.model.PeerStateChange)))))/streamHandler">streamHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.lib.model/-stream-handler/index.html"><span class="identifier">StreamHandler</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.lib.model/-peer-state-change/index.html"><span class="identifier">PeerStateChange</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="generate-invite-code.html">generateInviteCode</a></h4>
+</td>
+<td>
+<p>Generates an invite code which can be used by another node to connect to our node, and have each node will befriend each other.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">generateInviteCode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.NetworkService$generateInviteCode(kotlin.Int)/validForUses">validForUses</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt/-invite/index.html"><span class="identifier">Invite</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-all-known-peers.html">getAllKnownPeers</a></h4>
+</td>
+<td>
+<p>Queries for all the peers the instance is aware of in its gossip table.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAllKnownPeers</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.lib.model/-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-connected-peers.html">getConnectedPeers</a></h4>
+</td>
+<td>
+<p>Queries for the list of peers the instance is connected to.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getConnectedPeers</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.lib.model/-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="redeem-invite-code.html">redeemInviteCode</a></h4>
+</td>
+<td>
+<p>Redeems an invite issued by another node. If successful, the node will connect to the other node and each node will befriend each other.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">redeemInviteCode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.NetworkService$redeemInviteCode(org.apache.tuweni.scuttlebutt.Invite)/invite">invite</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt/-invite/index.html"><span class="identifier">Invite</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

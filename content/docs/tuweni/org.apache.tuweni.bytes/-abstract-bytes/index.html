@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AbstractBytes - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.bytes</a>&nbsp;/&nbsp;<a href="./index.html">AbstractBytes</a><br/>
+<br/>
+<h1>AbstractBytes</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AbstractBytes</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-bytes/index.html"><span class="identifier">Bytes</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/bytes/src/main/java/org/apache/tuweni/bytes/AbstractBytes.java#L19">(source)</a>
+<p>An abstract <code><a href="../-bytes/index.html">Bytes</a></code> value that provides implementations of <code><a href="equals.html">#equals(Object)</a></code>, <code><a href="hash-code.html">#hashCode()</a></code> and <code><a href="to-string.html">#toString()</a></code>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>An abstract <code><a href="../-bytes/index.html">Bytes</a></code> value that provides implementations of <code><a href="equals.html">#equals(Object)</a></code>, <code><a href="hash-code.html">#hashCode()</a></code> and <code><a href="to-string.html">#toString()</a></code>.</p>
+<code><span class="identifier">AbstractBytes</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<p>Compare this value and the provided one for equality. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.AbstractBytes$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-delegating-bytes/index.html">DelegatingBytes</a></h4>
+</td>
+<td>
+<p>A class that holds and delegates all operations to its inner bytes field. </p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DelegatingBytes</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AbstractBytes</span></a><span class="symbol">, </span><a href="../-bytes/index.html"><span class="identifier">Bytes</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-delegating-bytes32/index.html">DelegatingBytes32</a></h4>
+</td>
+<td>
+<p>A class that holds and delegates all operations to its inner bytes field. </p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DelegatingBytes32</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AbstractBytes</span></a><span class="symbol">, </span><a href="../-bytes32/index.html"><span class="identifier">Bytes32</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-delegating-bytes48/index.html">DelegatingBytes48</a></h4>
+</td>
+<td>
+<p>A class that holds and delegates all operations to its inner bytes field. </p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DelegatingBytes48</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AbstractBytes</span></a><span class="symbol">, </span><a href="../-bytes48/index.html"><span class="identifier">Bytes48</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BLS12381.sign - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.mikuli</a>&nbsp;/&nbsp;<a href="index.html">BLS12381</a>&nbsp;/&nbsp;<a href="./sign.html">sign</a><br/>
+<br/>
+<h1>sign</h1>
+<a name="org.apache.tuweni.crypto.mikuli.BLS12381$sign(org.apache.tuweni.crypto.mikuli.KeyPair, kotlin.ByteArray, kotlin.Int)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">sign</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$sign(org.apache.tuweni.crypto.mikuli.KeyPair, kotlin.ByteArray, kotlin.Int)/keyPair">keyPair</span><span class="symbol">:</span>&nbsp;<a href="../-key-pair/index.html"><span class="identifier">KeyPair</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$sign(org.apache.tuweni.crypto.mikuli.KeyPair, kotlin.ByteArray, kotlin.Int)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$sign(org.apache.tuweni.crypto.mikuli.KeyPair, kotlin.ByteArray, kotlin.Int)/domain">domain</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-signature-and-public-key/index.html"><span class="identifier">SignatureAndPublicKey</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/mikuli/BLS12381.java#L49">(source)</a>
+<p>Generates a SignatureAndPublicKey.</p>
+<h3>Parameters</h3>
+<p><a name="keyPair"></a>
+<code>keyPair</code> - <a href="../-key-pair/index.html"><span class="identifier">KeyPair</span></a><span class="symbol">!</span><span class="symbol">:</span> The public and private key pair, not null</p>
+<p><a name="message"></a>
+<code>message</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The message to sign, not null</p>
+<p><a name="domain"></a>
+<code>domain</code> - <span class="identifier">Int</span><span class="symbol">:</span> The domain value added to the message</p>
+<p><strong>Return</strong><br/>
+<a href="../-signature-and-public-key/index.html"><span class="identifier">SignatureAndPublicKey</span></a><span class="symbol">!</span><span class="symbol">:</span> The SignatureAndPublicKey, not null</p>
+<a name="org.apache.tuweni.crypto.mikuli.BLS12381$sign(org.apache.tuweni.crypto.mikuli.KeyPair, org.apache.tuweni.bytes.Bytes, kotlin.Int)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">sign</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$sign(org.apache.tuweni.crypto.mikuli.KeyPair, org.apache.tuweni.bytes.Bytes, kotlin.Int)/keyPair">keyPair</span><span class="symbol">:</span>&nbsp;<a href="../-key-pair/index.html"><span class="identifier">KeyPair</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$sign(org.apache.tuweni.crypto.mikuli.KeyPair, org.apache.tuweni.bytes.Bytes, kotlin.Int)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.mikuli.BLS12381$sign(org.apache.tuweni.crypto.mikuli.KeyPair, org.apache.tuweni.bytes.Bytes, kotlin.Int)/domain">domain</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-signature-and-public-key/index.html"><span class="identifier">SignatureAndPublicKey</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/mikuli/BLS12381.java#L67">(source)</a>
+<p>Generates a SignatureAndPublicKey.</p>
+<h3>Parameters</h3>
+<p><a name="keyPair"></a>
+<code>keyPair</code> - <a href="../-key-pair/index.html"><span class="identifier">KeyPair</span></a><span class="symbol">!</span><span class="symbol">:</span> The public and private key pair, not null</p>
+<p><a name="message"></a>
+<code>message</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The message to sign, not null</p>
+<p><a name="domain"></a>
+<code>domain</code> - <span class="identifier">Int</span><span class="symbol">:</span> The domain value added to the message</p>
+<p><strong>Return</strong><br/>
+<a href="../-signature-and-public-key/index.html"><span class="identifier">SignatureAndPublicKey</span></a><span class="symbol">!</span><span class="symbol">:</span> The SignatureAndPublicKey, not null</p>
+</BODY>
+</HTML>

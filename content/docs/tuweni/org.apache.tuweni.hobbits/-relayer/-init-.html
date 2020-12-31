@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Relayer.<init> - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.hobbits</a>&nbsp;/&nbsp;<a href="index.html">Relayer</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="org.apache.tuweni.hobbits.Relayer$&lt;init&gt;(io.vertx.core.Vertx, kotlin.String, kotlin.String, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.coroutines.CoroutineContext)"></a>
+<code><span class="identifier">Relayer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.hobbits.Relayer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.String, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.coroutines.CoroutineContext)/vertx">vertx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Vertx</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.Relayer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.String, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.coroutines.CoroutineContext)/bind">bind</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.Relayer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.String, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.coroutines.CoroutineContext)/to">to</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.Relayer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.String, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.coroutines.CoroutineContext)/interceptor">interceptor</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../-message/index.html"><span class="identifier">Message</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.Relayer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.String, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.coroutines.CoroutineContext)/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineContext</span>&nbsp;<span class="symbol">=</span>&nbsp;Dispatchers.Default<span class="symbol">)</span></code>
+<p>Relays messages between two endpoints, with an interceptor reading passed messages.</p>
+<h3>Parameters</h3>
+<p><a name="vertx"></a>
+<code>vertx</code> - a Vert.x instance</p>
+<p><a name="bind"></a>
+<code>bind</code> - the endpoint to bind to</p>
+<p><a name="to"></a>
+<code>to</code> - the endpoint to send to</p>
+<p><a name="interceptor"></a>
+<code>interceptor</code> - the interceptor function consuming messages being relayed</p>
+<p><a name="coroutineContext"></a>
+<code>coroutineContext</code> - the coroutine context of the relayer</p>
+</BODY>
+</HTML>

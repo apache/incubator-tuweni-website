@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AsyncCompletion.runOnContext - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.concurrent</a>&nbsp;/&nbsp;<a href="index.html">AsyncCompletion</a>&nbsp;/&nbsp;<a href="./run-on-context.html">runOnContext</a><br/>
+<br/>
+<h1>runOnContext</h1>
+<a name="org.apache.tuweni.concurrent.AsyncCompletion$runOnContext(io.vertx.core.Vertx, java.util.function.Supplier((org.apache.tuweni.concurrent.AsyncCompletion)))"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">runOnContext</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncCompletion$runOnContext(io.vertx.core.Vertx, java.util.function.Supplier((org.apache.tuweni.concurrent.AsyncCompletion)))/vertx">vertx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Vertx</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncCompletion$runOnContext(io.vertx.core.Vertx, java.util.function.Supplier((org.apache.tuweni.concurrent.AsyncCompletion)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent/src/main/java/org/apache/tuweni/concurrent/AsyncCompletion.java#L125">(source)</a>
+<p>Returns a completion that, after the given function executes on a vertx context and returns a completion, completes when the completion from the function does.</p>
+<h3>Parameters</h3>
+<p><a name="vertx"></a>
+<code>vertx</code> - <span class="identifier">Vertx</span><span class="symbol">!</span><span class="symbol">:</span> The vertx context.</p>
+<p><a name="fn"></a>
+<code>fn</code> - <span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> The function returning a completion.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span><span class="symbol">:</span> A completion.</p>
+<a name="org.apache.tuweni.concurrent.AsyncCompletion$runOnContext(io.vertx.core.Vertx, java.lang.Runnable)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">runOnContext</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncCompletion$runOnContext(io.vertx.core.Vertx, java.lang.Runnable)/vertx">vertx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Vertx</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncCompletion$runOnContext(io.vertx.core.Vertx, java.lang.Runnable)/action">action</span><span class="symbol">:</span>&nbsp;<span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent/src/main/java/org/apache/tuweni/concurrent/AsyncCompletion.java#L158">(source)</a>
+<p>Returns a completion that completes after the given action executes on a vertx context. </p>
+<p> Note that the given function is run directly on the context and should not block.</p>
+<h3>Parameters</h3>
+<p><a name="vertx"></a>
+<code>vertx</code> - <span class="identifier">Vertx</span><span class="symbol">!</span><span class="symbol">:</span> The vertx context.</p>
+<p><a name="action"></a>
+<code>action</code> - <span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">:</span> The action to execute.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span><span class="symbol">:</span> A completion.</p>
+</BODY>
+</HTML>

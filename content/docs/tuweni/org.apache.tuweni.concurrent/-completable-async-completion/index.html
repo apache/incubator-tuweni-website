@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CompletableAsyncCompletion - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.concurrent</a>&nbsp;/&nbsp;<a href="./index.html">CompletableAsyncCompletion</a><br/>
+<br/>
+<h1>CompletableAsyncCompletion</h1>
+<code><span class="keyword">interface </span><span class="identifier">CompletableAsyncCompletion</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent/src/main/java/org/apache/tuweni/concurrent/CompletableAsyncCompletion.java#L20">(source)</a>
+<p>An <code><a href="../-async-completion/index.html">AsyncCompletion</a></code> that can later be completed successfully or with a provided exception.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="complete.html">complete</a></h4>
+</td>
+<td>
+<p>Complete this completion.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">complete</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="complete-exceptionally.html">completeExceptionally</a></h4>
+</td>
+<td>
+<p>Complete this completion with the given exception.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">completeExceptionally</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.CompletableAsyncCompletion$completeExceptionally(kotlin.Throwable)/ex">ex</span><span class="symbol">:</span>&nbsp;<span class="identifier">Throwable</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-future.html">toFuture</a></h4>
+</td>
+<td>
+<p>Returns the underlying completable future associated with this instance. Note taking action directly on this future will impact this object.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">toFuture</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">CompletableFuture</span><span class="symbol">&lt;</span><span class="identifier">Void</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

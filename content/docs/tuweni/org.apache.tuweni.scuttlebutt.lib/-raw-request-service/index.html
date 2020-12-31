@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RawRequestService - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.lib</a>&nbsp;/&nbsp;<a href="./index.html">RawRequestService</a><br/>
+<br/>
+<h1>RawRequestService</h1>
+<code><span class="keyword">class </span><span class="identifier">RawRequestService</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-client-lib/src/main/java/org/apache/tuweni/scuttlebutt/lib/RawRequestService.java#L33">(source)</a>
+<p>Intended to make RPC requests which aren't supported by the higher level services possible. We cannot support every desired RPC request with higher level abstractions because it's possible to define custom plugins with custom endpoints.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="make-async-request.html">makeAsyncRequest</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">makeAsyncRequest</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.RawRequestService$makeAsyncRequest(org.apache.tuweni.scuttlebutt.rpc.RPCAsyncRequest)/request">request</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.rpc/-r-p-c-async-request/index.html"><span class="identifier">RPCAsyncRequest</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.rpc/-r-p-c-response/index.html"><span class="identifier">RPCResponse</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-stream.html">openStream</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">openStream</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.RawRequestService$openStream(org.apache.tuweni.scuttlebutt.rpc.RPCStreamRequest, java.util.function.Function((java.lang.Runnable, org.apache.tuweni.scuttlebutt.rpc.mux.ScuttlebuttStreamHandler)))/request">request</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.rpc/-r-p-c-stream-request/index.html"><span class="identifier">RPCStreamRequest</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.RawRequestService$openStream(org.apache.tuweni.scuttlebutt.rpc.RPCStreamRequest, java.util.function.Function((java.lang.Runnable, org.apache.tuweni.scuttlebutt.rpc.mux.ScuttlebuttStreamHandler)))/streamFactory">streamFactory</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.rpc.mux/-scuttlebutt-stream-handler/index.html"><span class="identifier">ScuttlebuttStreamHandler</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

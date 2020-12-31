@@ -1,0 +1,101 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MemoryPeerRepository - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.peer.repository.memory</a>&nbsp;/&nbsp;<a href="./index.html">MemoryPeerRepository</a><br/>
+<br/>
+<h1>MemoryPeerRepository</h1>
+<code><span class="keyword">class </span><span class="identifier">MemoryPeerRepository</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-peer-repository/index.html"><span class="identifier">PeerRepository</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/peer-repository/src/main/kotlin/org/apache/tuweni/peer/repository/memory/MemoryPeerRepository.kt#L32">(source)</a>
+<p>Memory-backed peer repository.</p>
+<p>Useful for proof-of-concept.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Memory-backed peer repository.</p>
+<code><span class="identifier">MemoryPeerRepository</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="connections.html">connections</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">connections</span><span class="symbol">: </span><span class="identifier">ConcurrentHashMap</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-connection/index.html"><span class="identifier">Connection</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="identities.html">identities</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">identities</span><span class="symbol">: </span><span class="identifier">HashSet</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.peer.repository/-identity/index.html"><span class="identifier">Identity</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="peer-map.html">peerMap</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">peerMap</span><span class="symbol">: </span><span class="identifier">ConcurrentHashMap</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.peer.repository/-identity/index.html"><span class="identifier">Identity</span></a><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-connection.html">addConnection</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addConnection</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.peer.repository.memory.MemoryPeerRepository$addConnection(org.apache.tuweni.peer.repository.Peer, org.apache.tuweni.peer.repository.Identity)/peer">peer</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.peer.repository.memory.MemoryPeerRepository$addConnection(org.apache.tuweni.peer.repository.Peer, org.apache.tuweni.peer.repository.Identity)/identity">identity</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-identity/index.html"><span class="identifier">Identity</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mark-connection-inactive.html">markConnectionInactive</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">markConnectionInactive</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.peer.repository.memory.MemoryPeerRepository$markConnectionInactive(org.apache.tuweni.peer.repository.Peer, org.apache.tuweni.peer.repository.Identity)/peer">peer</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.peer.repository.memory.MemoryPeerRepository$markConnectionInactive(org.apache.tuweni.peer.repository.Peer, org.apache.tuweni.peer.repository.Identity)/identity">identity</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-identity/index.html"><span class="identifier">Identity</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="peer-discovered-at.html">peerDiscoveredAt</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">peerDiscoveredAt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.peer.repository.memory.MemoryPeerRepository$peerDiscoveredAt(org.apache.tuweni.peer.repository.Peer, kotlin.Long)/peer">peer</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.peer.repository.memory.MemoryPeerRepository$peerDiscoveredAt(org.apache.tuweni.peer.repository.Peer, kotlin.Long)/time">time</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="random-peer.html">randomPeer</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">randomPeer</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.peer.repository/-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-identity.html">storeIdentity</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeIdentity</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.peer.repository.memory.MemoryPeerRepository$storeIdentity(kotlin.String, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.PublicKey)/networkInterface">networkInterface</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.peer.repository.memory.MemoryPeerRepository$storeIdentity(kotlin.String, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.PublicKey)/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.peer.repository.memory.MemoryPeerRepository$storeIdentity(kotlin.String, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.PublicKey)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.peer.repository/-identity/index.html"><span class="identifier">Identity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-peer.html">storePeer</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storePeer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.peer.repository.memory.MemoryPeerRepository$storePeer(org.apache.tuweni.peer.repository.Identity, java.time.Instant, java.time.Instant)/id">id</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-identity/index.html"><span class="identifier">Identity</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.peer.repository.memory.MemoryPeerRepository$storePeer(org.apache.tuweni.peer.repository.Identity, java.time.Instant, java.time.Instant)/lastContacted">lastContacted</span><span class="symbol">:</span>&nbsp;<span class="identifier">Instant</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.peer.repository.memory.MemoryPeerRepository$storePeer(org.apache.tuweni.peer.repository.Identity, java.time.Instant, java.time.Instant)/lastDiscovered">lastDiscovered</span><span class="symbol">:</span>&nbsp;<span class="identifier">Instant</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.peer.repository/-peer/index.html"><span class="identifier">Peer</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

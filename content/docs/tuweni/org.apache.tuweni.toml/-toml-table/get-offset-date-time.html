@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TomlTable.getOffsetDateTime - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.toml</a>&nbsp;/&nbsp;<a href="index.html">TomlTable</a>&nbsp;/&nbsp;<a href="./get-offset-date-time.html">getOffsetDateTime</a><br/>
+<br/>
+<h1>getOffsetDateTime</h1>
+<a name="org.apache.tuweni.toml.TomlTable$getOffsetDateTime(kotlin.String)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOffsetDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getOffsetDateTime(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">OffsetDateTime</span><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/TomlTable.java#L604">(source)</a>
+<p>Get an offset date time from the TOML document.</p>
+<h3>Parameters</h3>
+<p><a name="dottedKey"></a>
+<code>dottedKey</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> A dotted key (e.g. <code>"server.address.port"</code>).</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - If the key cannot be parsed.</p>
+<p><a name="TomlInvalidTypeException"></a>
+<code>TomlInvalidTypeException</code> - If the value is present but not an <code><a href="#">OffsetDateTime</a></code>, or any element of the path preceding the final key is not a table.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">OffsetDateTime</span><span class="symbol">?</span><span class="symbol">:</span> The value, or <code>null</code> if no value was set in the TOML document.</p>
+<a name="org.apache.tuweni.toml.TomlTable$getOffsetDateTime(kotlin.collections.MutableList((kotlin.String)))"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOffsetDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getOffsetDateTime(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">OffsetDateTime</span><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/TomlTable.java#L618">(source)</a>
+<p>Get an offset date time from the TOML document.</p>
+<h3>Parameters</h3>
+<p><a name="path"></a>
+<code>path</code> - <span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> The key path.</p>
+<h3>Exceptions</h3>
+<p><a name="TomlInvalidTypeException"></a>
+<code>TomlInvalidTypeException</code> - If the value is present but not an <code><a href="#">OffsetDateTime</a></code>, or any element of the path preceding the final key is not a table.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">OffsetDateTime</span><span class="symbol">?</span><span class="symbol">:</span> The value, or <code>null</code> if no value was set in the TOML document.</p>
+<a name="org.apache.tuweni.toml.TomlTable$getOffsetDateTime(kotlin.String, java.util.function.Supplier((java.time.OffsetDateTime)))"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOffsetDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getOffsetDateTime(kotlin.String, java.util.function.Supplier((java.time.OffsetDateTime)))/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getOffsetDateTime(kotlin.String, java.util.function.Supplier((java.time.OffsetDateTime)))/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">OffsetDateTime</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">OffsetDateTime</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/TomlTable.java#L639">(source)</a>
+<p>Get an offset date time from the TOML document, or return a default.</p>
+<h3>Parameters</h3>
+<p><a name="dottedKey"></a>
+<code>dottedKey</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> A dotted key (e.g. <code>"server.address.port"</code>).</p>
+<p><a name="defaultValue"></a>
+<code>defaultValue</code> - <span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">OffsetDateTime</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A supplier for the default value.</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - If the key cannot be parsed.</p>
+<p><a name="TomlInvalidTypeException"></a>
+<code>TomlInvalidTypeException</code> - If the value is present but not an <code><a href="#">OffsetDateTime</a></code>, or any element of the path preceding the final key is not a table.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">OffsetDateTime</span><span class="symbol">!</span><span class="symbol">:</span> The value, or the default.</p>
+<a name="org.apache.tuweni.toml.TomlTable$getOffsetDateTime(kotlin.collections.MutableList((kotlin.String)), java.util.function.Supplier((java.time.OffsetDateTime)))"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOffsetDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getOffsetDateTime(kotlin.collections.MutableList((kotlin.String)), java.util.function.Supplier((java.time.OffsetDateTime)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getOffsetDateTime(kotlin.collections.MutableList((kotlin.String)), java.util.function.Supplier((java.time.OffsetDateTime)))/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">OffsetDateTime</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">OffsetDateTime</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/TomlTable.java#L653">(source)</a>
+<p>Get an offset date time from the TOML document, or return a default.</p>
+<h3>Parameters</h3>
+<p><a name="path"></a>
+<code>path</code> - <span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> The key path.</p>
+<p><a name="defaultValue"></a>
+<code>defaultValue</code> - <span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">OffsetDateTime</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A supplier for the default value.</p>
+<h3>Exceptions</h3>
+<p><a name="TomlInvalidTypeException"></a>
+<code>TomlInvalidTypeException</code> - If the value is present but not an <code><a href="#">OffsetDateTime</a></code>, or any element of the path preceding the final key is not a table.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">OffsetDateTime</span><span class="symbol">!</span><span class="symbol">:</span> The value, or the default.</p>
+</BODY>
+</HTML>

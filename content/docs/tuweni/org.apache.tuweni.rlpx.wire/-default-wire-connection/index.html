@@ -1,0 +1,146 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DefaultWireConnection - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlpx.wire</a>&nbsp;/&nbsp;<a href="./index.html">DefaultWireConnection</a><br/>
+<br/>
+<h1>DefaultWireConnection</h1>
+<code><span class="keyword">class </span><span class="identifier">DefaultWireConnection</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-wire-connection/index.html"><span class="identifier">WireConnection</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlpx/src/main/java/org/apache/tuweni/rlpx/wire/DefaultWireConnection.java#L40">(source)</a>
+<p>A stateful connection between two peers under the Devp2p wire protocol.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Default constructor.</p>
+<code><span class="identifier">DefaultWireConnection</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$<init>(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, java.util.function.Consumer((org.apache.tuweni.rlpx.RLPxMessage)), java.util.function.Consumer((org.apache.tuweni.rlpx.wire.HelloMessage)), java.lang.Runnable, java.util.LinkedHashMap((org.apache.tuweni.rlpx.wire.SubProtocol, org.apache.tuweni.rlpx.wire.SubProtocolHandler)), kotlin.Int, kotlin.String, kotlin.Int, org.apache.tuweni.concurrent.CompletableAsyncResult((org.apache.tuweni.rlpx.wire.WireConnection)), kotlin.String, kotlin.Int)/nodeId">nodeId</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$<init>(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, java.util.function.Consumer((org.apache.tuweni.rlpx.RLPxMessage)), java.util.function.Consumer((org.apache.tuweni.rlpx.wire.HelloMessage)), java.lang.Runnable, java.util.LinkedHashMap((org.apache.tuweni.rlpx.wire.SubProtocol, org.apache.tuweni.rlpx.wire.SubProtocolHandler)), kotlin.Int, kotlin.String, kotlin.Int, org.apache.tuweni.concurrent.CompletableAsyncResult((org.apache.tuweni.rlpx.wire.WireConnection)), kotlin.String, kotlin.Int)/peerNodeId">peerNodeId</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$<init>(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, java.util.function.Consumer((org.apache.tuweni.rlpx.RLPxMessage)), java.util.function.Consumer((org.apache.tuweni.rlpx.wire.HelloMessage)), java.lang.Runnable, java.util.LinkedHashMap((org.apache.tuweni.rlpx.wire.SubProtocol, org.apache.tuweni.rlpx.wire.SubProtocolHandler)), kotlin.Int, kotlin.String, kotlin.Int, org.apache.tuweni.concurrent.CompletableAsyncResult((org.apache.tuweni.rlpx.wire.WireConnection)), kotlin.String, kotlin.Int)/writer">writer</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.rlpx/-r-l-px-message/index.html"><span class="identifier">RLPxMessage</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$<init>(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, java.util.function.Consumer((org.apache.tuweni.rlpx.RLPxMessage)), java.util.function.Consumer((org.apache.tuweni.rlpx.wire.HelloMessage)), java.lang.Runnable, java.util.LinkedHashMap((org.apache.tuweni.rlpx.wire.SubProtocol, org.apache.tuweni.rlpx.wire.SubProtocolHandler)), kotlin.Int, kotlin.String, kotlin.Int, org.apache.tuweni.concurrent.CompletableAsyncResult((org.apache.tuweni.rlpx.wire.WireConnection)), kotlin.String, kotlin.Int)/afterHandshakeListener">afterHandshakeListener</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../-hello-message/index.html"><span class="identifier">HelloMessage</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$<init>(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, java.util.function.Consumer((org.apache.tuweni.rlpx.RLPxMessage)), java.util.function.Consumer((org.apache.tuweni.rlpx.wire.HelloMessage)), java.lang.Runnable, java.util.LinkedHashMap((org.apache.tuweni.rlpx.wire.SubProtocol, org.apache.tuweni.rlpx.wire.SubProtocolHandler)), kotlin.Int, kotlin.String, kotlin.Int, org.apache.tuweni.concurrent.CompletableAsyncResult((org.apache.tuweni.rlpx.wire.WireConnection)), kotlin.String, kotlin.Int)/disconnectHandler">disconnectHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$<init>(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, java.util.function.Consumer((org.apache.tuweni.rlpx.RLPxMessage)), java.util.function.Consumer((org.apache.tuweni.rlpx.wire.HelloMessage)), java.lang.Runnable, java.util.LinkedHashMap((org.apache.tuweni.rlpx.wire.SubProtocol, org.apache.tuweni.rlpx.wire.SubProtocolHandler)), kotlin.Int, kotlin.String, kotlin.Int, org.apache.tuweni.concurrent.CompletableAsyncResult((org.apache.tuweni.rlpx.wire.WireConnection)), kotlin.String, kotlin.Int)/subprotocols">subprotocols</span><span class="symbol">:</span>&nbsp;<span class="identifier">LinkedHashMap</span><span class="symbol">&lt;</span><a href="../-sub-protocol/index.html"><span class="identifier">SubProtocol</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="../-sub-protocol-handler/index.html"><span class="identifier">SubProtocolHandler</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$<init>(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, java.util.function.Consumer((org.apache.tuweni.rlpx.RLPxMessage)), java.util.function.Consumer((org.apache.tuweni.rlpx.wire.HelloMessage)), java.lang.Runnable, java.util.LinkedHashMap((org.apache.tuweni.rlpx.wire.SubProtocol, org.apache.tuweni.rlpx.wire.SubProtocolHandler)), kotlin.Int, kotlin.String, kotlin.Int, org.apache.tuweni.concurrent.CompletableAsyncResult((org.apache.tuweni.rlpx.wire.WireConnection)), kotlin.String, kotlin.Int)/p2pVersion">p2pVersion</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$<init>(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, java.util.function.Consumer((org.apache.tuweni.rlpx.RLPxMessage)), java.util.function.Consumer((org.apache.tuweni.rlpx.wire.HelloMessage)), java.lang.Runnable, java.util.LinkedHashMap((org.apache.tuweni.rlpx.wire.SubProtocol, org.apache.tuweni.rlpx.wire.SubProtocolHandler)), kotlin.Int, kotlin.String, kotlin.Int, org.apache.tuweni.concurrent.CompletableAsyncResult((org.apache.tuweni.rlpx.wire.WireConnection)), kotlin.String, kotlin.Int)/clientId">clientId</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$<init>(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, java.util.function.Consumer((org.apache.tuweni.rlpx.RLPxMessage)), java.util.function.Consumer((org.apache.tuweni.rlpx.wire.HelloMessage)), java.lang.Runnable, java.util.LinkedHashMap((org.apache.tuweni.rlpx.wire.SubProtocol, org.apache.tuweni.rlpx.wire.SubProtocolHandler)), kotlin.Int, kotlin.String, kotlin.Int, org.apache.tuweni.concurrent.CompletableAsyncResult((org.apache.tuweni.rlpx.wire.WireConnection)), kotlin.String, kotlin.Int)/advertisedPort">advertisedPort</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$<init>(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, java.util.function.Consumer((org.apache.tuweni.rlpx.RLPxMessage)), java.util.function.Consumer((org.apache.tuweni.rlpx.wire.HelloMessage)), java.lang.Runnable, java.util.LinkedHashMap((org.apache.tuweni.rlpx.wire.SubProtocol, org.apache.tuweni.rlpx.wire.SubProtocolHandler)), kotlin.Int, kotlin.String, kotlin.Int, org.apache.tuweni.concurrent.CompletableAsyncResult((org.apache.tuweni.rlpx.wire.WireConnection)), kotlin.String, kotlin.Int)/ready">ready</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.concurrent/-completable-async-result/index.html"><span class="identifier">CompletableAsyncResult</span></a><span class="symbol">&lt;</span><a href="../-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$<init>(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, java.util.function.Consumer((org.apache.tuweni.rlpx.RLPxMessage)), java.util.function.Consumer((org.apache.tuweni.rlpx.wire.HelloMessage)), java.lang.Runnable, java.util.LinkedHashMap((org.apache.tuweni.rlpx.wire.SubProtocol, org.apache.tuweni.rlpx.wire.SubProtocolHandler)), kotlin.Int, kotlin.String, kotlin.Int, org.apache.tuweni.concurrent.CompletableAsyncResult((org.apache.tuweni.rlpx.wire.WireConnection)), kotlin.String, kotlin.Int)/peerHost">peerHost</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$<init>(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes, java.util.function.Consumer((org.apache.tuweni.rlpx.RLPxMessage)), java.util.function.Consumer((org.apache.tuweni.rlpx.wire.HelloMessage)), java.lang.Runnable, java.util.LinkedHashMap((org.apache.tuweni.rlpx.wire.SubProtocol, org.apache.tuweni.rlpx.wire.SubProtocolHandler)), kotlin.Int, kotlin.String, kotlin.Int, org.apache.tuweni.concurrent.CompletableAsyncResult((org.apache.tuweni.rlpx.wire.WireConnection)), kotlin.String, kotlin.Int)/peerPort">peerPort</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="agreed-subprotocols.html">agreedSubprotocols</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">agreedSubprotocols</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableCollection</span><span class="symbol">&lt;</span><a href="../-sub-protocol-identifier/index.html"><span class="identifier">SubProtocolIdentifier</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="disconnect.html">disconnect</a></h4>
+</td>
+<td>
+<p>Sends a message to the peer explaining that we are about to disconnect.</p>
+<code><span class="keyword">fun </span><span class="identifier">disconnect</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$disconnect(org.apache.tuweni.rlpx.wire.DisconnectReason)/reason">reason</span><span class="symbol">:</span>&nbsp;<a href="../-disconnect-reason/index.html"><span class="identifier">DisconnectReason</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-disconnect-reason.html">getDisconnectReason</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getDisconnectReason</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-disconnect-reason/index.html"><span class="identifier">DisconnectReason</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-peer-hello.html">getPeerHello</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getPeerHello</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-hello-message/index.html"><span class="identifier">HelloMessage</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="handle-connection-start.html">handleConnectionStart</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">handleConnectionStart</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-disconnect-received.html">isDisconnectReceived</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isDisconnectReceived</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-disconnect-requested.html">isDisconnectRequested</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isDisconnectRequested</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="message-received.html">messageReceived</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">messageReceived</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$messageReceived(org.apache.tuweni.rlpx.RLPxMessage)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx/-r-l-px-message/index.html"><span class="identifier">RLPxMessage</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="peer-host.html">peerHost</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">peerHost</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="peer-port.html">peerPort</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">peerPort</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="peer-public-key.html">peerPublicKey</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">peerPublicKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">PublicKey</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="register-listener.html">registerListener</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">registerListener</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$registerListener(org.apache.tuweni.rlpx.wire.WireConnection.EventListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<span class="identifier">EventListener</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="send-message.html">sendMessage</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">sendMessage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$sendMessage(org.apache.tuweni.rlpx.wire.SubProtocolIdentifier, kotlin.Int, org.apache.tuweni.bytes.Bytes)/subProtocolIdentifier">subProtocolIdentifier</span><span class="symbol">:</span>&nbsp;<a href="../-sub-protocol-identifier/index.html"><span class="identifier">SubProtocolIdentifier</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$sendMessage(org.apache.tuweni.rlpx.wire.SubProtocolIdentifier, kotlin.Int, org.apache.tuweni.bytes.Bytes)/messageType">messageType</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$sendMessage(org.apache.tuweni.rlpx.wire.SubProtocolIdentifier, kotlin.Int, org.apache.tuweni.bytes.Bytes)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="send-ping.html">sendPing</a></h4>
+</td>
+<td>
+<p>Sends a ping message to the remote peer.</p>
+<code><span class="keyword">fun </span><span class="identifier">sendPing</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="supports.html">supports</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">supports</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.wire.DefaultWireConnection$supports(org.apache.tuweni.rlpx.wire.SubProtocolIdentifier)/subProtocolIdentifier">subProtocolIdentifier</span><span class="symbol">:</span>&nbsp;<a href="../-sub-protocol-identifier/index.html"><span class="identifier">SubProtocolIdentifier</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

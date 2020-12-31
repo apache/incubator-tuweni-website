@@ -1,0 +1,170 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EthController - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.devp2p.eth</a>&nbsp;/&nbsp;<a href="./index.html">EthController</a><br/>
+<br/>
+<h1>EthController</h1>
+<code><span class="keyword">class </span><span class="identifier">EthController</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/devp2p-eth/src/main/kotlin/org/apache/tuweni/devp2p/eth/EthController.kt#L33">(source)</a>
+<p>Controller managing the state of the ETH or LES subprotocol handlers.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Controller managing the state of the ETH or LES subprotocol handlers.</p>
+<code><span class="identifier">EthController</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$<init>(org.apache.tuweni.eth.repository.BlockchainRepository, org.apache.tuweni.eth.repository.TransactionPool, org.apache.tuweni.devp2p.eth.EthRequestsManager, kotlin.Function2((org.apache.tuweni.rlpx.wire.WireConnection, org.apache.tuweni.devp2p.eth.Status, kotlin.Unit)))/repository">repository</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth.repository/-blockchain-repository/index.html"><span class="identifier">BlockchainRepository</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$<init>(org.apache.tuweni.eth.repository.BlockchainRepository, org.apache.tuweni.eth.repository.TransactionPool, org.apache.tuweni.devp2p.eth.EthRequestsManager, kotlin.Function2((org.apache.tuweni.rlpx.wire.WireConnection, org.apache.tuweni.devp2p.eth.Status, kotlin.Unit)))/pendingTransactionsPool">pendingTransactionsPool</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth.repository/-transaction-pool/index.html"><span class="identifier">TransactionPool</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$<init>(org.apache.tuweni.eth.repository.BlockchainRepository, org.apache.tuweni.eth.repository.TransactionPool, org.apache.tuweni.devp2p.eth.EthRequestsManager, kotlin.Function2((org.apache.tuweni.rlpx.wire.WireConnection, org.apache.tuweni.devp2p.eth.Status, kotlin.Unit)))/requestsManager">requestsManager</span><span class="symbol">:</span>&nbsp;<a href="../-eth-requests-manager/index.html"><span class="identifier">EthRequestsManager</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$<init>(org.apache.tuweni.eth.repository.BlockchainRepository, org.apache.tuweni.eth.repository.TransactionPool, org.apache.tuweni.devp2p.eth.EthRequestsManager, kotlin.Function2((org.apache.tuweni.rlpx.wire.WireConnection, org.apache.tuweni.devp2p.eth.Status, kotlin.Unit)))/connectionsListener">connectionsListener</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">,</span>&nbsp;<a href="../-status/index.html"><span class="identifier">Status</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span>&nbsp;<span class="symbol">=</span>&nbsp;{ _, _ -&gt; }<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="connections-listener.html">connectionsListener</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">connectionsListener</span><span class="symbol">: </span><span class="symbol">(</span><a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">,</span>&nbsp;<a href="../-status/index.html"><span class="identifier">Status</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="pending-transactions-pool.html">pendingTransactionsPool</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">pendingTransactionsPool</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth.repository/-transaction-pool/index.html"><span class="identifier">TransactionPool</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="repository.html">repository</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">repository</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth.repository/-blockchain-repository/index.html"><span class="identifier">BlockchainRepository</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="requests-manager.html">requestsManager</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">requestsManager</span><span class="symbol">: </span><a href="../-eth-requests-manager/index.html"><span class="identifier">EthRequestsManager</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-new-block.html">addNewBlock</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">addNewBlock</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$addNewBlock(org.apache.tuweni.eth.Block)/newBlock">newBlock</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-block/index.html"><span class="identifier">Block</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-new-block-bodies.html">addNewBlockBodies</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">addNewBlockBodies</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$addNewBlockBodies(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.collections.List((org.apache.tuweni.eth.BlockBody)))/connection">connection</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$addNewBlockBodies(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.collections.List((org.apache.tuweni.eth.BlockBody)))/bodies">bodies</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-block-body/index.html"><span class="identifier">BlockBody</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-new-block-hashes.html">addNewBlockHashes</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">addNewBlockHashes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$addNewBlockHashes(kotlin.collections.List((kotlin.Pair((org.apache.tuweni.eth.Hash, kotlin.Long)))))/hashes">hashes</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><span class="identifier">Pair</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">Long</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-new-block-headers.html">addNewBlockHeaders</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">addNewBlockHeaders</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$addNewBlockHeaders(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.collections.List((org.apache.tuweni.eth.BlockHeader)))/connection">connection</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$addNewBlockHeaders(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.collections.List((org.apache.tuweni.eth.BlockHeader)))/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-block-header/index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-new-node-data.html">addNewNodeData</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">addNewNodeData</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$addNewNodeData(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.collections.List((org.apache.tuweni.bytes.Bytes)))/connection">connection</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$addNewNodeData(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.collections.List((org.apache.tuweni.bytes.Bytes)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-new-pooled-transactions.html">addNewPooledTransactions</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">addNewPooledTransactions</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$addNewPooledTransactions(kotlin.collections.List((org.apache.tuweni.eth.Transaction)))/transactions">transactions</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-transaction/index.html"><span class="identifier">Transaction</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-new-transaction-receipts.html">addNewTransactionReceipts</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">addNewTransactionReceipts</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$addNewTransactionReceipts(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.collections.List((kotlin.collections.List((org.apache.tuweni.eth.TransactionReceipt)))))/connection">connection</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$addNewTransactionReceipts(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.collections.List((kotlin.collections.List((org.apache.tuweni.eth.TransactionReceipt)))))/transactionReceipts">transactionReceipts</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-transaction-receipt/index.html"><span class="identifier">TransactionReceipt</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-new-transactions.html">addNewTransactions</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">addNewTransactions</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$addNewTransactions(kotlin.collections.List((org.apache.tuweni.eth.Transaction)))/transactions">transactions</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-transaction/index.html"><span class="identifier">Transaction</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="find-block-bodies.html">findBlockBodies</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">findBlockBodies</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$findBlockBodies(kotlin.collections.List((org.apache.tuweni.eth.Hash)))/hashes">hashes</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-block-body/index.html"><span class="identifier">BlockBody</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="find-headers.html">findHeaders</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">findHeaders</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$findHeaders(org.apache.tuweni.bytes.Bytes, kotlin.Long, kotlin.Long, kotlin.Boolean)/block">block</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$findHeaders(org.apache.tuweni.bytes.Bytes, kotlin.Long, kotlin.Long, kotlin.Boolean)/maxHeaders">maxHeaders</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$findHeaders(org.apache.tuweni.bytes.Bytes, kotlin.Long, kotlin.Long, kotlin.Boolean)/skip">skip</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$findHeaders(org.apache.tuweni.bytes.Bytes, kotlin.Long, kotlin.Long, kotlin.Boolean)/reverse">reverse</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-block-header/index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="find-node-data.html">findNodeData</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">findNodeData</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$findNodeData(kotlin.collections.List((org.apache.tuweni.eth.Hash)))/hashes">hashes</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="find-pooled-transactions.html">findPooledTransactions</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">findPooledTransactions</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$findPooledTransactions(kotlin.collections.List((org.apache.tuweni.eth.Hash)))/hashes">hashes</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-transaction/index.html"><span class="identifier">Transaction</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="find-transaction-receipts.html">findTransactionReceipts</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">findTransactionReceipts</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$findTransactionReceipts(kotlin.collections.List((org.apache.tuweni.eth.Hash)))/hashes">hashes</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-transaction-receipt/index.html"><span class="identifier">TransactionReceipt</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="receive-status.html">receiveStatus</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">receiveStatus</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$receiveStatus(org.apache.tuweni.rlpx.wire.WireConnection, org.apache.tuweni.devp2p.eth.Status)/connection">connection</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$receiveStatus(org.apache.tuweni.rlpx.wire.WireConnection, org.apache.tuweni.devp2p.eth.Status)/status">status</span><span class="symbol">:</span>&nbsp;<a href="../-status/index.html"><span class="identifier">Status</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="request-block-header.html">requestBlockHeader</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">requestBlockHeader</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthController$requestBlockHeader(org.apache.tuweni.eth.Hash)/blockHash">blockHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

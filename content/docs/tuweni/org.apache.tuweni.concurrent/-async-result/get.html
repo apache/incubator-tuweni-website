@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AsyncResult.get - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.concurrent</a>&nbsp;/&nbsp;<a href="index.html">AsyncResult</a>&nbsp;/&nbsp;<a href="./get.html">get</a><br/>
+<br/>
+<h1>get</h1>
+<a name="org.apache.tuweni.concurrent.AsyncResult$get()"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent/src/main/java/org/apache/tuweni/concurrent/AsyncResult.java#L315">(source)</a>
+<p>Waits if necessary for the computation to complete, and then retrieves its result.</p>
+<h3>Exceptions</h3>
+<p><a name="CompletionException"></a>
+<code>CompletionException</code> - If the computation threw an exception.</p>
+<p><a name="InterruptedException"></a>
+<code>InterruptedException</code> - If the current thread was interrupted while waiting.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">T</span><span class="symbol">?</span><span class="symbol">:</span> The computed result.</p>
+<a name="org.apache.tuweni.concurrent.AsyncResult$get(kotlin.Long, java.util.concurrent.TimeUnit)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$get(kotlin.Long, java.util.concurrent.TimeUnit)/timeout">timeout</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$get(kotlin.Long, java.util.concurrent.TimeUnit)/unit">unit</span><span class="symbol">:</span>&nbsp;<span class="identifier">TimeUnit</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent/src/main/java/org/apache/tuweni/concurrent/AsyncResult.java#L328">(source)</a>
+<p>Waits if necessary for at most the given time for the computation to complete, and then retrieves its result.</p>
+<h3>Parameters</h3>
+<p><a name="timeout"></a>
+<code>timeout</code> - <span class="identifier">Long</span><span class="symbol">:</span> The maximum time to wait.</p>
+<p><a name="unit"></a>
+<code>unit</code> - <span class="identifier">TimeUnit</span><span class="symbol">!</span><span class="symbol">:</span> The time unit of the timeout argument.</p>
+<h3>Exceptions</h3>
+<p><a name="CompletionException"></a>
+<code>CompletionException</code> - If the computation threw an exception.</p>
+<p><a name="TimeoutException"></a>
+<code>TimeoutException</code> - If the wait timed out.</p>
+<p><a name="InterruptedException"></a>
+<code>InterruptedException</code> - If the current thread was interrupted while waiting.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">T</span><span class="symbol">?</span><span class="symbol">:</span> The computed result.</p>
+</BODY>
+</HTML>

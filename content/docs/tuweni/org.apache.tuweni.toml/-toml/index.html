@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Toml - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.toml</a>&nbsp;/&nbsp;<a href="./index.html">Toml</a><br/>
+<br/>
+<h1>Toml</h1>
+<code><span class="keyword">class </span><span class="identifier">Toml</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/Toml.java#L32">(source)</a>
+<p>Methods for parsing data stored in Tom's Obvious, Minimal Language (TOML).</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="canonical-dotted-key.html">canonicalDottedKey</a></h4>
+</td>
+<td>
+<p>Get the canonical form of the dotted key.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">canonicalDottedKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$canonicalDottedKey(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="join-key-path.html">joinKeyPath</a></h4>
+</td>
+<td>
+<p>Join a list of keys into a single dotted key string.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">joinKeyPath</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$joinKeyPath(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="parse.html">parse</a></h4>
+</td>
+<td>
+<p>Parse a TOML string.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(kotlin.String)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(kotlin.String, org.apache.tuweni.toml.TomlVersion)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(kotlin.String, org.apache.tuweni.toml.TomlVersion)/version">version</span><span class="symbol">:</span>&nbsp;<a href="../-toml-version/index.html"><span class="identifier">TomlVersion</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code>
+<p>Parse a TOML file.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.nio.file.Path)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.nio.file.Path, org.apache.tuweni.toml.TomlVersion)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.nio.file.Path, org.apache.tuweni.toml.TomlVersion)/version">version</span><span class="symbol">:</span>&nbsp;<a href="../-toml-version/index.html"><span class="identifier">TomlVersion</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code>
+<p>Parse a TOML input stream.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.io.InputStream)/is">is</span><span class="symbol">:</span>&nbsp;<span class="identifier">InputStream</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.io.InputStream, org.apache.tuweni.toml.TomlVersion)/is">is</span><span class="symbol">:</span>&nbsp;<span class="identifier">InputStream</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.io.InputStream, org.apache.tuweni.toml.TomlVersion)/version">version</span><span class="symbol">:</span>&nbsp;<a href="../-toml-version/index.html"><span class="identifier">TomlVersion</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.io.Reader, org.apache.tuweni.toml.TomlVersion)/reader">reader</span><span class="symbol">:</span>&nbsp;<span class="identifier">Reader</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.io.Reader, org.apache.tuweni.toml.TomlVersion)/version">version</span><span class="symbol">:</span>&nbsp;<a href="../-toml-version/index.html"><span class="identifier">TomlVersion</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.nio.channels.ReadableByteChannel, org.apache.tuweni.toml.TomlVersion)/channel">channel</span><span class="symbol">:</span>&nbsp;<span class="identifier">ReadableByteChannel</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.nio.channels.ReadableByteChannel, org.apache.tuweni.toml.TomlVersion)/version">version</span><span class="symbol">:</span>&nbsp;<a href="../-toml-version/index.html"><span class="identifier">TomlVersion</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code>
+<p>Parse a TOML reader.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.io.Reader)/reader">reader</span><span class="symbol">:</span>&nbsp;<span class="identifier">Reader</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parse(java.nio.channels.ReadableByteChannel)/channel">channel</span><span class="symbol">:</span>&nbsp;<span class="identifier">ReadableByteChannel</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-parse-result/index.html"><span class="identifier">TomlParseResult</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="parse-dotted-key.html">parseDottedKey</a></h4>
+</td>
+<td>
+<p>Parse a dotted key into individual parts.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseDottedKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$parseDottedKey(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="toml-escape.html">tomlEscape</a></h4>
+</td>
+<td>
+<p>Escape a text string using the TOML escape sequences.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">tomlEscape</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.Toml$tomlEscape(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">StringBuilder</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

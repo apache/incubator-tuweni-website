@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>org.apache.tuweni.rlpx - tuweni</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">tuweni</a>&nbsp;/&nbsp;<a href="./index.html">org.apache.tuweni.rlpx</a><br/>
+<br/>
+<h2>Package org.apache.tuweni.rlpx</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-ethereum-i-e-s-encryption-engine/index.html">EthereumIESEncryptionEngine</a></h4>
+</td>
+<td>
+<p>Support class for constructing integrated encryption ciphers for doing basic message exchanges on top of key agreement ciphers. Follows the description given in IEEE Std 1363a.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EthereumIESEncryptionEngine</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-handshake-message/index.html">HandshakeMessage</a></h4>
+</td>
+<td>
+<p>Contents of a message sent as part of a RLPx handshake.</p>
+<code><span class="keyword">interface </span><span class="identifier">HandshakeMessage</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-memory-wire-connections-repository/index.html">MemoryWireConnectionsRepository</a></h4>
+</td>
+<td>
+<p>In-memory implementation of the wire connections repository.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MemoryWireConnectionsRepository</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-wire-connection-repository/index.html"><span class="identifier">WireConnectionRepository</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-l-px-connection/index.html">RLPxConnection</a></h4>
+</td>
+<td>
+<p>Connection between 2 peers over the RLPx protocol. </p>
+<code><span class="keyword">class </span><span class="identifier">RLPxConnection</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-l-px-connection-factory/index.html">RLPxConnectionFactory</a></h4>
+</td>
+<td>
+<p>Factory creating RLPxConnection, either from initiating a handshake or responding to a handshake request.</p>
+<code><span class="keyword">class </span><span class="identifier">RLPxConnectionFactory</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-l-px-message/index.html">RLPxMessage</a></h4>
+</td>
+<td>
+<p>Message exchanged over a RLPx connection. </p>
+<code><span class="keyword">class </span><span class="identifier">RLPxMessage</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-l-px-service/index.html">RLPxService</a></h4>
+</td>
+<td>
+<p>Service allowing connections to remote peers over RLPx connections.</p>
+<code><span class="keyword">interface </span><span class="identifier">RLPxService</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-wire-connection-repository/index.html">WireConnectionRepository</a></h4>
+</td>
+<td>
+<p>A repository managing wire connections.</p>
+<code><span class="keyword">interface </span><span class="identifier">WireConnectionRepository</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-invalid-m-a-c-exception.html">InvalidMACException</a></h4>
+</td>
+<td>
+<p>Exception thrown when the message contents do not match the Message Authentication Code.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">InvalidMACException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

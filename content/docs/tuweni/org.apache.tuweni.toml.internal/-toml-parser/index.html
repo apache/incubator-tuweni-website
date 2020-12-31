@@ -1,0 +1,1629 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TomlParser - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.toml.internal</a>&nbsp;/&nbsp;<a href="./index.html">TomlParser</a><br/>
+<br/>
+<h1>TomlParser</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TomlParser</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Parser</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/build/generated-src/antlr/main/org/apache/tuweni/toml/internal/TomlParser.java#L15">(source)</a>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-array-context/index.html">ArrayContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ArrayContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-array-table-context/index.html">ArrayTableContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ArrayTableContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-array-value-context/index.html">ArrayValueContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ArrayValueContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-array-values-context/index.html">ArrayValuesContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ArrayValuesContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-basic-char-context/index.html">BasicCharContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BasicCharContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-basic-string-context/index.html">BasicStringContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BasicStringContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-basic-unescaped-context/index.html">BasicUnescapedContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BasicUnescapedContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-bin-int-context/index.html">BinIntContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BinIntContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-boolean-value-context/index.html">BooleanValueContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BooleanValueContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-date-context/index.html">DateContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DateContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-date-time-context/index.html">DateTimeContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DateTimeContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-day-context/index.html">DayContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DayContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-dec-int-context/index.html">DecIntContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DecIntContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-escaped-context/index.html">EscapedContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EscapedContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-expression-context/index.html">ExpressionContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ExpressionContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-false-bool-context/index.html">FalseBoolContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FalseBoolContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-float-value-context/index.html">FloatValueContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FloatValueContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-hex-int-context/index.html">HexIntContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HexIntContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-hour-context/index.html">HourContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HourContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-hour-offset-context/index.html">HourOffsetContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HourOffsetContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-inline-table-context/index.html">InlineTableContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">InlineTableContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-inline-table-values-context/index.html">InlineTableValuesContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">InlineTableValuesContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-integer-context/index.html">IntegerContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">IntegerContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-key-context/index.html">KeyContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">KeyContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-keyval-context/index.html">KeyvalContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">KeyvalContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-literal-body-context/index.html">LiteralBodyContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LiteralBodyContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-literal-string-context/index.html">LiteralStringContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LiteralStringContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-local-date-context/index.html">LocalDateContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalDateContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-local-date-time-context/index.html">LocalDateTimeContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalDateTimeContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-local-time-context/index.html">LocalTimeContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalTimeContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-minute-context/index.html">MinuteContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MinuteContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-minute-offset-context/index.html">MinuteOffsetContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MinuteOffsetContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-ml-basic-char-context/index.html">MlBasicCharContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MlBasicCharContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-ml-basic-string-context/index.html">MlBasicStringContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MlBasicStringContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-ml-basic-unescaped-context/index.html">MlBasicUnescapedContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MlBasicUnescapedContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-ml-literal-body-context/index.html">MlLiteralBodyContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MlLiteralBodyContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-ml-literal-string-context/index.html">MlLiteralStringContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MlLiteralStringContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-month-context/index.html">MonthContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MonthContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-oct-int-context/index.html">OctIntContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OctIntContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-offset-date-time-context/index.html">OffsetDateTimeContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OffsetDateTimeContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-quoted-key-context/index.html">QuotedKeyContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QuotedKeyContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-regular-float-context/index.html">RegularFloatContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RegularFloatContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-regular-float-inf-context/index.html">RegularFloatInfContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RegularFloatInfContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-regular-float-na-n-context/index.html">RegularFloatNaNContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RegularFloatNaNContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-second-context/index.html">SecondContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SecondContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-second-fraction-context/index.html">SecondFractionContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SecondFractionContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-simple-key-context/index.html">SimpleKeyContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SimpleKeyContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-standard-table-context/index.html">StandardTableContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StandardTableContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-string-context/index.html">StringContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StringContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-table-context/index.html">TableContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TableContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-time-context/index.html">TimeContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TimeContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-time-offset-context/index.html">TimeOffsetContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TimeOffsetContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-toml-context/index.html">TomlContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TomlContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-toml-key-context/index.html">TomlKeyContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TomlKeyContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-true-bool-context/index.html">TrueBoolContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TrueBoolContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-unquoted-key-context/index.html">UnquotedKeyContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UnquotedKeyContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-val-context/index.html">ValContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ValContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-year-context/index.html">YearContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">YearContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">TomlParser</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParser$<init>(org.antlr.v4.runtime.TokenStream)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">TokenStream</span><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="_-a-t-n.html">_ATN</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">_ATN</span><span class="symbol">: </span><span class="identifier">ATN</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="_decision-to-d-f-a.html">_decisionToDFA</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">_decisionToDFA</span><span class="symbol">: </span><span class="identifier">Array</span><span class="symbol">&lt;</span><span class="identifier">DFA</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="_serialized-a-t-n.html">_serializedATN</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">_serializedATN</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="_shared-context-cache.html">_sharedContextCache</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">_sharedContextCache</span><span class="symbol">: </span><span class="identifier">PredictionContextCache</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-apostrophe.html">Apostrophe</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">Apostrophe</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-array-end.html">ArrayEnd</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ArrayEnd</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-array-start.html">ArrayStart</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ArrayStart</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-array-table-key-end.html">ArrayTableKeyEnd</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ArrayTableKeyEnd</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-array-table-key-start.html">ArrayTableKeyStart</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ArrayTableKeyStart</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-binary-integer.html">BinaryInteger</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">BinaryInteger</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-colon.html">Colon</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">Colon</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-comma.html">Comma</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">Comma</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-comment.html">Comment</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">Comment</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-dash.html">Dash</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">Dash</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-date-comma.html">DateComma</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DateComma</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-date-digits.html">DateDigits</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DateDigits</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-decimal-integer.html">DecimalInteger</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DecimalInteger</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-dot.html">Dot</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">Dot</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-equals.html">Equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">Equals</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-error.html">Error</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">Error</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-escape-sequence.html">EscapeSequence</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">EscapeSequence</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-false-boolean.html">FalseBoolean</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">FalseBoolean</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-floating-point.html">FloatingPoint</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">FloatingPoint</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-floating-point-inf.html">FloatingPointInf</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">FloatingPointInf</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-floating-point-na-n.html">FloatingPointNaN</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">FloatingPointNaN</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-hex-integer.html">HexInteger</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">HexInteger</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-inline-table-end.html">InlineTableEnd</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">InlineTableEnd</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-inline-table-start.html">InlineTableStart</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">InlineTableStart</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-m-l-basic-string-end.html">MLBasicStringEnd</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MLBasicStringEnd</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-m-l-literal-string-end.html">MLLiteralStringEnd</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MLLiteralStringEnd</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-new-line.html">NewLine</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">NewLine</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-octal-integer.html">OctalInteger</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">OctalInteger</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-plus.html">Plus</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">Plus</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-quotation-mark.html">QuotationMark</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">QuotationMark</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_array.html">RULE_array</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_array</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_array-table.html">RULE_arrayTable</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_arrayTable</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_array-value.html">RULE_arrayValue</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_arrayValue</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_array-values.html">RULE_arrayValues</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_arrayValues</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_basic-char.html">RULE_basicChar</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_basicChar</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_basic-string.html">RULE_basicString</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_basicString</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_basic-unescaped.html">RULE_basicUnescaped</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_basicUnescaped</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_bin-int.html">RULE_binInt</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_binInt</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_boolean-value.html">RULE_booleanValue</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_booleanValue</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_date.html">RULE_date</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_date</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_date-time.html">RULE_dateTime</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_dateTime</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_day.html">RULE_day</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_day</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_dec-int.html">RULE_decInt</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_decInt</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_escaped.html">RULE_escaped</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_escaped</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_expression.html">RULE_expression</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_expression</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_false-bool.html">RULE_falseBool</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_falseBool</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_float-value.html">RULE_floatValue</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_floatValue</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_hex-int.html">RULE_hexInt</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_hexInt</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_hour.html">RULE_hour</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_hour</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_hour-offset.html">RULE_hourOffset</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_hourOffset</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_inline-table.html">RULE_inlineTable</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_inlineTable</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_inline-table-values.html">RULE_inlineTableValues</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_inlineTableValues</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_integer.html">RULE_integer</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_integer</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_key.html">RULE_key</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_key</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_keyval.html">RULE_keyval</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_keyval</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_literal-body.html">RULE_literalBody</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_literalBody</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_literal-string.html">RULE_literalString</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_literalString</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_local-date.html">RULE_localDate</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_localDate</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_local-date-time.html">RULE_localDateTime</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_localDateTime</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_local-time.html">RULE_localTime</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_localTime</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_minute.html">RULE_minute</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_minute</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_minute-offset.html">RULE_minuteOffset</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_minuteOffset</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_ml-basic-char.html">RULE_mlBasicChar</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_mlBasicChar</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_ml-basic-string.html">RULE_mlBasicString</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_mlBasicString</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_ml-basic-unescaped.html">RULE_mlBasicUnescaped</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_mlBasicUnescaped</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_ml-literal-body.html">RULE_mlLiteralBody</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_mlLiteralBody</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_ml-literal-string.html">RULE_mlLiteralString</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_mlLiteralString</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_month.html">RULE_month</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_month</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_oct-int.html">RULE_octInt</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_octInt</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_offset-date-time.html">RULE_offsetDateTime</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_offsetDateTime</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_quoted-key.html">RULE_quotedKey</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_quotedKey</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_regular-float.html">RULE_regularFloat</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_regularFloat</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_regular-float-inf.html">RULE_regularFloatInf</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_regularFloatInf</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_regular-float-na-n.html">RULE_regularFloatNaN</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_regularFloatNaN</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_second.html">RULE_second</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_second</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_second-fraction.html">RULE_secondFraction</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_secondFraction</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_simple-key.html">RULE_simpleKey</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_simpleKey</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_standard-table.html">RULE_standardTable</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_standardTable</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_string.html">RULE_string</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_string</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_table.html">RULE_table</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_table</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_time.html">RULE_time</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_time</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_time-offset.html">RULE_timeOffset</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_timeOffset</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_toml.html">RULE_toml</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_toml</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_toml-key.html">RULE_tomlKey</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_tomlKey</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_true-bool.html">RULE_trueBool</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_trueBool</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_unquoted-key.html">RULE_unquotedKey</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_unquotedKey</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_val.html">RULE_val</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_val</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-u-l-e_year.html">RULE_year</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RULE_year</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="rule-names.html">ruleNames</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ruleNames</span><span class="symbol">: </span><span class="identifier">Array</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-string-char.html">StringChar</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">StringChar</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-table-key-end.html">TableKeyEnd</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TableKeyEnd</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-table-key-start.html">TableKeyStart</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TableKeyStart</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-time-delimiter.html">TimeDelimiter</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TimeDelimiter</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="token-names.html">tokenNames</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">tokenNames</span><span class="symbol">: </span><span class="identifier">Array</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-triple-apostrophe.html">TripleApostrophe</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TripleApostrophe</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-triple-quotation-mark.html">TripleQuotationMark</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TripleQuotationMark</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-true-boolean.html">TrueBoolean</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TrueBoolean</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-unquoted-key.html">UnquotedKey</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">UnquotedKey</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-v-o-c-a-b-u-l-a-r-y.html">VOCABULARY</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">VOCABULARY</span><span class="symbol">: </span><span class="identifier">Vocabulary</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-w-s.html">WS</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">WS</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-z.html">Z</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">Z</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="array.html">array</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">array</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ArrayContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="array-table.html">arrayTable</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">arrayTable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ArrayTableContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="array-value.html">arrayValue</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">arrayValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ArrayValueContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="array-values.html">arrayValues</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">arrayValues</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ArrayValuesContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="basic-char.html">basicChar</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">basicChar</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BasicCharContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="basic-string.html">basicString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">basicString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BasicStringContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="basic-unescaped.html">basicUnescaped</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">basicUnescaped</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BasicUnescapedContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="bin-int.html">binInt</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">binInt</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BinIntContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="boolean-value.html">booleanValue</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">booleanValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BooleanValueContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="date.html">date</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">date</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">DateContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="date-time.html">dateTime</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">dateTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">DateTimeContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="day.html">day</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">day</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">DayContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="dec-int.html">decInt</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">decInt</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">DecIntContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="escaped.html">escaped</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">escaped</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">EscapedContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="expression.html">expression</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">expression</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ExpressionContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="false-bool.html">falseBool</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">falseBool</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">FalseBoolContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="float-value.html">floatValue</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">floatValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">FloatValueContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-a-t-n.html">getATN</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getATN</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ATN</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-grammar-file-name.html">getGrammarFileName</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getGrammarFileName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-rule-names.html">getRuleNames</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRuleNames</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Array</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-serialized-a-t-n.html">getSerializedATN</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSerializedATN</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-token-names.html">getTokenNames</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><s><span class="identifier">getTokenNames</span></s><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Array</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-vocabulary.html">getVocabulary</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getVocabulary</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Vocabulary</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hex-int.html">hexInt</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hexInt</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">HexIntContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hour.html">hour</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hour</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">HourContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hour-offset.html">hourOffset</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hourOffset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">HourOffsetContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="inline-table.html">inlineTable</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">inlineTable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">InlineTableContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="inline-table-values.html">inlineTableValues</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">inlineTableValues</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">InlineTableValuesContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="integer.html">integer</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">integer</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">IntegerContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="key.html">key</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">key</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">KeyContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="keyval.html">keyval</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">keyval</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">KeyvalContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="literal-body.html">literalBody</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">literalBody</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiteralBodyContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="literal-string.html">literalString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">literalString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiteralStringContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="local-date.html">localDate</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">localDate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalDateContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="local-date-time.html">localDateTime</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">localDateTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalDateTimeContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="local-time.html">localTime</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">localTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalTimeContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="minute.html">minute</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">minute</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MinuteContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="minute-offset.html">minuteOffset</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">minuteOffset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MinuteOffsetContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ml-basic-char.html">mlBasicChar</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">mlBasicChar</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MlBasicCharContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ml-basic-string.html">mlBasicString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">mlBasicString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MlBasicStringContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ml-basic-unescaped.html">mlBasicUnescaped</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">mlBasicUnescaped</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MlBasicUnescapedContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ml-literal-body.html">mlLiteralBody</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">mlLiteralBody</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MlLiteralBodyContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ml-literal-string.html">mlLiteralString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">mlLiteralString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MlLiteralStringContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="month.html">month</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">month</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MonthContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="oct-int.html">octInt</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">octInt</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">OctIntContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="offset-date-time.html">offsetDateTime</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">offsetDateTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">OffsetDateTimeContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="quoted-key.html">quotedKey</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">quotedKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">QuotedKeyContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="regular-float.html">regularFloat</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">regularFloat</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">RegularFloatContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="regular-float-inf.html">regularFloatInf</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">regularFloatInf</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">RegularFloatInfContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="regular-float-na-n.html">regularFloatNaN</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">regularFloatNaN</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">RegularFloatNaNContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="second.html">second</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">second</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">SecondContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="second-fraction.html">secondFraction</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">secondFraction</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">SecondFractionContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="simple-key.html">simpleKey</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">simpleKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">SimpleKeyContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="standard-table.html">standardTable</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">standardTable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">StandardTableContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="string.html">string</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">string</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">StringContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="table.html">table</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">table</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TableContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="time.html">time</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">time</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TimeContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="time-offset.html">timeOffset</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">timeOffset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TimeOffsetContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="toml.html">toml</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toml</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TomlContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="toml-key.html">tomlKey</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">tomlKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TomlKeyContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="true-bool.html">trueBool</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">trueBool</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TrueBoolContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="unquoted-key.html">unquotedKey</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">unquotedKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">UnquotedKeyContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="val.html">val</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">val</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ValContext</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="year.html">year</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">year</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">YearContext</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>org.apache.tuweni.ssz - tuweni</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">tuweni</a>&nbsp;/&nbsp;<a href="./index.html">org.apache.tuweni.ssz</a><br/>
+<br/>
+<h2>Package org.apache.tuweni.ssz</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-s-s-z/index.html">SSZ</a></h4>
+</td>
+<td>
+<p>Simple Serialize (SSZ) encoding and decoding.</p>
+<code><span class="keyword">class </span><span class="identifier">SSZ</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-s-s-z-reader/index.html">SSZReader</a></h4>
+</td>
+<td>
+<p>A reader for consuming values from an SSZ encoded source.</p>
+<code><span class="keyword">interface </span><span class="identifier">SSZReader</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-s-s-z-writer/index.html">SSZWriter</a></h4>
+</td>
+<td>
+<p>A writer for encoding values to SSZ.</p>
+<code><span class="keyword">interface </span><span class="identifier">SSZWriter</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-end-of-s-s-z-exception/index.html">EndOfSSZException</a></h4>
+</td>
+<td>
+<p>Indicates the end of the SSZ source has been reached unexpectedly.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EndOfSSZException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-s-s-z-exception/index.html"><span class="identifier">SSZException</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-invalid-s-s-z-type-exception/index.html">InvalidSSZTypeException</a></h4>
+</td>
+<td>
+<p>Indicates that an unexpected type was encountered when decoding SSZ.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">InvalidSSZTypeException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-s-s-z-exception/index.html"><span class="identifier">SSZException</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-s-s-z-exception/index.html">SSZException</a></h4>
+</td>
+<td>
+<p>Base type for all SSZ encoding and decoding exceptions.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SSZException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

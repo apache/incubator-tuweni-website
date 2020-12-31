@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RLP.decodeToList - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlp</a>&nbsp;/&nbsp;<a href="index.html">RLP</a>&nbsp;/&nbsp;<a href="./decode-to-list.html">decodeToList</a><br/>
+<br/>
+<h1>decodeToList</h1>
+<a name="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPReader, kotlin.collections.MutableList((kotlin.Any)))))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeToList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPReader, kotlin.collections.MutableList((kotlin.Any)))))/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPReader, kotlin.collections.MutableList((kotlin.Any)))))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlp/src/main/java/org/apache/tuweni/rlp/RLP.java#L314">(source)</a>
+<p>Read an RLP encoded list of values from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value, populating a mutable output list.</p>
+<h3>Parameters</h3>
+<p><a name="source"></a>
+<code>source</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The RLP encoded bytes.</p>
+<p><a name="fn"></a>
+<code>fn</code> - <span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A function that will be provided a <code><a href="../-r-l-p-reader/index.html">RLPReader</a></code>.</p>
+<h3>Exceptions</h3>
+<p><a name="InvalidRLPEncodingException"></a>
+<code>InvalidRLPEncodingException</code> - If there is an error decoding the RLP source.</p>
+<p><a name="InvalidRLPTypeException"></a>
+<code>InvalidRLPTypeException</code> - If the first RLP value is not a list.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> The list supplied to <code>fn</code>.</p>
+<a name="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPReader, kotlin.collections.MutableList((kotlin.Any)))))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeToList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPReader, kotlin.collections.MutableList((kotlin.Any)))))/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPReader, kotlin.collections.MutableList((kotlin.Any)))))/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPReader, kotlin.collections.MutableList((kotlin.Any)))))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlp/src/main/java/org/apache/tuweni/rlp/RLP.java#L328">(source)</a>
+<p>Read an RLP encoded list of values from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value, populating a mutable output list.</p>
+<h3>Parameters</h3>
+<p><a name="source"></a>
+<code>source</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The RLP encoded bytes.</p>
+<p><a name="lenient"></a>
+<code>lenient</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> If <code>false</code>, an exception will be thrown if the value is not minimally encoded.</p>
+<p><a name="fn"></a>
+<code>fn</code> - <span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A function that will be provided a <code><a href="../-r-l-p-reader/index.html">RLPReader</a></code>.</p>
+<h3>Exceptions</h3>
+<p><a name="InvalidRLPEncodingException"></a>
+<code>InvalidRLPEncodingException</code> - If there is an error decoding the RLP source.</p>
+<p><a name="InvalidRLPTypeException"></a>
+<code>InvalidRLPTypeException</code> - If the first RLP value is not a list.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> The list supplied to <code>fn</code>.</p>
+<a name="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decodeToList.T)))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">decodeToList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decodeToList.T)))/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decodeToList.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlp/src/main/java/org/apache/tuweni/rlp/RLP.java#L345">(source)</a>
+<p>Read a list of values from the RLP source, populating a list using a function interpreting each value.</p>
+<h3>Parameters</h3>
+<p><a name="source"></a>
+<code>source</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The RLP encoded bytes.</p>
+<p><a name="fn"></a>
+<code>fn</code> - <span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A function creating a new element of the list for each value in the RLP list.</p>
+<p><a name="&lt;T&gt;"></a>
+<code><T></code> - The type of the list elements.</p>
+<h3>Exceptions</h3>
+<p><a name="InvalidRLPEncodingException"></a>
+<code>InvalidRLPEncodingException</code> - If there is an error decoding the RLP source.</p>
+<p><a name="InvalidRLPTypeException"></a>
+<code>InvalidRLPTypeException</code> - If the first RLP value is not a list.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> The list supplied to <code>fn</code>.</p>
+<a name="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decodeToList.T)))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">decodeToList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decodeToList.T)))/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decodeToList.T)))/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decodeToList.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlp/src/main/java/org/apache/tuweni/rlp/RLP.java#L360">(source)</a>
+<p>Read an RLP encoded list of values from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value, populating a mutable output list.</p>
+<h3>Parameters</h3>
+<p><a name="source"></a>
+<code>source</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The RLP encoded bytes.</p>
+<p><a name="lenient"></a>
+<code>lenient</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> If <code>false</code>, an exception will be thrown if the value is not minimally encoded.</p>
+<p><a name="fn"></a>
+<code>fn</code> - <span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A function creating a new element of the list for each value in the RLP list.</p>
+<p><a name="&lt;T&gt;"></a>
+<code><T></code> - The type of the list elements.</p>
+<h3>Exceptions</h3>
+<p><a name="InvalidRLPEncodingException"></a>
+<code>InvalidRLPEncodingException</code> - If there is an error decoding the RLP source.</p>
+<p><a name="InvalidRLPTypeException"></a>
+<code>InvalidRLPTypeException</code> - If the first RLP value is not a list.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> The list supplied to <code>fn</code>.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DNSDaemon - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.discovery</a>&nbsp;/&nbsp;<a href="./index.html">DNSDaemon</a><br/>
+<br/>
+<h1>DNSDaemon</h1>
+<code><span class="keyword">class </span><span class="identifier">DNSDaemon</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/dns-discovery/src/main/kotlin/org/apache/tuweni/discovery/DNSDaemon.kt#L35">(source)</a>
+<p>Resolves DNS records over time, refreshing records.</p>
+<h3>Parameters</h3>
+<p><a name="enrLink"></a>
+<code>enrLink</code> - the ENR link to start with, of the form enrtree://PUBKEY@domain</p>
+<p><a name="listener"></a>
+<code>listener</code> - Listener notified when records are read and whenever they are updated.</p>
+<p><a name="dnsServer"></a>
+<code>dnsServer</code> - the DNS server to use for DNS query. If null, the default DNS server will be used.</p>
+<p><a name="seq"></a>
+<code>seq</code> - the sequence number of the root record. If the root record seq is higher, proceed with visit.</p>
+<p><a name="period"></a>
+<code>period</code> - the period at which to poll DNS records</p>
+<p><a name="resolver"></a>
+<code>resolver</code> - </p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Resolves DNS records over time, refreshing records.</p>
+<code><span class="identifier">DNSDaemon</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.discovery.DNSDaemon$<init>(kotlin.String, org.apache.tuweni.discovery.DNSDaemonListener, kotlin.Long, kotlin.Long, kotlin.String, org.xbill.DNS.Resolver)/enrLink">enrLink</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.discovery.DNSDaemon$<init>(kotlin.String, org.apache.tuweni.discovery.DNSDaemonListener, kotlin.Long, kotlin.Long, kotlin.String, org.xbill.DNS.Resolver)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../-d-n-s-daemon-listener/index.html"><span class="identifier">DNSDaemonListener</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.discovery.DNSDaemon$<init>(kotlin.String, org.apache.tuweni.discovery.DNSDaemonListener, kotlin.Long, kotlin.Long, kotlin.String, org.xbill.DNS.Resolver)/seq">seq</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.discovery.DNSDaemon$<init>(kotlin.String, org.apache.tuweni.discovery.DNSDaemonListener, kotlin.Long, kotlin.Long, kotlin.String, org.xbill.DNS.Resolver)/period">period</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span>&nbsp;<span class="symbol">=</span>&nbsp;60000L<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.discovery.DNSDaemon$<init>(kotlin.String, org.apache.tuweni.discovery.DNSDaemonListener, kotlin.Long, kotlin.Long, kotlin.String, org.xbill.DNS.Resolver)/dnsServer">dnsServer</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.discovery.DNSDaemon$<init>(kotlin.String, org.apache.tuweni.discovery.DNSDaemonListener, kotlin.Long, kotlin.Long, kotlin.String, org.xbill.DNS.Resolver)/resolver">resolver</span><span class="symbol">:</span>&nbsp;<span class="identifier">Resolver</span>&nbsp;<span class="symbol">=</span>&nbsp;SimpleResolver(dnsServer)<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="listeners.html">listeners</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">listeners</span><span class="symbol">: </span><span class="identifier">HashSet</span><span class="symbol">&lt;</span><a href="../-d-n-s-daemon-listener/index.html"><span class="identifier">DNSDaemonListener</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="close.html">close</a></h4>
+</td>
+<td>
+<p>Close the daemon.</p>
+<code><span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start.html">start</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">start</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

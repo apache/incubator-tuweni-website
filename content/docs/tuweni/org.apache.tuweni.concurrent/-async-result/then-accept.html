@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AsyncResult.thenAccept - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.concurrent</a>&nbsp;/&nbsp;<a href="index.html">AsyncResult</a>&nbsp;/&nbsp;<a href="./then-accept.html">thenAccept</a><br/>
+<br/>
+<h1>thenAccept</h1>
+<a name="org.apache.tuweni.concurrent.AsyncResult$thenAccept(java.util.function.Consumer((org.apache.tuweni.concurrent.AsyncResult.T)))"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">thenAccept</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.AsyncResult$thenAccept(java.util.function.Consumer((org.apache.tuweni.concurrent.AsyncResult.T)))/consumer">consumer</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent/src/main/java/org/apache/tuweni/concurrent/AsyncResult.java#L448">(source)</a>
+<p>Returns a completion that, when this result completes normally, completes after executing the supplied consumer with this result's value as an argument.</p>
+<h3>Parameters</h3>
+<p><a name="consumer"></a>
+<code>consumer</code> - <span class="identifier">Consumer</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> The consumer for the value of this result.</p>
+<p><strong>Return</strong><br/>
+<a href="../-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span><span class="symbol">:</span> A completion.</p>
+</BODY>
+</HTML>

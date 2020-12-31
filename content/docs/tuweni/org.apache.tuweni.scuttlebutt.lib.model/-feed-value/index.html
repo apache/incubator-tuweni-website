@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>FeedValue - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.lib.model</a>&nbsp;/&nbsp;<a href="./index.html">FeedValue</a><br/>
+<br/>
+<h1>FeedValue</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FeedValue</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-client-lib/src/main/java/org/apache/tuweni/scuttlebutt/lib/model/FeedValue.java#L24">(source)</a>
+<p>The metadata and contents of a message</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">FeedValue</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.model.FeedValue$<init>(kotlin.String, org.apache.tuweni.scuttlebutt.lib.model.Author, kotlin.Long, kotlin.Long, kotlin.String, com.fasterxml.jackson.databind.JsonNode)/previous">previous</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.model.FeedValue$<init>(kotlin.String, org.apache.tuweni.scuttlebutt.lib.model.Author, kotlin.Long, kotlin.Long, kotlin.String, com.fasterxml.jackson.databind.JsonNode)/author">author</span><span class="symbol">:</span>&nbsp;<a href="../-author/index.html"><span class="identifier">Author</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.model.FeedValue$<init>(kotlin.String, org.apache.tuweni.scuttlebutt.lib.model.Author, kotlin.Long, kotlin.Long, kotlin.String, com.fasterxml.jackson.databind.JsonNode)/sequence">sequence</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.model.FeedValue$<init>(kotlin.String, org.apache.tuweni.scuttlebutt.lib.model.Author, kotlin.Long, kotlin.Long, kotlin.String, com.fasterxml.jackson.databind.JsonNode)/timestamp">timestamp</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.model.FeedValue$<init>(kotlin.String, org.apache.tuweni.scuttlebutt.lib.model.Author, kotlin.Long, kotlin.Long, kotlin.String, com.fasterxml.jackson.databind.JsonNode)/hash">hash</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.model.FeedValue$<init>(kotlin.String, org.apache.tuweni.scuttlebutt.lib.model.Author, kotlin.Long, kotlin.Long, kotlin.String, com.fasterxml.jackson.databind.JsonNode)/content">content</span><span class="symbol">:</span>&nbsp;<span class="identifier">JsonNode</span><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-author.html">getAuthor</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAuthor</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-author/index.html"><span class="identifier">Author</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-content-as.html">getContentAs</a></h4>
+</td>
+<td>
+<p>The message content, deserialized to a Java class.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">getContentAs</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.model.FeedValue$getContentAs(com.fasterxml.jackson.databind.ObjectMapper, java.lang.Class((org.apache.tuweni.scuttlebutt.lib.model.FeedValue.getContentAs.T)))/mapper">mapper</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.model.FeedValue$getContentAs(com.fasterxml.jackson.databind.ObjectMapper, java.lang.Class((org.apache.tuweni.scuttlebutt.lib.model.FeedValue.getContentAs.T)))/clazz">clazz</span><span class="symbol">:</span>&nbsp;<span class="identifier">Class</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-content-as-json-string.html">getContentAsJsonString</a></h4>
+</td>
+<td>
+<p>The message content as a JSON string.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getContentAsJsonString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-hash.html">getHash</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getHash</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-previous.html">getPrevious</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPrevious</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-sequence.html">getSequence</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSequence</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-timestamp.html">getTimestamp</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTimestamp</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

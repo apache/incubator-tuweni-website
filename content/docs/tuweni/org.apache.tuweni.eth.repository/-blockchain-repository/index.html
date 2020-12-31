@@ -1,0 +1,295 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BlockchainRepository - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth.repository</a>&nbsp;/&nbsp;<a href="./index.html">BlockchainRepository</a><br/>
+<br/>
+<h1>BlockchainRepository</h1>
+<code><span class="keyword">class </span><span class="identifier">BlockchainRepository</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth-repository/src/main/kotlin/org/apache/tuweni/eth/repository/BlockchainRepository.kt#L53">(source)</a>
+<p>Repository housing blockchain information.</p>
+<p>This repository allows storing blocks, block headers and metadata about the blockchain, such as forks and head
+information.</p>
+<h3>Parameters</h3>
+<p><a name="chainMetadata"></a>
+<code>chainMetadata</code> - the key-value store to store chain metadata</p>
+<p><a name="blockBodyStore"></a>
+<code>blockBodyStore</code> - the key-value store to store block bodies</p>
+<p><a name="blockHeaderStore"></a>
+<code>blockHeaderStore</code> - the key-value store to store block headers</p>
+<p><a name="transactionReceiptStore"></a>
+<code>transactionReceiptStore</code> - the key-value store to store transaction receipts</p>
+<p><a name="transactionStore"></a>
+<code>transactionStore</code> - the key-value store to store transactions</p>
+<p><a name="stateStore"></a>
+<code>stateStore</code> - the key-value store to store the global state</p>
+<p><a name="blockchainIndex"></a>
+<code>blockchainIndex</code> - the blockchain index to index values</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Repository housing blockchain information.</p>
+<code><span class="identifier">BlockchainRepository</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$<init>(org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.eth.repository.BlockchainIndex)/chainMetadata">chainMetadata</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.kv/-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$<init>(org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.eth.repository.BlockchainIndex)/blockBodyStore">blockBodyStore</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.kv/-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$<init>(org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.eth.repository.BlockchainIndex)/blockHeaderStore">blockHeaderStore</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.kv/-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$<init>(org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.eth.repository.BlockchainIndex)/transactionReceiptStore">transactionReceiptStore</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.kv/-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$<init>(org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.eth.repository.BlockchainIndex)/transactionStore">transactionStore</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.kv/-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$<init>(org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.eth.repository.BlockchainIndex)/stateStore">stateStore</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.kv/-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$<init>(org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.eth.repository.BlockchainIndex)/blockchainIndex">blockchainIndex</span><span class="symbol">:</span>&nbsp;<a href="../-blockchain-index/index.html"><span class="identifier">BlockchainIndex</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="accounts-exists.html">accountsExists</a></h4>
+</td>
+<td>
+<p>Checks if a given account is stored in the repository.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">accountsExists</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$accountsExists(org.apache.tuweni.eth.Address)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="close.html">close</a></h4>
+</td>
+<td>
+<p>Closes the repository.</p>
+<code><span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="find-block-by-hash-or-number.html">findBlockByHashOrNumber</a></h4>
+</td>
+<td>
+<p>Finds a block according to the bytes, which can be a block number or block hash.</p>
+<code><span class="keyword">fun </span><span class="identifier">findBlockByHashOrNumber</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$findBlockByHashOrNumber(org.apache.tuweni.bytes.Bytes)/blockNumberOrBlockHash">blockNumberOrBlockHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="find-blocks-by-parent-hash.html">findBlocksByParentHash</a></h4>
+</td>
+<td>
+<p>Finds hashes of blocks which have a matching parent hash.</p>
+<code><span class="keyword">fun </span><span class="identifier">findBlocksByParentHash</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$findBlocksByParentHash(org.apache.tuweni.bytes.Bytes)/parentHash">parentHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-account.html">getAccount</a></h4>
+</td>
+<td>
+<p>Retrieves an account state for a given account.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAccount</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$getAccount(org.apache.tuweni.eth.Address)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-account-state/index.html"><span class="identifier">AccountState</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-account-code.html">getAccountCode</a></h4>
+</td>
+<td>
+<p>Gets the code of an account</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAccountCode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$getAccountCode(org.apache.tuweni.eth.Address)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-account-store-value.html">getAccountStoreValue</a></h4>
+</td>
+<td>
+<p>Gets a value stored in an account store, or null if the account doesn't exist.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAccountStoreValue</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$getAccountStoreValue(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes32)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$getAccountStoreValue(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes32)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="has-block-body.html">hasBlockBody</a></h4>
+</td>
+<td>
+<p>Returns true if the store contains the block body.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">hasBlockBody</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$hasBlockBody(org.apache.tuweni.bytes.Bytes)/blockHash">blockHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="has-block-header.html">hasBlockHeader</a></h4>
+</td>
+<td>
+<p>Returns true if the store contains the block header.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">hasBlockHeader</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$hasBlockHeader(org.apache.tuweni.bytes.Bytes)/blockHash">blockHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="retrieve-block.html">retrieveBlock</a></h4>
+</td>
+<td>
+<p>Retrieves a block into the repository.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">retrieveBlock</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$retrieveBlock(org.apache.tuweni.bytes.Bytes)/blockHash">blockHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-block/index.html"><span class="identifier">Block</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="retrieve-block-body.html">retrieveBlockBody</a></h4>
+</td>
+<td>
+<p>Retrieves a block body into the repository.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">retrieveBlockBody</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$retrieveBlockBody(org.apache.tuweni.bytes.Bytes)/blockHash">blockHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-block-body/index.html"><span class="identifier">BlockBody</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="retrieve-block-body-bytes.html">retrieveBlockBodyBytes</a></h4>
+</td>
+<td>
+<p>Retrieves a block body into the repository as its serialized RLP bytes representation.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">retrieveBlockBodyBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$retrieveBlockBodyBytes(org.apache.tuweni.bytes.Bytes)/blockHash">blockHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="retrieve-block-header.html">retrieveBlockHeader</a></h4>
+</td>
+<td>
+<p>Retrieves a block header into the repository.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">retrieveBlockHeader</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$retrieveBlockHeader(org.apache.tuweni.bytes.Bytes)/blockHash">blockHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-block-header/index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="retrieve-block-header-bytes.html">retrieveBlockHeaderBytes</a></h4>
+</td>
+<td>
+<p>Retrieves a block header into the repository as its serialized RLP bytes representation.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">retrieveBlockHeaderBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$retrieveBlockHeaderBytes(org.apache.tuweni.bytes.Bytes)/blockHash">blockHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="retrieve-chain-head.html">retrieveChainHead</a></h4>
+</td>
+<td>
+<p>Retrieves the block identified as the chain head.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">retrieveChainHead</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-block/index.html"><span class="identifier">Block</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="retrieve-chain-head-header.html">retrieveChainHeadHeader</a></h4>
+</td>
+<td>
+<p>Retrieves the block header identified as the chain head.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">retrieveChainHeadHeader</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-block-header/index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="retrieve-genesis-block.html">retrieveGenesisBlock</a></h4>
+</td>
+<td>
+<p>Retrieves the block identified as the genesis block</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">retrieveGenesisBlock</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-block/index.html"><span class="identifier">Block</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="retrieve-node-data.html">retrieveNodeData</a></h4>
+</td>
+<td>
+<p>Retrieves data, sending back exactly the list requested. If data is missing, the list entry is null.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">retrieveNodeData</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$retrieveNodeData(kotlin.collections.List((org.apache.tuweni.eth.Hash)))/hashes">hashes</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="retrieve-transaction-receipt.html">retrieveTransactionReceipt</a></h4>
+</td>
+<td>
+<p>Retrieves a transaction receipt associated with a block and an index</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">retrieveTransactionReceipt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$retrieveTransactionReceipt(org.apache.tuweni.bytes.Bytes, kotlin.Int)/blockHash">blockHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$retrieveTransactionReceipt(org.apache.tuweni.bytes.Bytes, kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-transaction-receipt/index.html"><span class="identifier">TransactionReceipt</span></a><span class="symbol">?</span></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">retrieveTransactionReceipt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$retrieveTransactionReceipt(org.apache.tuweni.eth.Hash)/txHash">txHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-transaction-receipt/index.html"><span class="identifier">TransactionReceipt</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="retrieve-transaction-receipts.html">retrieveTransactionReceipts</a></h4>
+</td>
+<td>
+<p>Retrieves all transaction receipts associated with a block.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">retrieveTransactionReceipts</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$retrieveTransactionReceipts(org.apache.tuweni.bytes.Bytes)/blockHash">blockHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-transaction-receipt/index.html"><span class="identifier">TransactionReceipt</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-account.html">storeAccount</a></h4>
+</td>
+<td>
+<p>Stores an account state for a given account.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">storeAccount</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$storeAccount(org.apache.tuweni.eth.Address, org.apache.tuweni.eth.AccountState)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$storeAccount(org.apache.tuweni.eth.Address, org.apache.tuweni.eth.AccountState)/account">account</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-account-state/index.html"><span class="identifier">AccountState</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-block.html">storeBlock</a></h4>
+</td>
+<td>
+<p>Stores a block into the repository.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">storeBlock</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$storeBlock(org.apache.tuweni.eth.Block)/block">block</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-block/index.html"><span class="identifier">Block</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-block-body.html">storeBlockBody</a></h4>
+</td>
+<td>
+<p>Stores a block body into the repository.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">storeBlockBody</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$storeBlockBody(org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.BlockBody)/blockHash">blockHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$storeBlockBody(org.apache.tuweni.eth.Hash, org.apache.tuweni.eth.BlockBody)/blockBody">blockBody</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-block-body/index.html"><span class="identifier">BlockBody</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-block-header.html">storeBlockHeader</a></h4>
+</td>
+<td>
+<p>Stores a block header in the repository.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">storeBlockHeader</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$storeBlockHeader(org.apache.tuweni.eth.BlockHeader)/header">header</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-block-header/index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-code.html">storeCode</a></h4>
+</td>
+<td>
+<p>Stores account code in world state</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">storeCode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$storeCode(org.apache.tuweni.bytes.Bytes)/code">code</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-node-data.html">storeNodeData</a></h4>
+</td>
+<td>
+<p>Stores state node data into the repository.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">storeNodeData</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$storeNodeData(org.apache.tuweni.eth.Hash, org.apache.tuweni.bytes.Bytes)/hash">hash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$storeNodeData(org.apache.tuweni.eth.Hash, org.apache.tuweni.bytes.Bytes)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-transaction.html">storeTransaction</a></h4>
+</td>
+<td>
+<p>Stores a transaction.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">storeTransaction</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$storeTransaction(org.apache.tuweni.eth.Transaction)/transaction">transaction</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-transaction/index.html"><span class="identifier">Transaction</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-transaction-receipt.html">storeTransactionReceipt</a></h4>
+</td>
+<td>
+<p>Stores a transaction receipt in the repository.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">storeTransactionReceipt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$storeTransactionReceipt(org.apache.tuweni.eth.TransactionReceipt, kotlin.Int, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/transactionReceipt">transactionReceipt</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-transaction-receipt/index.html"><span class="identifier">TransactionReceipt</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$storeTransactionReceipt(org.apache.tuweni.eth.TransactionReceipt, kotlin.Int, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/txIndex">txIndex</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$storeTransactionReceipt(org.apache.tuweni.eth.TransactionReceipt, kotlin.Int, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/txHash">txHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository$storeTransactionReceipt(org.apache.tuweni.eth.TransactionReceipt, kotlin.Int, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/blockHash">blockHash</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="init.html">init</a></h4>
+</td>
+<td>
+<p>Initializes a blockchain repository with metadata, placing it in key-value stores.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">init</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository.Companion$init(org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.eth.repository.BlockchainIndex, org.apache.tuweni.eth.Block)/blockBodyStore">blockBodyStore</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.kv/-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository.Companion$init(org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.eth.repository.BlockchainIndex, org.apache.tuweni.eth.Block)/blockHeaderStore">blockHeaderStore</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.kv/-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository.Companion$init(org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.eth.repository.BlockchainIndex, org.apache.tuweni.eth.Block)/chainMetadata">chainMetadata</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.kv/-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository.Companion$init(org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.eth.repository.BlockchainIndex, org.apache.tuweni.eth.Block)/transactionReceiptsStore">transactionReceiptsStore</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.kv/-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository.Companion$init(org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.eth.repository.BlockchainIndex, org.apache.tuweni.eth.Block)/transactionStore">transactionStore</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.kv/-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository.Companion$init(org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.eth.repository.BlockchainIndex, org.apache.tuweni.eth.Block)/stateStore">stateStore</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.kv/-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository.Companion$init(org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.eth.repository.BlockchainIndex, org.apache.tuweni.eth.Block)/blockchainIndex">blockchainIndex</span><span class="symbol">:</span>&nbsp;<a href="../-blockchain-index/index.html"><span class="identifier">BlockchainIndex</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainRepository.Companion$init(org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.kv.KeyValueStore((org.apache.tuweni.bytes.Bytes, )), org.apache.tuweni.eth.repository.BlockchainIndex, org.apache.tuweni.eth.Block)/genesisBlock">genesisBlock</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-block/index.html"><span class="identifier">Block</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">BlockchainRepository</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="in-memory.html">inMemory</a></h4>
+</td>
+<td>
+<p>Constructs a blockchain repository that resides entirely in heap.</p>
+<code><span class="keyword">fun </span><span class="identifier">inMemory</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">BlockchainRepository</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

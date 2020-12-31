@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SecureScuttlebuttStreamClient - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.handshake</a>&nbsp;/&nbsp;<a href="./index.html">SecureScuttlebuttStreamClient</a><br/>
+<br/>
+<h1>SecureScuttlebuttStreamClient</h1>
+<code><span class="keyword">interface </span><span class="identifier">SecureScuttlebuttStreamClient</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-handshake/src/main/java/org/apache/tuweni/scuttlebutt/handshake/SecureScuttlebuttStreamClient.java#L20">(source)</a>
+<p>Interface used to encrypt and decrypt messages to and from a server.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="read-from-server.html">readFromServer</a></h4>
+</td>
+<td>
+<p>Adds message bytes to the reader stream, returning the bytes that could be decrypted.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readFromServer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.handshake.SecureScuttlebuttStreamClient$readFromServer(org.apache.tuweni.bytes.Bytes)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="send-goodbye-to-server.html">sendGoodbyeToServer</a></h4>
+</td>
+<td>
+<p>Prepares a goodbye message to be sent to the server</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">sendGoodbyeToServer</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="send-to-server.html">sendToServer</a></h4>
+</td>
+<td>
+<p>Prepares a message to be sent to the server</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">sendToServer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.handshake.SecureScuttlebuttStreamClient$sendToServer(org.apache.tuweni.bytes.Bytes)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

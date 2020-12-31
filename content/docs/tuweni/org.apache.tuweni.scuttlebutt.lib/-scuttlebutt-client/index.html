@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ScuttlebuttClient - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.lib</a>&nbsp;/&nbsp;<a href="./index.html">ScuttlebuttClient</a><br/>
+<br/>
+<h1>ScuttlebuttClient</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ScuttlebuttClient</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-client-lib/src/main/java/org/apache/tuweni/scuttlebutt/lib/ScuttlebuttClient.java#L25">(source)</a>
+<p>A client for making requests to a scuttlebutt instance with. This is the entry point for accessing service classes which perform operations related to different logical areas. Should be constructed using the ScuttlebuttClientFactory factory class.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">ScuttlebuttClient</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.ScuttlebuttClient$<init>(org.apache.tuweni.scuttlebutt.rpc.mux.Multiplexer)/multiplexer">multiplexer</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.rpc.mux/-multiplexer/index.html"><span class="identifier">Multiplexer</span></a><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-feed-service.html">getFeedService</a></h4>
+</td>
+<td>
+<p>Provides a service for operations that concern scuttlebutt feeds.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getFeedService</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-feed-service/index.html"><span class="identifier">FeedService</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-network-service.html">getNetworkService</a></h4>
+</td>
+<td>
+<p>Provides a service for operations that connect nodes together.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNetworkService</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-network-service/index.html"><span class="identifier">NetworkService</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-social-service.html">getSocialService</a></h4>
+</td>
+<td>
+<p>Provides a service for operations concerning social connections and updating the instance's profile</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSocialService</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-social-service/index.html"><span class="identifier">SocialService</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="raw-request-service.html">rawRequestService</a></h4>
+</td>
+<td>
+<p>Provides a service for making lower level requests that are not supported by higher level services.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">rawRequestService</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-raw-request-service/index.html"><span class="identifier">RawRequestService</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

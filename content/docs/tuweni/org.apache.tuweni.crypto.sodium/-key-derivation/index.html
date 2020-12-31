@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>KeyDerivation - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="./index.html">KeyDerivation</a><br/>
+<br/>
+<h1>KeyDerivation</h1>
+<code><span class="keyword">class </span><span class="identifier">KeyDerivation</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/KeyDerivation.java#L35">(source)</a>
+<p>Key derivation. </p>
+<p> Multiple secret subkeys can be derived from a single master key. </p>
+<p> Given the master key and a key identifier, a subkey can be deterministically computed. However, given a subkey, an attacker cannot compute the master key nor any other subkeys.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-master-key/index.html">MasterKey</a></h4>
+</td>
+<td>
+<p>A KeyDerivation master key.</p>
+<code><span class="keyword">class </span><span class="identifier">MasterKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Destroyable</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Key derivation. </p>
+<code><span class="identifier">KeyDerivation</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="context-length.html">contextLength</a></h4>
+</td>
+<td>
+<p>Provides the required length for the context</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">contextLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-available.html">isAvailable</a></h4>
+</td>
+<td>
+<p>Check if Sodium and key derivation support is available. </p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isAvailable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="max-sub-key-length.html">maxSubKeyLength</a></h4>
+</td>
+<td>
+<p>Provides the maximum length for a new sub key</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">maxSubKeyLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="min-sub-key-length.html">minSubKeyLength</a></h4>
+</td>
+<td>
+<p>Provides the minimum length for a new sub key</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">minSubKeyLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

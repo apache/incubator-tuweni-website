@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DiscoveryV5Service - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.devp2p.v5</a>&nbsp;/&nbsp;<a href="./index.html">DiscoveryV5Service</a><br/>
+<br/>
+<h1>DiscoveryV5Service</h1>
+<code><span class="keyword">interface </span><span class="identifier">DiscoveryV5Service</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineScope</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/devp2p/src/main/kotlin/org/apache/tuweni/devp2p/v5/DiscoveryV5Service.kt#L109">(source)</a>
+<p>Service executes network discovery, according to discv5 specification
+(https://github.com/ethereum/devp2p/blob/master/discv5/discv5.md)</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-peer.html">addPeer</a></h4>
+</td>
+<td>
+<p>Adds a peer to the routing table.</p>
+<code><span class="keyword">open</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">addPeer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.v5.DiscoveryV5Service$addPeer(org.apache.tuweni.bytes.Bytes)/rlpENR">rlpENR</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">addPeer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.v5.DiscoveryV5Service$addPeer(org.apache.tuweni.devp2p.EthereumNodeRecord, io.vertx.core.net.SocketAddress)/enr">enr</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.devp2p/-ethereum-node-record/index.html"><span class="identifier">EthereumNodeRecord</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.v5.DiscoveryV5Service$addPeer(org.apache.tuweni.devp2p.EthereumNodeRecord, io.vertx.core.net.SocketAddress)/address">address</span><span class="symbol">:</span>&nbsp;<span class="identifier">SocketAddress</span>&nbsp;<span class="symbol">=</span>&nbsp;SocketAddress.inetSocketAddress(enr.udp()!!, enr.ip().hostAddress)<span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enr.html">enr</a></h4>
+</td>
+<td>
+<p>Provides the ENR identifying the service.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">enr</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.devp2p/-ethereum-node-record/index.html"><span class="identifier">EthereumNodeRecord</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="request-nodes.html">requestNodes</a></h4>
+</td>
+<td>
+<p>Requests nodes from all connected peers.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">requestNodes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.v5.DiscoveryV5Service$requestNodes(kotlin.Int, kotlin.Long)/distance">distance</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.v5.DiscoveryV5Service$requestNodes(kotlin.Int, kotlin.Long)/maxSecondsToWait">maxSecondsToWait</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span>&nbsp;<span class="symbol">=</span>&nbsp;10<span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">Map</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.devp2p/-ethereum-node-record/index.html"><span class="identifier">EthereumNodeRecord</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.devp2p/-ethereum-node-record/index.html"><span class="identifier">EthereumNodeRecord</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start.html">start</a></h4>
+</td>
+<td>
+<p>Starts the node discovery service.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">start</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start-async.html">startAsync</a></h4>
+</td>
+<td>
+<p>Starts the discovery service, providing a handle to the completion of the start operation.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">startAsync</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="terminate.html">terminate</a></h4>
+</td>
+<td>
+<p>Stops the node discovery service.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">terminate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="terminate-async.html">terminateAsync</a></h4>
+</td>
+<td>
+<p>Stops the node discovery service, providing a handle to the completion of the shutdown operation.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">terminateAsync</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

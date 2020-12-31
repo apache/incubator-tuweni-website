@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ConfigurationError - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.config</a>&nbsp;/&nbsp;<a href="./index.html">ConfigurationError</a><br/>
+<br/>
+<h1>ConfigurationError</h1>
+<code><span class="keyword">class </span><span class="identifier">ConfigurationError</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/config/src/main/java/org/apache/tuweni/config/ConfigurationError.java#L20">(source)</a>
+<p>Provides details regarding an error in the configuration.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Construct an error.</p>
+<code><span class="identifier">ConfigurationError</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.ConfigurationError$<init>(kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">ConfigurationError</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.ConfigurationError$<init>(kotlin.String, kotlin.Throwable)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.config.ConfigurationError$<init>(kotlin.String, kotlin.Throwable)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">Throwable</span><span class="symbol">?</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">ConfigurationError</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.ConfigurationError$<init>(org.apache.tuweni.config.DocumentPosition, kotlin.String)/position">position</span><span class="symbol">:</span>&nbsp;<a href="../-document-position/index.html"><span class="identifier">DocumentPosition</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.config.ConfigurationError$<init>(org.apache.tuweni.config.DocumentPosition, kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">ConfigurationError</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.ConfigurationError$<init>(org.apache.tuweni.config.DocumentPosition, kotlin.String, kotlin.Throwable)/position">position</span><span class="symbol">:</span>&nbsp;<a href="../-document-position/index.html"><span class="identifier">DocumentPosition</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.config.ConfigurationError$<init>(org.apache.tuweni.config.DocumentPosition, kotlin.String, kotlin.Throwable)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.config.ConfigurationError$<init>(org.apache.tuweni.config.DocumentPosition, kotlin.String, kotlin.Throwable)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">Throwable</span><span class="symbol">?</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="message.html">message</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">message</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-message-without-position.html">getMessageWithoutPosition</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getMessageWithoutPosition</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="position.html">position</a></h4>
+</td>
+<td>
+<p>Provides the position in the input where the error occurred.</p>
+<code><span class="keyword">fun </span><span class="identifier">position</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-document-position/index.html"><span class="identifier">DocumentPosition</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

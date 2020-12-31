@@ -1,0 +1,128 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RPCMessage - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.rpc</a>&nbsp;/&nbsp;<a href="./index.html">RPCMessage</a><br/>
+<br/>
+<h1>RPCMessage</h1>
+<code><span class="keyword">class </span><span class="identifier">RPCMessage</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-rpc/src/main/java/org/apache/tuweni/scuttlebutt/rpc/RPCMessage.java#L28">(source)</a>
+<p>Decoded RPC message, making elements of the message available directly.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Default constructor</p>
+<code><span class="identifier">RPCMessage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCMessage$<init>(org.apache.tuweni.bytes.Bytes)/messageBytes">messageBytes</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="as-j-s-o-n.html">asJSON</a></h4>
+</td>
+<td>
+<p>Provides the body of the message, marshalled as a JSON object.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">asJSON</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCMessage$asJSON(com.fasterxml.jackson.databind.ObjectMapper, java.lang.Class((org.apache.tuweni.scuttlebutt.rpc.RPCMessage.asJSON.T)))/objectMapper">objectMapper</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCMessage$asJSON(com.fasterxml.jackson.databind.ObjectMapper, java.lang.Class((org.apache.tuweni.scuttlebutt.rpc.RPCMessage.asJSON.T)))/clazz">clazz</span><span class="symbol">:</span>&nbsp;<span class="identifier">Class</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="as-string.html">asString</a></h4>
+</td>
+<td>
+<p>Provides the body of the message as a UTF-8 string.</p>
+<code><span class="keyword">fun </span><span class="identifier">asString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="body.html">body</a></h4>
+</td>
+<td>
+<p>Provides the body of the message.</p>
+<code><span class="keyword">fun </span><span class="identifier">body</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="body-type.html">bodyType</a></h4>
+</td>
+<td>
+<p>Provides the type of the body of the message: a binary message, a UTF-8 string or a JSON message.</p>
+<code><span class="keyword">fun </span><span class="identifier">bodyType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BodyType</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-error-body.html">getErrorBody</a></h4>
+</td>
+<td>
+<p>Gets error body</p>
+<code><span class="keyword">fun </span><span class="identifier">getErrorBody</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCMessage$getErrorBody(com.fasterxml.jackson.databind.ObjectMapper)/objectMapper">objectMapper</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Optional</span><span class="symbol">&lt;</span><a href="../-r-p-c-error-body/index.html"><span class="identifier">RPCErrorBody</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-exception.html">getException</a></h4>
+</td>
+<td>
+<p>Gets exception from object mapper.</p>
+<code><span class="keyword">fun </span><span class="identifier">getException</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCMessage$getException(com.fasterxml.jackson.databind.ObjectMapper)/objectMapper">objectMapper</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Optional</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.rpc.mux.exceptions/-r-p-c-request-failed-exception/index.html"><span class="identifier">RPCRequestFailedException</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-error-message.html">isErrorMessage</a></h4>
+</td>
+<td>
+<p>Returns true if this an error message.</p>
+<code><span class="keyword">fun </span><span class="identifier">isErrorMessage</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-successful-last-message.html">isSuccessfulLastMessage</a></h4>
+</td>
+<td>
+<p>Returns true is this is the last message in the stream</p>
+<code><span class="keyword">fun </span><span class="identifier">isSuccessfulLastMessage</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="last-message-or-error.html">lastMessageOrError</a></h4>
+</td>
+<td>
+<p>Indicates if the message is either the last in the stream or an error message.</p>
+<code><span class="keyword">fun </span><span class="identifier">lastMessageOrError</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="request-number.html">requestNumber</a></h4>
+</td>
+<td>
+<p>Provides the request number of the message.</p>
+<code><span class="keyword">fun </span><span class="identifier">requestNumber</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="rpc-flags.html">rpcFlags</a></h4>
+</td>
+<td>
+<p>Provide the RPC flags set on the message.</p>
+<code><span class="keyword">fun </span><span class="identifier">rpcFlags</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Byte</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stream.html">stream</a></h4>
+</td>
+<td>
+<p>Indicates if the message is part of a stream.</p>
+<code><span class="keyword">fun </span><span class="identifier">stream</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

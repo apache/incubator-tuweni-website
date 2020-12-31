@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSZ.encodeTo - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ssz</a>&nbsp;/&nbsp;<a href="index.html">SSZ</a>&nbsp;/&nbsp;<a href="./encode-to.html">encodeTo</a><br/>
+<br/>
+<h1>encodeTo</h1>
+<a name="org.apache.tuweni.ssz.SSZ$encodeTo(org.apache.tuweni.ssz.SSZ.encodeTo.T, java.util.function.Consumer((org.apache.tuweni.ssz.SSZWriter)))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ByteBuffer</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">encodeTo</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeTo(org.apache.tuweni.ssz.SSZ.encodeTo.T, java.util.function.Consumer((org.apache.tuweni.ssz.SSZWriter)))/buffer">buffer</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ssz.SSZ$encodeTo(org.apache.tuweni.ssz.SSZ.encodeTo.T, java.util.function.Consumer((org.apache.tuweni.ssz.SSZWriter)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../-s-s-z-writer/index.html"><span class="identifier">SSZWriter</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZ.java#L133">(source)</a>
+<p>Encode values to a <code><a href="#">ByteBuffer</a></code>.</p>
+<h3>Parameters</h3>
+<p><a name="buffer"></a>
+<code>buffer</code> - <span class="identifier">T</span><span class="symbol">:</span> The buffer to write into, starting from its current position.</p>
+<p><a name="fn"></a>
+<code>fn</code> - <span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../-s-s-z-writer/index.html"><span class="identifier">SSZWriter</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A consumer that will be provided with a <code><a href="../-s-s-z-writer/index.html">SSZWriter</a></code> that can consume values.</p>
+<p><a name="&lt;T&gt;"></a>
+<code><T></code> - The type of the buffer.</p>
+<h3>Exceptions</h3>
+<p><a name="BufferOverflowException"></a>
+<code>BufferOverflowException</code> - if the writer attempts to write more than the provided buffer can hold</p>
+<p><a name="ReadOnlyBufferException"></a>
+<code>ReadOnlyBufferException</code> - if the provided buffer is read-only</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">T</span><span class="symbol">:</span> The buffer.</p>
+</BODY>
+</HTML>

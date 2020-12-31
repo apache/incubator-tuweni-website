@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Sodium.searchLibrary - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="index.html">Sodium</a>&nbsp;/&nbsp;<a href="./search-library.html">searchLibrary</a><br/>
+<br/>
+<h1>searchLibrary</h1>
+<a name="org.apache.tuweni.crypto.sodium.Sodium$searchLibrary(kotlin.Array((java.nio.file.Path)))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">searchLibrary</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.crypto.sodium.Sodium$searchLibrary(kotlin.Array((java.nio.file.Path)))/paths">paths</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/Sodium.java#L143">(source)</a>
+<p>Search for, then load and initialize the native libsodium shared library. </p>
+<p> The library will be searched for in all the provided locations, using the library name <code>"sodium"</code>. If this method returns successfully (without throwing a <code><a href="#">LinkageError</a></code>), then all future calls to methods provided by this class will use the loaded library.</p>
+<h3>Parameters</h3>
+<p><a name="paths"></a>
+<code>paths</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> A set of directories to search for the library in.</p>
+<h3>Exceptions</h3>
+<p><a name="LinkageError"></a>
+<code>LinkageError</code> - If the library cannot be found, dependent libraries are missing, or cannot be initialized.</p>
+<a name="org.apache.tuweni.crypto.sodium.Sodium$searchLibrary(kotlin.String, kotlin.Array((java.nio.file.Path)))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">searchLibrary</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Sodium$searchLibrary(kotlin.String, kotlin.Array((java.nio.file.Path)))/libraryName">libraryName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.crypto.sodium.Sodium$searchLibrary(kotlin.String, kotlin.Array((java.nio.file.Path)))/paths">paths</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/Sodium.java#L159">(source)</a>
+<p>Search for, then load and initialize the native libsodium shared library. </p>
+<p> The library will be searched for in all the provided locations, using the provided library name. If this method returns successfully (without throwing a <code><a href="#">LinkageError</a></code>), then all future calls to methods provided by this class will use the loaded library.</p>
+<h3>Parameters</h3>
+<p><a name="libraryName"></a>
+<code>libraryName</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> The name of the library (e.g. <code>"sodium"</code>).</p>
+<p><a name="paths"></a>
+<code>paths</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> A set of directories to search for the library in.</p>
+<h3>Exceptions</h3>
+<p><a name="LinkageError"></a>
+<code>LinkageError</code> - If the library cannot be found, dependent libraries are missing, or cannot be initialized.</p>
+</BODY>
+</HTML>

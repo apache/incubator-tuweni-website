@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SubProtocolHandler.handle - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlpx.wire</a>&nbsp;/&nbsp;<a href="index.html">SubProtocolHandler</a>&nbsp;/&nbsp;<a href="./handle.html">handle</a><br/>
+<br/>
+<h1>handle</h1>
+<a name="org.apache.tuweni.rlpx.wire.SubProtocolHandler$handle(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.Int, org.apache.tuweni.bytes.Bytes)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">handle</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.wire.SubProtocolHandler$handle(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.Int, org.apache.tuweni.bytes.Bytes)/connection">connection</span><span class="symbol">:</span>&nbsp;<a href="../-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.wire.SubProtocolHandler$handle(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.Int, org.apache.tuweni.bytes.Bytes)/messageType">messageType</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.wire.SubProtocolHandler$handle(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.Int, org.apache.tuweni.bytes.Bytes)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlpx/src/main/java/org/apache/tuweni/rlpx/wire/SubProtocolHandler.java#L31">(source)</a>
+<p>Handle an incoming wire protocol message</p>
+<h3>Parameters</h3>
+<p><a name="connection"></a>
+<code>connection</code> - <a href="../-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">!</span><span class="symbol">:</span> the peer connection</p>
+<p><a name="messageType"></a>
+<code>messageType</code> - <span class="identifier">Int</span><span class="symbol">:</span> the type of the message</p>
+<p><a name="message"></a>
+<code>message</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the message to be handled</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">!</span><span class="symbol">:</span> a handle tracking the completion of the handling of the message.</p>
+</BODY>
+</HTML>

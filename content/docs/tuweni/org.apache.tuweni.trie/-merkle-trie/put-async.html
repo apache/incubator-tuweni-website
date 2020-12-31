@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MerkleTrie.putAsync - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.trie</a>&nbsp;/&nbsp;<a href="index.html">MerkleTrie</a>&nbsp;/&nbsp;<a href="./put-async.html">putAsync</a><br/>
+<br/>
+<h1>putAsync</h1>
+<a name="org.apache.tuweni.trie.MerkleTrie$putAsync(org.apache.tuweni.trie.MerkleTrie.K, org.apache.tuweni.trie.MerkleTrie.V)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">putAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$putAsync(org.apache.tuweni.trie.MerkleTrie.K, org.apache.tuweni.trie.MerkleTrie.V)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$putAsync(org.apache.tuweni.trie.MerkleTrie.K, org.apache.tuweni.trie.MerkleTrie.V)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/merkle-trie/src/main/kotlin/org/apache/tuweni/trie/MerkleTrie.kt#L99">(source)</a>
+<p>Updates the value that corresponds to the specified key, creating the value if one does not already exist.</p>
+<p>If the value is null, deletes the value that corresponds to the specified key, if such a value exists.</p>
+<h3>Parameters</h3>
+<p><a name="key"></a>
+<code>key</code> - The key that corresponds to the value to be updated.</p>
+<p><a name="value"></a>
+<code>value</code> - The value to associate the key with.</p>
+<p><strong>Return</strong><br/>
+A completion that will complete when the value has been put into the trie.</p>
+<a name="org.apache.tuweni.trie.MerkleTrie$putAsync(kotlinx.coroutines.CoroutineDispatcher, org.apache.tuweni.trie.MerkleTrie.K, org.apache.tuweni.trie.MerkleTrie.V)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">putAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$putAsync(kotlinx.coroutines.CoroutineDispatcher, org.apache.tuweni.trie.MerkleTrie.K, org.apache.tuweni.trie.MerkleTrie.V)/dispatcher">dispatcher</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineDispatcher</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$putAsync(kotlinx.coroutines.CoroutineDispatcher, org.apache.tuweni.trie.MerkleTrie.K, org.apache.tuweni.trie.MerkleTrie.V)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$putAsync(kotlinx.coroutines.CoroutineDispatcher, org.apache.tuweni.trie.MerkleTrie.K, org.apache.tuweni.trie.MerkleTrie.V)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/merkle-trie/src/main/kotlin/org/apache/tuweni/trie/MerkleTrie.kt#L111">(source)</a>
+<p>Updates the value that corresponds to the specified key, creating the value if one does not already exist.</p>
+<p>If the value is null, deletes the value that corresponds to the specified key, if such a value exists.</p>
+<h3>Parameters</h3>
+<p><a name="key"></a>
+<code>key</code> - The key that corresponds to the value to be updated.</p>
+<p><a name="value"></a>
+<code>value</code> - The value to associate the key with.</p>
+<p><a name="dispatcher"></a>
+<code>dispatcher</code> - The co-routine dispatcher for asynchronous tasks.</p>
+<p><strong>Return</strong><br/>
+A completion that will complete when the value has been put into the trie.</p>
+</BODY>
+</HTML>

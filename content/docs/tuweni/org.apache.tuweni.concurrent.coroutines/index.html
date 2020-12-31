@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>org.apache.tuweni.concurrent.coroutines - tuweni</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">tuweni</a>&nbsp;/&nbsp;<a href="./index.html">org.apache.tuweni.concurrent.coroutines</a><br/>
+<br/>
+<h2>Package org.apache.tuweni.concurrent.coroutines</h2>
+<h3>Extensions for External Classes</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="kotlinx.coroutines.-coroutine-scope/index.html">kotlinx.coroutines.CoroutineScope</a></h4>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<h4><a href="kotlinx.coroutines.-deferred/index.html">kotlinx.coroutines.Deferred</a></h4>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<h4><a href="kotlinx.coroutines.-job/index.html">kotlinx.coroutines.Job</a></h4>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<h4><a href="org.apache.tuweni.concurrent.-async-completion/index.html">org.apache.tuweni.concurrent.AsyncCompletion</a></h4>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<h4><a href="org.apache.tuweni.concurrent.-async-result/index.html">org.apache.tuweni.concurrent.AsyncResult</a></h4>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="timeout-and-retry.html">timeoutAndRetry</a></h4>
+</td>
+<td>
+<p>Cancel and retry a suspending block until a non-null result is obtained.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <span class="identifier">timeoutAndRetry</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.coroutines$timeoutAndRetry(kotlin.Long, kotlin.coroutines.SuspendFunction1((kotlin.Int, org.apache.tuweni.concurrent.coroutines.timeoutAndRetry.R)))/timeout">timeout</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.coroutines$timeoutAndRetry(kotlin.Long, kotlin.coroutines.SuspendFunction1((kotlin.Int, org.apache.tuweni.concurrent.coroutines.timeoutAndRetry.R)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="identifier">Int</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">R</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">R</span></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <span class="identifier">timeoutAndRetry</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.coroutines$timeoutAndRetry(kotlin.Long, kotlin.Int, kotlin.coroutines.SuspendFunction1((kotlin.Int, org.apache.tuweni.concurrent.coroutines.timeoutAndRetry.R)))/timeout">timeout</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.coroutines$timeoutAndRetry(kotlin.Long, kotlin.Int, kotlin.coroutines.SuspendFunction1((kotlin.Int, org.apache.tuweni.concurrent.coroutines.timeoutAndRetry.R)))/maxRetries">maxRetries</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.coroutines$timeoutAndRetry(kotlin.Long, kotlin.Int, kotlin.coroutines.SuspendFunction1((kotlin.Int, org.apache.tuweni.concurrent.coroutines.timeoutAndRetry.R)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="identifier">Int</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">R</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">R</span><span class="symbol">?</span></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <span class="identifier">timeoutAndRetry</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.concurrent.coroutines$timeoutAndRetry(kotlin.Function1((kotlin.Int, kotlin.Long)), kotlin.coroutines.SuspendFunction1((kotlin.Int, org.apache.tuweni.concurrent.coroutines.timeoutAndRetry.R)))/timeout">timeout</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">Int</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Long</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.concurrent.coroutines$timeoutAndRetry(kotlin.Function1((kotlin.Int, kotlin.Long)), kotlin.coroutines.SuspendFunction1((kotlin.Int, org.apache.tuweni.concurrent.coroutines.timeoutAndRetry.R)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="identifier">Int</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">R</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">R</span><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

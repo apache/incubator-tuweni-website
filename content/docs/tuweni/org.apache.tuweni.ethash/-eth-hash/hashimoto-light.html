@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EthHash.hashimotoLight - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ethash</a>&nbsp;/&nbsp;<a href="index.html">EthHash</a>&nbsp;/&nbsp;<a href="./hashimoto-light.html">hashimotoLight</a><br/>
+<br/>
+<h1>hashimotoLight</h1>
+<a name="org.apache.tuweni.ethash.EthHash$hashimotoLight(kotlin.Long, kotlin.Array((org.apache.tuweni.units.bigints.UInt32)), org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">hashimotoLight</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethash.EthHash$hashimotoLight(kotlin.Long, kotlin.Array((org.apache.tuweni.units.bigints.UInt32)), org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/size">size</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethash.EthHash$hashimotoLight(kotlin.Long, kotlin.Array((org.apache.tuweni.units.bigints.UInt32)), org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/cache">cache</span><span class="symbol">:</span>&nbsp;<span class="identifier">Array</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int32/index.html"><span class="identifier">UInt32</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethash.EthHash$hashimotoLight(kotlin.Long, kotlin.Array((org.apache.tuweni.units.bigints.UInt32)), org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/header">header</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethash.EthHash$hashimotoLight(kotlin.Long, kotlin.Array((org.apache.tuweni.units.bigints.UInt32)), org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/pow/src/main/java/org/apache/tuweni/ethash/EthHash.java#L98">(source)</a>
+<p>Hashimoto Light Hashing.</p>
+<h3>Parameters</h3>
+<p><a name="size"></a>
+<code>size</code> - <span class="identifier">Long</span><span class="symbol">:</span> the size of the full data set</p>
+<p><a name="cache"></a>
+<code>cache</code> - <span class="identifier">Array</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int32/index.html"><span class="identifier">UInt32</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> EthHash Cache</p>
+<p><a name="header"></a>
+<code>header</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> Truncated BlockHeader hash</p>
+<p><a name="nonce"></a>
+<code>nonce</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> Nonce to use for hashing</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> A byte array holding MixHash in its first 32 bytes and the EthHash result in the bytes 32 to 63</p>
+</BODY>
+</HTML>

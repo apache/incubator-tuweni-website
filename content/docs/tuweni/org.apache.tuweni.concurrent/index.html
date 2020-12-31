@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>org.apache.tuweni.concurrent - tuweni</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">tuweni</a>&nbsp;/&nbsp;<a href="./index.html">org.apache.tuweni.concurrent</a><br/>
+<br/>
+<h2>Package org.apache.tuweni.concurrent</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-async-completion/index.html">AsyncCompletion</a></h4>
+</td>
+<td>
+<p>A completion that will be complete at a future time.</p>
+<code><span class="keyword">interface </span><span class="identifier">AsyncCompletion</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-async-result/index.html">AsyncResult</a></h4>
+</td>
+<td>
+<p>A result that will be available at a future time.</p>
+<code><span class="keyword">interface </span><span class="identifier">AsyncResult</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-completable-async-completion/index.html">CompletableAsyncCompletion</a></h4>
+</td>
+<td>
+<p>An <code><a href="-async-completion/index.html">AsyncCompletion</a></code> that can later be completed successfully or with a provided exception.</p>
+<code><span class="keyword">interface </span><span class="identifier">CompletableAsyncCompletion</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-completable-async-result/index.html">CompletableAsyncResult</a></h4>
+</td>
+<td>
+<p>An <code><a href="-async-result/index.html">AsyncResult</a></code> that can be later completed successfully with a provided value, or completed with an exception.</p>
+<code><span class="keyword">interface </span><span class="identifier">CompletableAsyncResult</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-expiring-map/index.html">ExpiringMap</a></h4>
+</td>
+<td>
+<p>A concurrent hash map that stores values along with an expiry. Values are stored in the map until their expiry is reached, after which they will no longer be available and will appear as if removed. The actual removal is done lazily whenever the map is accessed, or when the <code><a href="-expiring-map/purge-expired.html">#purgeExpired()</a></code> method is invoked.</p>
+<code><span class="keyword">class </span><span class="identifier">ExpiringMap</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">MutableMap</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-expiring-set/index.html">ExpiringSet</a></h4>
+</td>
+<td>
+<p>A concurrent hash set that stores values along with an expiry. Elements are stored in the set until their expiry is reached, after which they will no longer be available and will appear as if removed. The actual removal is done lazily whenever the set is accessed, or when the <code><a href="-expiring-set/purge-expired.html">#purgeExpired()</a></code> method is invoked.</p>
+<code><span class="keyword">class </span><span class="identifier">ExpiringSet</span><span class="symbol">&lt;</span><span class="identifier">E</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">E</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Protocol - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.hobbits</a>&nbsp;/&nbsp;<a href="./index.html">Protocol</a><br/>
+<br/>
+<h1>Protocol</h1>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">Protocol</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/hobbits/src/main/kotlin/org/apache/tuweni/hobbits/Message.kt#L109">(source)</a>
+<p>Subprotocols supported by the hobbits protocol.</p>
+<h3>Parameters</h3>
+<p><a name="code"></a>
+<code>code</code> - the byte identifying the subprotocol</p>
+<h3>Enum Values</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-g-o-s-s-i-p.html">GOSSIP</a></h4>
+</td>
+<td>
+<p>Gossip protocol message</p>
+</td>
+</tr>
+<tr>
+<td>
+<h4><a href="-p-i-n-g.html">PING</a></h4>
+</td>
+<td>
+<p>Ping message</p>
+</td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-p-c.html">RPC</a></h4>
+</td>
+<td>
+<p>RPC message</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="code.html">code</a></h4>
+</td>
+<td>
+<p>the byte identifying the subprotocol</p>
+<code><span class="keyword">val </span><span class="identifier">code</span><span class="symbol">: </span><span class="identifier">Byte</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="from-byte.html">fromByte</a></h4>
+</td>
+<td>
+<p>Finds a protocol from a byte, or throws an error if no protocol exists for that code.</p>
+<code><span class="keyword">fun </span><span class="identifier">fromByte</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.hobbits.Protocol.Companion$fromByte(kotlin.Byte)/b">b</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Protocol</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

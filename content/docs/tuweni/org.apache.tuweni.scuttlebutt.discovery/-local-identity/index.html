@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>LocalIdentity - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.discovery</a>&nbsp;/&nbsp;<a href="./index.html">LocalIdentity</a><br/>
+<br/>
+<h1>LocalIdentity</h1>
+<code><span class="keyword">class </span><span class="identifier">LocalIdentity</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-discovery/src/main/java/org/apache/tuweni/scuttlebutt/discovery/LocalIdentity.java#L31">(source)</a>
+<p>Representation of an identity associated with an IP and port, used for Scuttlebutt local discovery. </p>
+<p> See https://ssbc.github.io/scuttlebutt-protocol-guide/ for a detailed description of this identity.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Constructor for a local identity</p>
+<code><span class="identifier">LocalIdentity</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.discovery.LocalIdentity$<init>(kotlin.String, kotlin.String, org.apache.tuweni.scuttlebutt.Identity)/ip">ip</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.discovery.LocalIdentity$<init>(kotlin.String, kotlin.String, org.apache.tuweni.scuttlebutt.Identity)/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.discovery.LocalIdentity$<init>(kotlin.String, kotlin.String, org.apache.tuweni.scuttlebutt.Identity)/id">id</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt/-identity/index.html"><span class="identifier">Identity</span></a><span class="symbol">!</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">LocalIdentity</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.discovery.LocalIdentity$<init>(kotlin.String, kotlin.Int, org.apache.tuweni.scuttlebutt.Identity)/ip">ip</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.discovery.LocalIdentity$<init>(kotlin.String, kotlin.Int, org.apache.tuweni.scuttlebutt.Identity)/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.discovery.LocalIdentity$<init>(kotlin.String, kotlin.Int, org.apache.tuweni.scuttlebutt.Identity)/id">id</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt/-identity/index.html"><span class="identifier">Identity</span></a><span class="symbol">!</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">LocalIdentity</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.discovery.LocalIdentity$<init>(java.net.InetSocketAddress, org.apache.tuweni.scuttlebutt.Identity)/addr">addr</span><span class="symbol">:</span>&nbsp;<span class="identifier">InetSocketAddress</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.discovery.LocalIdentity$<init>(java.net.InetSocketAddress, org.apache.tuweni.scuttlebutt.Identity)/id">id</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt/-identity/index.html"><span class="identifier">Identity</span></a><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.discovery.LocalIdentity$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-string.html">fromString</a></h4>
+</td>
+<td>
+<p>Create a local identity from a String of the form net:IP address:port~shs:base64 of public key</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.discovery.LocalIdentity$fromString(kotlin.String)/str">str</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalIdentity</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-canonical-form.html">toCanonicalForm</a></h4>
+</td>
+<td>
+<p>The canonical form of an invite</p>
+<code><span class="keyword">fun </span><span class="identifier">toCanonicalForm</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DiscoveryPeerRepository.get - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ethclient</a>&nbsp;/&nbsp;<a href="index.html">DiscoveryPeerRepository</a>&nbsp;/&nbsp;<a href="./get.html">get</a><br/>
+<br/>
+<h1>get</h1>
+<a name="org.apache.tuweni.ethclient.DiscoveryPeerRepository$get(kotlin.String, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.PublicKey)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.DiscoveryPeerRepository$get(kotlin.String, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.PublicKey)/host">host</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethclient.DiscoveryPeerRepository$get(kotlin.String, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.PublicKey)/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethclient.DiscoveryPeerRepository$get(kotlin.String, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.PublicKey)/nodeId">nodeId</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.devp2p/-peer/index.html"><span class="identifier">Peer</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth-client/src/main/kotlin/org/apache/tuweni/ethclient/DiscoveryPeerRepository.kt#L34">(source)</a>
+<p>Get a Peer based on a URI components.</p>
+<p>The returned peer will use the endpoint from the URI, unless the peer is already active, in
+which case its endpoint will be unchanged.</p>
+<h3>Parameters</h3>
+<p><a name="host"></a>
+<code>host</code> - the peer host</p>
+<p><a name="port"></a>
+<code>port</code> - the peer port</p>
+<p><a name="nodeId"></a>
+<code>nodeId</code> - the public key associated with the peer</p>
+<a name="org.apache.tuweni.ethclient.DiscoveryPeerRepository$get(java.net.URI)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.DiscoveryPeerRepository$get(java.net.URI)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">URI</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.devp2p/-peer/index.html"><span class="identifier">Peer</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth-client/src/main/kotlin/org/apache/tuweni/ethclient/DiscoveryPeerRepository.kt#L40">(source)</a>
+<p>Get a Peer based on a URI.</p>
+<p>The returned peer will use the endpoint from the URI, unless the peer is already active, in
+which case its endpoint will be unchanged.</p>
+<h3>Parameters</h3>
+<p><a name="uri"></a>
+<code>uri</code> - the enode URI</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if the URI is not a valid enode URI</p>
+<p><strong>Return</strong><br/>
+the peer</p>
+</BODY>
+</HTML>

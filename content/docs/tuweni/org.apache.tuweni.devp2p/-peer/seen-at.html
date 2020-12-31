@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Peer.seenAt - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.devp2p</a>&nbsp;/&nbsp;<a href="index.html">Peer</a>&nbsp;/&nbsp;<a href="./seen-at.html">seenAt</a><br/>
+<br/>
+<h1>seenAt</h1>
+<a name="org.apache.tuweni.devp2p.Peer$seenAt(kotlin.Long)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">seenAt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.Peer$seenAt(kotlin.Long)/time">time</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/devp2p/src/main/kotlin/org/apache/tuweni/devp2p/Peer.kt#L96">(source)</a>
+<p>Set the <a href="last-seen.html">lastSeen</a> time to the current time.</p>
+<p>Will only update <a href="last-seen.html">lastSeen</a> if the new time is more recent than their current values.</p>
+<h3>Parameters</h3>
+<p><a name="time"></a>
+<code>time</code> - the time when the endpoint was verified, in milliseconds since the epoch</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - if there is no endpoint for this peer</p>
+</BODY>
+</HTML>

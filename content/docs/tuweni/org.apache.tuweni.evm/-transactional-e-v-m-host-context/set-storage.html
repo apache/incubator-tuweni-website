@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TransactionalEVMHostContext.setStorage - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.evm</a>&nbsp;/&nbsp;<a href="index.html">TransactionalEVMHostContext</a>&nbsp;/&nbsp;<a href="./set-storage.html">setStorage</a><br/>
+<br/>
+<h1>setStorage</h1>
+<a name="org.apache.tuweni.evm.TransactionalEVMHostContext$setStorage(kotlin.ByteArray, kotlin.ByteArray, kotlin.ByteArray)"></a>
+<code><span class="keyword">fun </span><span class="identifier">setStorage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$setStorage(kotlin.ByteArray, kotlin.ByteArray, kotlin.ByteArray)/addressBytes">addressBytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$setStorage(kotlin.ByteArray, kotlin.ByteArray, kotlin.ByteArray)/keyBytes">keyBytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$setStorage(kotlin.ByteArray, kotlin.ByteArray, kotlin.ByteArray)/valueBytes">valueBytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/evm/src/main/kotlin/org/apache/tuweni/evm/TransactionalEVMHostContext.kt#L127">(source)</a>
+<p>Set storage function.</p>
+<p>This function is used by a VM to update the given account storage entry. The VM MUST make
+sure that the account exists. This requirement is only a formality because VM implementations
+only modify storage of the account of the current execution context (i.e. referenced by
+evmc_message::destination).</p>
+<h3>Parameters</h3>
+<p><a name="address"></a>
+<code>address</code> - The address of the account.</p>
+<p><a name="key"></a>
+<code>key</code> - The index of the storage entry.</p>
+<p><a name="value"></a>
+<code>value</code> - The value to be stored.</p>
+<p><strong>Return</strong><br/>
+The effect on the storage item:
+The value of a storage item has been left unchanged: 0 -&gt; 0 and X -&gt; X.
+EVMC_STORAGE_UNCHANGED = 0,
+The value of a storage item has been modified: X -&gt; Y.
+EVMC_STORAGE_MODIFIED = 1,
+A storage item has been modified after being modified before: X -&gt; Y -&gt; Z.
+EVMC_STORAGE_MODIFIED_AGAIN = 2,
+A new storage item has been added: 0 -&gt; X.
+EVMC_STORAGE_ADDED = 3,
+A storage item has been deleted: X -&gt; 0.
+EVMC_STORAGE_DELETED = 4</p>
+</BODY>
+</HTML>

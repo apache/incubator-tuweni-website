@@ -1,0 +1,191 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Transaction - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth</a>&nbsp;/&nbsp;<a href="./index.html">Transaction</a><br/>
+<br/>
+<h1>Transaction</h1>
+<code><span class="keyword">class </span><span class="identifier">Transaction</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth/src/main/java/org/apache/tuweni/eth/Transaction.java#L36">(source)</a>
+<p>An Ethereum transaction.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Create a transaction.</p>
+<code><span class="identifier">Transaction</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair)/gasPrice">gasPrice</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair)/gasLimit">gasLimit</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-gas/index.html"><span class="identifier">Gas</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../-address/index.html"><span class="identifier">Address</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair)/payload">payload</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair)/keyPair">keyPair</span><span class="symbol">:</span>&nbsp;<span class="identifier">KeyPair</span><span class="symbol">!</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">Transaction</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair, kotlin.Int)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair, kotlin.Int)/gasPrice">gasPrice</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair, kotlin.Int)/gasLimit">gasLimit</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-gas/index.html"><span class="identifier">Gas</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair, kotlin.Int)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../-address/index.html"><span class="identifier">Address</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair, kotlin.Int)/payload">payload</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair, kotlin.Int)/keyPair">keyPair</span><span class="symbol">:</span>&nbsp;<span class="identifier">KeyPair</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.SECP256K1.KeyPair, kotlin.Int)/chainId">chainId</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">Transaction</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.Signature)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.Signature)/gasPrice">gasPrice</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.Signature)/gasLimit">gasLimit</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-gas/index.html"><span class="identifier">Gas</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.Signature)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../-address/index.html"><span class="identifier">Address</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.Signature)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.Signature)/payload">payload</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.Signature)/chainId">chainId</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$<init>(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.Signature)/signature">signature</span><span class="symbol">:</span>&nbsp;<span class="identifier">Signature</span><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Transaction$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="extract-public-key.html">extractPublicKey</a></h4>
+</td>
+<td>
+<p>Extracts the public key of the signature of the transaction. If the transaction is invalid, the public key may be null.</p>
+<code><span class="keyword">fun </span><span class="identifier">extractPublicKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">PublicKey</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-bytes.html">fromBytes</a></h4>
+</td>
+<td>
+<p>Deserialize a transaction from RLP encoded bytes.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Transaction$fromBytes(org.apache.tuweni.bytes.Bytes)/encoded">encoded</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Transaction</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Transaction$fromBytes(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/encoded">encoded</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$fromBytes(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Transaction</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-chain-id.html">getChainId</a></h4>
+</td>
+<td>
+<p>Provides the chain id</p>
+<code><span class="keyword">fun </span><span class="identifier">getChainId</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-gas-limit.html">getGasLimit</a></h4>
+</td>
+<td>
+<p>Provides the gas limit</p>
+<code><span class="keyword">fun </span><span class="identifier">getGasLimit</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.ethereum/-gas/index.html"><span class="identifier">Gas</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-gas-price.html">getGasPrice</a></h4>
+</td>
+<td>
+<p>Provides the gas price</p>
+<code><span class="keyword">fun </span><span class="identifier">getGasPrice</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-hash.html">getHash</a></h4>
+</td>
+<td>
+<p>Calculate and return the hash for this transaction.</p>
+<code><span class="keyword">fun </span><span class="identifier">getHash</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-nonce.html">getNonce</a></h4>
+</td>
+<td>
+<p>Provides the transaction nonce</p>
+<code><span class="keyword">fun </span><span class="identifier">getNonce</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-payload.html">getPayload</a></h4>
+</td>
+<td>
+<p>Provides the transaction payload</p>
+<code><span class="keyword">fun </span><span class="identifier">getPayload</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-sender.html">getSender</a></h4>
+</td>
+<td>
+<p>Provides the sender's address</p>
+<code><span class="keyword">fun </span><span class="identifier">getSender</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-address/index.html"><span class="identifier">Address</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-signature.html">getSignature</a></h4>
+</td>
+<td>
+<p>Provides the transaction signature</p>
+<code><span class="keyword">fun </span><span class="identifier">getSignature</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Signature</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-to.html">getTo</a></h4>
+</td>
+<td>
+<p>Provides the target contact address.</p>
+<code><span class="keyword">fun </span><span class="identifier">getTo</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-address/index.html"><span class="identifier">Address</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-value.html">getValue</a></h4>
+</td>
+<td>
+<p>Provides the amount of eth to transfer</p>
+<code><span class="keyword">fun </span><span class="identifier">getValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-contract-creation.html">isContractCreation</a></h4>
+</td>
+<td>
+<p>Returns true if the transaction creates a contract.</p>
+<code><span class="keyword">fun </span><span class="identifier">isContractCreation</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-from.html">readFrom</a></h4>
+</td>
+<td>
+<p>Deserialize a transaction from an RLP input.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">readFrom</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Transaction$readFrom(org.apache.tuweni.rlp.RLPReader)/reader">reader</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlp/-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Transaction</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="signature-data.html">signatureData</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">signatureData</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Transaction$signatureData(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$signatureData(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int)/gasPrice">gasPrice</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$signatureData(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int)/gasLimit">gasLimit</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-gas/index.html"><span class="identifier">Gas</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$signatureData(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../-address/index.html"><span class="identifier">Address</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$signatureData(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$signatureData(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int)/payload">payload</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$signatureData(org.apache.tuweni.units.bigints.UInt256, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.units.ethereum.Gas, org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei, org.apache.tuweni.bytes.Bytes, kotlin.Int)/chainId">chainId</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-bytes.html">toBytes</a></h4>
+</td>
+<td>
+<p>Provides the transaction bytes</p>
+<code><span class="keyword">fun </span><span class="identifier">toBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-to.html">writeTo</a></h4>
+</td>
+<td>
+<p>Write this transaction to an RLP output.</p>
+<code><span class="keyword">fun </span><span class="identifier">writeTo</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Transaction$writeTo(org.apache.tuweni.rlp.RLPWriter)/writer">writer</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlp/-r-l-p-writer/index.html"><span class="identifier">RLPWriter</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

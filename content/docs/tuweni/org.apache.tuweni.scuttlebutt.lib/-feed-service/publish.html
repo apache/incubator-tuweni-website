@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>FeedService.publish - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.lib</a>&nbsp;/&nbsp;<a href="index.html">FeedService</a>&nbsp;/&nbsp;<a href="./publish.html">publish</a><br/>
+<br/>
+<h1>publish</h1>
+<a name="org.apache.tuweni.scuttlebutt.lib.FeedService$publish(org.apache.tuweni.scuttlebutt.lib.FeedService.publish.T)"></a>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.lib.model/-scuttlebutt-message-content/index.html"><span class="identifier">ScuttlebuttMessageContent</span></a><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">publish</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.FeedService$publish(org.apache.tuweni.scuttlebutt.lib.FeedService.publish.T)/content">content</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.lib.model/-feed-message/index.html"><span class="identifier">FeedMessage</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-client-lib/src/main/java/org/apache/tuweni/scuttlebutt/lib/FeedService.java#L66">(source)</a>
+<p>Publishes a message to the instance's own scuttlebutt feed, assuming the client established the connection using keys authorising it to perform this operation.</p>
+<h3>Parameters</h3>
+<p><a name="content"></a>
+<code>content</code> - <span class="identifier">T</span><span class="symbol">:</span> the message to publish to the feed</p>
+<p><a name="&lt;T&gt;"></a>
+<code><T></code> - the content published should extend ScuttlebuttMessageContent to ensure the 'type' field is a String</p>
+<h3>Exceptions</h3>
+<p><a name="JsonProcessingException"></a>
+<code>JsonProcessingException</code> - if 'content' could not be marshalled to JSON.</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.lib.model/-feed-message/index.html"><span class="identifier">FeedMessage</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> the newly published message, asynchronously</p>
+</BODY>
+</HTML>

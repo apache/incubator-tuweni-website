@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Message.readMessage - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.hobbits</a>&nbsp;/&nbsp;<a href="index.html">Message</a>&nbsp;/&nbsp;<a href="./read-message.html">readMessage</a><br/>
+<br/>
+<h1>readMessage</h1>
+<a name="org.apache.tuweni.hobbits.Message.Companion$readMessage(org.apache.tuweni.bytes.Bytes)"></a>
+<code><span class="identifier">@JvmStatic</span> <span class="keyword">fun </span><span class="identifier">readMessage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.hobbits.Message.Companion$readMessage(org.apache.tuweni.bytes.Bytes)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Message</span></a><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/hobbits/src/main/kotlin/org/apache/tuweni/hobbits/Message.kt#L50">(source)</a>
+<p>Reads a message from a byte buffer.</p>
+<h3>Parameters</h3>
+<p><a name="message"></a>
+<code>message</code> - the message bytes</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if the message doesn't start with the correct preamble.</p>
+<p><strong>Return</strong><br/>
+the message interpreted by the codec, or null if the message is too short.</p>
+</BODY>
+</HTML>

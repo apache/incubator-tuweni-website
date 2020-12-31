@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RLPxConnectionFactory.init - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlpx</a>&nbsp;/&nbsp;<a href="index.html">RLPxConnectionFactory</a>&nbsp;/&nbsp;<a href="./init.html">init</a><br/>
+<br/>
+<h1>init</h1>
+<a name="org.apache.tuweni.rlpx.RLPxConnectionFactory$init(org.apache.tuweni.crypto.SECP256K1.KeyPair, org.apache.tuweni.crypto.SECP256K1.PublicKey, org.apache.tuweni.crypto.SECP256K1.KeyPair, org.apache.tuweni.bytes.Bytes32)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">init</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxConnectionFactory$init(org.apache.tuweni.crypto.SECP256K1.KeyPair, org.apache.tuweni.crypto.SECP256K1.PublicKey, org.apache.tuweni.crypto.SECP256K1.KeyPair, org.apache.tuweni.bytes.Bytes32)/keyPair">keyPair</span><span class="symbol">:</span>&nbsp;<span class="identifier">KeyPair</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxConnectionFactory$init(org.apache.tuweni.crypto.SECP256K1.KeyPair, org.apache.tuweni.crypto.SECP256K1.PublicKey, org.apache.tuweni.crypto.SECP256K1.KeyPair, org.apache.tuweni.bytes.Bytes32)/remotePublicKey">remotePublicKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxConnectionFactory$init(org.apache.tuweni.crypto.SECP256K1.KeyPair, org.apache.tuweni.crypto.SECP256K1.PublicKey, org.apache.tuweni.crypto.SECP256K1.KeyPair, org.apache.tuweni.bytes.Bytes32)/ephemeralKeyPair">ephemeralKeyPair</span><span class="symbol">:</span>&nbsp;<span class="identifier">KeyPair</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxConnectionFactory$init(org.apache.tuweni.crypto.SECP256K1.KeyPair, org.apache.tuweni.crypto.SECP256K1.PublicKey, org.apache.tuweni.crypto.SECP256K1.KeyPair, org.apache.tuweni.bytes.Bytes32)/initiatorNonce">initiatorNonce</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlpx/src/main/java/org/apache/tuweni/rlpx/RLPxConnectionFactory.java#L133">(source)</a>
+<p>Creates a handshake initiation message using ephemeral keys and a random nonce.</p>
+<h3>Parameters</h3>
+<p><a name="keyPair"></a>
+<code>keyPair</code> - <span class="identifier">KeyPair</span><span class="symbol">!</span><span class="symbol">:</span> our key pair</p>
+<p><a name="remotePublicKey"></a>
+<code>remotePublicKey</code> - <span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">:</span> the peer public key</p>
+<p><a name="ephemeralKeyPair"></a>
+<code>ephemeralKeyPair</code> - <span class="identifier">KeyPair</span><span class="symbol">!</span><span class="symbol">:</span> our ephemeral key pair for this connection</p>
+<p><a name="initiatorNonce"></a>
+<code>initiatorNonce</code> - <a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span><span class="symbol">:</span> our random nonce</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the bytes of a handshake initiation message for a given peer</p>
+</BODY>
+</HTML>

@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>FeedService.createFeedStream - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.lib</a>&nbsp;/&nbsp;<a href="index.html">FeedService</a>&nbsp;/&nbsp;<a href="./create-feed-stream.html">createFeedStream</a><br/>
+<br/>
+<h1>createFeedStream</h1>
+<a name="org.apache.tuweni.scuttlebutt.lib.FeedService$createFeedStream(java.util.function.Function((java.lang.Runnable, org.apache.tuweni.scuttlebutt.lib.model.StreamHandler((org.apache.tuweni.scuttlebutt.lib.model.FeedMessage)))))"></a>
+<code><span class="keyword">fun </span><span class="identifier">createFeedStream</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.FeedService$createFeedStream(java.util.function.Function((java.lang.Runnable, org.apache.tuweni.scuttlebutt.lib.model.StreamHandler((org.apache.tuweni.scuttlebutt.lib.model.FeedMessage)))))/streamHandler">streamHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.lib.model/-stream-handler/index.html"><span class="identifier">StreamHandler</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.lib.model/-feed-message/index.html"><span class="identifier">FeedMessage</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-client-lib/src/main/java/org/apache/tuweni/scuttlebutt/lib/FeedService.java#L93">(source)</a>
+<p>Streams every message in the instance's database.</p>
+<h3>Parameters</h3>
+<p><a name="streamHandler"></a>
+<code>streamHandler</code> - <span class="identifier">Function</span><span class="symbol">&lt;</span><span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.lib.model/-stream-handler/index.html"><span class="identifier">StreamHandler</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.lib.model/-feed-message/index.html"><span class="identifier">FeedMessage</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> a function that can be used to construct the handler for processing the streamed messages, using a runnable which can be ran to close the stream early.</p>
+<h3>Exceptions</h3>
+<p><a name="JsonProcessingException"></a>
+<code>JsonProcessingException</code> - if the request to open the stream could not be made due to a JSON marshalling error.</p>
+<p><a name="ConnectionClosedException"></a>
+<code>ConnectionClosedException</code> - if the stream could not be started because the connection is no longer open.</p>
+</BODY>
+</HTML>

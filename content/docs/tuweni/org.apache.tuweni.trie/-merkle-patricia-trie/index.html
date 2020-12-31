@@ -1,0 +1,129 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MerklePatriciaTrie - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.trie</a>&nbsp;/&nbsp;<a href="./index.html">MerklePatriciaTrie</a><br/>
+<br/>
+<h1>MerklePatriciaTrie</h1>
+<code><span class="keyword">class </span><span class="identifier">MerklePatriciaTrie</span><span class="symbol">&lt;</span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-merkle-trie/index.html"><span class="identifier">MerkleTrie</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/merkle-trie/src/main/kotlin/org/apache/tuweni/trie/MerklePatriciaTrie.kt#L41">(source)</a>
+<p>An in-memory <a href="../-merkle-trie/index.html">MerkleTrie</a>.</p>
+<h3>Parameters</h3>
+<p><a name="valueSerializer"></a>
+<code>valueSerializer</code> - A function for serializing values to bytes.</p>
+<p><strong>Parameters</strong><br/>
+</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Creates an empty trie.</p>
+<code><span class="identifier">MerklePatriciaTrie</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerklePatriciaTrie$<init>(kotlin.Function1((org.apache.tuweni.trie.MerklePatriciaTrie.V, org.apache.tuweni.bytes.Bytes)))/valueSerializer">valueSerializer</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">V</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<p>Returns the value that corresponds to the specified key, or an empty byte array if no such value exists.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerklePatriciaTrie$get(org.apache.tuweni.bytes.Bytes)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-async.html">getAsync</a></h4>
+</td>
+<td>
+<p>Returns the value that corresponds to the specified key, or an empty byte array if no such value exists.</p>
+<code><span class="keyword">fun </span><span class="identifier">getAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerklePatriciaTrie$getAsync(org.apache.tuweni.bytes.Bytes)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">V</span><span class="symbol">?</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="put.html">put</a></h4>
+</td>
+<td>
+<p>Updates the value that corresponds to the specified key, creating the value if one does not already exist.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">put</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerklePatriciaTrie$put(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.trie.MerklePatriciaTrie.V)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.trie.MerklePatriciaTrie$put(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.trie.MerklePatriciaTrie.V)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="put-async.html">putAsync</a></h4>
+</td>
+<td>
+<p>Updates the value that corresponds to the specified key, creating the value if one does not already exist.</p>
+<code><span class="keyword">fun </span><span class="identifier">putAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerklePatriciaTrie$putAsync(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.trie.MerklePatriciaTrie.V)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.trie.MerklePatriciaTrie$putAsync(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.trie.MerklePatriciaTrie.V)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove.html">remove</a></h4>
+</td>
+<td>
+<p>Deletes the value that corresponds to the specified key, if such a value exists.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">remove</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerklePatriciaTrie$remove(org.apache.tuweni.bytes.Bytes)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-async.html">removeAsync</a></h4>
+</td>
+<td>
+<p>Deletes the value that corresponds to the specified key, if such a value exists.</p>
+<code><span class="keyword">fun </span><span class="identifier">removeAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerklePatriciaTrie$removeAsync(org.apache.tuweni.bytes.Bytes)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="root-hash.html">rootHash</a></h4>
+</td>
+<td>
+<p>Returns the KECCAK256 hash of the root node of the trie.</p>
+<code><span class="keyword">fun </span><span class="identifier">rootHash</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="create.html">create</a></h4>
+</td>
+<td>
+<p>Create a trie.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">V</span><span class="symbol">&gt;</span> <span class="identifier">create</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerklePatriciaTrie.Companion$create(java.util.function.Function((org.apache.tuweni.trie.MerklePatriciaTrie.Companion.create.V, org.apache.tuweni.bytes.Bytes)))/valueSerializer">valueSerializer</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="identifier">V</span><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MerklePatriciaTrie</span></a><span class="symbol">&lt;</span><span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="storing-bytes.html">storingBytes</a></h4>
+</td>
+<td>
+<p>Create a trie with keys and values of type <a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a>.</p>
+<code><span class="keyword">fun </span><span class="identifier">storingBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MerklePatriciaTrie</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="storing-strings.html">storingStrings</a></h4>
+</td>
+<td>
+<p>Create a trie with value of type <a href="#">String</a>.</p>
+<code><span class="keyword">fun </span><span class="identifier">storingStrings</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MerklePatriciaTrie</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

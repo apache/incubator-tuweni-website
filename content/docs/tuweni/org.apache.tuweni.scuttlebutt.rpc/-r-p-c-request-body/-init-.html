@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RPCRequestBody.<init> - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.rpc</a>&nbsp;/&nbsp;<a href="index.html">RPCRequestBody</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="org.apache.tuweni.scuttlebutt.rpc.RPCRequestBody$&lt;init&gt;(kotlin.collections.MutableList((kotlin.String)), org.apache.tuweni.scuttlebutt.rpc.RPCRequestType, kotlin.collections.MutableList((kotlin.Any)))"></a>
+<code><span class="identifier">RPCRequestBody</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCRequestBody$<init>(kotlin.collections.MutableList((kotlin.String)), org.apache.tuweni.scuttlebutt.rpc.RPCRequestType, kotlin.collections.MutableList((kotlin.Any)))/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCRequestBody$<init>(kotlin.collections.MutableList((kotlin.String)), org.apache.tuweni.scuttlebutt.rpc.RPCRequestType, kotlin.collections.MutableList((kotlin.Any)))/type">type</span><span class="symbol">:</span>&nbsp;<a href="../-r-p-c-request-type/index.html"><span class="identifier">RPCRequestType</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCRequestBody$<init>(kotlin.collections.MutableList((kotlin.String)), org.apache.tuweni.scuttlebutt.rpc.RPCRequestType, kotlin.collections.MutableList((kotlin.Any)))/args">args</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span></code>
+<h3>Parameters</h3>
+<p><a name="name"></a>
+<code>name</code> - <span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> the function to be in invoked. If the function is in a namespace, the first n-1 items in the array are the namespace followed by the function name (e.g. 'blobs.get' becomes ['blobs', 'get']). If the function is not in a namespace, it is an array with one item (e.g. ['createFeedStream'].</p>
+<p><a name="type"></a>
+<code>type</code> - <a href="../-r-p-c-request-type/index.html"><span class="identifier">RPCRequestType</span></a><span class="symbol">!</span><span class="symbol">:</span> the type of the request (e.g. stream or async.)</p>
+<p><a name="args"></a>
+<code>args</code> - <span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> The args passed to the function being invoked. Each item can be any arbitrary object which is JSON serializable (e.g. String, Int, list, object.)</p>
+</BODY>
+</HTML>

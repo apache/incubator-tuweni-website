@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EthereumNodeRecord.fromRLP - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.devp2p</a>&nbsp;/&nbsp;<a href="index.html">EthereumNodeRecord</a>&nbsp;/&nbsp;<a href="./from-r-l-p.html">fromRLP</a><br/>
+<br/>
+<h1>fromRLP</h1>
+<a name="org.apache.tuweni.devp2p.EthereumNodeRecord.Companion$fromRLP(org.apache.tuweni.bytes.Bytes)"></a>
+<code><span class="identifier">@JvmStatic</span> <span class="keyword">fun </span><span class="identifier">fromRLP</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.EthereumNodeRecord.Companion$fromRLP(org.apache.tuweni.bytes.Bytes)/rlp">rlp</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">EthereumNodeRecord</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/devp2p/src/main/kotlin/org/apache/tuweni/devp2p/EthereumNodeRecord.kt#L70">(source)</a>
+<p>Creates an ENR from its serialized form as a RLP list</p>
+<h3>Parameters</h3>
+<p><a name="rlp"></a>
+<code>rlp</code> - the serialized form of the ENR</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if the rlp bytes length is longer than 300 bytes</p>
+<p><strong>Return</strong><br/>
+the ENR</p>
+<a name="org.apache.tuweni.devp2p.EthereumNodeRecord.Companion$fromRLP(org.apache.tuweni.rlp.RLPReader)"></a>
+<code><span class="identifier">@JvmStatic</span> <span class="keyword">fun </span><span class="identifier">fromRLP</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.EthereumNodeRecord.Companion$fromRLP(org.apache.tuweni.rlp.RLPReader)/reader">reader</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlp/-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">EthereumNodeRecord</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/devp2p/src/main/kotlin/org/apache/tuweni/devp2p/EthereumNodeRecord.kt#L84">(source)</a><br/>
+<a name="org.apache.tuweni.devp2p.EthereumNodeRecord.Companion$fromRLP(org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.bytes.Bytes)"></a>
+<code><span class="identifier">@JvmStatic</span> <span class="keyword">fun </span><span class="identifier">fromRLP</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.EthereumNodeRecord.Companion$fromRLP(org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.bytes.Bytes)/reader">reader</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlp/-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.EthereumNodeRecord.Companion$fromRLP(org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.bytes.Bytes)/rlp">rlp</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">EthereumNodeRecord</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/devp2p/src/main/kotlin/org/apache/tuweni/devp2p/EthereumNodeRecord.kt#L101">(source)</a>
+<p>Creates an ENR from its serialized form as a RLP list</p>
+<h3>Parameters</h3>
+<p><a name="reader"></a>
+<code>reader</code> - the RLP reader</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if the rlp bytes length is longer than 300 bytes</p>
+<p><strong>Return</strong><br/>
+the ENR</p>
+</BODY>
+</HTML>

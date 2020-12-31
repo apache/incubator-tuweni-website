@@ -1,0 +1,267 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UInt256Value - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.units.bigints</a>&nbsp;/&nbsp;<a href="./index.html">UInt256Value</a><br/>
+<br/>
+<h1>UInt256Value</h1>
+<code><span class="keyword">interface </span><span class="identifier">UInt256Value</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">UInt256Value</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Comparable</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/units/src/main/java/org/apache/tuweni/units/bigints/UInt256Value.java#L42">(source)</a>
+<p>Represents a 256-bit (32 bytes) unsigned integer value. </p>
+<p> A <code><a href="./index.html">UInt256Value</a></code> is an unsigned integer value stored with 32 bytes, so whose value can range between 0 and 2^256-1. </p>
+<p> This interface defines operations for value types with a 256-bit precision range. The methods provided by this interface take parameters of the same type (and also <code>long</code>. This provides type safety by ensuring calculations cannot mix different <code>UInt256Value</code> types. </p>
+<p> Where only a pure numerical 256-bit value is required, <code><a href="../-u-int256/index.html">UInt256</a></code> should be used. </p>
+<p> It is strongly advised to extend <code><a href="../-base-u-int256-value/index.html">BaseUInt256Value</a></code> rather than implementing this interface directly. Doing so provides type safety in that quantities of different units cannot be mixed accidentally.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add.html">add</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this + value)</code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$add(org.apache.tuweni.units.bigints.UInt256Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$add(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-exact.html">addExact</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this + value)</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addExact</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$addExact(org.apache.tuweni.units.bigints.UInt256Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addExact</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$addExact(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-mod.html">addMod</a></h4>
+</td>
+<td>
+<p>Returns a value equivalent to <code>((this + value) mod modulus)</code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">addMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$addMod(org.apache.tuweni.units.bigints.UInt256Value.T, org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$addMod(org.apache.tuweni.units.bigints.UInt256Value.T, org.apache.tuweni.units.bigints.UInt256)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">addMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$addMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$addMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt256)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">addMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$addMod(kotlin.Long, kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$addMod(kotlin.Long, kotlin.Long)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="bit-length.html">bitLength</a></h4>
+</td>
+<td>
+<p>Provides the number of bits following and including the highest-order ("leftmost") one-bit in the binary representation of this value, or zero if all bits are zero.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">bitLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="divide.html">divide</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this / value)</code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">divide</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$divide(org.apache.tuweni.units.bigints.UInt256Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">divide</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$divide(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="divide-ceil.html">divideCeil</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>ceiling(this / value)</code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">divideCeil</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$divideCeil(org.apache.tuweni.units.bigints.UInt256Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">divideCeil</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$divideCeil(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="fits-int.html">fitsInt</a></h4>
+</td>
+<td>
+<p>Returns true if the value can fit in an int.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">fitsInt</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="fits-long.html">fitsLong</a></h4>
+</td>
+<td>
+<p>Returns true if the value can fit in a long.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">fitsLong</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="int-value.html">intValue</a></h4>
+</td>
+<td>
+<p>Provides this value as an int.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">intValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-zero.html">isZero</a></h4>
+</td>
+<td>
+<p>Returns true is the value is 0.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isZero</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mod.html">mod</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this mod modulus)</code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">mod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$mod(org.apache.tuweni.units.bigints.UInt256)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">mod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$mod(kotlin.Long)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mod0.html">mod0</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this mod modulus)</code>, or 0 if modulus is 0.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">mod0</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$mod0(org.apache.tuweni.units.bigints.UInt256)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">mod0</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$mod0(kotlin.Long)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="multiply.html">multiply</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this * value)</code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">multiply</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$multiply(org.apache.tuweni.units.bigints.UInt256Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">multiply</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$multiply(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="multiply-mod.html">multiplyMod</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>((this * value) mod modulus)</code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">multiplyMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$multiplyMod(org.apache.tuweni.units.bigints.UInt256Value.T, org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$multiplyMod(org.apache.tuweni.units.bigints.UInt256Value.T, org.apache.tuweni.units.bigints.UInt256)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">multiplyMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$multiplyMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt256)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$multiplyMod(kotlin.Long, org.apache.tuweni.units.bigints.UInt256)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">multiplyMod</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$multiplyMod(kotlin.Long, kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$multiplyMod(kotlin.Long, kotlin.Long)/modulus">modulus</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="number-of-leading-zeros.html">numberOfLeadingZeros</a></h4>
+</td>
+<td>
+<p>Provides the number of zero bits preceding the highest-order one-bit.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">numberOfLeadingZeros</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="plus.html">plus</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this + value)</code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">plus</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$plus(org.apache.tuweni.units.bigints.UInt256Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">plus</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$plus(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="pow.html">pow</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this&lt;sup&gt;exponent&lt;/sup&gt; mod 2&lt;sup&gt;256&lt;/sup&gt;)</code> </p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">pow</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$pow(org.apache.tuweni.units.bigints.UInt256)/exponent">exponent</span><span class="symbol">:</span>&nbsp;<a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">pow</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$pow(kotlin.Long)/exponent">exponent</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="subtract.html">subtract</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this - value)</code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">subtract</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$subtract(org.apache.tuweni.units.bigints.UInt256Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">subtract</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$subtract(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="subtract-exact.html">subtractExact</a></h4>
+</td>
+<td>
+<p>Returns a value that is <code>(this - value)</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">subtractExact</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$subtractExact(org.apache.tuweni.units.bigints.UInt256Value.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">subtractExact</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.units.bigints.UInt256Value$subtractExact(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-big-integer.html">toBigInteger</a></h4>
+</td>
+<td>
+<p>Provides the value as a BigInteger.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toBigInteger</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-bytes.html">toBytes</a></h4>
+</td>
+<td>
+<p>Provides the value as bytes.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">toBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-hex-string.html">toHexString</a></h4>
+</td>
+<td>
+<p>This value represented as an hexadecimal string. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toHexString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-long.html">toLong</a></h4>
+</td>
+<td>
+<p>Provides the value as a long.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toLong</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-minimal-bytes.html">toMinimalBytes</a></h4>
+</td>
+<td>
+<p>Provides the value as bytes without any leading zero bytes.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">toMinimalBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-short-hex-string.html">toShortHexString</a></h4>
+</td>
+<td>
+<p>Returns this value represented as a minimal hexadecimal string (without any leading zero)</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toShortHexString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-u-int256.html">toUInt256</a></h4>
+</td>
+<td>
+<p>Convert this value to a <code><a href="../-u-int256/index.html">UInt256</a></code>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">toUInt256</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-base-u-int256-value/index.html">BaseUInt256Value</a></h4>
+</td>
+<td>
+<p>Base class for <code><a href="./index.html">UInt256Value</a></code>. </p>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">BaseUInt256Value</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">UInt256Value</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">UInt256Value</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-u-int256/index.html">UInt256</a></h4>
+</td>
+<td>
+<p>An unsigned 256-bit precision number. This is a raw <code><a href="./index.html">UInt256Value</a></code> - a 256-bit precision unsigned number of no particular unit.</p>
+<code><span class="keyword">class </span><span class="identifier">UInt256</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">UInt256Value</span></a><span class="symbol">&lt;</span><a href="../-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

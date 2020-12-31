@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RLPxConnection - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlpx</a>&nbsp;/&nbsp;<a href="./index.html">RLPxConnection</a><br/>
+<br/>
+<h1>RLPxConnection</h1>
+<code><span class="keyword">class </span><span class="identifier">RLPxConnection</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlpx/src/main/java/org/apache/tuweni/rlpx/RLPxConnection.java#L44">(source)</a>
+<p>Connection between 2 peers over the RLPx protocol. </p>
+<p> The RLPx protocol creates a exchange of unique secrets during an initial handshake. The peers proceed to communicate using the shared secrets. </p>
+<p> This connection allows encrypting and decrypting messages with a remote peer.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="configure-after-handshake.html">configureAfterHandshake</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">configureAfterHandshake</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxConnection$configureAfterHandshake(org.apache.tuweni.rlpx.wire.HelloMessage)/helloMessage">helloMessage</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-hello-message/index.html"><span class="identifier">HelloMessage</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxConnection$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-complemented-by.html">isComplementedBy</a></h4>
+</td>
+<td>
+<p>Checks if two RLPx connections represent both ends of a connection. </p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isComplementedBy</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxConnection$isComplementedBy(org.apache.tuweni.rlpx.RLPxConnection, org.apache.tuweni.rlpx.RLPxConnection)/one">one</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">RLPxConnection</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxConnection$isComplementedBy(org.apache.tuweni.rlpx.RLPxConnection, org.apache.tuweni.rlpx.RLPxConnection)/other">other</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">RLPxConnection</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="peer-public-key.html">peerPublicKey</a></h4>
+</td>
+<td>
+<p>Provides the peer public key</p>
+<code><span class="keyword">fun </span><span class="identifier">peerPublicKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">PublicKey</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="public-key.html">publicKey</a></h4>
+</td>
+<td>
+<p>Provides the local public key</p>
+<code><span class="keyword">fun </span><span class="identifier">publicKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">PublicKey</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-frame.html">readFrame</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">readFrame</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxConnection$readFrame(org.apache.tuweni.bytes.Bytes)/messageFrame">messageFrame</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-r-l-px-message/index.html"><span class="identifier">RLPxMessage</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stream.html">stream</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">stream</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxConnection$stream(org.apache.tuweni.bytes.Bytes, java.util.function.Consumer((org.apache.tuweni.rlpx.RLPxMessage)))/newBytes">newBytes</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxConnection$stream(org.apache.tuweni.bytes.Bytes, java.util.function.Consumer((org.apache.tuweni.rlpx.RLPxMessage)))/messageConsumer">messageConsumer</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../-r-l-px-message/index.html"><span class="identifier">RLPxMessage</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write.html">write</a></h4>
+</td>
+<td>
+<p>Frames a message for sending to an RLPx peer, encrypting it and calculating the appropriate MACs.</p>
+<code><span class="keyword">fun </span><span class="identifier">write</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlpx.RLPxConnection$write(org.apache.tuweni.rlpx.RLPxMessage)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../-r-l-px-message/index.html"><span class="identifier">RLPxMessage</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

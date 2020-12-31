@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RPCResponse - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.rpc</a>&nbsp;/&nbsp;<a href="./index.html">RPCResponse</a><br/>
+<br/>
+<h1>RPCResponse</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RPCResponse</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-rpc/src/main/java/org/apache/tuweni/scuttlebutt/rpc/RPCResponse.java#L28">(source)</a>
+<p>A successful RPC response.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>A successful RPC response.</p>
+<code><span class="identifier">RPCResponse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCResponse$<init>(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.scuttlebutt.rpc.RPCFlag.BodyType)/body">body</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCResponse$<init>(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.scuttlebutt.rpc.RPCFlag.BodyType)/bodyType">bodyType</span><span class="symbol">:</span>&nbsp;<span class="identifier">BodyType</span><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="as-j-s-o-n.html">asJSON</a></h4>
+</td>
+<td>
+<p>Provides the body of the message, marshalled as a JSON object.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">asJSON</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCResponse$asJSON(com.fasterxml.jackson.databind.ObjectMapper, java.lang.Class((org.apache.tuweni.scuttlebutt.rpc.RPCResponse.asJSON.T)))/objectMapper">objectMapper</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCResponse$asJSON(com.fasterxml.jackson.databind.ObjectMapper, java.lang.Class((org.apache.tuweni.scuttlebutt.rpc.RPCResponse.asJSON.T)))/clazz">clazz</span><span class="symbol">:</span>&nbsp;<span class="identifier">Class</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">asJSON</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCResponse$asJSON(com.fasterxml.jackson.databind.ObjectMapper, com.fasterxml.jackson.core.type.TypeReference((org.apache.tuweni.scuttlebutt.rpc.RPCResponse.asJSON.T)))/objectMapper">objectMapper</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCResponse$asJSON(com.fasterxml.jackson.databind.ObjectMapper, com.fasterxml.jackson.core.type.TypeReference((org.apache.tuweni.scuttlebutt.rpc.RPCResponse.asJSON.T)))/typeReference">typeReference</span><span class="symbol">:</span>&nbsp;<span class="identifier">TypeReference</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="as-string.html">asString</a></h4>
+</td>
+<td>
+<p>Provides the body of the message as a UTF-8 string.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">asString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="body.html">body</a></h4>
+</td>
+<td>
+<p>Response body</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">body</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="body-type.html">bodyType</a></h4>
+</td>
+<td>
+<p>Responsse body type</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">bodyType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BodyType</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

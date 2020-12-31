@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DiscoveryPeerRepository - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ethclient</a>&nbsp;/&nbsp;<a href="./index.html">DiscoveryPeerRepository</a><br/>
+<br/>
+<h1>DiscoveryPeerRepository</h1>
+<code><span class="keyword">class </span><span class="identifier">DiscoveryPeerRepository</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.devp2p/-peer-repository/index.html"><span class="identifier">PeerRepository</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth-client/src/main/kotlin/org/apache/tuweni/ethclient/DiscoveryPeerRepository.kt#L32">(source)</a>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">DiscoveryPeerRepository</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.DiscoveryPeerRepository$<init>(org.apache.tuweni.peer.repository.PeerRepository)/repository">repository</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-peer-repository/index.html"><span class="identifier">PeerRepository</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<p>Get a Peer based on a URI components.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.DiscoveryPeerRepository$get(kotlin.String, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.PublicKey)/host">host</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethclient.DiscoveryPeerRepository$get(kotlin.String, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.PublicKey)/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethclient.DiscoveryPeerRepository$get(kotlin.String, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.PublicKey)/nodeId">nodeId</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.devp2p/-peer/index.html"><span class="identifier">Peer</span></a></code>
+<p>Get a Peer based on a URI.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.DiscoveryPeerRepository$get(java.net.URI)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">URI</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.devp2p/-peer/index.html"><span class="identifier">Peer</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-async.html">getAsync</a></h4>
+</td>
+<td>
+<p>Get a Peer based on a URI.</p>
+<code><span class="keyword">fun </span><span class="identifier">getAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.DiscoveryPeerRepository$getAsync(java.net.URI)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">URI</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.devp2p/-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">&gt;</span></code>
+<p>Get a Peer based on a URI string.</p>
+<code><span class="keyword">fun </span><span class="identifier">getAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.DiscoveryPeerRepository$getAsync(kotlin.String)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.devp2p/-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

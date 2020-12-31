@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RPCStreamRequest - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.rpc</a>&nbsp;/&nbsp;<a href="./index.html">RPCStreamRequest</a><br/>
+<br/>
+<h1>RPCStreamRequest</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RPCStreamRequest</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-rpc/src/main/java/org/apache/tuweni/scuttlebutt/rpc/RPCStreamRequest.java#L25">(source)</a>
+<p>A request which returns a 'source' type result (e.g. opens up a stream that is followed by the request ID.)</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>The details for the function (the name of the function and its arguments.)</p>
+<code><span class="identifier">RPCStreamRequest</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCStreamRequest$<init>(org.apache.tuweni.scuttlebutt.rpc.RPCFunction, kotlin.collections.MutableList((kotlin.Any)))/function">function</span><span class="symbol">:</span>&nbsp;<a href="../-r-p-c-function/index.html"><span class="identifier">RPCFunction</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCStreamRequest$<init>(org.apache.tuweni.scuttlebutt.rpc.RPCFunction, kotlin.collections.MutableList((kotlin.Any)))/arguments">arguments</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-r-p-c-flags.html">getRPCFlags</a></h4>
+</td>
+<td>
+<p>The request flags</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRPCFlags</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Array</span><span class="symbol">&lt;</span><a href="../-r-p-c-flag/index.html"><span class="identifier">RPCFlag</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-encoded-rpc-message.html">toEncodedRpcMessage</a></h4>
+</td>
+<td>
+<p>Encodes message to bytes</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toEncodedRpcMessage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCStreamRequest$toEncodedRpcMessage(com.fasterxml.jackson.databind.ObjectMapper)/mapper">mapper</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

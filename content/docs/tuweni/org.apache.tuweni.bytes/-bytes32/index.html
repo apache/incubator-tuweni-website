@@ -1,0 +1,190 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Bytes32 - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.bytes</a>&nbsp;/&nbsp;<a href="./index.html">Bytes32</a><br/>
+<br/>
+<h1>Bytes32</h1>
+<code><span class="keyword">interface </span><span class="identifier">Bytes32</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-bytes/index.html"><span class="identifier">Bytes</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/bytes/src/main/java/org/apache/tuweni/bytes/Bytes32.java#L24">(source)</a>
+<p>A <code><a href="../-bytes/index.html">Bytes</a></code> value that is guaranteed to contain exactly 32 bytes.</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-s-i-z-e.html">SIZE</a></h4>
+</td>
+<td>
+<p>The number of bytes in this value - i.e. 32</p>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">SIZE</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-z-e-r-o.html">ZERO</a></h4>
+</td>
+<td>
+<p>A <code>Bytes32</code> containing all zero bytes</p>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ZERO</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="and.html">and</a></h4>
+</td>
+<td>
+<p>Return a bit-wise AND of these bytes and the supplied bytes.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">and</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$and(org.apache.tuweni.bytes.Bytes32)/other">other</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="copy.html">copy</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-hex-string.html">fromHexString</a></h4>
+</td>
+<td>
+<p>Parse a hexadecimal string into a <code><a href="./index.html">Bytes32</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromHexString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$fromHexString(kotlin.CharSequence)/str">str</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharSequence</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-hex-string-lenient.html">fromHexStringLenient</a></h4>
+</td>
+<td>
+<p>Parse a hexadecimal string into a <code><a href="./index.html">Bytes32</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromHexStringLenient</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$fromHexStringLenient(kotlin.CharSequence)/str">str</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharSequence</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-hex-string-strict.html">fromHexStringStrict</a></h4>
+</td>
+<td>
+<p>Parse a hexadecimal string into a <code><a href="./index.html">Bytes32</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromHexStringStrict</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$fromHexStringStrict(kotlin.CharSequence)/str">str</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharSequence</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="left-pad.html">leftPad</a></h4>
+</td>
+<td>
+<p>Left pad a <code><a href="../-bytes/index.html">Bytes</a></code> value with zero bytes to create a <code><a href="./index.html">Bytes32</a></code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">leftPad</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$leftPad(org.apache.tuweni.bytes.Bytes)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mutable-copy.html">mutableCopy</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">mutableCopy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-mutable-bytes32/index.html"><span class="identifier">MutableBytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="not.html">not</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">not</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="or.html">or</a></h4>
+</td>
+<td>
+<p>Return a bit-wise OR of these bytes and the supplied bytes.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">or</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$or(org.apache.tuweni.bytes.Bytes32)/other">other</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="random.html">random</a></h4>
+</td>
+<td>
+<p>Generate random bytes.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">random</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">random</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$random(java.util.Random)/generator">generator</span><span class="symbol">:</span>&nbsp;<span class="identifier">Random</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="right-pad.html">rightPad</a></h4>
+</td>
+<td>
+<p>Right pad a <code><a href="../-bytes/index.html">Bytes</a></code> value with zero bytes to create a <code><a href="./index.html">Bytes32</a></code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">rightPad</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$rightPad(org.apache.tuweni.bytes.Bytes)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="shift-left.html">shiftLeft</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">shiftLeft</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$shiftLeft(kotlin.Int)/distance">distance</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="shift-right.html">shiftRight</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">shiftRight</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$shiftRight(kotlin.Int)/distance">distance</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="size.html">size</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">size</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="wrap.html">wrap</a></h4>
+</td>
+<td>
+<p>Wrap the provided byte array, which must be of length 32, as a <code><a href="./index.html">Bytes32</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">wrap</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$wrap(kotlin.ByteArray)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code>
+<p>Wrap a slice/sub-part of the provided array as a <code><a href="./index.html">Bytes32</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">wrap</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$wrap(kotlin.ByteArray, kotlin.Int)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$wrap(kotlin.ByteArray, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code>
+<p>Wrap a the provided value, which must be of size 32, as a <code><a href="./index.html">Bytes32</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">wrap</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$wrap(org.apache.tuweni.bytes.Bytes)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code>
+<p>Wrap a slice/sub-part of the provided value as a <code><a href="./index.html">Bytes32</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">wrap</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$wrap(org.apache.tuweni.bytes.Bytes, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$wrap(org.apache.tuweni.bytes.Bytes, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="xor.html">xor</a></h4>
+</td>
+<td>
+<p>Return a bit-wise XOR of these bytes and the supplied bytes.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">xor</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$xor(org.apache.tuweni.bytes.Bytes32)/other">other</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-delegating-bytes32/index.html">DelegatingBytes32</a></h4>
+</td>
+<td>
+<p>A class that holds and delegates all operations to its inner bytes field. </p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DelegatingBytes32</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-abstract-bytes/index.html"><span class="identifier">AbstractBytes</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Bytes32</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-mutable-bytes32/index.html">MutableBytes32</a></h4>
+</td>
+<td>
+<p>A mutable <code><a href="./index.html">Bytes32</a></code>, that is a mutable <code><a href="../-bytes/index.html">Bytes</a></code> value of exactly 32 bytes.</p>
+<code><span class="keyword">interface </span><span class="identifier">MutableBytes32</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-mutable-bytes/index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Bytes32</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

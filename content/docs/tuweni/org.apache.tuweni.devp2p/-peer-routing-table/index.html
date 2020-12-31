@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PeerRoutingTable - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.devp2p</a>&nbsp;/&nbsp;<a href="./index.html">PeerRoutingTable</a><br/>
+<br/>
+<h1>PeerRoutingTable</h1>
+<code><span class="keyword">interface </span><span class="identifier">PeerRoutingTable</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Set</span><span class="symbol">&lt;</span><a href="../-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">&gt;</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/devp2p/src/main/kotlin/org/apache/tuweni/devp2p/PeerRoutingTable.kt#L27">(source)</a>
+<p>A routing table for ÐΞVp2p peers.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add.html">add</a></h4>
+</td>
+<td>
+<p>Add a node to the table.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.PeerRoutingTable$add(org.apache.tuweni.devp2p.Peer)/node">node</span><span class="symbol">:</span>&nbsp;<a href="../-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="evict.html">evict</a></h4>
+</td>
+<td>
+<p>Remove a node from the table, potentially adding an alternative from the replacement cache.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">evict</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.PeerRoutingTable$evict(org.apache.tuweni.devp2p.Peer)/node">node</span><span class="symbol">:</span>&nbsp;<a href="../-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="nearest.html">nearest</a></h4>
+</td>
+<td>
+<p>Return the nearest nodes to a target id, in order from closest to furthest.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">nearest</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.PeerRoutingTable$nearest(org.apache.tuweni.crypto.SECP256K1.PublicKey, kotlin.Int)/targetId">targetId</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.PeerRoutingTable$nearest(org.apache.tuweni.crypto.SECP256K1.PublicKey, kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

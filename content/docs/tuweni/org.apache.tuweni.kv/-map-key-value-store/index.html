@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MapKeyValueStore - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.kv</a>&nbsp;/&nbsp;<a href="./index.html">MapKeyValueStore</a><br/>
+<br/>
+<h1>MapKeyValueStore</h1>
+<code><span class="keyword">class </span><span class="identifier">MapKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-key-value-store/index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/kv/src/main/kotlin/org/apache/tuweni/kv/MapKeyValueStore.kt#L30">(source)</a>
+<p>A key-value store backed by an in-memory Map.</p>
+<h3>Parameters</h3>
+<p><a name="map"></a>
+<code>map</code> - The backing map for this store.</p>
+<p><strong>Return</strong><br/>
+A key-value store.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Open an in-memory key-value store.</p>
+<code><span class="identifier">MapKeyValueStore</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kv.MapKeyValueStore$<init>(kotlin.collections.MutableMap((org.apache.tuweni.kv.MapKeyValueStore.K, org.apache.tuweni.kv.MapKeyValueStore.V)), kotlin.coroutines.CoroutineContext)/map">map</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableMap</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;HashMap()<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.kv.MapKeyValueStore$<init>(kotlin.collections.MutableMap((org.apache.tuweni.kv.MapKeyValueStore.K, org.apache.tuweni.kv.MapKeyValueStore.V)), kotlin.coroutines.CoroutineContext)/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineContext</span>&nbsp;<span class="symbol">=</span>&nbsp;Dispatchers.IO<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="coroutine-context.html">coroutineContext</a></h4>
+</td>
+<td>
+<p>the kotlin coroutine context</p>
+<code><span class="keyword">val </span><span class="identifier">coroutineContext</span><span class="symbol">: </span><span class="identifier">CoroutineContext</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="clear.html">clear</a></h4>
+</td>
+<td>
+<p>Clears the contents of the store.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="close.html">close</a></h4>
+</td>
+<td>
+<p>Has no effect in this KeyValueStore implementation.</p>
+<code><span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains-key.html">containsKey</a></h4>
+</td>
+<td>
+<p>Returns true if the store contains the key.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">containsKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kv.MapKeyValueStore$containsKey(org.apache.tuweni.kv.MapKeyValueStore.K)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<p>Retrieves data from the store.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kv.MapKeyValueStore$get(org.apache.tuweni.kv.MapKeyValueStore.K)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="keys.html">keys</a></h4>
+</td>
+<td>
+<p>Provides an iterator over the keys of the store.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">keys</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Iterable</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="put.html">put</a></h4>
+</td>
+<td>
+<p>Puts data into the store.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">put</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kv.MapKeyValueStore$put(org.apache.tuweni.kv.MapKeyValueStore.K, org.apache.tuweni.kv.MapKeyValueStore.V)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.kv.MapKeyValueStore$put(org.apache.tuweni.kv.MapKeyValueStore.K, org.apache.tuweni.kv.MapKeyValueStore.V)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="open.html">open</a></h4>
+</td>
+<td>
+<p>Open an in-memory key-value store.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span> <span class="identifier">open</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MapKeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code><br/>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span> <span class="identifier">open</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kv.MapKeyValueStore.Companion$open(kotlin.collections.MutableMap((org.apache.tuweni.kv.MapKeyValueStore.Companion.open.K, org.apache.tuweni.kv.MapKeyValueStore.Companion.open.V)))/map">map</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableMap</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MapKeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EthRequestsManager.transactionReceiptsRequested - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.devp2p.eth</a>&nbsp;/&nbsp;<a href="index.html">EthRequestsManager</a>&nbsp;/&nbsp;<a href="./transaction-receipts-requested.html">transactionReceiptsRequested</a><br/>
+<br/>
+<h1>transactionReceiptsRequested</h1>
+<a name="org.apache.tuweni.devp2p.eth.EthRequestsManager$transactionReceiptsRequested(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.collections.List((kotlin.collections.List((org.apache.tuweni.eth.TransactionReceipt)))))"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">transactionReceiptsRequested</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthRequestsManager$transactionReceiptsRequested(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.collections.List((kotlin.collections.List((org.apache.tuweni.eth.TransactionReceipt)))))/connection">connection</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.EthRequestsManager$transactionReceiptsRequested(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.collections.List((kotlin.collections.List((org.apache.tuweni.eth.TransactionReceipt)))))/transactionReceipts">transactionReceipts</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-transaction-receipt/index.html"><span class="identifier">TransactionReceipt</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-request/index.html"><span class="identifier">Request</span></a><span class="symbol">?</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/devp2p-eth/src/main/kotlin/org/apache/tuweni/devp2p/eth/EthRequestsManager.kt#L108">(source)</a>
+<p>Checks if a request was made to get transaction receipts</p>
+<h3>Parameters</h3>
+<p><a name="connection"></a>
+<code>connection</code> - the wire connection sending data</p>
+<p><a name="transactionReceipts"></a>
+<code>transactionReceipts</code> - the transaction receipts just received</p>
+<p><strong>Return</strong><br/>
+a handle to the completion of the operation, with metadata, or null if no such request was placed</p>
+</BODY>
+</HTML>

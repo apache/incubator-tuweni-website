@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MerkleTrie - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.trie</a>&nbsp;/&nbsp;<a href="./index.html">MerkleTrie</a><br/>
+<br/>
+<h1>MerkleTrie</h1>
+<code><span class="keyword">interface </span><span class="identifier">MerkleTrie</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/merkle-trie/src/main/kotlin/org/apache/tuweni/trie/MerkleTrie.kt#L45">(source)</a>
+<p>A Merkle Trie.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<p>Returns the value that corresponds to the specified key, or an empty byte array if no such value exists.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$get(org.apache.tuweni.trie.MerkleTrie.K)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-async.html">getAsync</a></h4>
+</td>
+<td>
+<p>Returns the value that corresponds to the specified key, or an empty byte array if no such value exists.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$getAsync(org.apache.tuweni.trie.MerkleTrie.K)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">V</span><span class="symbol">?</span><span class="symbol">&gt;</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$getAsync(kotlinx.coroutines.CoroutineDispatcher, org.apache.tuweni.trie.MerkleTrie.K)/dispatcher">dispatcher</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineDispatcher</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$getAsync(kotlinx.coroutines.CoroutineDispatcher, org.apache.tuweni.trie.MerkleTrie.K)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">V</span><span class="symbol">?</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="put.html">put</a></h4>
+</td>
+<td>
+<p>Updates the value that corresponds to the specified key, creating the value if one does not already exist.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">put</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$put(org.apache.tuweni.trie.MerkleTrie.K, org.apache.tuweni.trie.MerkleTrie.V)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$put(org.apache.tuweni.trie.MerkleTrie.K, org.apache.tuweni.trie.MerkleTrie.V)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="put-async.html">putAsync</a></h4>
+</td>
+<td>
+<p>Updates the value that corresponds to the specified key, creating the value if one does not already exist.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">putAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$putAsync(org.apache.tuweni.trie.MerkleTrie.K, org.apache.tuweni.trie.MerkleTrie.V)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$putAsync(org.apache.tuweni.trie.MerkleTrie.K, org.apache.tuweni.trie.MerkleTrie.V)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">putAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$putAsync(kotlinx.coroutines.CoroutineDispatcher, org.apache.tuweni.trie.MerkleTrie.K, org.apache.tuweni.trie.MerkleTrie.V)/dispatcher">dispatcher</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineDispatcher</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$putAsync(kotlinx.coroutines.CoroutineDispatcher, org.apache.tuweni.trie.MerkleTrie.K, org.apache.tuweni.trie.MerkleTrie.V)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$putAsync(kotlinx.coroutines.CoroutineDispatcher, org.apache.tuweni.trie.MerkleTrie.K, org.apache.tuweni.trie.MerkleTrie.V)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove.html">remove</a></h4>
+</td>
+<td>
+<p>Deletes the value that corresponds to the specified key, if such a value exists.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">remove</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$remove(org.apache.tuweni.trie.MerkleTrie.K)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-async.html">removeAsync</a></h4>
+</td>
+<td>
+<p>Deletes the value that corresponds to the specified key, if such a value exists.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$removeAsync(org.apache.tuweni.trie.MerkleTrie.K)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$removeAsync(kotlinx.coroutines.CoroutineDispatcher, org.apache.tuweni.trie.MerkleTrie.K)/dispatcher">dispatcher</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineDispatcher</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.trie.MerkleTrie$removeAsync(kotlinx.coroutines.CoroutineDispatcher, org.apache.tuweni.trie.MerkleTrie.K)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="root-hash.html">rootHash</a></h4>
+</td>
+<td>
+<p>Returns the KECCAK256 hash of the root node of the trie.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">rootHash</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-e-m-p-t-y_-t-r-i-e_-r-o-o-t_-h-a-s-h.html">EMPTY_TRIE_ROOT_HASH</a></h4>
+</td>
+<td>
+<p>The root hash of an empty tree.</p>
+<code><span class="keyword">val </span><span class="identifier">EMPTY_TRIE_ROOT_HASH</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-merkle-patricia-trie/index.html">MerklePatriciaTrie</a></h4>
+</td>
+<td>
+<p>An in-memory <a href="./index.html">MerkleTrie</a>.</p>
+<code><span class="keyword">class </span><span class="identifier">MerklePatriciaTrie</span><span class="symbol">&lt;</span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">MerkleTrie</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-stored-merkle-patricia-trie/index.html">StoredMerklePatriciaTrie</a></h4>
+</td>
+<td>
+<p>A <a href="./index.html">MerkleTrie</a> that persists trie nodes to a <a href="../-merkle-storage/index.html">MerkleStorage</a> key/value store.</p>
+<code><span class="keyword">class </span><span class="identifier">StoredMerklePatriciaTrie</span><span class="symbol">&lt;</span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">MerkleTrie</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

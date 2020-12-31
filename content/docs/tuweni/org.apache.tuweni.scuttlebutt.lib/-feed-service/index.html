@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>FeedService - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.lib</a>&nbsp;/&nbsp;<a href="./index.html">FeedService</a><br/>
+<br/>
+<h1>FeedService</h1>
+<code><span class="keyword">class </span><span class="identifier">FeedService</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-client-lib/src/main/java/org/apache/tuweni/scuttlebutt/lib/FeedService.java#L41">(source)</a>
+<p>A service for operations that concern scuttlebutt feeds. Should be accessed via a ScuttlebuttClient instance.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="create-feed-stream.html">createFeedStream</a></h4>
+</td>
+<td>
+<p>Streams every message in the instance's database.</p>
+<code><span class="keyword">fun </span><span class="identifier">createFeedStream</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.FeedService$createFeedStream(java.util.function.Function((java.lang.Runnable, org.apache.tuweni.scuttlebutt.lib.model.StreamHandler((org.apache.tuweni.scuttlebutt.lib.model.FeedMessage)))))/streamHandler">streamHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.lib.model/-stream-handler/index.html"><span class="identifier">StreamHandler</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.lib.model/-feed-message/index.html"><span class="identifier">FeedMessage</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="publish.html">publish</a></h4>
+</td>
+<td>
+<p>Publishes a message to the instance's own scuttlebutt feed, assuming the client established the connection using keys authorising it to perform this operation.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.lib.model/-scuttlebutt-message-content/index.html"><span class="identifier">ScuttlebuttMessageContent</span></a><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">publish</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.FeedService$publish(org.apache.tuweni.scuttlebutt.lib.FeedService.publish.T)/content">content</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.lib.model/-feed-message/index.html"><span class="identifier">FeedMessage</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

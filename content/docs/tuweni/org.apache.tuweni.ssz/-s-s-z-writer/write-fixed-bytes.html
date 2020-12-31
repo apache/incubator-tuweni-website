@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSZWriter.writeFixedBytes - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ssz</a>&nbsp;/&nbsp;<a href="index.html">SSZWriter</a>&nbsp;/&nbsp;<a href="./write-fixed-bytes.html">writeFixedBytes</a><br/>
+<br/>
+<h1>writeFixedBytes</h1>
+<a name="org.apache.tuweni.ssz.SSZWriter$writeFixedBytes(org.apache.tuweni.bytes.Bytes)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeFixedBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ssz.SSZWriter$writeFixedBytes(org.apache.tuweni.bytes.Bytes)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/ssz/src/main/java/org/apache/tuweni/ssz/SSZWriter.java#L73">(source)</a>
+<p>Encode a known fixed-length <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value to SSZ without the length mixin.</p>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the byte array to encode</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if the byteLength is not the same size as value.</p>
+</BODY>
+</HTML>

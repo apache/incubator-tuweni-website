@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PropertyValidator.validate - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.config</a>&nbsp;/&nbsp;<a href="index.html">PropertyValidator</a>&nbsp;/&nbsp;<a href="./validate.html">validate</a><br/>
+<br/>
+<h1>validate</h1>
+<a name="org.apache.tuweni.config.PropertyValidator$validate(kotlin.String, org.apache.tuweni.config.DocumentPosition, org.apache.tuweni.config.PropertyValidator.T)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.PropertyValidator$validate(kotlin.String, org.apache.tuweni.config.DocumentPosition, org.apache.tuweni.config.PropertyValidator.T)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier" id="org.apache.tuweni.config.PropertyValidator$validate(kotlin.String, org.apache.tuweni.config.DocumentPosition, org.apache.tuweni.config.PropertyValidator.T)/position">position</span><span class="symbol">:</span>&nbsp;<a href="../-document-position/index.html"><span class="identifier">DocumentPosition</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier" id="org.apache.tuweni.config.PropertyValidator$validate(kotlin.String, org.apache.tuweni.config.DocumentPosition, org.apache.tuweni.config.PropertyValidator.T)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../-configuration-error/index.html"><span class="identifier">ConfigurationError</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/config/src/main/java/org/apache/tuweni/config/PropertyValidator.java#L204">(source)</a>
+<p>Validate a configuration property.</p>
+<h3>Parameters</h3>
+<p><a name="key"></a>
+<code>key</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> The configuration property key.</p>
+<p><a name="position"></a>
+<code>position</code> - <a href="../-document-position/index.html"><span class="identifier">DocumentPosition</span></a><span class="symbol">?</span><span class="symbol">:</span> The position of the property in the input document, if supported. This should be used when constructing errors.</p>
+<p><a name="value"></a>
+<code>value</code> - <span class="identifier">T</span><span class="symbol">?</span><span class="symbol">:</span> The value associated with the configuration entry.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../-configuration-error/index.html"><span class="identifier">ConfigurationError</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A list of errors. If no errors are found, an empty list should be returned.</p>
+</BODY>
+</HTML>

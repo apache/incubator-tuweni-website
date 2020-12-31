@@ -1,0 +1,188 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EthHash - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ethash</a>&nbsp;/&nbsp;<a href="./index.html">EthHash</a><br/>
+<br/>
+<h1>EthHash</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EthHash</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/pow/src/main/java/org/apache/tuweni/ethash/EthHash.java#L30">(source)</a>
+<p>Implementation of EthHash utilities for Ethereum mining algorithms.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Implementation of EthHash utilities for Ethereum mining algorithms.</p>
+<code><span class="identifier">EthHash</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-a-c-c-e-s-s-e-s.html">ACCESSES</a></h4>
+</td>
+<td>
+<p>number of accesses in hashimoto loop</p>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">ACCESSES</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-c-a-c-h-e_-b-y-t-e-s_-g-r-o-w-t-h.html">CACHE_BYTES_GROWTH</a></h4>
+</td>
+<td>
+<p>cache growth per epoch</p>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">CACHE_BYTES_GROWTH</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-c-a-c-h-e_-b-y-t-e-s_-i-n-i-t.html">CACHE_BYTES_INIT</a></h4>
+</td>
+<td>
+<p>bytes in cache at genesis</p>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">CACHE_BYTES_INIT</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-c-a-c-h-e_-m-u-l-t-i-p-l-i-e-r.html">CACHE_MULTIPLIER</a></h4>
+</td>
+<td>
+<p>Size of the DAG relative to the cache</p>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">CACHE_MULTIPLIER</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-c-a-c-h-e_-r-o-u-n-d-s.html">CACHE_ROUNDS</a></h4>
+</td>
+<td>
+<p>number of rounds in cache production</p>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">CACHE_ROUNDS</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-d-a-t-a-s-e-t_-b-y-t-e-s_-g-r-o-w-t-h.html">DATASET_BYTES_GROWTH</a></h4>
+</td>
+<td>
+<p>dataset growth per epoch</p>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">DATASET_BYTES_GROWTH</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-d-a-t-a-s-e-t_-b-y-t-e-s_-i-n-i-t.html">DATASET_BYTES_INIT</a></h4>
+</td>
+<td>
+<p>bytes in dataset at genesis</p>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">DATASET_BYTES_INIT</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-d-a-t-a-s-e-t_-p-a-r-e-n-t-s.html">DATASET_PARENTS</a></h4>
+</td>
+<td>
+<p>number of parents of each dataset element</p>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">DATASET_PARENTS</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-e-p-o-c-h_-l-e-n-g-t-h.html">EPOCH_LENGTH</a></h4>
+</td>
+<td>
+<p>blocks per epoch</p>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">EPOCH_LENGTH</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-f-n-v_-p-r-i-m-e.html">FNV_PRIME</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">FNV_PRIME</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-h-a-s-h_-b-y-t-e-s.html">HASH_BYTES</a></h4>
+</td>
+<td>
+<p>hash length in bytes</p>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">HASH_BYTES</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-m-i-x_-b-y-t-e-s.html">MIX_BYTES</a></h4>
+</td>
+<td>
+<p>width of mix</p>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">MIX_BYTES</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-w-o-r-d_-b-y-t-e-s.html">WORD_BYTES</a></h4>
+</td>
+<td>
+<p>Bytes in word.</p>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">WORD_BYTES</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="calc-dataset-item.html">calcDatasetItem</a></h4>
+</td>
+<td>
+<p>Calculate a data set item based on the previous cache for a given index</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">calcDatasetItem</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethash.EthHash$calcDatasetItem(kotlin.Array((org.apache.tuweni.units.bigints.UInt32)), org.apache.tuweni.units.bigints.UInt32)/cache">cache</span><span class="symbol">:</span>&nbsp;<span class="identifier">Array</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int32/index.html"><span class="identifier">UInt32</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethash.EthHash$calcDatasetItem(kotlin.Array((org.apache.tuweni.units.bigints.UInt32)), org.apache.tuweni.units.bigints.UInt32)/index">index</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int32/index.html"><span class="identifier">UInt32</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="epoch.html">epoch</a></h4>
+</td>
+<td>
+<p>Calculates the EthHash Epoch for a given block number.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">epoch</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethash.EthHash$epoch(kotlin.Long)/block">block</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-cache-size.html">getCacheSize</a></h4>
+</td>
+<td>
+<p>Provides the size of the cache at a given block number</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getCacheSize</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethash.EthHash$getCacheSize(kotlin.Long)/block_number">block_number</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-full-size.html">getFullSize</a></h4>
+</td>
+<td>
+<p>Provides the size of the full dataset at a given block number</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getFullSize</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethash.EthHash$getFullSize(kotlin.Long)/block_number">block_number</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hashimoto-light.html">hashimotoLight</a></h4>
+</td>
+<td>
+<p>Hashimoto Light Hashing.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">hashimotoLight</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethash.EthHash$hashimotoLight(kotlin.Long, kotlin.Array((org.apache.tuweni.units.bigints.UInt32)), org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/size">size</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethash.EthHash$hashimotoLight(kotlin.Long, kotlin.Array((org.apache.tuweni.units.bigints.UInt32)), org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/cache">cache</span><span class="symbol">:</span>&nbsp;<span class="identifier">Array</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int32/index.html"><span class="identifier">UInt32</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethash.EthHash$hashimotoLight(kotlin.Long, kotlin.Array((org.apache.tuweni.units.bigints.UInt32)), org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/header">header</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethash.EthHash$hashimotoLight(kotlin.Long, kotlin.Array((org.apache.tuweni.units.bigints.UInt32)), org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes)/nonce">nonce</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mk-cache.html">mkCache</a></h4>
+</td>
+<td>
+<p>Generates the EthHash cache for given parameters.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">mkCache</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethash.EthHash$mkCache(kotlin.Int, kotlin.Long)/cacheSize">cacheSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethash.EthHash$mkCache(kotlin.Int, kotlin.Long)/block">block</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Array</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.units.bigints/-u-int32/index.html"><span class="identifier">UInt32</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

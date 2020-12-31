@@ -1,0 +1,178 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Schema - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.config</a>&nbsp;/&nbsp;<a href="./index.html">Schema</a><br/>
+<br/>
+<h1>Schema</h1>
+<code><span class="keyword">class </span><span class="identifier">Schema</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/config/src/main/java/org/apache/tuweni/config/Schema.java#L32">(source)</a>
+<p>A schema for a configuration, providing default values and validation rules.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="defaults-key-set.html">defaultsKeySet</a></h4>
+</td>
+<td>
+<p>The keys of all defaults provided by this schema.</p>
+<code><span class="keyword">fun </span><span class="identifier">defaultsKeySet</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">defaultsKeySet</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$defaultsKeySet(kotlin.String)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="description.html">description</a></h4>
+</td>
+<td>
+<p>Get the description for a key.</p>
+<code><span class="keyword">fun </span><span class="identifier">description</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$description(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-default.html">getDefault</a></h4>
+</td>
+<td>
+<p>Get a default value from this configuration.</p>
+<code><span class="keyword">fun </span><span class="identifier">getDefault</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$getDefault(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-default-boolean.html">getDefaultBoolean</a></h4>
+</td>
+<td>
+<p>Get a default value from this configuration as a boolean.</p>
+<code><span class="keyword">fun </span><span class="identifier">getDefaultBoolean</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$getDefaultBoolean(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-default-double.html">getDefaultDouble</a></h4>
+</td>
+<td>
+<p>Get a default value from this configuration as a double.</p>
+<code><span class="keyword">fun </span><span class="identifier">getDefaultDouble</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$getDefaultDouble(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-default-integer.html">getDefaultInteger</a></h4>
+</td>
+<td>
+<p>Get a default value from this configuration as a integer.</p>
+<code><span class="keyword">fun </span><span class="identifier">getDefaultInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$getDefaultInteger(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-default-list.html">getDefaultList</a></h4>
+</td>
+<td>
+<p>Get a default value from this configuration as a list.</p>
+<code><span class="keyword">fun </span><span class="identifier">getDefaultList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$getDefaultList(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-default-list-of-boolean.html">getDefaultListOfBoolean</a></h4>
+</td>
+<td>
+<p>Get a default value from this configuration as a list of booleans.</p>
+<code><span class="keyword">fun </span><span class="identifier">getDefaultListOfBoolean</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$getDefaultListOfBoolean(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Boolean</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-default-list-of-double.html">getDefaultListOfDouble</a></h4>
+</td>
+<td>
+<p>Get a default value from this configuration as a list of doubles.</p>
+<code><span class="keyword">fun </span><span class="identifier">getDefaultListOfDouble</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$getDefaultListOfDouble(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Double</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-default-list-of-integer.html">getDefaultListOfInteger</a></h4>
+</td>
+<td>
+<p>Get a default value from this configuration as a list of integers.</p>
+<code><span class="keyword">fun </span><span class="identifier">getDefaultListOfInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$getDefaultListOfInteger(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-default-list-of-long.html">getDefaultListOfLong</a></h4>
+</td>
+<td>
+<p>Get a default value from this configuration as a list of longs.</p>
+<code><span class="keyword">fun </span><span class="identifier">getDefaultListOfLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$getDefaultListOfLong(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-default-list-of-map.html">getDefaultListOfMap</a></h4>
+</td>
+<td>
+<p>Get a default value from this configuration as a list of maps.</p>
+<code><span class="keyword">fun </span><span class="identifier">getDefaultListOfMap</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$getDefaultListOfMap(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">MutableMap</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-default-list-of-string.html">getDefaultListOfString</a></h4>
+</td>
+<td>
+<p>Get a default value from this configuration as a list of strings.</p>
+<code><span class="keyword">fun </span><span class="identifier">getDefaultListOfString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$getDefaultListOfString(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-default-long.html">getDefaultLong</a></h4>
+</td>
+<td>
+<p>Get a default value from this configuration as a long.</p>
+<code><span class="keyword">fun </span><span class="identifier">getDefaultLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$getDefaultLong(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-default-map.html">getDefaultMap</a></h4>
+</td>
+<td>
+<p>Get a default value from this configuration as a map.</p>
+<code><span class="keyword">fun </span><span class="identifier">getDefaultMap</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$getDefaultMap(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableMap</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-default-string.html">getDefaultString</a></h4>
+</td>
+<td>
+<p>Get a default value from this configuration as a string.</p>
+<code><span class="keyword">fun </span><span class="identifier">getDefaultString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$getDefaultString(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-sub-section.html">getSubSection</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getSubSection</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$getSubSection(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Schema</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-sub-section-prefix.html">getSubSectionPrefix</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getSubSectionPrefix</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$getSubSectionPrefix(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="has-default.html">hasDefault</a></h4>
+</td>
+<td>
+<p>Check if a key has a default provided by this schema.</p>
+<code><span class="keyword">fun </span><span class="identifier">hasDefault</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$hasDefault(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="validate.html">validate</a></h4>
+</td>
+<td>
+<p>Validate a configuration against this schema. </p>
+<code><span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.config.Schema$validate(org.apache.tuweni.config.Configuration)/configuration">configuration</span><span class="symbol">:</span>&nbsp;<a href="../-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Stream</span><span class="symbol">&lt;</span><a href="../-configuration-error/index.html"><span class="identifier">ConfigurationError</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

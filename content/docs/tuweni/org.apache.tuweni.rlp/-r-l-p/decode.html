@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RLP.decode - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlp</a>&nbsp;/&nbsp;<a href="index.html">RLP</a>&nbsp;/&nbsp;<a href="./decode.html">decode</a><br/>
+<br/>
+<h1>decode</h1>
+<a name="org.apache.tuweni.rlp.RLP$decode(org.apache.tuweni.bytes.Bytes, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decode.T)))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">decode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decode(org.apache.tuweni.bytes.Bytes, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decode.T)))/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decode(org.apache.tuweni.bytes.Bytes, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decode.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlp/src/main/java/org/apache/tuweni/rlp/RLP.java#L251">(source)</a>
+<p>Read and decode RLP from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value. </p>
+<p> Important: this method does not consume any list prefix from the source data. If you are reading a RLP encoded list of values, you usually want to use <code><a href="decode-list.html">#decodeList(Bytes, Function)</a></code>.</p>
+<h3>Parameters</h3>
+<p><a name="source"></a>
+<code>source</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The RLP encoded bytes.</p>
+<p><a name="fn"></a>
+<code>fn</code> - <span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A function that will be provided a <code><a href="../-r-l-p-reader/index.html">RLPReader</a></code>.</p>
+<p><a name="&lt;T&gt;"></a>
+<code><T></code> - The result type of the reading function.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">T</span><span class="symbol">:</span> The result from the reading function.</p>
+<a name="org.apache.tuweni.rlp.RLP$decode(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decode.T)))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">decode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decode(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decode.T)))/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decode(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decode.T)))/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decode(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decode.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlp/src/main/java/org/apache/tuweni/rlp/RLP.java#L267">(source)</a>
+<p>Read and decode RLP from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value. </p>
+<p> Important: this method does not consume any list prefix from the source data. If you are reading a RLP encoded list of values, you usually want to use <code><a href="decode-list.html">#decodeList(Bytes, Function)</a></code>.</p>
+<h3>Parameters</h3>
+<p><a name="source"></a>
+<code>source</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The RLP encoded bytes.</p>
+<p><a name="lenient"></a>
+<code>lenient</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> If <code>false</code>, an exception will be thrown if the value is not minimally encoded.</p>
+<p><a name="fn"></a>
+<code>fn</code> - <span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> A function that will be provided a <code><a href="../-r-l-p-reader/index.html">RLPReader</a></code>.</p>
+<p><a name="&lt;T&gt;"></a>
+<code><T></code> - The result type of the reading function.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">T</span><span class="symbol">:</span> The result from the reading function.</p>
+</BODY>
+</HTML>

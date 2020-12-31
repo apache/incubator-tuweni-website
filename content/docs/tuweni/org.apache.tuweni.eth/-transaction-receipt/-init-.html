@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TransactionReceipt.<init> - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth</a>&nbsp;/&nbsp;<a href="index.html">TransactionReceipt</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="org.apache.tuweni.eth.TransactionReceipt$&lt;init&gt;(org.apache.tuweni.bytes.Bytes32, kotlin.Long, org.apache.tuweni.eth.LogsBloomFilter, kotlin.collections.MutableList((org.apache.tuweni.eth.Log)))"></a>
+<code><span class="identifier">TransactionReceipt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.TransactionReceipt$<init>(org.apache.tuweni.bytes.Bytes32, kotlin.Long, org.apache.tuweni.eth.LogsBloomFilter, kotlin.collections.MutableList((org.apache.tuweni.eth.Log)))/stateRoot">stateRoot</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.TransactionReceipt$<init>(org.apache.tuweni.bytes.Bytes32, kotlin.Long, org.apache.tuweni.eth.LogsBloomFilter, kotlin.collections.MutableList((org.apache.tuweni.eth.Log)))/cumulativeGasUsed">cumulativeGasUsed</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.TransactionReceipt$<init>(org.apache.tuweni.bytes.Bytes32, kotlin.Long, org.apache.tuweni.eth.LogsBloomFilter, kotlin.collections.MutableList((org.apache.tuweni.eth.Log)))/bloomFilter">bloomFilter</span><span class="symbol">:</span>&nbsp;<a href="../-logs-bloom-filter/index.html"><span class="identifier">LogsBloomFilter</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.TransactionReceipt$<init>(org.apache.tuweni.bytes.Bytes32, kotlin.Long, org.apache.tuweni.eth.LogsBloomFilter, kotlin.collections.MutableList((org.apache.tuweni.eth.Log)))/logs">logs</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../-log/index.html"><span class="identifier">Log</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span></code>
+<p>Creates an instance of a state root-encoded transaction receipt.</p>
+<h3>Parameters</h3>
+<p><a name="stateRoot"></a>
+<code>stateRoot</code> - <a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span><span class="symbol">:</span> the state root for the world state after the transaction has been processed</p>
+<p><a name="cumulativeGasUsed"></a>
+<code>cumulativeGasUsed</code> - <span class="identifier">Long</span><span class="symbol">:</span> the total amount of gas consumed in the block after this transaction</p>
+<p><a name="bloomFilter"></a>
+<code>bloomFilter</code> - <a href="../-logs-bloom-filter/index.html"><span class="identifier">LogsBloomFilter</span></a><span class="symbol">!</span><span class="symbol">:</span> the bloom filter of the logs</p>
+<p><a name="logs"></a>
+<code>logs</code> - <span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../-log/index.html"><span class="identifier">Log</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> the logs generated within the transaction</p>
+<a name="org.apache.tuweni.eth.TransactionReceipt$&lt;init&gt;(kotlin.Int, kotlin.Long, org.apache.tuweni.eth.LogsBloomFilter, kotlin.collections.MutableList((org.apache.tuweni.eth.Log)))"></a>
+<code><span class="identifier">TransactionReceipt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.TransactionReceipt$<init>(kotlin.Int, kotlin.Long, org.apache.tuweni.eth.LogsBloomFilter, kotlin.collections.MutableList((org.apache.tuweni.eth.Log)))/status">status</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.TransactionReceipt$<init>(kotlin.Int, kotlin.Long, org.apache.tuweni.eth.LogsBloomFilter, kotlin.collections.MutableList((org.apache.tuweni.eth.Log)))/cumulativeGasUsed">cumulativeGasUsed</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.TransactionReceipt$<init>(kotlin.Int, kotlin.Long, org.apache.tuweni.eth.LogsBloomFilter, kotlin.collections.MutableList((org.apache.tuweni.eth.Log)))/bloomFilter">bloomFilter</span><span class="symbol">:</span>&nbsp;<a href="../-logs-bloom-filter/index.html"><span class="identifier">LogsBloomFilter</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.TransactionReceipt$<init>(kotlin.Int, kotlin.Long, org.apache.tuweni.eth.LogsBloomFilter, kotlin.collections.MutableList((org.apache.tuweni.eth.Log)))/logs">logs</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../-log/index.html"><span class="identifier">Log</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span></code>
+<p>Creates an instance of a status-encoded transaction receipt.</p>
+<h3>Parameters</h3>
+<p><a name="status"></a>
+<code>status</code> - <span class="identifier">Int</span><span class="symbol">:</span> the status code for the transaction (1 for success and 0 for failure)</p>
+<p><a name="cumulativeGasUsed"></a>
+<code>cumulativeGasUsed</code> - <span class="identifier">Long</span><span class="symbol">:</span> the total amount of gas consumed in the block after this transaction</p>
+<p><a name="bloomFilter"></a>
+<code>bloomFilter</code> - <a href="../-logs-bloom-filter/index.html"><span class="identifier">LogsBloomFilter</span></a><span class="symbol">!</span><span class="symbol">:</span> the bloom filter of the logs</p>
+<p><a name="logs"></a>
+<code>logs</code> - <span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../-log/index.html"><span class="identifier">Log</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> the logs generated within the transaction</p>
+</BODY>
+</HTML>

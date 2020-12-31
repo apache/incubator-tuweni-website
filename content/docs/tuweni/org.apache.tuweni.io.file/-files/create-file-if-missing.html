@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Files.createFileIfMissing - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.io.file</a>&nbsp;/&nbsp;<a href="index.html">Files</a>&nbsp;/&nbsp;<a href="./create-file-if-missing.html">createFileIfMissing</a><br/>
+<br/>
+<h1>createFileIfMissing</h1>
+<a name="org.apache.tuweni.io.file.Files$createFileIfMissing(java.nio.file.Path, kotlin.Array((java.nio.file.attribute.FileAttribute((kotlin.Any)))))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">createFileIfMissing</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.io.file.Files$createFileIfMissing(java.nio.file.Path, kotlin.Array((java.nio.file.attribute.FileAttribute((kotlin.Any)))))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.io.file.Files$createFileIfMissing(java.nio.file.Path, kotlin.Array((java.nio.file.attribute.FileAttribute((kotlin.Any)))))/attrs">attrs</span><span class="symbol">:</span>&nbsp;<span class="identifier">FileAttribute</span><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/io/src/main/java/org/apache/tuweni/io/file/Files.java#L53">(source)</a>
+<p>Create a file, if it does not already exist.</p>
+<h3>Parameters</h3>
+<p><a name="path"></a>
+<code>path</code> - <span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">:</span> The path to the file to create.</p>
+<p><a name="attrs"></a>
+<code>attrs</code> - <span class="identifier">FileAttribute</span><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> An optional list of file attributes to set atomically when creating the file.</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - If an I/O error occurs or the parent directory does not exist.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> <code>true</code> if the file was created.</p>
+</BODY>
+</HTML>

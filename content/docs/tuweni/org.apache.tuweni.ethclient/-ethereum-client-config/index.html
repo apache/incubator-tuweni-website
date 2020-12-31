@@ -1,0 +1,107 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EthereumClientConfig - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ethclient</a>&nbsp;/&nbsp;<a href="./index.html">EthereumClientConfig</a><br/>
+<br/>
+<h1>EthereumClientConfig</h1>
+<code><span class="keyword">class </span><span class="identifier">EthereumClientConfig</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth-client/src/main/kotlin/org/apache/tuweni/ethclient/EthereumClientConfig.kt#L30">(source)</a>
+<p>Configuration of EthereumClient. Can be provided via file or over the wire.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Configuration of EthereumClient. Can be provided via file or over the wire.</p>
+<code><span class="identifier">EthereumClientConfig</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.EthereumClientConfig$<init>(org.apache.tuweni.config.Configuration)/config">config</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.config/-configuration/index.html"><span class="identifier">Configuration</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Configuration.empty(createSchema())<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="data-stores.html">dataStores</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">dataStores</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../-data-store-configuration/index.html"><span class="identifier">DataStoreConfiguration</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="dns-clients.html">dnsClients</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">dnsClients</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../-d-n-s-configuration/index.html"><span class="identifier">DNSConfiguration</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="genesis-files.html">genesisFiles</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">genesisFiles</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../-genesis-file-configuration/index.html"><span class="identifier">GenesisFileConfiguration</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="peer-repositories.html">peerRepositories</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">peerRepositories</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../-peer-repository-configuration/index.html"><span class="identifier">PeerRepositoryConfiguration</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="rlpx-services.html">rlpxServices</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">rlpxServices</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../-r-l-px-service-configuration/index.html"><span class="identifier">RLPxServiceConfiguration</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-toml.html">toToml</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toToml</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="create-schema.html">createSchema</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createSchema</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.config/-schema/index.html"><span class="identifier">Schema</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="empty.html">empty</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">empty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EthereumClientConfig</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-file.html">fromFile</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">fromFile</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.EthereumClientConfig.Companion$fromFile(java.nio.file.Path)/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EthereumClientConfig</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-string.html">fromString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">fromString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.EthereumClientConfig.Companion$fromString(kotlin.String)/config">config</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EthereumClientConfig</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

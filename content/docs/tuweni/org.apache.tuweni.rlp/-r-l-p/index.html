@@ -1,0 +1,183 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RLP - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.rlp</a>&nbsp;/&nbsp;<a href="./index.html">RLP</a><br/>
+<br/>
+<h1>RLP</h1>
+<code><span class="keyword">class </span><span class="identifier">RLP</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/rlp/src/main/java/org/apache/tuweni/rlp/RLP.java#L33">(source)</a>
+<p>Recursive Length Prefix (RLP) encoding and decoding.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="decode.html">decode</a></h4>
+</td>
+<td>
+<p>Read and decode RLP from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value. </p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">decode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decode(org.apache.tuweni.bytes.Bytes, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decode.T)))/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decode(org.apache.tuweni.bytes.Bytes, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decode.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">decode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decode(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decode.T)))/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decode(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decode.T)))/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decode(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decode.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-big-integer.html">decodeBigInteger</a></h4>
+</td>
+<td>
+<p>Read an RLP encoded big integer from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeBigInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeBigInteger(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeBigInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeBigInteger(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeBigInteger(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-int.html">decodeInt</a></h4>
+</td>
+<td>
+<p>Read an RLP encoded integer from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeInt(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeInt(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeInt(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-list.html">decodeList</a></h4>
+</td>
+<td>
+<p>Read an RLP encoded list of values from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">decodeList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeList(org.apache.tuweni.bytes.Bytes, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decodeList.T)))/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeList(org.apache.tuweni.bytes.Bytes, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decodeList.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">decodeList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeList(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decodeList.T)))/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeList(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decodeList.T)))/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeList(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decodeList.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-long.html">decodeLong</a></h4>
+</td>
+<td>
+<p>Read an RLP encoded long from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeLong(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeLong(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeLong(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-string.html">decodeString</a></h4>
+</td>
+<td>
+<p>Read an RLP encoded string from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeString(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeString(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeString(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-to-list.html">decodeToList</a></h4>
+</td>
+<td>
+<p>Read an RLP encoded list of values from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value, populating a mutable output list.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeToList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPReader, kotlin.collections.MutableList((kotlin.Any)))))/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPReader, kotlin.collections.MutableList((kotlin.Any)))))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeToList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPReader, kotlin.collections.MutableList((kotlin.Any)))))/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPReader, kotlin.collections.MutableList((kotlin.Any)))))/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPReader, kotlin.collections.MutableList((kotlin.Any)))))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">decodeToList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decodeToList.T)))/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decodeToList.T)))/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, kotlin.Boolean, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decodeToList.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Read a list of values from the RLP source, populating a list using a function interpreting each value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">decodeToList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decodeToList.T)))/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeToList(org.apache.tuweni.bytes.Bytes, java.util.function.Function((org.apache.tuweni.rlp.RLPReader, org.apache.tuweni.rlp.RLP.decodeToList.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><a href="../-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decode-value.html">decodeValue</a></h4>
+</td>
+<td>
+<p>Read an RLP encoded value from a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeValue</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeValue(org.apache.tuweni.bytes.Bytes)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decodeValue</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeValue(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$decodeValue(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode.html">encode</a></h4>
+</td>
+<td>
+<p>Encode values to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value. </p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$encode(java.util.function.Consumer((org.apache.tuweni.rlp.RLPWriter)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../-r-l-p-writer/index.html"><span class="identifier">RLPWriter</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-big-integer.html">encodeBigInteger</a></h4>
+</td>
+<td>
+<p>Encode a big integer to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeBigInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$encodeBigInteger(java.math.BigInteger)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-byte-array.html">encodeByteArray</a></h4>
+</td>
+<td>
+<p>Encode a value to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeByteArray</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$encodeByteArray(kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-int.html">encodeInt</a></h4>
+</td>
+<td>
+<p>Encode a integer to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$encodeInt(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-list.html">encodeList</a></h4>
+</td>
+<td>
+<p>Encode a list of values to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$encodeList(java.util.function.Consumer((org.apache.tuweni.rlp.RLPWriter)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../-r-l-p-writer/index.html"><span class="identifier">RLPWriter</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">encodeList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$encodeList(kotlin.collections.MutableList((org.apache.tuweni.rlp.RLP.encodeList.T)), java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPWriter, org.apache.tuweni.rlp.RLP.encodeList.T)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$encodeList(kotlin.collections.MutableList((org.apache.tuweni.rlp.RLP.encodeList.T)), java.util.function.BiConsumer((org.apache.tuweni.rlp.RLPWriter, org.apache.tuweni.rlp.RLP.encodeList.T)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">BiConsumer</span><span class="symbol">&lt;</span><a href="../-r-l-p-writer/index.html"><span class="identifier">RLPWriter</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-list-to.html">encodeListTo</a></h4>
+</td>
+<td>
+<p>Encode a list of values to a <code><a href="#">ByteBuffer</a></code>.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ByteBuffer</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">encodeListTo</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$encodeListTo(org.apache.tuweni.rlp.RLP.encodeListTo.T, java.util.function.Consumer((org.apache.tuweni.rlp.RLPWriter)))/buffer">buffer</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$encodeListTo(org.apache.tuweni.rlp.RLP.encodeListTo.T, java.util.function.Consumer((org.apache.tuweni.rlp.RLPWriter)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../-r-l-p-writer/index.html"><span class="identifier">RLPWriter</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-long.html">encodeLong</a></h4>
+</td>
+<td>
+<p>Encode a long to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$encodeLong(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-string.html">encodeString</a></h4>
+</td>
+<td>
+<p>Encode a string to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$encodeString(kotlin.String)/str">str</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-to.html">encodeTo</a></h4>
+</td>
+<td>
+<p>Encode values to a <code><a href="#">ByteBuffer</a></code>. </p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ByteBuffer</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">encodeTo</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$encodeTo(org.apache.tuweni.rlp.RLP.encodeTo.T, java.util.function.Consumer((org.apache.tuweni.rlp.RLPWriter)))/buffer">buffer</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.rlp.RLP$encodeTo(org.apache.tuweni.rlp.RLP.encodeTo.T, java.util.function.Consumer((org.apache.tuweni.rlp.RLPWriter)))/fn">fn</span><span class="symbol">:</span>&nbsp;<span class="identifier">Consumer</span><span class="symbol">&lt;</span><a href="../-r-l-p-writer/index.html"><span class="identifier">RLPWriter</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode-value.html">encodeValue</a></h4>
+</td>
+<td>
+<p>Encode a value to a <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeValue</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$encodeValue(org.apache.tuweni.bytes.Bytes)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-list.html">isList</a></h4>
+</td>
+<td>
+<p>Check if the <code><a href="../../org.apache.tuweni.bytes/-bytes/index.html">Bytes</a></code> value contains an RLP encoded list.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isList</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.rlp.RLP$isList(org.apache.tuweni.bytes.Bytes)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

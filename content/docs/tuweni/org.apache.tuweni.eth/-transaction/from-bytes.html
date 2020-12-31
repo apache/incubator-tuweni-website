@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Transaction.fromBytes - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth</a>&nbsp;/&nbsp;<a href="index.html">Transaction</a>&nbsp;/&nbsp;<a href="./from-bytes.html">fromBytes</a><br/>
+<br/>
+<h1>fromBytes</h1>
+<a name="org.apache.tuweni.eth.Transaction$fromBytes(org.apache.tuweni.bytes.Bytes)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Transaction$fromBytes(org.apache.tuweni.bytes.Bytes)/encoded">encoded</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Transaction</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth/src/main/java/org/apache/tuweni/eth/Transaction.java#L48">(source)</a>
+<p>Deserialize a transaction from RLP encoded bytes.</p>
+<h3>Parameters</h3>
+<p><a name="encoded"></a>
+<code>encoded</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The RLP encoded transaction.</p>
+<h3>Exceptions</h3>
+<p><a name="RLPException"></a>
+<code>RLPException</code> - If there is an error decoding the transaction.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">Transaction</span></a><span class="symbol">!</span><span class="symbol">:</span> The de-serialized transaction.</p>
+<a name="org.apache.tuweni.eth.Transaction$fromBytes(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.Transaction$fromBytes(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/encoded">encoded</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.Transaction$fromBytes(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/lenient">lenient</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Transaction</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth/src/main/java/org/apache/tuweni/eth/Transaction.java#L60">(source)</a>
+<p>Deserialize a transaction from RLP encoded bytes.</p>
+<h3>Parameters</h3>
+<p><a name="encoded"></a>
+<code>encoded</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The RLP encoded transaction.</p>
+<p><a name="lenient"></a>
+<code>lenient</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> If <code>true</code>, the RLP decoding will be lenient toward any non-minimal encoding.</p>
+<h3>Exceptions</h3>
+<p><a name="RLPException"></a>
+<code>RLPException</code> - If there is an error decoding the transaction.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">Transaction</span></a><span class="symbol">!</span><span class="symbol">:</span> The de-serialized transaction.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RPCRequestBody.asBytes - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.rpc</a>&nbsp;/&nbsp;<a href="index.html">RPCRequestBody</a>&nbsp;/&nbsp;<a href="./as-bytes.html">asBytes</a><br/>
+<br/>
+<h1>asBytes</h1>
+<a name="org.apache.tuweni.scuttlebutt.rpc.RPCRequestBody$asBytes(com.fasterxml.jackson.databind.ObjectMapper)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">asBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCRequestBody$asBytes(com.fasterxml.jackson.databind.ObjectMapper)/objectMapper">objectMapper</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-rpc/src/main/java/org/apache/tuweni/scuttlebutt/rpc/RPCRequestBody.java#L66">(source)</a>
+<p>Serialize body to bytes.</p>
+<h3>Parameters</h3>
+<p><a name="objectMapper"></a>
+<code>objectMapper</code> - <span class="identifier">ObjectMapper</span><span class="symbol">!</span><span class="symbol">:</span> the object mapper to serialize to bytes with</p>
+<h3>Exceptions</h3>
+<p><a name="JsonProcessingException"></a>
+<code>JsonProcessingException</code> - thrown if there is a problem transforming the object to JSON.</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the bytes representation of this RPC request body. The request is first encoded into JSON, then from JSON to a byte array</p>
+</BODY>
+</HTML>

@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SecretEncryptionStream - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="./index.html">SecretEncryptionStream</a><br/>
+<br/>
+<h1>SecretEncryptionStream</h1>
+<code><span class="keyword">interface </span><span class="identifier">SecretEncryptionStream</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Destroyable</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/SecretEncryptionStream.java#L22">(source)</a>
+<p>Used to encrypt a sequence of messages, or a single message split into arbitrary chunks.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="header.html">header</a></h4>
+</td>
+<td>
+<p>Returns the header for the stream</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">header</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="header-array.html">headerArray</a></h4>
+</td>
+<td>
+<p>Returns the header for the stream</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">headerArray</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="push.html">push</a></h4>
+</td>
+<td>
+<p>Push a message to this secret stream.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">push</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$push(org.apache.tuweni.bytes.Bytes)/clearText">clearText</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">push</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$push(kotlin.ByteArray)/clearText">clearText</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">push</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$push(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/clearText">clearText</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$push(org.apache.tuweni.bytes.Bytes, kotlin.Boolean)/isFinal">isFinal</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">push</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$push(kotlin.ByteArray, kotlin.Boolean)/clearText">clearText</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$push(kotlin.ByteArray, kotlin.Boolean)/isFinal">isFinal</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="push-last.html">pushLast</a></h4>
+</td>
+<td>
+<p>Push the final message to this secret stream.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">pushLast</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$pushLast(org.apache.tuweni.bytes.Bytes)/clearText">clearText</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">pushLast</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SecretEncryptionStream$pushLast(kotlin.ByteArray)/clearText">clearText</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

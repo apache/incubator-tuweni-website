@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Signature.KeyPair - tuweni</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="../index.html">Signature</a>&nbsp;/&nbsp;<a href="./index.html">KeyPair</a><br/>
+<br/>
+<h1>KeyPair</h1>
+<code><span class="keyword">class </span><span class="identifier">KeyPair</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/Signature.java#L385">(source)</a>
+<p>A Signature key pair.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Create a <code><a href="./index.html">KeyPair</a></code> from pair of keys.</p>
+<code><span class="identifier">KeyPair</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature.KeyPair$<init>(org.apache.tuweni.crypto.sodium.Signature.PublicKey, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature.KeyPair$<init>(org.apache.tuweni.crypto.sodium.Signature.PublicKey, org.apache.tuweni.crypto.sodium.Signature.SecretKey)/secretKey">secretKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature.KeyPair$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="for-secret-key.html">forSecretKey</a></h4>
+</td>
+<td>
+<p>Create a <code><a href="./index.html">KeyPair</a></code> from an array of secret key bytes.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">forSecretKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature.KeyPair$forSecretKey(org.apache.tuweni.crypto.sodium.Signature.SecretKey)/secretKey">secretKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecretKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">KeyPair</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-seed.html">fromSeed</a></h4>
+</td>
+<td>
+<p>Generate a new key using a seed.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromSeed</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Signature.KeyPair$fromSeed(org.apache.tuweni.crypto.sodium.Signature.Seed)/seed">seed</span><span class="symbol">:</span>&nbsp;<span class="identifier">Seed</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">KeyPair</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="public-key.html">publicKey</a></h4>
+</td>
+<td>
+<p>Provides the public key.</p>
+<code><span class="keyword">fun </span><span class="identifier">publicKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">PublicKey</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="random.html">random</a></h4>
+</td>
+<td>
+<p>Generate a new key using a random generator.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">random</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">KeyPair</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="secret-key.html">secretKey</a></h4>
+</td>
+<td>
+<p>Provides the secret key.</p>
+<code><span class="keyword">fun </span><span class="identifier">secretKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">SecretKey</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

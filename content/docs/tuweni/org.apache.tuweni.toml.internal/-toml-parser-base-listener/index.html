@@ -1,0 +1,992 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TomlParserBaseListener - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.toml.internal</a>&nbsp;/&nbsp;<a href="./index.html">TomlParserBaseListener</a><br/>
+<br/>
+<h1>TomlParserBaseListener</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TomlParserBaseListener</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-toml-parser-listener/index.html"><span class="identifier">TomlParserListener</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/build/generated-src/antlr/main/org/apache/tuweni/toml/internal/TomlParserBaseListener.java#L15">(source)</a>
+<p>This class provides an empty implementation of <code><a href="../-toml-parser-listener/index.html">TomlParserListener</a></code>, which can be extended to create a listener which only needs to handle a subset of the available methods.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>This class provides an empty implementation of <code><a href="../-toml-parser-listener/index.html">TomlParserListener</a></code>, which can be extended to create a listener which only needs to handle a subset of the available methods.</p>
+<code><span class="identifier">TomlParserBaseListener</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="enter-array.html">enterArray</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/array.html">TomlParser#array</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterArray</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterArray(org.apache.tuweni.toml.internal.TomlParser.ArrayContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">ArrayContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-array-table.html">enterArrayTable</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/array-table.html">TomlParser#arrayTable</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterArrayTable</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterArrayTable(org.apache.tuweni.toml.internal.TomlParser.ArrayTableContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">ArrayTableContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-array-value.html">enterArrayValue</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/array-value.html">TomlParser#arrayValue</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterArrayValue</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterArrayValue(org.apache.tuweni.toml.internal.TomlParser.ArrayValueContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">ArrayValueContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-array-values.html">enterArrayValues</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/array-values.html">TomlParser#arrayValues</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterArrayValues</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterArrayValues(org.apache.tuweni.toml.internal.TomlParser.ArrayValuesContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">ArrayValuesContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-basic-char.html">enterBasicChar</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/basic-char.html">TomlParser#basicChar</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterBasicChar</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterBasicChar(org.apache.tuweni.toml.internal.TomlParser.BasicCharContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">BasicCharContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-basic-string.html">enterBasicString</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/basic-string.html">TomlParser#basicString</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterBasicString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterBasicString(org.apache.tuweni.toml.internal.TomlParser.BasicStringContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">BasicStringContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-basic-unescaped.html">enterBasicUnescaped</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/basic-unescaped.html">TomlParser#basicUnescaped</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterBasicUnescaped</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterBasicUnescaped(org.apache.tuweni.toml.internal.TomlParser.BasicUnescapedContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">BasicUnescapedContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-bin-int.html">enterBinInt</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/bin-int.html">TomlParser#binInt</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterBinInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterBinInt(org.apache.tuweni.toml.internal.TomlParser.BinIntContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">BinIntContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-boolean-value.html">enterBooleanValue</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/boolean-value.html">TomlParser#booleanValue</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterBooleanValue</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterBooleanValue(org.apache.tuweni.toml.internal.TomlParser.BooleanValueContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">BooleanValueContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-date.html">enterDate</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/date.html">TomlParser#date</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterDate</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterDate(org.apache.tuweni.toml.internal.TomlParser.DateContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">DateContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-date-time.html">enterDateTime</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/date-time.html">TomlParser#dateTime</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterDateTime(org.apache.tuweni.toml.internal.TomlParser.DateTimeContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">DateTimeContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-day.html">enterDay</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/day.html">TomlParser#day</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterDay</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterDay(org.apache.tuweni.toml.internal.TomlParser.DayContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">DayContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-dec-int.html">enterDecInt</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/dec-int.html">TomlParser#decInt</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterDecInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterDecInt(org.apache.tuweni.toml.internal.TomlParser.DecIntContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">DecIntContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-escaped.html">enterEscaped</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/escaped.html">TomlParser#escaped</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterEscaped</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterEscaped(org.apache.tuweni.toml.internal.TomlParser.EscapedContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">EscapedContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-every-rule.html">enterEveryRule</a></h4>
+</td>
+<td>
+<p>The default implementation does nothing.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterEveryRule</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterEveryRule(org.antlr.v4.runtime.ParserRuleContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-expression.html">enterExpression</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/expression.html">TomlParser#expression</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterExpression</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterExpression(org.apache.tuweni.toml.internal.TomlParser.ExpressionContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">ExpressionContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-false-bool.html">enterFalseBool</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/false-bool.html">TomlParser#falseBool</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterFalseBool</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterFalseBool(org.apache.tuweni.toml.internal.TomlParser.FalseBoolContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">FalseBoolContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-float-value.html">enterFloatValue</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/float-value.html">TomlParser#floatValue</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterFloatValue</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterFloatValue(org.apache.tuweni.toml.internal.TomlParser.FloatValueContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">FloatValueContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-hex-int.html">enterHexInt</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/hex-int.html">TomlParser#hexInt</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterHexInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterHexInt(org.apache.tuweni.toml.internal.TomlParser.HexIntContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">HexIntContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-hour.html">enterHour</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/hour.html">TomlParser#hour</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterHour</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterHour(org.apache.tuweni.toml.internal.TomlParser.HourContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">HourContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-hour-offset.html">enterHourOffset</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/hour-offset.html">TomlParser#hourOffset</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterHourOffset</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterHourOffset(org.apache.tuweni.toml.internal.TomlParser.HourOffsetContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">HourOffsetContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-inline-table.html">enterInlineTable</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/inline-table.html">TomlParser#inlineTable</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterInlineTable</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterInlineTable(org.apache.tuweni.toml.internal.TomlParser.InlineTableContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">InlineTableContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-inline-table-values.html">enterInlineTableValues</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/inline-table-values.html">TomlParser#inlineTableValues</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterInlineTableValues</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterInlineTableValues(org.apache.tuweni.toml.internal.TomlParser.InlineTableValuesContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">InlineTableValuesContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-integer.html">enterInteger</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/integer.html">TomlParser#integer</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterInteger(org.apache.tuweni.toml.internal.TomlParser.IntegerContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">IntegerContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-key.html">enterKey</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/key.html">TomlParser#key</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterKey(org.apache.tuweni.toml.internal.TomlParser.KeyContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">KeyContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-keyval.html">enterKeyval</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/keyval.html">TomlParser#keyval</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterKeyval</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterKeyval(org.apache.tuweni.toml.internal.TomlParser.KeyvalContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">KeyvalContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-literal-body.html">enterLiteralBody</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/literal-body.html">TomlParser#literalBody</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterLiteralBody</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterLiteralBody(org.apache.tuweni.toml.internal.TomlParser.LiteralBodyContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">LiteralBodyContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-literal-string.html">enterLiteralString</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/literal-string.html">TomlParser#literalString</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterLiteralString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterLiteralString(org.apache.tuweni.toml.internal.TomlParser.LiteralStringContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">LiteralStringContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-local-date.html">enterLocalDate</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/local-date.html">TomlParser#localDate</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterLocalDate</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterLocalDate(org.apache.tuweni.toml.internal.TomlParser.LocalDateContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">LocalDateContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-local-date-time.html">enterLocalDateTime</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/local-date-time.html">TomlParser#localDateTime</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterLocalDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterLocalDateTime(org.apache.tuweni.toml.internal.TomlParser.LocalDateTimeContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">LocalDateTimeContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-local-time.html">enterLocalTime</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/local-time.html">TomlParser#localTime</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterLocalTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterLocalTime(org.apache.tuweni.toml.internal.TomlParser.LocalTimeContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">LocalTimeContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-minute.html">enterMinute</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/minute.html">TomlParser#minute</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterMinute</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterMinute(org.apache.tuweni.toml.internal.TomlParser.MinuteContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">MinuteContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-minute-offset.html">enterMinuteOffset</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/minute-offset.html">TomlParser#minuteOffset</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterMinuteOffset</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterMinuteOffset(org.apache.tuweni.toml.internal.TomlParser.MinuteOffsetContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">MinuteOffsetContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-ml-basic-char.html">enterMlBasicChar</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/ml-basic-char.html">TomlParser#mlBasicChar</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterMlBasicChar</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterMlBasicChar(org.apache.tuweni.toml.internal.TomlParser.MlBasicCharContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">MlBasicCharContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-ml-basic-string.html">enterMlBasicString</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/ml-basic-string.html">TomlParser#mlBasicString</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterMlBasicString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterMlBasicString(org.apache.tuweni.toml.internal.TomlParser.MlBasicStringContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">MlBasicStringContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-ml-basic-unescaped.html">enterMlBasicUnescaped</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/ml-basic-unescaped.html">TomlParser#mlBasicUnescaped</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterMlBasicUnescaped</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterMlBasicUnescaped(org.apache.tuweni.toml.internal.TomlParser.MlBasicUnescapedContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">MlBasicUnescapedContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-ml-literal-body.html">enterMlLiteralBody</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/ml-literal-body.html">TomlParser#mlLiteralBody</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterMlLiteralBody</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterMlLiteralBody(org.apache.tuweni.toml.internal.TomlParser.MlLiteralBodyContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">MlLiteralBodyContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-ml-literal-string.html">enterMlLiteralString</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/ml-literal-string.html">TomlParser#mlLiteralString</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterMlLiteralString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterMlLiteralString(org.apache.tuweni.toml.internal.TomlParser.MlLiteralStringContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">MlLiteralStringContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-month.html">enterMonth</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/month.html">TomlParser#month</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterMonth</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterMonth(org.apache.tuweni.toml.internal.TomlParser.MonthContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">MonthContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-oct-int.html">enterOctInt</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/oct-int.html">TomlParser#octInt</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterOctInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterOctInt(org.apache.tuweni.toml.internal.TomlParser.OctIntContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">OctIntContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-offset-date-time.html">enterOffsetDateTime</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/offset-date-time.html">TomlParser#offsetDateTime</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterOffsetDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterOffsetDateTime(org.apache.tuweni.toml.internal.TomlParser.OffsetDateTimeContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">OffsetDateTimeContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-quoted-key.html">enterQuotedKey</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/quoted-key.html">TomlParser#quotedKey</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterQuotedKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterQuotedKey(org.apache.tuweni.toml.internal.TomlParser.QuotedKeyContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">QuotedKeyContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-regular-float.html">enterRegularFloat</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/regular-float.html">TomlParser#regularFloat</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterRegularFloat</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterRegularFloat(org.apache.tuweni.toml.internal.TomlParser.RegularFloatContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">RegularFloatContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-regular-float-inf.html">enterRegularFloatInf</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/regular-float-inf.html">TomlParser#regularFloatInf</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterRegularFloatInf</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterRegularFloatInf(org.apache.tuweni.toml.internal.TomlParser.RegularFloatInfContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">RegularFloatInfContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-regular-float-na-n.html">enterRegularFloatNaN</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/regular-float-na-n.html">TomlParser#regularFloatNaN</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterRegularFloatNaN</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterRegularFloatNaN(org.apache.tuweni.toml.internal.TomlParser.RegularFloatNaNContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">RegularFloatNaNContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-second.html">enterSecond</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/second.html">TomlParser#second</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterSecond</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterSecond(org.apache.tuweni.toml.internal.TomlParser.SecondContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecondContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-second-fraction.html">enterSecondFraction</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/second-fraction.html">TomlParser#secondFraction</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterSecondFraction</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterSecondFraction(org.apache.tuweni.toml.internal.TomlParser.SecondFractionContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecondFractionContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-simple-key.html">enterSimpleKey</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/simple-key.html">TomlParser#simpleKey</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterSimpleKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterSimpleKey(org.apache.tuweni.toml.internal.TomlParser.SimpleKeyContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">SimpleKeyContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-standard-table.html">enterStandardTable</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/standard-table.html">TomlParser#standardTable</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterStandardTable</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterStandardTable(org.apache.tuweni.toml.internal.TomlParser.StandardTableContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">StandardTableContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-string.html">enterString</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/string.html">TomlParser#string</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterString(org.apache.tuweni.toml.internal.TomlParser.StringContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">StringContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-table.html">enterTable</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/table.html">TomlParser#table</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterTable</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterTable(org.apache.tuweni.toml.internal.TomlParser.TableContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">TableContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-time.html">enterTime</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/time.html">TomlParser#time</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterTime(org.apache.tuweni.toml.internal.TomlParser.TimeContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">TimeContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-time-offset.html">enterTimeOffset</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/time-offset.html">TomlParser#timeOffset</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterTimeOffset</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterTimeOffset(org.apache.tuweni.toml.internal.TomlParser.TimeOffsetContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">TimeOffsetContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-toml.html">enterToml</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/toml.html">TomlParser#toml</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterToml</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterToml(org.apache.tuweni.toml.internal.TomlParser.TomlContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">TomlContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-toml-key.html">enterTomlKey</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/toml-key.html">TomlParser#tomlKey</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterTomlKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterTomlKey(org.apache.tuweni.toml.internal.TomlParser.TomlKeyContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">TomlKeyContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-true-bool.html">enterTrueBool</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/true-bool.html">TomlParser#trueBool</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterTrueBool</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterTrueBool(org.apache.tuweni.toml.internal.TomlParser.TrueBoolContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">TrueBoolContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-unquoted-key.html">enterUnquotedKey</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/unquoted-key.html">TomlParser#unquotedKey</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterUnquotedKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterUnquotedKey(org.apache.tuweni.toml.internal.TomlParser.UnquotedKeyContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">UnquotedKeyContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-val.html">enterVal</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/val.html">TomlParser#val</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterVal</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterVal(org.apache.tuweni.toml.internal.TomlParser.ValContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">ValContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-year.html">enterYear</a></h4>
+</td>
+<td>
+<p>Enter a parse tree produced by <code><a href="../-toml-parser/year.html">TomlParser#year</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enterYear</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$enterYear(org.apache.tuweni.toml.internal.TomlParser.YearContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">YearContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-array.html">exitArray</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/array.html">TomlParser#array</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitArray</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitArray(org.apache.tuweni.toml.internal.TomlParser.ArrayContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">ArrayContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-array-table.html">exitArrayTable</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/array-table.html">TomlParser#arrayTable</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitArrayTable</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitArrayTable(org.apache.tuweni.toml.internal.TomlParser.ArrayTableContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">ArrayTableContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-array-value.html">exitArrayValue</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/array-value.html">TomlParser#arrayValue</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitArrayValue</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitArrayValue(org.apache.tuweni.toml.internal.TomlParser.ArrayValueContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">ArrayValueContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-array-values.html">exitArrayValues</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/array-values.html">TomlParser#arrayValues</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitArrayValues</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitArrayValues(org.apache.tuweni.toml.internal.TomlParser.ArrayValuesContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">ArrayValuesContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-basic-char.html">exitBasicChar</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/basic-char.html">TomlParser#basicChar</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitBasicChar</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitBasicChar(org.apache.tuweni.toml.internal.TomlParser.BasicCharContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">BasicCharContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-basic-string.html">exitBasicString</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/basic-string.html">TomlParser#basicString</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitBasicString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitBasicString(org.apache.tuweni.toml.internal.TomlParser.BasicStringContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">BasicStringContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-basic-unescaped.html">exitBasicUnescaped</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/basic-unescaped.html">TomlParser#basicUnescaped</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitBasicUnescaped</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitBasicUnescaped(org.apache.tuweni.toml.internal.TomlParser.BasicUnescapedContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">BasicUnescapedContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-bin-int.html">exitBinInt</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/bin-int.html">TomlParser#binInt</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitBinInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitBinInt(org.apache.tuweni.toml.internal.TomlParser.BinIntContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">BinIntContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-boolean-value.html">exitBooleanValue</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/boolean-value.html">TomlParser#booleanValue</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitBooleanValue</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitBooleanValue(org.apache.tuweni.toml.internal.TomlParser.BooleanValueContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">BooleanValueContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-date.html">exitDate</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/date.html">TomlParser#date</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitDate</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitDate(org.apache.tuweni.toml.internal.TomlParser.DateContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">DateContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-date-time.html">exitDateTime</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/date-time.html">TomlParser#dateTime</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitDateTime(org.apache.tuweni.toml.internal.TomlParser.DateTimeContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">DateTimeContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-day.html">exitDay</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/day.html">TomlParser#day</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitDay</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitDay(org.apache.tuweni.toml.internal.TomlParser.DayContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">DayContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-dec-int.html">exitDecInt</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/dec-int.html">TomlParser#decInt</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitDecInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitDecInt(org.apache.tuweni.toml.internal.TomlParser.DecIntContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">DecIntContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-escaped.html">exitEscaped</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/escaped.html">TomlParser#escaped</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitEscaped</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitEscaped(org.apache.tuweni.toml.internal.TomlParser.EscapedContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">EscapedContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-every-rule.html">exitEveryRule</a></h4>
+</td>
+<td>
+<p>The default implementation does nothing.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitEveryRule</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitEveryRule(org.antlr.v4.runtime.ParserRuleContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">ParserRuleContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-expression.html">exitExpression</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/expression.html">TomlParser#expression</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitExpression</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitExpression(org.apache.tuweni.toml.internal.TomlParser.ExpressionContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">ExpressionContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-false-bool.html">exitFalseBool</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/false-bool.html">TomlParser#falseBool</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitFalseBool</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitFalseBool(org.apache.tuweni.toml.internal.TomlParser.FalseBoolContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">FalseBoolContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-float-value.html">exitFloatValue</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/float-value.html">TomlParser#floatValue</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitFloatValue</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitFloatValue(org.apache.tuweni.toml.internal.TomlParser.FloatValueContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">FloatValueContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-hex-int.html">exitHexInt</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/hex-int.html">TomlParser#hexInt</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitHexInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitHexInt(org.apache.tuweni.toml.internal.TomlParser.HexIntContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">HexIntContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-hour.html">exitHour</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/hour.html">TomlParser#hour</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitHour</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitHour(org.apache.tuweni.toml.internal.TomlParser.HourContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">HourContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-hour-offset.html">exitHourOffset</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/hour-offset.html">TomlParser#hourOffset</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitHourOffset</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitHourOffset(org.apache.tuweni.toml.internal.TomlParser.HourOffsetContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">HourOffsetContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-inline-table.html">exitInlineTable</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/inline-table.html">TomlParser#inlineTable</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitInlineTable</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitInlineTable(org.apache.tuweni.toml.internal.TomlParser.InlineTableContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">InlineTableContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-inline-table-values.html">exitInlineTableValues</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/inline-table-values.html">TomlParser#inlineTableValues</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitInlineTableValues</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitInlineTableValues(org.apache.tuweni.toml.internal.TomlParser.InlineTableValuesContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">InlineTableValuesContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-integer.html">exitInteger</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/integer.html">TomlParser#integer</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitInteger</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitInteger(org.apache.tuweni.toml.internal.TomlParser.IntegerContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">IntegerContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-key.html">exitKey</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/key.html">TomlParser#key</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitKey(org.apache.tuweni.toml.internal.TomlParser.KeyContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">KeyContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-keyval.html">exitKeyval</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/keyval.html">TomlParser#keyval</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitKeyval</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitKeyval(org.apache.tuweni.toml.internal.TomlParser.KeyvalContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">KeyvalContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-literal-body.html">exitLiteralBody</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/literal-body.html">TomlParser#literalBody</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitLiteralBody</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitLiteralBody(org.apache.tuweni.toml.internal.TomlParser.LiteralBodyContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">LiteralBodyContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-literal-string.html">exitLiteralString</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/literal-string.html">TomlParser#literalString</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitLiteralString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitLiteralString(org.apache.tuweni.toml.internal.TomlParser.LiteralStringContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">LiteralStringContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-local-date.html">exitLocalDate</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/local-date.html">TomlParser#localDate</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitLocalDate</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitLocalDate(org.apache.tuweni.toml.internal.TomlParser.LocalDateContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">LocalDateContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-local-date-time.html">exitLocalDateTime</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/local-date-time.html">TomlParser#localDateTime</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitLocalDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitLocalDateTime(org.apache.tuweni.toml.internal.TomlParser.LocalDateTimeContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">LocalDateTimeContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-local-time.html">exitLocalTime</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/local-time.html">TomlParser#localTime</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitLocalTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitLocalTime(org.apache.tuweni.toml.internal.TomlParser.LocalTimeContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">LocalTimeContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-minute.html">exitMinute</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/minute.html">TomlParser#minute</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitMinute</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitMinute(org.apache.tuweni.toml.internal.TomlParser.MinuteContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">MinuteContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-minute-offset.html">exitMinuteOffset</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/minute-offset.html">TomlParser#minuteOffset</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitMinuteOffset</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitMinuteOffset(org.apache.tuweni.toml.internal.TomlParser.MinuteOffsetContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">MinuteOffsetContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-ml-basic-char.html">exitMlBasicChar</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/ml-basic-char.html">TomlParser#mlBasicChar</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitMlBasicChar</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitMlBasicChar(org.apache.tuweni.toml.internal.TomlParser.MlBasicCharContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">MlBasicCharContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-ml-basic-string.html">exitMlBasicString</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/ml-basic-string.html">TomlParser#mlBasicString</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitMlBasicString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitMlBasicString(org.apache.tuweni.toml.internal.TomlParser.MlBasicStringContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">MlBasicStringContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-ml-basic-unescaped.html">exitMlBasicUnescaped</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/ml-basic-unescaped.html">TomlParser#mlBasicUnescaped</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitMlBasicUnescaped</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitMlBasicUnescaped(org.apache.tuweni.toml.internal.TomlParser.MlBasicUnescapedContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">MlBasicUnescapedContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-ml-literal-body.html">exitMlLiteralBody</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/ml-literal-body.html">TomlParser#mlLiteralBody</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitMlLiteralBody</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitMlLiteralBody(org.apache.tuweni.toml.internal.TomlParser.MlLiteralBodyContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">MlLiteralBodyContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-ml-literal-string.html">exitMlLiteralString</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/ml-literal-string.html">TomlParser#mlLiteralString</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitMlLiteralString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitMlLiteralString(org.apache.tuweni.toml.internal.TomlParser.MlLiteralStringContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">MlLiteralStringContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-month.html">exitMonth</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/month.html">TomlParser#month</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitMonth</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitMonth(org.apache.tuweni.toml.internal.TomlParser.MonthContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">MonthContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-oct-int.html">exitOctInt</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/oct-int.html">TomlParser#octInt</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitOctInt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitOctInt(org.apache.tuweni.toml.internal.TomlParser.OctIntContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">OctIntContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-offset-date-time.html">exitOffsetDateTime</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/offset-date-time.html">TomlParser#offsetDateTime</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitOffsetDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitOffsetDateTime(org.apache.tuweni.toml.internal.TomlParser.OffsetDateTimeContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">OffsetDateTimeContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-quoted-key.html">exitQuotedKey</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/quoted-key.html">TomlParser#quotedKey</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitQuotedKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitQuotedKey(org.apache.tuweni.toml.internal.TomlParser.QuotedKeyContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">QuotedKeyContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-regular-float.html">exitRegularFloat</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/regular-float.html">TomlParser#regularFloat</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitRegularFloat</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitRegularFloat(org.apache.tuweni.toml.internal.TomlParser.RegularFloatContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">RegularFloatContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-regular-float-inf.html">exitRegularFloatInf</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/regular-float-inf.html">TomlParser#regularFloatInf</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitRegularFloatInf</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitRegularFloatInf(org.apache.tuweni.toml.internal.TomlParser.RegularFloatInfContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">RegularFloatInfContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-regular-float-na-n.html">exitRegularFloatNaN</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/regular-float-na-n.html">TomlParser#regularFloatNaN</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitRegularFloatNaN</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitRegularFloatNaN(org.apache.tuweni.toml.internal.TomlParser.RegularFloatNaNContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">RegularFloatNaNContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-second.html">exitSecond</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/second.html">TomlParser#second</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitSecond</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitSecond(org.apache.tuweni.toml.internal.TomlParser.SecondContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecondContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-second-fraction.html">exitSecondFraction</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/second-fraction.html">TomlParser#secondFraction</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitSecondFraction</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitSecondFraction(org.apache.tuweni.toml.internal.TomlParser.SecondFractionContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">SecondFractionContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-simple-key.html">exitSimpleKey</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/simple-key.html">TomlParser#simpleKey</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitSimpleKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitSimpleKey(org.apache.tuweni.toml.internal.TomlParser.SimpleKeyContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">SimpleKeyContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-standard-table.html">exitStandardTable</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/standard-table.html">TomlParser#standardTable</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitStandardTable</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitStandardTable(org.apache.tuweni.toml.internal.TomlParser.StandardTableContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">StandardTableContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-string.html">exitString</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/string.html">TomlParser#string</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitString(org.apache.tuweni.toml.internal.TomlParser.StringContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">StringContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-table.html">exitTable</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/table.html">TomlParser#table</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitTable</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitTable(org.apache.tuweni.toml.internal.TomlParser.TableContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">TableContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-time.html">exitTime</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/time.html">TomlParser#time</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitTime(org.apache.tuweni.toml.internal.TomlParser.TimeContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">TimeContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-time-offset.html">exitTimeOffset</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/time-offset.html">TomlParser#timeOffset</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitTimeOffset</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitTimeOffset(org.apache.tuweni.toml.internal.TomlParser.TimeOffsetContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">TimeOffsetContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-toml.html">exitToml</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/toml.html">TomlParser#toml</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitToml</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitToml(org.apache.tuweni.toml.internal.TomlParser.TomlContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">TomlContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-toml-key.html">exitTomlKey</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/toml-key.html">TomlParser#tomlKey</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitTomlKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitTomlKey(org.apache.tuweni.toml.internal.TomlParser.TomlKeyContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">TomlKeyContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-true-bool.html">exitTrueBool</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/true-bool.html">TomlParser#trueBool</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitTrueBool</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitTrueBool(org.apache.tuweni.toml.internal.TomlParser.TrueBoolContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">TrueBoolContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-unquoted-key.html">exitUnquotedKey</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/unquoted-key.html">TomlParser#unquotedKey</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitUnquotedKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitUnquotedKey(org.apache.tuweni.toml.internal.TomlParser.UnquotedKeyContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">UnquotedKeyContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-val.html">exitVal</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/val.html">TomlParser#val</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitVal</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitVal(org.apache.tuweni.toml.internal.TomlParser.ValContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">ValContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-year.html">exitYear</a></h4>
+</td>
+<td>
+<p>Exit a parse tree produced by <code><a href="../-toml-parser/year.html">TomlParser#year</a></code>. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">exitYear</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$exitYear(org.apache.tuweni.toml.internal.TomlParser.YearContext)/ctx">ctx</span><span class="symbol">:</span>&nbsp;<span class="identifier">YearContext</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="visit-error-node.html">visitErrorNode</a></h4>
+</td>
+<td>
+<p>The default implementation does nothing.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">visitErrorNode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$visitErrorNode(org.antlr.v4.runtime.tree.ErrorNode)/node">node</span><span class="symbol">:</span>&nbsp;<span class="identifier">ErrorNode</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="visit-terminal.html">visitTerminal</a></h4>
+</td>
+<td>
+<p>The default implementation does nothing.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">visitTerminal</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.internal.TomlParserBaseListener$visitTerminal(org.antlr.v4.runtime.tree.TerminalNode)/node">node</span><span class="symbol">:</span>&nbsp;<span class="identifier">TerminalNode</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

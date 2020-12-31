@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ScuttlebuttMessageContent - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.lib.model</a>&nbsp;/&nbsp;<a href="./index.html">ScuttlebuttMessageContent</a><br/>
+<br/>
+<h1>ScuttlebuttMessageContent</h1>
+<code><span class="keyword">interface </span><span class="identifier">ScuttlebuttMessageContent</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-client-lib/src/main/java/org/apache/tuweni/scuttlebutt/lib/model/ScuttlebuttMessageContent.java#L18">(source)</a>
+<p>Classes that are to be posted to the scuttlebutt feed should implement this interface</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-type.html">getType</a></h4>
+</td>
+<td>
+<p>To be serializable to scuttlebutt, its message content must have a 'type' field.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-update-name-message/index.html">UpdateNameMessage</a></h4>
+</td>
+<td>
+<p>A message that when persisted to the feed updates the name of the given user</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UpdateNameMessage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ScuttlebuttMessageContent</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BlockchainInformation - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.devp2p.eth</a>&nbsp;/&nbsp;<a href="./index.html">BlockchainInformation</a><br/>
+<br/>
+<h1>BlockchainInformation</h1>
+<code><span class="keyword">interface </span><span class="identifier">BlockchainInformation</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/devp2p-eth/src/main/kotlin/org/apache/tuweni/devp2p/eth/BlockchainInformation.kt#L28">(source)</a>
+<p>Blockchain information to be shared over the network with peers</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="best-hash.html">bestHash</a></h4>
+</td>
+<td>
+<p>Best block hash we know</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">bestHash</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="best-number.html">bestNumber</a></h4>
+</td>
+<td>
+<p>Best block number we know</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">bestNumber</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="forks.html">forks</a></h4>
+</td>
+<td>
+<p>Forks of our network we know</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">forks</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="genesis-hash.html">genesisHash</a></h4>
+</td>
+<td>
+<p>Genesis block hash</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">genesisHash</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-fork-hashes.html">getForkHashes</a></h4>
+</td>
+<td>
+<p>Get all our fork hashes</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getForkHashes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-latest-fork.html">getLatestFork</a></h4>
+</td>
+<td>
+<p>Get our latest known fork</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLatestFork</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-latest-fork-hash.html">getLatestForkHash</a></h4>
+</td>
+<td>
+<p>Get latest fork hash, if known</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLatestForkHash</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="network-i-d.html">networkID</a></h4>
+</td>
+<td>
+<p>Our network ID. 1 for mainnet.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">networkID</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="total-difficulty.html">totalDifficulty</a></h4>
+</td>
+<td>
+<p>Total difficulty of our canonical chain</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">totalDifficulty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-simple-blockchain-information/index.html">SimpleBlockchainInformation</a></h4>
+</td>
+<td>
+<p>POJO - constant representation of the blockchain information</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">SimpleBlockchainInformation</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BlockchainInformation</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

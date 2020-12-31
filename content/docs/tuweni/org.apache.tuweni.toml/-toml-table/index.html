@@ -1,0 +1,343 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TomlTable - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.toml</a>&nbsp;/&nbsp;<a href="./index.html">TomlTable</a><br/>
+<br/>
+<h1>TomlTable</h1>
+<code><span class="keyword">interface </span><span class="identifier">TomlTable</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/toml/src/main/java/org/apache/tuweni/toml/TomlTable.java#L39">(source)</a>
+<p>An interface for accessing data stored in Tom's Obvious, Minimal Language (TOML).</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="contains.html">contains</a></h4>
+</td>
+<td>
+<p>Check if a key was set in the TOML document.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">contains</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$contains(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">contains</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$contains(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="dotted-key-set.html">dottedKeySet</a></h4>
+</td>
+<td>
+<p>Get all the dotted keys of this table. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">dottedKeySet</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Get all the dotted keys of this table.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">dottedKeySet</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$dottedKeySet(kotlin.Boolean)/includeTables">includeTables</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<p>Get a value from the TOML document.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$get(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$get(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-array.html">getArray</a></h4>
+</td>
+<td>
+<p>Get an array from the TOML document.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getArray</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getArray(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-array/index.html"><span class="identifier">TomlArray</span></a><span class="symbol">?</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getArray</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getArray(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-array/index.html"><span class="identifier">TomlArray</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-array-or-empty.html">getArrayOrEmpty</a></h4>
+</td>
+<td>
+<p>Get an array from the TOML document.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getArrayOrEmpty</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getArrayOrEmpty(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-array/index.html"><span class="identifier">TomlArray</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getArrayOrEmpty</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getArrayOrEmpty(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-array/index.html"><span class="identifier">TomlArray</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-boolean.html">getBoolean</a></h4>
+</td>
+<td>
+<p>Get a boolean from the TOML document.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getBoolean</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getBoolean(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span><span class="symbol">?</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getBoolean</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getBoolean(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span><span class="symbol">?</span></code>
+<p>Get a boolean from the TOML document, or return a default.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getBoolean</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getBoolean(kotlin.String, java.util.function.BooleanSupplier)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getBoolean(kotlin.String, java.util.function.BooleanSupplier)/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">BooleanSupplier</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getBoolean</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getBoolean(kotlin.collections.MutableList((kotlin.String)), java.util.function.BooleanSupplier)/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getBoolean(kotlin.collections.MutableList((kotlin.String)), java.util.function.BooleanSupplier)/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">BooleanSupplier</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-double.html">getDouble</a></h4>
+</td>
+<td>
+<p>Get a double from the TOML document.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDouble</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getDouble(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span><span class="symbol">?</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDouble</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getDouble(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span><span class="symbol">?</span></code>
+<p>Get a double from the TOML document, or return a default.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDouble</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getDouble(kotlin.String, java.util.function.DoubleSupplier)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getDouble(kotlin.String, java.util.function.DoubleSupplier)/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">DoubleSupplier</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDouble</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getDouble(kotlin.collections.MutableList((kotlin.String)), java.util.function.DoubleSupplier)/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getDouble(kotlin.collections.MutableList((kotlin.String)), java.util.function.DoubleSupplier)/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">DoubleSupplier</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-local-date.html">getLocalDate</a></h4>
+</td>
+<td>
+<p>Get a local date from the TOML document.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalDate</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalDate(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalDate</span><span class="symbol">?</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalDate</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalDate(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalDate</span><span class="symbol">?</span></code>
+<p>Get a local date from the TOML document, or return a default.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalDate</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalDate(kotlin.String, java.util.function.Supplier((java.time.LocalDate)))/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalDate(kotlin.String, java.util.function.Supplier((java.time.LocalDate)))/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">LocalDate</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalDate</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalDate</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalDate(kotlin.collections.MutableList((kotlin.String)), java.util.function.Supplier((java.time.LocalDate)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalDate(kotlin.collections.MutableList((kotlin.String)), java.util.function.Supplier((java.time.LocalDate)))/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">LocalDate</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalDate</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-local-date-time.html">getLocalDateTime</a></h4>
+</td>
+<td>
+<p>Get a local date time from the TOML document.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalDateTime(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalDateTime</span><span class="symbol">?</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalDateTime(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalDateTime</span><span class="symbol">?</span></code>
+<p>Get a local date time from the TOML document, or return a default.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalDateTime(kotlin.String, java.util.function.Supplier((java.time.LocalDateTime)))/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalDateTime(kotlin.String, java.util.function.Supplier((java.time.LocalDateTime)))/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">LocalDateTime</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalDateTime</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalDateTime(kotlin.collections.MutableList((kotlin.String)), java.util.function.Supplier((java.time.LocalDateTime)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalDateTime(kotlin.collections.MutableList((kotlin.String)), java.util.function.Supplier((java.time.LocalDateTime)))/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">LocalDateTime</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalDateTime</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-local-time.html">getLocalTime</a></h4>
+</td>
+<td>
+<p>Get a local time from the TOML document.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalTime(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalTime</span><span class="symbol">?</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalTime(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalTime</span><span class="symbol">?</span></code>
+<p>Get a local time from the TOML document, or return a default.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalTime(kotlin.String, java.util.function.Supplier((java.time.LocalTime)))/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalTime(kotlin.String, java.util.function.Supplier((java.time.LocalTime)))/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">LocalTime</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalTime</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalTime(kotlin.collections.MutableList((kotlin.String)), java.util.function.Supplier((java.time.LocalTime)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLocalTime(kotlin.collections.MutableList((kotlin.String)), java.util.function.Supplier((java.time.LocalTime)))/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">LocalTime</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LocalTime</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-long.html">getLong</a></h4>
+</td>
+<td>
+<p>Get a long from the TOML document.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLong(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span><span class="symbol">?</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLong(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span><span class="symbol">?</span></code>
+<p>Get a long from the TOML document, or return a default.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLong(kotlin.String, java.util.function.LongSupplier)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLong(kotlin.String, java.util.function.LongSupplier)/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">LongSupplier</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLong(kotlin.collections.MutableList((kotlin.String)), java.util.function.LongSupplier)/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getLong(kotlin.collections.MutableList((kotlin.String)), java.util.function.LongSupplier)/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">LongSupplier</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-offset-date-time.html">getOffsetDateTime</a></h4>
+</td>
+<td>
+<p>Get an offset date time from the TOML document.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOffsetDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getOffsetDateTime(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">OffsetDateTime</span><span class="symbol">?</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOffsetDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getOffsetDateTime(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">OffsetDateTime</span><span class="symbol">?</span></code>
+<p>Get an offset date time from the TOML document, or return a default.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOffsetDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getOffsetDateTime(kotlin.String, java.util.function.Supplier((java.time.OffsetDateTime)))/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getOffsetDateTime(kotlin.String, java.util.function.Supplier((java.time.OffsetDateTime)))/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">OffsetDateTime</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">OffsetDateTime</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOffsetDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getOffsetDateTime(kotlin.collections.MutableList((kotlin.String)), java.util.function.Supplier((java.time.OffsetDateTime)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getOffsetDateTime(kotlin.collections.MutableList((kotlin.String)), java.util.function.Supplier((java.time.OffsetDateTime)))/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">OffsetDateTime</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">OffsetDateTime</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-string.html">getString</a></h4>
+</td>
+<td>
+<p>Get a string from the TOML document.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getString(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getString(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Get a string from the TOML document, or return a default.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getString(kotlin.String, java.util.function.Supplier((kotlin.String)))/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getString(kotlin.String, java.util.function.Supplier((kotlin.String)))/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getString(kotlin.collections.MutableList((kotlin.String)), java.util.function.Supplier((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getString(kotlin.collections.MutableList((kotlin.String)), java.util.function.Supplier((kotlin.String)))/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Supplier</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-table.html">getTable</a></h4>
+</td>
+<td>
+<p>Get a table from the TOML document.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTable</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getTable(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">TomlTable</span></a><span class="symbol">?</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTable</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getTable(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">TomlTable</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-table-or-empty.html">getTableOrEmpty</a></h4>
+</td>
+<td>
+<p>Get a table from the TOML document.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTableOrEmpty</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getTableOrEmpty(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">TomlTable</span></a><span class="symbol">!</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTableOrEmpty</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$getTableOrEmpty(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">TomlTable</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="input-position-of.html">inputPositionOf</a></h4>
+</td>
+<td>
+<p>Get the position where a key is defined in the TOML document.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">inputPositionOf</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$inputPositionOf(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-position/index.html"><span class="identifier">TomlPosition</span></a><span class="symbol">?</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">inputPositionOf</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$inputPositionOf(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-toml-position/index.html"><span class="identifier">TomlPosition</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-array.html">isArray</a></h4>
+</td>
+<td>
+<p>Check if a value in the TOML document is an array.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isArray</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isArray(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isArray</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isArray(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-boolean.html">isBoolean</a></h4>
+</td>
+<td>
+<p>Check if a value in the TOML document is a boolean.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isBoolean</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isBoolean(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isBoolean</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isBoolean(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-double.html">isDouble</a></h4>
+</td>
+<td>
+<p>Check if a value in the TOML document is a double.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isDouble</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isDouble(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isDouble</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isDouble(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-empty.html">isEmpty</a></h4>
+</td>
+<td>
+<p>Returns true if there are no entries in this table</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-local-date.html">isLocalDate</a></h4>
+</td>
+<td>
+<p>Check if a value in the TOML document is a <code><a href="#">LocalDate</a></code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isLocalDate</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isLocalDate(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isLocalDate</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isLocalDate(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-local-date-time.html">isLocalDateTime</a></h4>
+</td>
+<td>
+<p>Check if a value in the TOML document is a <code><a href="#">LocalDateTime</a></code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isLocalDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isLocalDateTime(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isLocalDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isLocalDateTime(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-local-time.html">isLocalTime</a></h4>
+</td>
+<td>
+<p>Check if a value in the TOML document is a <code><a href="#">LocalTime</a></code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isLocalTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isLocalTime(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isLocalTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isLocalTime(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-long.html">isLong</a></h4>
+</td>
+<td>
+<p>Check if a value in the TOML document is a long.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isLong(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isLong</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isLong(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-offset-date-time.html">isOffsetDateTime</a></h4>
+</td>
+<td>
+<p>Check if a value in the TOML document is an <code><a href="#">OffsetDateTime</a></code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isOffsetDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isOffsetDateTime(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isOffsetDateTime</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isOffsetDateTime(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-string.html">isString</a></h4>
+</td>
+<td>
+<p>Check if a value in the TOML document is a string.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isString(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isString</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isString(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-table.html">isTable</a></h4>
+</td>
+<td>
+<p>Check if a value in the TOML document is a table.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isTable</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isTable(kotlin.String)/dottedKey">dottedKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isTable</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$isTable(kotlin.collections.MutableList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="key-path-set.html">keyPathSet</a></h4>
+</td>
+<td>
+<p>Get all the paths in this table. </p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">keyPathSet</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Get all the paths in this table.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">keyPathSet</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$keyPathSet(kotlin.Boolean)/includeTables">includeTables</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="key-set.html">keySet</a></h4>
+</td>
+<td>
+<p>Get the keys of this table. </p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">keySet</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableSet</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="size.html">size</a></h4>
+</td>
+<td>
+<p>Provides the size of the table</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">size</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-json.html">toJson</a></h4>
+</td>
+<td>
+<p>Return a representation of this table using JSON.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toJson</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Append a JSON representation of this table to the appendable output.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toJson</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.toml.TomlTable$toJson(java.lang.Appendable)/appendable">appendable</span><span class="symbol">:</span>&nbsp;<span class="identifier">Appendable</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-map.html">toMap</a></h4>
+</td>
+<td>
+<p>Get the elements of this array as a <code><a href="#">Map</a></code>. </p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">toMap</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableMap</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-toml-parse-result/index.html">TomlParseResult</a></h4>
+</td>
+<td>
+<p>The result from parsing a TOML document.</p>
+<code><span class="keyword">interface </span><span class="identifier">TomlParseResult</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">TomlTable</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

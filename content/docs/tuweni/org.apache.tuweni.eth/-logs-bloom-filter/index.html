@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>LogsBloomFilter - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth</a>&nbsp;/&nbsp;<a href="./index.html">LogsBloomFilter</a><br/>
+<br/>
+<h1>LogsBloomFilter</h1>
+<code><span class="keyword">class </span><span class="identifier">LogsBloomFilter</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth/src/main/java/org/apache/tuweni/eth/LogsBloomFilter.java#L33">(source)</a>
+<p>Bloom filter implementation for storing persistent logs, describes a 2048-bit representation of all log entries of a transaction, except data. Sets the bits of the 2048 byte array, where indices are given by: The lower order 11-bits, of the first three double-bytes, of the SHA3, of each value. For instance the address "0x0F572E5295C57F15886F9B263E2F6D2D6C7B5EC6" results in the KECCAK256 hash "bd2b01afcd27800b54d2179edc49e2bffde5078bb6d0b204694169b1643fb108", of which the corresponding double-bytes are: bd2b, 01af, cd27, corresponding to the following bits in the bloom filter: 1323, 431, 1319</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">LogsBloomFilter</span><span class="symbol">(</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">LogsBloomFilter</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.LogsBloomFilter$<init>(org.apache.tuweni.bytes.Bytes)/data">data</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="compute.html">compute</a></h4>
+</td>
+<td>
+<p>Creates a bloom filter corresponding to the provide log series.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">compute</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.LogsBloomFilter$compute(kotlin.collections.MutableCollection((org.apache.tuweni.eth.Log)))/logs">logs</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableCollection</span><span class="symbol">&lt;</span><a href="../-log/index.html"><span class="identifier">Log</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LogsBloomFilter</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="digest.html">digest</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">digest</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.LogsBloomFilter$digest(org.apache.tuweni.eth.LogsBloomFilter)/other">other</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LogsBloomFilter</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.LogsBloomFilter$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="insert-log.html">insertLog</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">insertLog</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.LogsBloomFilter$insertLog(org.apache.tuweni.eth.Log)/log">log</span><span class="symbol">:</span>&nbsp;<a href="../-log/index.html"><span class="identifier">Log</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-from.html">readFrom</a></h4>
+</td>
+<td>
+<p>Creates a bloom filter from the given RLP-encoded input.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">readFrom</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.LogsBloomFilter$readFrom(org.apache.tuweni.rlp.RLPReader)/input">input</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlp/-r-l-p-reader/index.html"><span class="identifier">RLPReader</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LogsBloomFilter</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-bytes.html">toBytes</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AES256GCM.forKey - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="index.html">AES256GCM</a>&nbsp;/&nbsp;<a href="./for-key.html">forKey</a><br/>
+<br/>
+<h1>forKey</h1>
+<a name="org.apache.tuweni.crypto.sodium.AES256GCM$forKey(org.apache.tuweni.crypto.sodium.AES256GCM.Key)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">forKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.AES256GCM$forKey(org.apache.tuweni.crypto.sodium.AES256GCM.Key)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">AES256GCM</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/AES256GCM.java#L366">(source)</a>
+<p>Pre-compute the expansion for the key. </p>
+<p> Note that the returned instance of <code><a href="index.html">AES256GCM</a></code> should be closed using <code><a href="close.html">#close()</a></code> (or try-with-resources) to ensure timely release of the expanded key, which is held in native memory.</p>
+<h3>Parameters</h3>
+<p><a name="key"></a>
+<code>key</code> - <span class="identifier">Key</span><span class="symbol">!</span><span class="symbol">:</span> The key to precompute an expansion for.</p>
+<h3>Exceptions</h3>
+<p><a name="UnsupportedOperationException"></a>
+<code>UnsupportedOperationException</code> - If AES256-GSM support is not available.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">AES256GCM</span></a><span class="symbol">!</span><span class="symbol">:</span> A <code><a href="index.html">AES256GCM</a></code> instance.</p>
+</BODY>
+</HTML>

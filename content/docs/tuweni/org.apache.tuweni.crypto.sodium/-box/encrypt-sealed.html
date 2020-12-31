@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Box.encryptSealed - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="index.html">Box</a>&nbsp;/&nbsp;<a href="./encrypt-sealed.html">encryptSealed</a><br/>
+<br/>
+<h1>encryptSealed</h1>
+<a name="org.apache.tuweni.crypto.sodium.Box$encryptSealed(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.Box.PublicKey)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encryptSealed</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Box$encryptSealed(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.Box.PublicKey)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Box$encryptSealed(org.apache.tuweni.bytes.Bytes, org.apache.tuweni.crypto.sodium.Box.PublicKey)/receiver">receiver</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/Box.java#L835">(source)</a>
+<p>Encrypt a sealed message for a given key. </p>
+<p> Sealed boxes are designed to anonymously send messages to a recipient given its public key. </p>
+<p> Only the recipient can decrypt these messages, using its private key. While the recipient can verify the integrity of the message, it cannot verify the identity of the sender. </p>
+<p> A message is encrypted using an ephemeral key pair, whose secret part is destroyed right after the encryption process. </p>
+<p> Without knowing the secret key used for a given message, the sender cannot decrypt its own message later. And without additional data, a message cannot be correlated with the identity of its sender.</p>
+<h3>Parameters</h3>
+<p><a name="message"></a>
+<code>message</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The message to encrypt.</p>
+<p><a name="receiver"></a>
+<code>receiver</code> - <span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">:</span> The public key of the receiver.</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The encrypted data.</p>
+<a name="org.apache.tuweni.crypto.sodium.Box$encryptSealed(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.Box.PublicKey)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encryptSealed</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Box$encryptSealed(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.Box.PublicKey)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.crypto.sodium.Box$encryptSealed(kotlin.ByteArray, org.apache.tuweni.crypto.sodium.Box.PublicKey)/receiver">receiver</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/Box.java#L861">(source)</a>
+<p>Encrypt a sealed message for a given key. </p>
+<p> Sealed boxes are designed to anonymously send messages to a recipient given its public key. </p>
+<p> Only the recipient can decrypt these messages, using its private key. While the recipient can verify the integrity of the message, it cannot verify the identity of the sender. </p>
+<p> A message is encrypted using an ephemeral key pair, whose secret part is destroyed right after the encryption process. </p>
+<p> Without knowing the secret key used for a given message, the sender cannot decrypt its own message later. And without additional data, a message cannot be correlated with the identity of its sender.</p>
+<h3>Parameters</h3>
+<p><a name="message"></a>
+<code>message</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The message to encrypt.</p>
+<p><a name="receiver"></a>
+<code>receiver</code> - <span class="identifier">PublicKey</span><span class="symbol">!</span><span class="symbol">:</span> The public key of the receiver.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The encrypted data.</p>
+</BODY>
+</HTML>

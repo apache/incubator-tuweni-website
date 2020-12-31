@@ -1,0 +1,176 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>KeyValueStore - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.kv</a>&nbsp;/&nbsp;<a href="./index.html">KeyValueStore</a><br/>
+<br/>
+<h1>KeyValueStore</h1>
+<code><span class="keyword">interface </span><span class="identifier">KeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Closeable</span><span class="symbol">, </span><span class="identifier">CoroutineScope</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/kv/src/main/kotlin/org/apache/tuweni/kv/KeyValueStore.kt#L29">(source)</a>
+<p>A key-value store.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="clear.html">clear</a></h4>
+</td>
+<td>
+<p>Clears the contents of the store.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="clear-async.html">clearAsync</a></h4>
+</td>
+<td>
+<p>Clears the contents of the store.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clearAsync</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains-key.html">containsKey</a></h4>
+</td>
+<td>
+<p>Returns true if the store contains the key.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">containsKey</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kv.KeyValueStore$containsKey(org.apache.tuweni.kv.KeyValueStore.K)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="contains-key-async.html">containsKeyAsync</a></h4>
+</td>
+<td>
+<p>Returns true if the store contains the key.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">containsKeyAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kv.KeyValueStore$containsKeyAsync(org.apache.tuweni.kv.KeyValueStore.K)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">Boolean</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<p>Retrieves data from the store.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kv.KeyValueStore$get(org.apache.tuweni.kv.KeyValueStore.K)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">V</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-async.html">getAsync</a></h4>
+</td>
+<td>
+<p>Retrieves data from the store.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kv.KeyValueStore$getAsync(org.apache.tuweni.kv.KeyValueStore.K)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">V</span><span class="symbol">?</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="keys.html">keys</a></h4>
+</td>
+<td>
+<p>Provides an iterator over the keys of the store.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">keys</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Iterable</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="keys-async.html">keysAsync</a></h4>
+</td>
+<td>
+<p>Provides an iterator over the keys of the store.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">keysAsync</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">Iterable</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="put.html">put</a></h4>
+</td>
+<td>
+<p>Puts data into the store.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">put</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kv.KeyValueStore$put(org.apache.tuweni.kv.KeyValueStore.K, org.apache.tuweni.kv.KeyValueStore.V)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.kv.KeyValueStore$put(org.apache.tuweni.kv.KeyValueStore.K, org.apache.tuweni.kv.KeyValueStore.V)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="put-async.html">putAsync</a></h4>
+</td>
+<td>
+<p>Puts data into the store.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">putAsync</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.kv.KeyValueStore$putAsync(org.apache.tuweni.kv.KeyValueStore.K, org.apache.tuweni.kv.KeyValueStore.V)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">K</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.kv.KeyValueStore$putAsync(org.apache.tuweni.kv.KeyValueStore.K, org.apache.tuweni.kv.KeyValueStore.V)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">V</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-entity-manager-key-value-store/index.html">EntityManagerKeyValueStore</a></h4>
+</td>
+<td>
+<p>JPA-backed key value store.</p>
+<code><span class="keyword">class </span><span class="identifier">EntityManagerKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-infinispan-key-value-store/index.html">InfinispanKeyValueStore</a></h4>
+</td>
+<td>
+<p>A key-value store backed by <a href="https://infinispan.org">Infinispan</a></p>
+<code><span class="keyword">class </span><span class="identifier">InfinispanKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-level-d-b-key-value-store/index.html">LevelDBKeyValueStore</a></h4>
+</td>
+<td>
+<p>A key-value store backed by LevelDB.</p>
+<code><span class="keyword">class </span><span class="identifier">LevelDBKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-map-d-b-key-value-store/index.html">MapDBKeyValueStore</a></h4>
+</td>
+<td>
+<p>A key-value store backed by a MapDB instance.</p>
+<code><span class="keyword">class </span><span class="identifier">MapDBKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-map-key-value-store/index.html">MapKeyValueStore</a></h4>
+</td>
+<td>
+<p>A key-value store backed by an in-memory Map.</p>
+<code><span class="keyword">class </span><span class="identifier">MapKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-proxy-key-value-store/index.html">ProxyKeyValueStore</a></h4>
+</td>
+<td>
+<p>A store used as a proxy for another store.</p>
+<code><span class="keyword">class </span><span class="identifier">ProxyKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">, </span><span class="identifier">E</span><span class="symbol">, </span><span class="identifier">R</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-redis-key-value-store/index.html">RedisKeyValueStore</a></h4>
+</td>
+<td>
+<p>A key-value store backed by Redis.</p>
+<code><span class="keyword">class </span><span class="identifier">RedisKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-rocks-d-b-key-value-store/index.html">RocksDBKeyValueStore</a></h4>
+</td>
+<td>
+<p>A key-value store backed by RocksDB.</p>
+<code><span class="keyword">class </span><span class="identifier">RocksDBKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-s-q-l-key-value-store/index.html">SQLKeyValueStore</a></h4>
+</td>
+<td>
+<p>A key-value store backed by a relational database.</p>
+<code><span class="keyword">class </span><span class="identifier">SQLKeyValueStore</span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">KeyValueStore</span></a><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

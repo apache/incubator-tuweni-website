@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RPCCodec.encodeResponse - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.rpc</a>&nbsp;/&nbsp;<a href="index.html">RPCCodec</a>&nbsp;/&nbsp;<a href="./encode-response.html">encodeResponse</a><br/>
+<br/>
+<h1>encodeResponse</h1>
+<a name="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeResponse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte)/body">body</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte)/requestNumber">requestNumber</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte)/flagByte">flagByte</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-rpc/src/main/java/org/apache/tuweni/scuttlebutt/rpc/RPCCodec.java#L111">(source)</a>
+<p>Encode a message as a response to a RPC request.</p>
+<h3>Parameters</h3>
+<p><a name="body"></a>
+<code>body</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the body to encode as the body of the response</p>
+<p><a name="requestNumber"></a>
+<code>requestNumber</code> - <span class="identifier">Int</span><span class="symbol">:</span> the request of the number. Must be equal or greater than one.</p>
+<p><a name="flagByte"></a>
+<code>flagByte</code> - <span class="identifier">Byte</span><span class="symbol">:</span> the flags of the RPC response encoded as a byte</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the response encoded as a RPC response</p>
+<a name="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeResponse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/body">body</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/requestNumber">requestNumber</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/flagByte">flagByte</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Byte, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/flags">flags</span><span class="symbol">:</span>&nbsp;<a href="../-r-p-c-flag/index.html"><span class="identifier">RPCFlag</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-rpc/src/main/java/org/apache/tuweni/scuttlebutt/rpc/RPCCodec.java#L132">(source)</a>
+<p>Encode a message as a response to a RPC request.</p>
+<h3>Parameters</h3>
+<p><a name="body"></a>
+<code>body</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the body to encode as the body of the response</p>
+<p><a name="requestNumber"></a>
+<code>requestNumber</code> - <span class="identifier">Int</span><span class="symbol">:</span> the request of the number. Must be equal or greater than one.</p>
+<p><a name="flagByte"></a>
+<code>flagByte</code> - <span class="identifier">Byte</span><span class="symbol">:</span> the flags of the RPC response encoded as a byte</p>
+<p><a name="flags"></a>
+<code>flags</code> - <a href="../-r-p-c-flag/index.html"><span class="identifier">RPCFlag</span></a><span class="symbol">!</span><span class="symbol">:</span> the flags of the RPC request</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the response encoded as a RPC response</p>
+<a name="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encodeResponse</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/body">body</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/requestNumber">requestNumber</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.RPCCodec$encodeResponse(org.apache.tuweni.bytes.Bytes, kotlin.Int, kotlin.Array((org.apache.tuweni.scuttlebutt.rpc.RPCFlag)))/flags">flags</span><span class="symbol">:</span>&nbsp;<a href="../-r-p-c-flag/index.html"><span class="identifier">RPCFlag</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-rpc/src/main/java/org/apache/tuweni/scuttlebutt/rpc/RPCCodec.java#L165">(source)</a>
+<p>Encode a message as a response to a RPC request.</p>
+<h3>Parameters</h3>
+<p><a name="body"></a>
+<code>body</code> - <a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the body to encode as the body of the response</p>
+<p><a name="requestNumber"></a>
+<code>requestNumber</code> - <span class="identifier">Int</span><span class="symbol">:</span> the request of the number. Must be equal or greater than one.</p>
+<p><a name="flags"></a>
+<code>flags</code> - <a href="../-r-p-c-flag/index.html"><span class="identifier">RPCFlag</span></a><span class="symbol">!</span><span class="symbol">:</span> the flags of the RPC request</p>
+<p><strong>Return</strong><br/>
+<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> the response encoded as a RPC response</p>
+</BODY>
+</HTML>

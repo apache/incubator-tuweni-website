@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>HobbitsTransport.createTCPEndpoint - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.hobbits</a>&nbsp;/&nbsp;<a href="index.html">HobbitsTransport</a>&nbsp;/&nbsp;<a href="./create-t-c-p-endpoint.html">createTCPEndpoint</a><br/>
+<br/>
+<h1>createTCPEndpoint</h1>
+<a name="org.apache.tuweni.hobbits.HobbitsTransport$createTCPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))"></a>
+<code><span class="keyword">fun </span><span class="identifier">createTCPEndpoint</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createTCPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"default"<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createTCPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/networkInterface">networkInterface</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"0.0.0.0"<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createTCPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;9237<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createTCPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/tls">tls</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createTCPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../-message/index.html"><span class="identifier">Message</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.hobbits.HobbitsTransport$createTCPEndpoint(kotlin.String, kotlin.String, kotlin.Int, kotlin.Boolean, kotlin.Function1((org.apache.tuweni.hobbits.Message, kotlin.Unit)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/portUpdateListener">portUpdateListener</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">Int</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/hobbits/src/main/kotlin/org/apache/tuweni/hobbits/HobbitsTransport.kt#L110">(source)</a>
+<p>Creates a new endpoint over tcp persistent connections.</p>
+<h3>Parameters</h3>
+<p><a name="networkInterface"></a>
+<code>networkInterface</code> - the network interface to bind the endpoint to</p>
+<p><a name="port"></a>
+<code>port</code> - the port to serve traffic from</p>
+<p><a name="tls"></a>
+<code>tls</code> - whether the endpoint should be secured using TLS</p>
+<p><a name="handler"></a>
+<code>handler</code> - function called when a message is received</p>
+</BODY>
+</HTML>

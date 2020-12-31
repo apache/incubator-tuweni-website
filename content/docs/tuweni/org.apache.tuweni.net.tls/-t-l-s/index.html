@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TLS - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.net.tls</a>&nbsp;/&nbsp;<a href="./index.html">TLS</a><br/>
+<br/>
+<h1>TLS</h1>
+<code><span class="keyword">class </span><span class="identifier">TLS</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/net/src/main/java/org/apache/tuweni/net/tls/TLS.java#L63">(source)</a>
+<p>Common utilities for TLS. </p>
+<p> This class depends upon the BouncyCastle library being available and added as a <code><a href="#">java.security.Provider</a></code>. See https://www.bouncycastle.org/wiki/display/JA1/Provider+Installation. </p>
+<p> BouncyCastle can be included using the gradle dependencies <code>org.bouncycastle:bcprov-jdk15on</code> and <code>org.bouncycastle:bcpkix-jdk15on</code>.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="certificate-fingerprint.html">certificateFingerprint</a></h4>
+</td>
+<td>
+<p>Calculate the fingerprint for a PEM-encoded certificate.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">certificateFingerprint</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.TLS$certificateFingerprint(java.nio.file.Path)/certificate">certificate</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code>
+<p>Calculate the fingerprint for certificate.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">certificateFingerprint</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.TLS$certificateFingerprint(java.security.cert.Certificate)/certificate">certificate</span><span class="symbol">:</span>&nbsp;<span class="identifier">Certificate</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="certificate-hex-fingerprint.html">certificateHexFingerprint</a></h4>
+</td>
+<td>
+<p>Calculate the fingerprint for a PEM-encoded certificate.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">certificateHexFingerprint</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.TLS$certificateHexFingerprint(java.nio.file.Path)/certificate">certificate</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Calculate the fingerprint for certificate.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">certificateHexFingerprint</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.TLS$certificateHexFingerprint(java.security.cert.Certificate)/certificate">certificate</span><span class="symbol">:</span>&nbsp;<span class="identifier">Certificate</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="create-self-signed-certificate-if-missing.html">createSelfSignedCertificateIfMissing</a></h4>
+</td>
+<td>
+<p>Create a self-signed certificate, if it is not already present. </p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">createSelfSignedCertificateIfMissing</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.TLS$createSelfSignedCertificateIfMissing(java.nio.file.Path, java.nio.file.Path)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.net.tls.TLS$createSelfSignedCertificateIfMissing(java.nio.file.Path, java.nio.file.Path)/certificate">certificate</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">createSelfSignedCertificateIfMissing</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.TLS$createSelfSignedCertificateIfMissing(java.nio.file.Path, java.nio.file.Path, kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.net.tls.TLS$createSelfSignedCertificateIfMissing(java.nio.file.Path, java.nio.file.Path, kotlin.String)/certificate">certificate</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.net.tls.TLS$createSelfSignedCertificateIfMissing(java.nio.file.Path, java.nio.file.Path, kotlin.String)/commonName">commonName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-pem-file.html">readPemFile</a></h4>
+</td>
+<td>
+<p>Read a PEM-encoded file.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">readPemFile</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.net.tls.TLS$readPemFile(java.nio.file.Path)/certificate">certificate</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

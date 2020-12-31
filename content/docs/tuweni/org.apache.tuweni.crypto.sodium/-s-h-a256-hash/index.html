@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SHA256Hash - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="./index.html">SHA256Hash</a><br/>
+<br/>
+<h1>SHA256Hash</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SHA256Hash</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/crypto/src/main/java/org/apache/tuweni/crypto/sodium/SHA256Hash.java#L37">(source)</a>
+<p>SHA-256 hashing. The SHA-256 and SHA-512 functions are provided for interoperability with other applications. If you are looking for a generic hash function and not specifically SHA-2, using crypto_generichash() (BLAKE2b) might be a better choice. </p>
+<p> These functions are also not suitable for hashing passwords or deriving keys from passwords. Use one of the password hashing APIs instead. </p>
+<p> These functions are not keyed and are thus deterministic. In addition, the untruncated versions are vulnerable to length extension attacks. </p>
+<p><strong>See Also</strong><br/>
+&lt;a href="https://libsodium.gitbook.io/doc/advanced/sha-2_hash_function"&gt;SHA-2&lt;/a&gt;</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-hash/index.html">Hash</a></h4>
+</td>
+<td>
+<p>SHA-256 hash output</p>
+<code><span class="keyword">class </span><span class="identifier">Hash</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Destroyable</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-input/index.html">Input</a></h4>
+</td>
+<td>
+<p>Input of a SHA-256 hash function</p>
+<code><span class="keyword">class </span><span class="identifier">Input</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Destroyable</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>SHA-256 hashing. The SHA-256 and SHA-512 functions are provided for interoperability with other applications. If you are looking for a generic hash function and not specifically SHA-2, using crypto_generichash() (BLAKE2b) might be a better choice. </p>
+<code><span class="identifier">SHA256Hash</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="hash.html">hash</a></h4>
+</td>
+<td>
+<p>Hashes input to a SHA-256 hash</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">hash</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SHA256Hash$hash(org.apache.tuweni.crypto.sodium.SHA256Hash.Input)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">Input</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Hash</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

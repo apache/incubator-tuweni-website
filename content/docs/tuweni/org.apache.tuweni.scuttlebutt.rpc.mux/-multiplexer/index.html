@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Multiplexer - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.rpc.mux</a>&nbsp;/&nbsp;<a href="./index.html">Multiplexer</a><br/>
+<br/>
+<h1>Multiplexer</h1>
+<code><span class="keyword">interface </span><span class="identifier">Multiplexer</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-rpc/src/main/java/org/apache/tuweni/scuttlebutt/rpc/mux/Multiplexer.java#L28">(source)</a>
+<p>Multiplexes asynchronous requests and streams across a connection to a node. Handles multiple active requests and streams across one connection.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="close.html">close</a></h4>
+</td>
+<td>
+<p>Close the underlying connection</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="make-async-request.html">makeAsyncRequest</a></h4>
+</td>
+<td>
+<p>Issue an 'async' type request to a node, which will eventually return a result from the node.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">makeAsyncRequest</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.mux.Multiplexer$makeAsyncRequest(org.apache.tuweni.scuttlebutt.rpc.RPCAsyncRequest)/request">request</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.rpc/-r-p-c-async-request/index.html"><span class="identifier">RPCAsyncRequest</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-result/index.html"><span class="identifier">AsyncResult</span></a><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.scuttlebutt.rpc/-r-p-c-response/index.html"><span class="identifier">RPCResponse</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-stream.html">openStream</a></h4>
+</td>
+<td>
+<p>Creates a request which opens a stream (e.g. a 'source' in the protocol docs.)</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">openStream</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.mux.Multiplexer$openStream(org.apache.tuweni.scuttlebutt.rpc.RPCStreamRequest, java.util.function.Function((java.lang.Runnable, org.apache.tuweni.scuttlebutt.rpc.mux.ScuttlebuttStreamHandler)))/request">request</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.scuttlebutt.rpc/-r-p-c-stream-request/index.html"><span class="identifier">RPCStreamRequest</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.rpc.mux.Multiplexer$openStream(org.apache.tuweni.scuttlebutt.rpc.RPCStreamRequest, java.util.function.Function((java.lang.Runnable, org.apache.tuweni.scuttlebutt.rpc.mux.ScuttlebuttStreamHandler)))/streamFactory">streamFactory</span><span class="symbol">:</span>&nbsp;<span class="identifier">Function</span><span class="symbol">&lt;</span><span class="identifier">Runnable</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="../-scuttlebutt-stream-handler/index.html"><span class="identifier">ScuttlebuttStreamHandler</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-r-p-c-handler/index.html">RPCHandler</a></h4>
+</td>
+<td>
+<p>Handles RPC requests and responses from an active connection to a scuttlebutt node.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RPCHandler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Multiplexer</span></a><span class="symbol">, </span><a href="../../org.apache.tuweni.scuttlebutt.handshake.vertx/-client-handler/index.html"><span class="identifier">ClientHandler</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

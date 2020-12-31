@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>FeedValue.getContentAs - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.scuttlebutt.lib.model</a>&nbsp;/&nbsp;<a href="index.html">FeedValue</a>&nbsp;/&nbsp;<a href="./get-content-as.html">getContentAs</a><br/>
+<br/>
+<h1>getContentAs</h1>
+<a name="org.apache.tuweni.scuttlebutt.lib.model.FeedValue$getContentAs(com.fasterxml.jackson.databind.ObjectMapper, java.lang.Class((org.apache.tuweni.scuttlebutt.lib.model.FeedValue.getContentAs.T)))"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">getContentAs</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.model.FeedValue$getContentAs(com.fasterxml.jackson.databind.ObjectMapper, java.lang.Class((org.apache.tuweni.scuttlebutt.lib.model.FeedValue.getContentAs.T)))/mapper">mapper</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.scuttlebutt.lib.model.FeedValue$getContentAs(com.fasterxml.jackson.databind.ObjectMapper, java.lang.Class((org.apache.tuweni.scuttlebutt.lib.model.FeedValue.getContentAs.T)))/clazz">clazz</span><span class="symbol">:</span>&nbsp;<span class="identifier">Class</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/scuttlebutt-client-lib/src/main/java/org/apache/tuweni/scuttlebutt/lib/model/FeedValue.java#L94">(source)</a>
+<p>The message content, deserialized to a Java class.</p>
+<h3>Parameters</h3>
+<p><a name="mapper"></a>
+<code>mapper</code> - <span class="identifier">ObjectMapper</span><span class="symbol">!</span><span class="symbol">:</span> the mapper instance to use to deserialize the content</p>
+<p><a name="clazz"></a>
+<code>clazz</code> - <span class="identifier">Class</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> the class to deserialize the content to</p>
+<p><a name="&lt;T&gt;"></a>
+<code><T></code> - the type to deserialize the content to</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - if the content could not successfully be deserialized.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">T</span><span class="symbol">:</span> the deserialized content</p>
+</BODY>
+</HTML>
