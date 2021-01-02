@@ -86,6 +86,11 @@ cp -R build/docs/tuweni/* ../asf-site-branch/content/docs
 cd ..
 cd asf-site-branch
 
+#
+# Copy favicon to default location
+#
+cp content/assets/themes/apache/img/tuweni_face.ico content/favicon.ico
+
 
 #
 # Commit and push to gitbox
