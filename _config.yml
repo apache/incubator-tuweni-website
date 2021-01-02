@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 markdown: kramdown
+highlighter: rouge
 permalink: /news/:year/:month/:day/:title/
 excerpt_separator: ""
 
