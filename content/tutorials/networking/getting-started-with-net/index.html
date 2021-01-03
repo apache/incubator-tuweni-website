@@ -147,7 +147,83 @@
       <span></span>
     </div>
     <div class="content">
-      
+      <p>To get started, install the <code class="highlighter-rouge">net</code> library.</p>
+
+<p>With Maven:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.apache.tuweni<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>net<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.3.0<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+
+<p>Or using Gradle:</p>
+
+<figure class="highlight"><pre><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span><span class="o">(</span><span class="s2">"org.apache.tuweni:net:1.3.0"</span><span class="o">)</span></code></pre></figure>
+
+<p>If you haven’t already, you will also need to add Bouncy Castle to your dependencies, and add the Bouncy Castle Security Provider to Java.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Security</span><span class="o">.</span><span class="na">addProvider</span><span class="o">(</span><span class="k">new</span> <span class="n">BouncyCastleProvider</span><span class="o">());</span></code></pre></figure>
+
+<h1 id="permissions">Permissions</h1>
+
+<p>Since we’re engaging in peer-to-peer applications, we will define different scenarios for trust.</p>
+
+<p>First off, we will engage in two-way certificate authentication. The server will provide its certificate to the client and the client will also need to provide its identity.</p>
+
+<p>All those settings are taken after the <a href="https://github.com/consensys/constellation">Constellation private enclave network options</a>.</p>
+
+<h2 id="ca">CA</h2>
+<p>By default, Java uses Certificate Authorities on the machine to authenticate a trusted certificate.</p>
+
+<h2 id="recording">Recording</h2>
+<p>We can also choose to record the fingerprints of incoming connections while authorizing all of them.</p>
+
+<h2 id="trust-on-first-use-tofu">Trust On First Use (TOFU)</h2>
+<p>In this setting, incoming connections are recorded, and their certificates are collected, but only the first certificate assigned to a connection is allowed.</p>
+
+<p>This is a good way to mitigate MITM attacks.</p>
+
+<h2 id="whitelist">Whitelist</h2>
+
+<p>Only explicit hosts and certificate combinations are allowed.</p>
+
+<h1 id="trustmanagerfactories">TrustManagerFactories</h1>
+
+<p><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/javax/net/ssl/TrustManagerFactory.html"><code class="highlighter-rouge">TrustManagerFactory</code> implementations</a> provide trust with JDK and most Java-based servers.</p>
+
+<p>The <a href="/docs/org.apache.tuweni.net.tls/-trust-manager-factories/index.html"><code class="highlighter-rouge">TrustManagerFactories</code> API</a> creates <code class="highlighter-rouge">TrustManagerFactory</code> objects for client and server communications.</p>
+
+<p>As an example, the following method creates a <code class="highlighter-rouge">TrustManagerFactory</code> that records incoming connections into a <code class="highlighter-rouge">knownServersFile</code>, but only the ones that don’t have a signed CA certificate.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">TrustManagerFactories</span><span class="o">.</span><span class="na">recordServerFingerprints</span><span class="o">(</span><span class="n">knownServersFile</span><span class="o">,</span> <span class="kc">false</span><span class="o">);</span></code></pre></figure>
+
+<h1 id="vertxtrustoptions">VertxTrustOptions</h1>
+
+<p>The <a href="/docs/org.apache.tuweni.net.tls/-vertx-trust-options/index.html"><code class="highlighter-rouge">VertxTrustOptions</code> API</a> is a quick drop-in API to configure Vert.x servers and clients for communications.</p>
+
+<p>In the example below, we set a server to require client authentication and trust clients on first access (TOFU).</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">HttpServerOptions</span> <span class="n">options</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpServerOptions</span><span class="o">();</span>
+<span class="n">options</span><span class="o">.</span><span class="na">setSsl</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+       <span class="o">.</span><span class="na">setClientAuth</span><span class="o">(</span><span class="n">ClientAuth</span><span class="o">.</span><span class="na">REQUIRED</span><span class="o">)</span>
+       <span class="o">.</span><span class="na">setPemKeyCertOptions</span><span class="o">(</span><span class="n">serverCert</span><span class="o">.</span><span class="na">keyCertOptions</span><span class="o">())</span>
+       <span class="o">.</span><span class="na">setTrustOptions</span><span class="o">(</span><span class="n">VertxTrustOptions</span><span class="o">.</span><span class="na">trustClientOnFirstAccess</span><span class="o">(</span><span class="n">knownClientsFile</span><span class="o">))</span>
+       <span class="o">.</span><span class="na">setIdleTimeout</span><span class="o">(</span><span class="mi">1500</span><span class="o">)</span>
+       <span class="o">.</span><span class="na">setReuseAddress</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+       <span class="o">.</span><span class="na">setReusePort</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+<span class="n">httpServer</span> <span class="o">=</span> <span class="n">vertx</span><span class="o">.</span><span class="na">createHttpServer</span><span class="o">(</span><span class="n">options</span><span class="o">);</span></code></pre></figure>
+
+<p>In this example, we set a HTTP client to communicate with servers that are whitelisted only (and not even trust CA-signed certificates):</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">HttpClientOptions</span> <span class="n">options</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpClientOptions</span><span class="o">();</span>
+<span class="n">options</span><span class="o">.</span><span class="na">setSsl</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+       <span class="o">.</span><span class="na">setTrustOptions</span><span class="o">(</span><span class="n">VertxTrustOptions</span><span class="o">.</span><span class="na">whitelistServers</span><span class="o">(</span><span class="n">knownServersFile</span><span class="o">,</span> <span class="kc">false</span><span class="o">))</span>
+       <span class="o">.</span><span class="na">setConnectTimeout</span><span class="o">(</span><span class="mi">1500</span><span class="o">)</span>
+       <span class="o">.</span><span class="na">setReuseAddress</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+       <span class="o">.</span><span class="na">setReusePort</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">vertx</span><span class="o">.</span><span class="na">createHttpClient</span><span class="o">(</span><span class="n">options</span><span class="o">);</span></code></pre></figure>
+
 
     </div>
     <div class="pagination row col-md-12">

@@ -4,11 +4,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Manipulating Bytes</title>
+    <title>Gossip</title>
     <link rel="icon"
           type="image/ico"
           href="/assets/themes/apache/img/tuweni_face.ico">
-    <meta name="description" content="Manipulating Bytes">
+    <meta name="description" content="Gossip">
 
     <meta name="author" content="">
 
@@ -97,7 +97,7 @@
       
 
 <div class="page-header">
-  <h1>Manipulating Bytes </h1>
+  <h1>Gossip </h1>
 </div>
 
 <div class="row-fluid post-full">
@@ -112,8 +112,8 @@
 
   
      
-    	<li><a href="#bytes-ref">
-    		bytes <span></span>
+    	<li><a href="#applications-ref">
+    		applications <span></span>
     	</a></li>
     
   
@@ -147,44 +147,56 @@
           
         
           
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
             
-            <a href="/tutorials/libraries/creating-bytes/" title="Creating Bytes">&larr; Creating Bytes</a><br/>
+            <a href="/" title="Apache Tuweni">&larr; Apache Tuweni</a><br/>
           
         
           
-        
+            
+            <a href="/tutorials/libraries/" title="Libraries Tutorials">&larr; Libraries Tutorials</a><br/>
           
         
           
-        
+            
+            <a href="/tutorials/apps/" title="Applications">&larr; Applications</a><br/>
           
         
           
-        
+            
+            <a href="/tutorials/" title="Tutorials">&larr; Tutorials</a><br/>
           
         
           
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
+            
+            <a href="/tutorials/networking/" title="Networking">&larr; Networking</a><br/>
           
         
           
@@ -203,65 +215,6 @@
       </div>
       <div class="col-md-6" style="text-align: right;">
       
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-            
-            <a href="/tutorials/libraries/extracting-values/" title="Extracting values">Extracting values &rarr;</a><br/>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
       </div>
     </div>
     <hr>
@@ -269,59 +222,47 @@
       <span></span>
     </div>
     <div class="content">
-      <h1 id="concatenating-and-wrapping">Concatenating and wrapping</h1>
+      <p>The <code class="highlighter-rouge">gossip</code> application is an example showing how the Plumtree gossip implementation functions.</p>
 
-<p>You can <a href="/docs/org.apache.tuweni.bytes/-bytes/concatenate.html">concatenate</a> or <a href="/docs/org.apache.tuweni.bytes/-bytes/wrap.html">wrap</a> bytes objects.</p>
+<p><code class="highlighter-rouge">gossip</code> is distributed as part of the binary distribution of Apache Tuweni, which you can download from this <a href="/download">page</a></p>
 
-<p>When concatenating, the underlying objects are copied into a new bytes object.</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">./gossip <span class="nt">--help</span>
+Usage: &lt;main class&gt; <span class="o">[</span><span class="nt">-h</span><span class="o">]</span> <span class="o">[</span><span class="nt">--sending</span><span class="o">]</span> <span class="o">[</span><span class="nt">--numberOfMessages</span><span class="o">=</span>&lt;numberOfMessages&gt;]
+                    <span class="o">[</span><span class="nt">--payloadSize</span><span class="o">=</span>&lt;payloadSize&gt;]
+                    <span class="o">[</span><span class="nt">--sendInterval</span><span class="o">=</span>&lt;sendInterval&gt;] <span class="o">[</span><span class="nt">-c</span><span class="o">=</span>&lt;configPath&gt;]
+                    <span class="o">[</span><span class="nt">-l</span><span class="o">=</span>&lt;port&gt;] <span class="o">[</span><span class="nt">-m</span><span class="o">=</span>&lt;messageLog&gt;] <span class="o">[</span><span class="nt">-n</span><span class="o">=</span>&lt;networkInterface&gt;]
+                    <span class="o">[</span><span class="nt">-r</span><span class="o">=</span>&lt;rpcPort&gt;] <span class="o">[</span><span class="nt">-p</span><span class="o">[=</span>&lt;peers&gt;...]]...
+      <span class="nt">--numberOfMessages</span><span class="o">=</span>&lt;numberOfMessages&gt;
+                            Number of messages to publish <span class="o">(</span>load testing<span class="o">)</span>
+      <span class="nt">--payloadSize</span><span class="o">=</span>&lt;payloadSize&gt;
+                            Size of the random payload to send to other peers <span class="o">(</span>load
+                              testing<span class="o">)</span>
+      <span class="nt">--sending</span>             Whether this peer sends random messages to all other
+                              peers <span class="o">(</span>load testing<span class="o">)</span>
+      <span class="nt">--sendInterval</span><span class="o">=</span>&lt;sendInterval&gt;
+                            Interval to <span class="nb">wait </span><span class="k">in </span>between sending messages <span class="k">in
+                              </span>milliseconds <span class="o">(</span>load testing<span class="o">)</span>
+  <span class="nt">-c</span>, <span class="nt">--config</span><span class="o">=</span>&lt;configPath&gt; Configuration file.
+  <span class="nt">-h</span>, <span class="nt">--help</span>                Prints usage prompt
+  <span class="nt">-l</span>, <span class="nt">--listen</span><span class="o">=</span>&lt;port&gt;       Port to listen on
+  <span class="nt">-m</span>, <span class="nt">--messageLog</span><span class="o">=</span>&lt;messageLog&gt;
+                            Log file where messages are stored
+  <span class="nt">-n</span>, <span class="nt">--networkInterface</span><span class="o">=</span>&lt;networkInterface&gt;
+                            Network interface to <span class="nb">bind </span>to
+  <span class="nt">-p</span>, <span class="nt">--peer</span><span class="o">[=</span>&lt;peers&gt;...]   Static peers list
+  <span class="nt">-r</span>, <span class="nt">--rpc</span><span class="o">=</span>&lt;rpcPort&gt;       RPC port to listen on</code></pre></figure>
 
-<p>When wrapping, you are creating a <em>view</em> made of the underlying bytes objects. If their values change, the wrapped view changes as well.</p>
+<p>You can set up a <code class="highlighter-rouge">gossip</code> app to listen with this command:</p>
 
-<p>Of course, wrapping is preferrable to avoid copying bytes in memory.</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">./gossip <span class="nt">-l</span> 9000 <span class="nt">-m</span> /tmp/log</code></pre></figure>
 
-<h1 id="copying-and-slicing">Copying and slicing</h1>
+<p>In a separate shell, you can send messages to the listener with:</p>
 
-<p>In the same spirit as above, you can <a href="/docs/org.apache.tuweni.bytes/-bytes/copy.html">copy</a> or <a href="/docs/org.apache.tuweni.bytes/-bytes/slice.html">slice</a> bytes objects. When you slice a bytes object, you create a view of the original bytes object, and the slice will change if the underlying bytes object changes. If you copy instead, you create a new copy of the bytes.</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">./gossip <span class="nt">-l</span> 9001 <span class="nt">-p</span> 127.0.0.1:9000 <span class="nt">--sending</span> <span class="nt">--payloadSize</span><span class="o">=</span>32 <span class="nt">--numberOfMessages</span><span class="o">=</span>10 <span class="nt">-p</span> tcp://127.0.0.1:9000 <span class="nt">--sendInterval</span><span class="o">=</span>1000</code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// slice from the second byte:</span>
-<span class="n">bytes</span><span class="o">.</span><span class="na">slice</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
-<span class="c1">// slice from the second byte to the fifth byte:</span>
-<span class="n">bytes</span><span class="o">.</span><span class="na">slice</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">5</span><span class="o">);</span></code></pre></figure>
+<p>This will send 10 messages, of 32 random bytes each. Open the file <code class="highlighter-rouge">/tmp/log</code> to see them.</p>
 
-<h1 id="shifting-bytes">Shifting bytes</h1>
-
-<p>You can shift <a href="/docs/org.apache.tuweni.bytes/-bytes/shift-right.html">right</a> and <a href="/docs/org.apache.tuweni.bytes/-bytes/shift-left.html">left</a> the bits of a bytes object by a given distance.</p>
-
-<p>This is equivalent to the <code class="highlighter-rouge">&lt;&lt;&lt;</code> or <code class="highlighter-rouge">&gt;&gt;&gt;</code> operators in Java.</p>
-
-<h1 id="xor-or-and">xor, or, and</h1>
-
-<p>You can apply boolean operations to Bytes objects.</p>
-
-<ul>
-  <li><a href="/docs/org.apache.tuweni.bytes/-bytes/xor.html">xor</a></li>
-  <li><a href="/docs/org.apache.tuweni.bytes/-bytes/or.html">or</a></li>
-  <li><a href="/docs/org.apache.tuweni.bytes/-bytes/and.html">and</a></li>
-</ul>
-
-<p>Those methods take as argument the value to compare this value with, and return a new Bytes object that is the result of the boolean operation.</p>
-
-<p>If the argument and the value are different lengths, then the shorter will be zero-padded to the left.</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Bytes</span> <span class="n">value</span> <span class="o">=</span> <span class="n">Bytes</span><span class="o">.</span><span class="na">fromHexString</span><span class="o">(</span><span class="s">"0x01000001"</span><span class="o">).</span><span class="na">xor</span><span class="o">(</span><span class="n">Bytes</span><span class="o">.</span><span class="na">fromHexString</span><span class="o">(</span><span class="s">"0x01000000"</span><span class="o">));</span>
-<span class="n">assertEquals</span><span class="o">(</span><span class="n">Bytes</span><span class="o">.</span><span class="na">fromHexString</span><span class="o">(</span><span class="s">"0x00000001"</span><span class="o">),</span> <span class="n">value</span><span class="o">);</span></code></pre></figure>
-
-<h1 id="not">not</h1>
-
-<p>The <a href="https://tuweni.apache.org/docs/org.apache.tuweni.bytes/-bytes/not.html"><code class="highlighter-rouge">not</code> method</a> returns a bit-wise NOT of the bytes.</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Bytes</span> <span class="n">value</span> <span class="o">=</span> <span class="n">Bytes</span><span class="o">.</span><span class="na">fromHexString</span><span class="o">(</span><span class="s">"0x01000001"</span><span class="o">).</span><span class="na">not</span><span class="o">();</span>
-<span class="n">assertEquals</span><span class="o">(</span><span class="n">Bytes</span><span class="o">.</span><span class="na">fromHexString</span><span class="o">(</span><span class="s">"0xfefffffe"</span><span class="o">),</span> <span class="n">value</span><span class="o">);</span></code></pre></figure>
-
-<h1 id="commonprefix">commonPrefix</h1>
-
-<p>The <a href="https://tuweni.apache.org/docs/org.apache.tuweni.bytes/-bytes/common-prefix.html"><code class="highlighter-rouge">commonPrefix</code> method</a> returns the common bytes both the value and the argument start with.</p>
-
+<p>You can create more complex scenarios with multiple gossip listeners, showing the path by which gossip circulates across peers.</p>
 
     </div>
     <div class="pagination row col-md-12">
@@ -333,44 +274,56 @@
           
         
           
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
             
-            <a href="/tutorials/libraries/creating-bytes/" title="Creating Bytes">&larr; Creating Bytes</a><br/>
+            <a href="/" title="Apache Tuweni">&larr; Apache Tuweni</a><br/>
           
         
           
-        
+            
+            <a href="/tutorials/libraries/" title="Libraries Tutorials">&larr; Libraries Tutorials</a><br/>
           
         
           
-        
+            
+            <a href="/tutorials/apps/" title="Applications">&larr; Applications</a><br/>
           
         
           
-        
+            
+            <a href="/tutorials/" title="Tutorials">&larr; Tutorials</a><br/>
           
         
           
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
+            
+            <a href="/tutorials/networking/" title="Networking">&larr; Networking</a><br/>
           
         
           
@@ -388,65 +341,6 @@
       
       </div>
       <div class="col-md-6" style="text-align: right;">
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-            
-            <a href="/tutorials/libraries/extracting-values/" title="Extracting values">Extracting values &rarr;</a><br/>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
       
       </div>
     </div>
