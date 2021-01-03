@@ -4,11 +4,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Getting Started with Bytes</title>
+    <title>Unsigned Integers operations</title>
     <link rel="icon"
           type="image/ico"
           href="/assets/themes/apache/img/tuweni_face.ico">
-    <meta name="description" content="Getting Started with Bytes">
+    <meta name="description" content="Unsigned Integers operations">
 
     <meta name="author" content="">
 
@@ -97,7 +97,7 @@
       
 
 <div class="page-header">
-  <h1>Getting Started with Bytes </h1>
+  <h1>Unsigned Integers operations </h1>
 </div>
 
 <div class="row-fluid post-full">
@@ -112,8 +112,12 @@
 
   
      
-    	<li><a href="#bytes-ref">
-    		bytes <span></span>
+    	<li><a href="#units-ref">
+    		units <span></span>
+    	</a></li>
+     
+    	<li><a href="#bigints-ref">
+    		bigints <span></span>
     	</a></li>
     
   
@@ -149,29 +153,26 @@
           
         
           
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
             
-            <a href="/tutorials/" title="Tutorials">&larr; Tutorials</a><br/>
+            <a href="/tutorials/creating-uints/" title="Creating Uints">&larr; Creating Uints</a><br/>
           
         
           
-            
-            <a href="/" title="Apache Tuweni">&larr; Apache Tuweni</a><br/>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -196,38 +197,38 @@
           
         
           
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
             
-            <a href="/tutorials/creating-bytes/" title="Creating Bytes">Creating Bytes &rarr;</a><br/>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
+            <a href="/tutorials/own-uints-class/" title="Creating your own unsigned integer class">Creating your own unsigned integer class &rarr;</a><br/>
           
         
           
@@ -240,26 +241,64 @@
       <span></span>
     </div>
     <div class="content">
-      <p>Apache Tuweni provides support for manipulating bytes.</p>
+      <p><code class="highlighter-rouge">Uints</code> are immutable, so all operations create a new object as the result of the operation.</p>
 
-<p>To get started, install the <code class="highlighter-rouge">bytes</code> library.</p>
+<h1 id="arithmetic-operations">Arithmetic operations</h1>
 
-<p>With Maven:</p>
+<h2 id="adding-and-subtracting">Adding and subtracting</h2>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
-  <span class="nt">&lt;groupId&gt;</span>org.apache.tuweni<span class="nt">&lt;/groupId&gt;</span>
-  <span class="nt">&lt;artifactId&gt;</span>bytes<span class="nt">&lt;/artifactId&gt;</span>
-  <span class="nt">&lt;version&gt;</span>1.3.0<span class="nt">&lt;/version&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+<ul>
+  <li><a href="/docs/org.apache.tuweni.units.bigints/-u-int256-value/add.html"><code class="highlighter-rouge">add(other)</code></a></li>
+  <li><a href="/docs/org.apache.tuweni.units.bigints/-u-int256-value/subtract.html"><code class="highlighter-rouge">substract(other)</code></a></li>
+</ul>
 
-<p>Or using Gradle:</p>
+<p>Since these are bound integers, they will overflow and underflow if the operation returns a value outside the boundaries - for a <code class="highlighter-rouge">Uint256</code>, 0 to 2^256.</p>
 
-<figure class="highlight"><pre><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span><span class="o">(</span><span class="s2">"org.apache.tuweni:bytes:1.3.0"</span><span class="o">)</span></code></pre></figure>
+<p>For this reason, the API also contains <code class="highlighter-rouge">exact</code> methods that throw exceptions if the operations overflows or underflows.</p>
 
-<p>The <a href="/docs/org.apache.tuweni.bytes/index.html">bytes library</a> revolves mainly around the <a href="/docs/org.apache.tuweni.bytes/-bytes/index.html"><code class="highlighter-rouge">Bytes</code></a> interface.</p>
+<ul>
+  <li><a href="/docs/org.apache.tuweni.units.bigints/-u-int256-value/add-exact.html"><code class="highlighter-rouge">addExact(other)</code></a></li>
+  <li><a href="/docs/org.apache.tuweni.units.bigints/-u-int256-value/subtract-exact.html"><code class="highlighter-rouge">subtractExact(other)</code></a></li>
+</ul>
 
-<p>This tutorial goes over the main uses of <code class="highlighter-rouge">Bytes</code>, from creating them to manipulating them.</p>
+<h2 id="multiplying-and-dividing">Multiplying and dividing</h2>
 
+<ul>
+  <li><a href="/docs/org.apache.tuweni.units.bigints/-u-int256-value/multiply.html"><code class="highlighter-rouge">multiply(other)</code></a></li>
+  <li><a href="/docs/org.apache.tuweni.units.bigints/-u-int256-value/divide.html"><code class="highlighter-rouge">divide(other)</code></a></li>
+</ul>
+
+<p>Additionally, the <a href="/docs/org.apache.tuweni.units.bigints/-u-int256-value/divide-ceil.html">method <code class="highlighter-rouge">divideCeil(other)</code></a> divides integers but returns the ceiling of the rounding.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">UInt256</span> <span class="n">result</span> <span class="o">=</span> <span class="n">UInt256</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">12L</span><span class="o">).</span><span class="na">divide</span><span class="o">(</span><span class="n">UInt256</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">5L</span><span class="o">));</span> <span class="c1">// returns 2</span>
+<span class="n">UInt256</span> <span class="n">resultCeiling</span> <span class="o">=</span> <span class="n">UInt256</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">12L</span><span class="o">).</span><span class="na">divideCeil</span><span class="o">(</span><span class="n">UInt256</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">5L</span><span class="o">));</span> <span class="c1">// returns 3</span></code></pre></figure>
+
+<h2 id="modulus">Modulus</h2>
+
+<p>You can use the <a href="/docs/org.apache.tuweni.units.bigints/-u-int256-value/mod.html">method <code class="highlighter-rouge">mod(divisor)</code></a> to get the modulus of the value by the divisor.</p>
+
+<p>The <a href="/docs/org.apache.tuweni.units.bigints/-u-int256-value/mod0.html">method <code class="highlighter-rouge">mod0</code></a> is more forgiving - if you divide by zero, it will return zero instead of throwing an exception.</p>
+
+<h2 id="power">Power</h2>
+
+<p>The <a href="/docs/org.apache.tuweni.units.bigints/-u-int256-value/pow.html">method <code class="highlighter-rouge">pow(exponent)</code></a> returns a value that is `value^exponent mod 2^256.</p>
+
+<h1 id="boolean-operations">Boolean operations</h1>
+
+<p>You can use the following methods to perform boolean operations:</p>
+
+<ul>
+  <li><a href="/docs/org.apache.tuweni.units.bigints/-u-int256/not.html"><code class="highlighter-rouge">not()</code>: bit-wise NOT of this value.</a></li>
+  <li><a href="/docs/org.apache.tuweni.units.bigints/-u-int256/and.html"><code class="highlighter-rouge">and(other)</code>: bit-wise AND of this value and the supplied value.</a></li>
+  <li><a href="/docs/org.apache.tuweni.units.bigints/-u-int256/or.html"><code class="highlighter-rouge">or(other)</code>: bit-wise OR of this value and the supplied value.</a></li>
+  <li><a href="/docs/org.apache.tuweni.units.bigints/-u-int256/xor.html"><code class="highlighter-rouge">xor(other)</code>: bit-wise XOR of this value and the supplied value.</a></li>
+</ul>
+
+<h1 id="shifting-bytes">Shifting bytes</h1>
+
+<p>You can shift <a href="/docs/org.apache.tuweni.units.bigints/-u-int256/shift-right.html">right</a> and <a href="/docs/org.apache.tuweni.units.bigints/-u-int256/shift-left.html">left</a> the bits of the underlying bytes object by a given distance.</p>
+
+<p>This is equivalent to the <code class="highlighter-rouge">&lt;&lt;&lt;</code> or <code class="highlighter-rouge">&gt;&gt;&gt;</code> operators in Java.</p>
 
     </div>
     <div class="pagination row col-md-12">
@@ -273,29 +312,26 @@
           
         
           
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
             
-            <a href="/tutorials/" title="Tutorials">&larr; Tutorials</a><br/>
+            <a href="/tutorials/creating-uints/" title="Creating Uints">&larr; Creating Uints</a><br/>
           
         
           
-            
-            <a href="/" title="Apache Tuweni">&larr; Apache Tuweni</a><br/>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -320,38 +356,38 @@
           
         
           
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
             
-            <a href="/tutorials/creating-bytes/" title="Creating Bytes">Creating Bytes &rarr;</a><br/>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
+            <a href="/tutorials/own-uints-class/" title="Creating your own unsigned integer class">Creating your own unsigned integer class &rarr;</a><br/>
           
         
           

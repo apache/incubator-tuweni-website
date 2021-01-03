@@ -183,9 +183,56 @@
         
           
         
+          
+        
+          
+        
       
       </div>
       <div class="col-md-6" style="text-align: right;">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            <a href="/tutorials/uints-operations/" title="Unsigned Integers operations">Unsigned Integers operations &rarr;</a><br/>
+          
+        
       
       </div>
     </div>
@@ -194,7 +241,35 @@
       <span></span>
     </div>
     <div class="content">
-      <p>TODO</p>
+      <p>NOTE: We are going to use the <a href="/docs/org.apache.tuweni.units.bigints/-u-int256/index.html"><code class="highlighter-rouge">UInt256</code> class</a> for all examples, but the same behaviors are possible with the <a href="/docs/org.apache.tuweni.units.bigints/-u-int384/index.html"><code class="highlighter-rouge">UInt384</code></a>, <a href="/docs/org.apache.tuweni.units.bigints/-u-int64/index.html"><code class="highlighter-rouge">UInt64</code></a>, <a href="/docs/org.apache.tuweni.units.bigints/-u-int32/index.html"><code class="highlighter-rouge">UInt32</code></a> classes.</p>
+
+<p>We refer to those classes as <code class="highlighter-rouge">UInt</code>.</p>
+
+<h1 id="creating-uints">Creating Uints</h1>
+
+<h2 id="valueof"><code class="highlighter-rouge">valueOf</code></h2>
+
+<p>You can initialize a <code class="highlighter-rouge">UInt</code> with the <a href="/docs/org.apache.tuweni.units.bigints/-u-int256/value-of.html">static method <code class="highlighter-rouge">valueOf</code></a>, with an integer, a long, or a BigInteger object. This only accepts positive values.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// from an int</span>
+<span class="n">UInt256</span> <span class="n">value</span> <span class="o">=</span> <span class="n">UInt256</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">42</span><span class="o">);</span>
+<span class="c1">// from a long</span>
+<span class="n">UInt256</span> <span class="n">value</span> <span class="o">=</span> <span class="n">UInt256</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">42L</span><span class="o">);</span>
+<span class="c1">// from a BigInteger</span>
+<span class="n">UInt256</span> <span class="n">value</span> <span class="o">=</span> <span class="n">UInt256</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">BigInteger</span><span class="o">.</span><span class="na">ONE</span><span class="o">);</span></code></pre></figure>
+
+<h2 id="frombytes"><code class="highlighter-rouge">fromBytes</code></h2>
+
+<p>You can initialize a <code class="highlighter-rouge">UInt</code> from a <code class="highlighter-rouge">Bytes</code> object, using the <a href="/docs/org.apache.tuweni.units.bigints/-u-int256/from-bytes.html"><code class="highlighter-rouge">fromBytes</code> method</a>.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">UInt256</span> <span class="n">value</span> <span class="o">=</span> <span class="n">UInt256</span><span class="o">.</span><span class="na">fromBytes</span><span class="o">(</span><span class="n">Bytes</span><span class="o">.</span><span class="na">wrap</span><span class="o">(</span><span class="k">new</span> <span class="kt">byte</span><span class="o">[]</span> <span class="o">{</span><span class="mh">0x01</span><span class="o">,</span> <span class="mh">0x02</span><span class="o">,</span> <span class="mh">0x03</span><span class="o">}));</span></code></pre></figure>
+
+<h2 id="fromhexstring"><code class="highlighter-rouge">fromHexString</code></h2>
+
+<p>You can initialize a <code class="highlighter-rouge">UInt</code> from a string representing a hexadecimal encoding of bytes, with an optional prefix of <code class="highlighter-rouge">0x</code>.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">UInt256</span> <span class="n">value</span> <span class="o">=</span> <span class="n">UInt256</span><span class="o">.</span><span class="na">fromHexString</span><span class="o">(</span><span class="s">"0xdeadbeef"</span><span class="o">);</span></code></pre></figure>
+
 
     </div>
     <div class="pagination row col-md-12">
@@ -238,9 +313,56 @@
         
           
         
+          
+        
+          
+        
       
       </div>
       <div class="col-md-6" style="text-align: right;">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            <a href="/tutorials/uints-operations/" title="Unsigned Integers operations">Unsigned Integers operations &rarr;</a><br/>
+          
+        
       
       </div>
     </div>
