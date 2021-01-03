@@ -1,0 +1,486 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Extracting values</title>
+    <link rel="icon"
+          type="image/ico"
+          href="/assets/themes/apache/img/tuweni_face.ico">
+    <meta name="description" content="Extracting values">
+
+    <meta name="author" content="">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/apache/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/apache/css/style.css?body=1" rel="stylesheet" type="text/css">
+    <link href="/css/main.css?body=1" rel="stylesheet" type="text/css">
+    <link href="/assets/themes/apache/css/syntax.css" rel="stylesheet"  type="text/css" media="screen" />
+    <!-- Le fav and touch icons -->
+    <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  <script src="/assets/themes/apache/jquery/jquery-2.1.1.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" style="font-family: 'Montserrat Light'">
+                <img src="/assets/themes/apache/img/tuweni_face.svg" width="25" height="25">
+                Apache Tuweni
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li id="download">
+                    <a href="/download">Download</a>
+                </li>
+                <li id="community">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Community<b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-left">
+                        <li><a href="/community">Get Involved</a></li>
+                        <li><a href="/community-members">Who we are</a></li>
+                    </ul>
+                </li>
+                <li id="docs">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Docs<b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-left">
+                        <li><a href="/tutorials">Tutorials</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/docs">Javadoc</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/apache/incubator-tuweni">GitHub</a></li>
+                <li id="apache">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Apache<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://www.apache.org/foundation/how-it-works.html">Apache Software Foundation</a></li>
+                        <li><a href="http://www.apache.org/licenses/">Apache License</a></li>
+                        <li><a href="http://www.apache.org/foundation/sponsorship.html">Sponsorship</a></li>
+                        <li><a href="http://www.apache.org/foundation/thanks.html">Thanks</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+    <div class="container" style="margin-top:10px">
+      
+
+<div class="page-header">
+  <h1>Extracting values </h1>
+</div>
+
+<div class="row-fluid post-full">
+  <div class="span12">
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-folder-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="#bytes-ref">
+    		bytes <span></span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+    
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
+      
+      
+
+
+  
+    
+  
+
+
+
+    </ul>
+    
+
+    <div class="pagination row col-md-12">
+      <div class="col-md-6">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            <a href="/tutorials/libraries/manipulating-bytes/" title="Manipulating Bytes">&larr; Manipulating Bytes</a><br/>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      </div>
+      <div class="col-md-6" style="text-align: right;">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            <a href="/tutorials/libraries/mutable-bytes/" title="Mutable Bytes">Mutable Bytes &rarr;</a><br/>
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      </div>
+    </div>
+    <hr>
+    <div class="date">
+      <span></span>
+    </div>
+    <div class="content">
+      <p>You can extract values from a bytes object into native Java objects such as ints and longs, bytes, byte arrays and so on.</p>
+
+<p>Note all the methods here take an optional <code class="highlighter-rouge">ByteOrder</code> argument, defaulting to big endian by default.</p>
+
+<h1 id="toint-and-tolong">toInt() and toLong()</h1>
+
+<p>The <a href="docs/org.apache.tuweni.bytes/-bytes/to-int.html">method <code class="highlighter-rouge">toInt()</code></a> and the <a href="/docs/org.apache.tuweni.bytes/-bytes/to-long.html">method <code class="highlighter-rouge">toLong()</code></a> respectively translate the bytes values into an int or a long, requiring respectively the value to be at most 4 or 8 bytes long.</p>
+
+<h1 id="geti">get(i)</h1>
+
+<p>The <a href="/docs/org.apache.tuweni.bytes/-bytes/get.html"><code class="highlighter-rouge">get(i)</code> method</a> provides the byte at index <code class="highlighter-rouge">i</code>.</p>
+
+<h1 id="getinti-and-getlongi">getInt(i) and getLong(i)</h1>
+
+<p>The <a href="docs/org.apache.tuweni.bytes/-bytes/get-int.html">method <code class="highlighter-rouge">getInt()</code></a> and the <a href="/docs/org.apache.tuweni.bytes/-bytes/get-long.html">method <code class="highlighter-rouge">getLong()</code></a> respectively return the next 4 or 8 bytes into an int or a long.</p>
+
+<h1 id="toarray-and-toarrayunsafe">toArray() and toArrayUnsafe()</h1>
+
+<p>The <a href="/docs/org.apache.tuweni.bytes/-bytes/to-array.html">method <code class="highlighter-rouge">toArray</code></a> copies the bytes of the object into a new bytes array.</p>
+
+<p>The <a href="/docs/org.apache.tuweni.bytes/-bytes/to-array-unsafe.html">method <code class="highlighter-rouge">toArrayUnsafe</code></a> makes available the underlying byte array of the object - modifying it changes the Bytes object. Note this is more performant as it doesn’t allocate new memory.</p>
+
+<h1 id="to-bigintegers">To BigIntegers</h1>
+
+<p>The <a href="/docs/org.apache.tuweni.bytes/-bytes/to-unsigned-big-integer.html">method <code class="highlighter-rouge">toUnsignedBigInteger</code></a> creates a new unsigned BigInteger object with the contents of the Bytes object.
+You can also use the method <a href="/docs/org.apache.tuweni.bytes/-bytes/to-big-integer.html"><code class="highlighter-rouge">toBigInteger</code></a> to represent Bytes as a signed integer, using the two’s-complement representation.</p>
+
+<h1 id="transforming-bytes-into-strings">Transforming Bytes into strings</h1>
+
+<p>There is a sleuth of options to turn bytes into strings, and they all have different use cases.</p>
+
+<ul>
+  <li>The <a href="/docs/org.apache.tuweni.bytes/-bytes/to-hex-string.html">method <code class="highlighter-rouge">toHexString</code></a> provides the value represented as hexadecimal, starting with “0x”.</li>
+  <li>The <a href="/docs/org.apache.tuweni.bytes/-bytes/to-unprefixed-hex-string.html">method <code class="highlighter-rouge">toUnprefixedHexString</code></a> provides the value represented as hexadecimal, no “0x” prefix though.</li>
+  <li>The <a href="/docs/org.apache.tuweni.bytes/-bytes/to-short-hex-string.html">method <code class="highlighter-rouge">toShortHexString</code></a> provides the value represented as a minimal hexadecimal string (without any leading zero).</li>
+  <li>The <a href="/docs/org.apache.tuweni.bytes/-bytes/to-quantity-hex-string.html">method <code class="highlighter-rouge">toQuantityHexString</code></a> provides the value represented as a minimal hexadecimal string (without any leading zero, except if it’s valued zero or empty, in which case it returns 0x0).</li>
+  <li>The <a href="/docs/org.apache.tuweni.bytes/-bytes/to-ellipsis-hex-string.html">method <code class="highlighter-rouge">toEllipsisHexString</code></a> provides the first 3 bytes and last 3 bytes represented as hexadecimal strings, joined with an ellipsis (<code class="highlighter-rouge">...</code>).</li>
+</ul>
+
+<p>By default, <code class="highlighter-rouge">toString()</code> calls <code class="highlighter-rouge">toHexString()</code>.</p>
+
+    </div>
+    <div class="pagination row col-md-12">
+      <div class="col-md-6">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            <a href="/tutorials/libraries/manipulating-bytes/" title="Manipulating Bytes">&larr; Manipulating Bytes</a><br/>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      </div>
+      <div class="col-md-6" style="text-align: right;">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            <a href="/tutorials/libraries/mutable-bytes/" title="Mutable Bytes">Mutable Bytes &rarr;</a><br/>
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+      <hr>
+      <footer>
+        <!-- <p>&copy; 2021 </p>-->
+        <footer class="site-footer">
+    <div class="wrapper">
+        <div class="footer-col-wrapper">
+            
+            Apache Tuweni is an effort undergoing <a href="https://incubator.apache.org/index.html">Incubation</a>
+            at The Apache Software Foundation (ASF), sponsored by the Incubator. Incubation is required of all newly
+            accepted projects until a further review indicates that the infrastructure, communications, and decision
+            making process have stabilized in a manner consistent with other successful ASF projects. While incubation
+            status is not necessarily a reflection of the completeness or stability of the code, it does indicate that
+            the project has yet to be fully endorsed by the ASF.
+            <hr>
+            
+            <div style="text-align:center;">
+                
+                <div style="margin-top: 20px; margin-bottom: 20px;">
+                    <a href="http://incubator.apache.org"><img src="/assets/themes/apache/img/egg-logo.png"
+                                                               alt="Apache Incubator"/></a>
+                </div>
+                
+                <div>
+                    Copyright &copy; 2019-2021 <a href="http://www.apache.org">The Apache Software Foundation</a>.
+                    <br>
+                    Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version
+                    2.0</a>.
+                    <br>
+                    
+                    Apache, the Apache Feather logo, and the Apache Incubator project logo are trademarks of The Apache
+                    Software Foundation.
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+      </footer>
+    </div>
+
+    
+    
+
+    <script src="/assets/themes/apache/bootstrap/js/bootstrap.min.js"></script>
+
+
+  </body>
+</html>
+
