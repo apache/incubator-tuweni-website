@@ -5,6 +5,7 @@ description: Unsigned Integers operations
 group: nav-right
 categories: ["units", "bigints"]
 previous: creating-uints.md
+next: own-uints-class.md
 ---
 
 `Uints` are immutable, so all operations create a new object as the result of the operation.
