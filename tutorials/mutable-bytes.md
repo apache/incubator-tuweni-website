@@ -5,6 +5,7 @@ description: Mutable Bytes
 group: nav-right
 categories: ["bytes"]
 previous: manipulating-bytes.md
+next: own-bytes-class.md
 ---
 
 
