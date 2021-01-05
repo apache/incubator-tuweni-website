@@ -15,12 +15,26 @@ The `gossip` application is an example showing how the Plumtree gossip implement
 
 # hobbits-relayer
 
+The `hobbits-relayer` application showcases how to use the Hobbits protocol to pass messages between different networks.
+
 [More](/tutorials/apps/hobbits-relayer)
 
 # tuweni
 
 [More](/tutorials/apps/tuweni)
 
+# scraper
 
-devp2p
-eth-faucet
+The `scraper` application discovers nodes running on discv5, reporting them to stdout as it goes.
+
+[More](/tutorials/apps/scraper)
+
+# v4scraper
+
+TODO
+
+# eth-faucet
+
+The `eth-faucet` application is an Ethereum faucet that runs alongside an Ethereum client. The faucet allows to distribute funds.
+
+[More](/tutorials/apps/eth-faucet)
