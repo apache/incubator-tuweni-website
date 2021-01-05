@@ -4,11 +4,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Gossip</title>
+    <title>Ethereum Faucet</title>
     <link rel="icon"
           type="image/ico"
           href="/assets/themes/apache/img/tuweni_face.ico">
-    <meta name="description" content="Gossip">
+    <meta name="description" content="Ethereum Faucet">
 
     <meta name="author" content="">
 
@@ -97,7 +97,7 @@
       
 
 <div class="page-header">
-  <h1>Gossip </h1>
+  <h1>Ethereum Faucet </h1>
 </div>
 
 <div class="row-fluid post-full">
@@ -228,47 +228,62 @@
       <span></span>
     </div>
     <div class="content">
-      <p>The <code class="highlighter-rouge">gossip</code> application is an example showing how the Plumtree gossip implementation functions.</p>
+      <p>The <code class="highlighter-rouge">eth-faucet</code> application is an Ethereum faucet that runs alongside an Ethereum client. The faucet allows to distribute funds.</p>
 
-<p><code class="highlighter-rouge">gossip</code> is distributed as part of the binary distribution of Apache Tuweni, which you can download from this <a href="/download">page</a></p>
+<p>The faucet works with a configuration file, <code class="highlighter-rouge">application.yml</code>. Here is a template of the file:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">./gossip <span class="nt">--help</span>
-Usage: &lt;main class&gt; <span class="o">[</span><span class="nt">-h</span><span class="o">]</span> <span class="o">[</span><span class="nt">--sending</span><span class="o">]</span> <span class="o">[</span><span class="nt">--numberOfMessages</span><span class="o">=</span>&lt;numberOfMessages&gt;]
-                    <span class="o">[</span><span class="nt">--payloadSize</span><span class="o">=</span>&lt;payloadSize&gt;]
-                    <span class="o">[</span><span class="nt">--sendInterval</span><span class="o">=</span>&lt;sendInterval&gt;] <span class="o">[</span><span class="nt">-c</span><span class="o">=</span>&lt;configPath&gt;]
-                    <span class="o">[</span><span class="nt">-l</span><span class="o">=</span>&lt;port&gt;] <span class="o">[</span><span class="nt">-m</span><span class="o">=</span>&lt;messageLog&gt;] <span class="o">[</span><span class="nt">-n</span><span class="o">=</span>&lt;networkInterface&gt;]
-                    <span class="o">[</span><span class="nt">-r</span><span class="o">=</span>&lt;rpcPort&gt;] <span class="o">[</span><span class="nt">-p</span><span class="o">[=</span>&lt;peers&gt;...]]...
-      <span class="nt">--numberOfMessages</span><span class="o">=</span>&lt;numberOfMessages&gt;
-                            Number of messages to publish <span class="o">(</span>load testing<span class="o">)</span>
-      <span class="nt">--payloadSize</span><span class="o">=</span>&lt;payloadSize&gt;
-                            Size of the random payload to send to other peers <span class="o">(</span>load
-                              testing<span class="o">)</span>
-      <span class="nt">--sending</span>             Whether this peer sends random messages to all other
-                              peers <span class="o">(</span>load testing<span class="o">)</span>
-      <span class="nt">--sendInterval</span><span class="o">=</span>&lt;sendInterval&gt;
-                            Interval to <span class="nb">wait </span><span class="k">in </span>between sending messages <span class="k">in
-                              </span>milliseconds <span class="o">(</span>load testing<span class="o">)</span>
-  <span class="nt">-c</span>, <span class="nt">--config</span><span class="o">=</span>&lt;configPath&gt; Configuration file.
-  <span class="nt">-h</span>, <span class="nt">--help</span>                Prints usage prompt
-  <span class="nt">-l</span>, <span class="nt">--listen</span><span class="o">=</span>&lt;port&gt;       Port to listen on
-  <span class="nt">-m</span>, <span class="nt">--messageLog</span><span class="o">=</span>&lt;messageLog&gt;
-                            Log file where messages are stored
-  <span class="nt">-n</span>, <span class="nt">--networkInterface</span><span class="o">=</span>&lt;networkInterface&gt;
-                            Network interface to <span class="nb">bind </span>to
-  <span class="nt">-p</span>, <span class="nt">--peer</span><span class="o">[=</span>&lt;peers&gt;...]   Static peers list
-  <span class="nt">-r</span>, <span class="nt">--rpc</span><span class="o">=</span>&lt;rpcPort&gt;       RPC port to listen on</code></pre></figure>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">server</span><span class="pi">:</span>
+  <span class="na">use-forward-headers</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">forward-headers-strategy</span><span class="pi">:</span> <span class="s">native</span>
+<span class="na">spring</span><span class="pi">:</span>
+  <span class="na">main</span><span class="pi">:</span>
+    <span class="na">banner-mode</span><span class="pi">:</span> <span class="s2">"</span><span class="s">off"</span>
+  <span class="na">security</span><span class="pi">:</span>
+    <span class="na">oauth2</span><span class="pi">:</span>
+      <span class="na">client</span><span class="pi">:</span>
+        <span class="na">registration</span><span class="pi">:</span>
+          <span class="na">github</span><span class="pi">:</span>
+            <span class="na">clientId</span><span class="pi">:</span> <span class="s">&lt;your github client ID&gt;</span>
+            <span class="na">clientSecret</span><span class="pi">:</span> <span class="s">&lt;your github client secret&gt;</span>
+<span class="na">html</span><span class="pi">:</span>
+  <span class="na">title</span><span class="pi">:</span> <span class="s">Faucet</span>
+  <span class="na">request_message</span><span class="pi">:</span> <span class="s">Welcome to our faucet. You can ask for up to 1 ETH on this faucet.</span>
 
-<p>You can set up a <code class="highlighter-rouge">gossip</code> app to listen with this command:</p>
+<span class="na">security</span><span class="pi">:</span>
+  <span class="na">oauth2</span><span class="pi">:</span>
+    <span class="na">client</span><span class="pi">:</span>
+      <span class="na">preEstablishedRedirectUri</span><span class="pi">:</span> <span class="s">&lt;registered github redirect URI&gt;</span>
+      <span class="na">registeredRedirectUri</span><span class="pi">:</span> <span class="s">&lt;registered github redirect URI&gt;</span>
+      <span class="na">useCurrentUri</span><span class="pi">:</span> <span class="no">false</span>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">./gossip <span class="nt">-l</span> 9000 <span class="nt">-m</span> /tmp/log</code></pre></figure>
+<span class="na">faucet</span><span class="pi">:</span>
+  <span class="na">maxETH</span><span class="pi">:</span> <span class="s">&lt;the maximum amount of eth, in ETH, that you&gt;</span>
+  <span class="na">chainId</span><span class="pi">:</span> <span class="s">&lt;chain id of your network&gt;</span>
+  <span class="na">rpcPort</span><span class="pi">:</span> <span class="s">&lt;Ethereum client RPC port&gt;</span>
+  <span class="na">rpcHost</span><span class="pi">:</span> <span class="s">&lt;Ethereum client RPC host&gt;</span>
 
-<p>In a separate shell, you can send messages to the listener with:</p>
+<span class="na">wallet</span><span class="pi">:</span>
+  <span class="na">path</span><span class="pi">:</span> <span class="s">wallet.key</span>
+<span class="na">banner</span><span class="pi">:</span> <span class="pi">&gt;</span>
+  <span class="no">Apache Tuweni Faucet example.</span>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">./gossip <span class="nt">-l</span> 9001 <span class="nt">-p</span> 127.0.0.1:9000 <span class="nt">--sending</span> <span class="nt">--payloadSize</span><span class="o">=</span>32 <span class="nt">--numberOfMessages</span><span class="o">=</span>10 <span class="nt">-p</span> tcp://127.0.0.1:9000 <span class="nt">--sendInterval</span><span class="o">=</span>1000</code></pre></figure>
+           <span class="no">`:oyhdhhhhhhyo-`</span>
+         <span class="no">:yds/.        ./sdy:</span>
+       <span class="no">:mh:                :hm:</span>
+     <span class="no">`ym:                    :my`</span>
+     <span class="no">hm`                      `mh</span>
+    <span class="no">+N.                        .N+</span>
+    <span class="no">my :ydh/              /hdy- ym</span>
+    <span class="no">Mo`MMMMM`            .MMMMN oM</span>
+    <span class="no">my /hdh/              +hdh: ym</span>
+    <span class="no">+N.                        .N+</span>
+     <span class="no">hm`              `m:     `mh</span>
+     <span class="no">`ym:    `sssssssssN:    :my`</span>
+       <span class="no">:dh:   ``````````   :hd:</span>
+         <span class="no">:yds/.        ./sdy:</span>
+           <span class="no">`-oyhdhhhhdhyo-`</span></code></pre></figure>
 
-<p>This will send 10 messages, of 32 random bytes each. Open the file <code class="highlighter-rouge">/tmp/log</code> to see them.</p>
-
-<p>You can create more complex scenarios with multiple gossip listeners, showing the path by which gossip circulates across peers.</p>
+<p>You should register a Github OAuth application to go along and fill the template.</p>
 
     </div>
     <div class="pagination row col-md-12">
