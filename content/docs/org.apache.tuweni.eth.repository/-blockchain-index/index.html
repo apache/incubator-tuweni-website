@@ -8,7 +8,7 @@
 <a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth.repository</a>&nbsp;/&nbsp;<a href="./index.html">BlockchainIndex</a><br/>
 <br/>
 <h1>BlockchainIndex</h1>
-<code><span class="keyword">class </span><span class="identifier">BlockchainIndex</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-blockchain-index-writer/index.html"><span class="identifier">BlockchainIndexWriter</span></a><span class="symbol">, </span><a href="../-blockchain-index-reader/index.html"><span class="identifier">BlockchainIndexReader</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth-repository/src/main/kotlin/org/apache/tuweni/eth/repository/BlockchainIndex.kt#L297">(source)</a>
+<code><span class="keyword">class </span><span class="identifier">BlockchainIndex</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-blockchain-index-writer/index.html"><span class="identifier">BlockchainIndexWriter</span></a><span class="symbol">, </span><a href="../-blockchain-index-reader/index.html"><span class="identifier">BlockchainIndexReader</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/eth-repository/src/main/kotlin/org/apache/tuweni/eth/repository/BlockchainIndex.kt#L311">(source)</a>
 <p>A Lucene-backed indexer capable of indexing blocks and block headers.</p>
 <h3>Constructors</h3>
 <table>
@@ -90,6 +90,14 @@
 </tr>
 <tr>
 <td>
+<h4><a href="find-largest-total-difficulty.html">findLargestTotalDifficulty</a></h4>
+</td>
+<td>
+<p>Find the hash of the block header with the largest total difficulty.</p>
+<code><span class="keyword">fun </span><span class="identifier">findLargestTotalDifficulty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-hash/index.html"><span class="identifier">Hash</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
 <h4><a href="--index--.html">index</a></h4>
 </td>
 <td>
@@ -103,7 +111,15 @@ rolled back.</p>
 </td>
 <td>
 <p>Indexes a block header.</p>
-<code><span class="keyword">fun </span><span class="identifier">indexBlockHeader</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainIndex$indexBlockHeader(org.apache.tuweni.eth.BlockHeader)/blockHeader">blockHeader</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-block-header/index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+<code><span class="keyword">fun </span><span class="identifier">indexBlockHeader</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainIndex$indexBlockHeader(org.apache.tuweni.eth.BlockHeader, kotlin.Boolean)/blockHeader">blockHeader</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-block-header/index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainIndex$indexBlockHeader(org.apache.tuweni.eth.BlockHeader, kotlin.Boolean)/indexTotalDifficulty">indexTotalDifficulty</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="index-total-difficulty.html">indexTotalDifficulty</a></h4>
+</td>
+<td>
+<p>Indexes the total difficulty of a block header based on its position in the chain.</p>
+<code><span class="keyword">fun </span><span class="identifier">indexTotalDifficulty</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainIndex$indexTotalDifficulty(org.apache.tuweni.eth.BlockHeader)/blockHeader">blockHeader</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-block-header/index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
 </tr>
 <tr>
 <td>

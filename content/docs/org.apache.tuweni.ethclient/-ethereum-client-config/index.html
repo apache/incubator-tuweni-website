@@ -8,7 +8,7 @@
 <a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ethclient</a>&nbsp;/&nbsp;<a href="./index.html">EthereumClientConfig</a><br/>
 <br/>
 <h1>EthereumClientConfig</h1>
-<code><span class="keyword">class </span><span class="identifier">EthereumClientConfig</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth-client/src/main/kotlin/org/apache/tuweni/ethclient/EthereumClientConfig.kt#L30">(source)</a>
+<code><span class="keyword">class </span><span class="identifier">EthereumClientConfig</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/eth-client/src/main/kotlin/org/apache/tuweni/ethclient/EthereumClientConfig.kt#L38">(source)</a>
 <p>Configuration of EthereumClient. Can be provided via file or over the wire.</p>
 <h3>Constructors</h3>
 <table>
@@ -49,6 +49,34 @@
 </tr>
 <tr>
 <td>
+<h4><a href="metrics-grpc-push-enabled.html">metricsGrpcPushEnabled</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">metricsGrpcPushEnabled</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="metrics-network-interface.html">metricsNetworkInterface</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">metricsNetworkInterface</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="metrics-port.html">metricsPort</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">metricsPort</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="metrics-prometheus-enabled.html">metricsPrometheusEnabled</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">metricsPrometheusEnabled</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
 <h4><a href="peer-repositories.html">peerRepositories</a></h4>
 </td>
 <td>
@@ -60,6 +88,13 @@
 </td>
 <td>
 <code><span class="keyword">fun </span><span class="identifier">rlpxServices</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../-r-l-px-service-configuration/index.html"><span class="identifier">RLPxServiceConfiguration</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="static-peers.html">staticPeers</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">staticPeers</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../-static-peers-configuration/index.html"><span class="identifier">StaticPeersConfiguration</span></a><span class="symbol">&gt;</span></code></td>
 </tr>
 <tr>
 <td>

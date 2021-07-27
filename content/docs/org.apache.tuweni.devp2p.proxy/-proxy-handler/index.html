@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ProxyHandler - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.devp2p.proxy</a>&nbsp;/&nbsp;<a href="./index.html">ProxyHandler</a><br/>
+<br/>
+<h1>ProxyHandler</h1>
+<code><span class="keyword">class </span><span class="identifier">ProxyHandler</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineScope</span><span class="symbol">, </span><a href="../../org.apache.tuweni.rlpx.wire/-sub-protocol-handler/index.html"><span class="identifier">SubProtocolHandler</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/devp2p-proxy/src/main/kotlin/org/apache/tuweni/devp2p/proxy/ProxyHandler.kt#L40">(source)</a>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">ProxyHandler</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.proxy.ProxyHandler$<init>(kotlin.coroutines.CoroutineContext, org.apache.tuweni.rlpx.SubprotocolService, org.apache.tuweni.devp2p.proxy.ProxyClient)/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineContext</span>&nbsp;<span class="symbol">=</span>&nbsp;Dispatchers.Default<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.proxy.ProxyHandler$<init>(kotlin.coroutines.CoroutineContext, org.apache.tuweni.rlpx.SubprotocolService, org.apache.tuweni.devp2p.proxy.ProxyClient)/service">service</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx/-subprotocol-service/index.html"><span class="identifier">SubprotocolService</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.proxy.ProxyHandler$<init>(kotlin.coroutines.CoroutineContext, org.apache.tuweni.rlpx.SubprotocolService, org.apache.tuweni.devp2p.proxy.ProxyClient)/client">client</span><span class="symbol">:</span>&nbsp;<a href="../-proxy-client/index.html"><span class="identifier">ProxyClient</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="client.html">client</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">client</span><span class="symbol">: </span><a href="../-proxy-client/index.html"><span class="identifier">ProxyClient</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="coroutine-context.html">coroutineContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">coroutineContext</span><span class="symbol">: </span><span class="identifier">CoroutineContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="service.html">service</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">service</span><span class="symbol">: </span><a href="../../org.apache.tuweni.rlpx/-subprotocol-service/index.html"><span class="identifier">SubprotocolService</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="handle.html">handle</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">handle</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.proxy.ProxyHandler$handle(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.Int, org.apache.tuweni.bytes.Bytes)/connection">connection</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.proxy.ProxyHandler$handle(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.Int, org.apache.tuweni.bytes.Bytes)/messageType">messageType</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.proxy.ProxyHandler$handle(org.apache.tuweni.rlpx.wire.WireConnection, kotlin.Int, org.apache.tuweni.bytes.Bytes)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="handle-new-peer-connection.html">handleNewPeerConnection</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">handleNewPeerConnection</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.proxy.ProxyHandler$handleNewPeerConnection(org.apache.tuweni.rlpx.wire.WireConnection)/connection">connection</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.rlpx.wire/-wire-connection/index.html"><span class="identifier">WireConnection</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stop.html">stop</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">stop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="logger.html">logger</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">logger</span><span class="symbol">: </span><span class="identifier">Logger</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EthStatsServer - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ethstats</a>&nbsp;/&nbsp;<a href="./index.html">EthStatsServer</a><br/>
+<br/>
+<h1>EthStatsServer</h1>
+<code><span class="keyword">class </span><span class="identifier">EthStatsServer</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineScope</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/ethstats/src/main/kotlin/org/apache/tuweni/ethstats/EthStatsServer.kt#L34">(source)</a>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">EthStatsServer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function0((java.time.Instant)), org.apache.tuweni.ethstats.EthStatsServerController, kotlin.coroutines.CoroutineContext)/vertx">vertx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Vertx</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function0((java.time.Instant)), org.apache.tuweni.ethstats.EthStatsServerController, kotlin.coroutines.CoroutineContext)/networkInterface">networkInterface</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function0((java.time.Instant)), org.apache.tuweni.ethstats.EthStatsServerController, kotlin.coroutines.CoroutineContext)/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function0((java.time.Instant)), org.apache.tuweni.ethstats.EthStatsServerController, kotlin.coroutines.CoroutineContext)/secret">secret</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function0((java.time.Instant)), org.apache.tuweni.ethstats.EthStatsServerController, kotlin.coroutines.CoroutineContext)/timeSupplier">timeSupplier</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Instant</span>&nbsp;<span class="symbol">=</span>&nbsp;Instant::now<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function0((java.time.Instant)), org.apache.tuweni.ethstats.EthStatsServerController, kotlin.coroutines.CoroutineContext)/controller">controller</span><span class="symbol">:</span>&nbsp;<a href="../-eth-stats-server-controller/index.html"><span class="identifier">EthStatsServerController</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServer$<init>(io.vertx.core.Vertx, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function0((java.time.Instant)), org.apache.tuweni.ethstats.EthStatsServerController, kotlin.coroutines.CoroutineContext)/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineContext</span>&nbsp;<span class="symbol">=</span>&nbsp;Dispatchers.Default<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="coroutine-context.html">coroutineContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">coroutineContext</span><span class="symbol">: </span><span class="identifier">CoroutineContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="network-interface.html">networkInterface</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">networkInterface</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="port.html">port</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">port</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="secret.html">secret</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">secret</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="connect.html">connect</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">connect</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServer$connect(io.vertx.core.http.ServerWebSocket)/serverWebSocket">serverWebSocket</span><span class="symbol">:</span>&nbsp;<span class="identifier">ServerWebSocket</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start.html">start</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">start</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stop.html">stop</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">stop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="logger.html">logger</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">logger</span><span class="symbol">: </span><span class="identifier">Logger</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mapper.html">mapper</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">mapper</span><span class="symbol">: </span><span class="identifier">ObjectMapper</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

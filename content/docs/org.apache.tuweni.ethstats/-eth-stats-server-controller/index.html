@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EthStatsServerController - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ethstats</a>&nbsp;/&nbsp;<a href="./index.html">EthStatsServerController</a><br/>
+<br/>
+<h1>EthStatsServerController</h1>
+<code><span class="keyword">interface </span><span class="identifier">EthStatsServerController</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/ethstats/src/main/kotlin/org/apache/tuweni/ethstats/EthStatsServerController.kt#L22">(source)</a>
+<p>Controller receiving information of all clients connected to the ethstats server.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="read-block.html">readBlock</a></h4>
+</td>
+<td>
+<p>Reads block information from the peer.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readBlock</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServerController$readBlock(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.BlockStats)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServerController$readBlock(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.BlockStats)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServerController$readBlock(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.BlockStats)/block">block</span><span class="symbol">:</span>&nbsp;<a href="../-block-stats/index.html"><span class="identifier">BlockStats</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-disconnect.html">readDisconnect</a></h4>
+</td>
+<td>
+<p>Handles the disconnection of the peer.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readDisconnect</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServerController$readDisconnect(kotlin.String, kotlin.String)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServerController$readDisconnect(kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-latency.html">readLatency</a></h4>
+</td>
+<td>
+<p>Reads latency from the peer to the server, in milliseconds.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readLatency</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServerController$readLatency(kotlin.String, kotlin.String, kotlin.Long)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServerController$readLatency(kotlin.String, kotlin.String, kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServerController$readLatency(kotlin.String, kotlin.String, kotlin.Long)/latency">latency</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-node-info.html">readNodeInfo</a></h4>
+</td>
+<td>
+<p>Reads node information. This is sent upon connection from the peer.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readNodeInfo</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServerController$readNodeInfo(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeInfo)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServerController$readNodeInfo(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeInfo)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServerController$readNodeInfo(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeInfo)/nodeInfo">nodeInfo</span><span class="symbol">:</span>&nbsp;<a href="../-node-info/index.html"><span class="identifier">NodeInfo</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-node-stats.html">readNodeStats</a></h4>
+</td>
+<td>
+<p>Reads node statistics.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readNodeStats</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServerController$readNodeStats(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeStats)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServerController$readNodeStats(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeStats)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServerController$readNodeStats(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeStats)/nodeStats">nodeStats</span><span class="symbol">:</span>&nbsp;<a href="../-node-stats/index.html"><span class="identifier">NodeStats</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-pending-tx.html">readPendingTx</a></h4>
+</td>
+<td>
+<p>Reads the number of pending transactions from the peer</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readPendingTx</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServerController$readPendingTx(kotlin.String, kotlin.String, kotlin.Long)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServerController$readPendingTx(kotlin.String, kotlin.String, kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethstats.EthStatsServerController$readPendingTx(kotlin.String, kotlin.String, kotlin.Long)/pendingTx">pendingTx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../../org.apache.tuweni.eth.crawler/-crawler-ethstats-controller/index.html">CrawlerEthstatsController</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CrawlerEthstatsController</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EthStatsServerController</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

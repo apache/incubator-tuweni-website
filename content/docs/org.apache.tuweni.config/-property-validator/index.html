@@ -8,7 +8,7 @@
 <a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.config</a>&nbsp;/&nbsp;<a href="./index.html">PropertyValidator</a><br/>
 <br/>
 <h1>PropertyValidator</h1>
-<code><span class="keyword">interface </span><span class="identifier">PropertyValidator</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/config/src/main/java/org/apache/tuweni/config/PropertyValidator.java#L30">(source)</a>
+<code><span class="keyword">interface </span><span class="identifier">PropertyValidator</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/config/src/main/java/org/apache/tuweni/config/PropertyValidator.java#L30">(source)</a>
 <p>A validator associated with a specific configuration property.</p>
 <h3>Functions</h3>
 <table>
@@ -73,6 +73,22 @@
 <td>
 <p>A validator that ensures a property, if present, is a well-formed URL.</p>
 <code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isURL</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-valid-port.html">isValidPort</a></h4>
+</td>
+<td>
+<p>A validator that ensures a property, if present, is a well-formed port number.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isValidPort</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-valid-port-or-zero.html">isValidPortOrZero</a></h4>
+</td>
+<td>
+<p>A validator that ensures a property, if present, is a well-formed port number, or zero - meaning it will be allocated at runtime.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isValidPortOrZero</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">PropertyValidator</span></a><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>

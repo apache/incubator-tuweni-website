@@ -17,22 +17,44 @@
 </td>
 <td>
 <p>Block statistics reported to ethnetstats.</p>
-<code><span class="keyword">class </span><span class="identifier">BlockStats</span></code></td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">BlockStats</span></code></td>
 </tr>
 <tr>
 <td>
 <h4><a href="-eth-stats-reporter/index.html">EthStatsReporter</a></h4>
 </td>
 <td>
-<p>ETHNetStats reporting service. </p>
-<code><span class="keyword">class </span><span class="identifier">EthStatsReporter</span></code></td>
+<p>ETHNetStats reporting service.</p>
+<code><span class="keyword">class </span><span class="identifier">EthStatsReporter</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineScope</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-eth-stats-server/index.html">EthStatsServer</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">EthStatsServer</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineScope</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-eth-stats-server-controller/index.html">EthStatsServerController</a></h4>
+</td>
+<td>
+<p>Controller receiving information of all clients connected to the ethstats server.</p>
+<code><span class="keyword">interface </span><span class="identifier">EthStatsServerController</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-node-info/index.html">NodeInfo</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NodeInfo</span></code></td>
 </tr>
 <tr>
 <td>
 <h4><a href="-node-stats/index.html">NodeStats</a></h4>
 </td>
 <td>
-<code><span class="keyword">class </span><span class="identifier">NodeStats</span></code></td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NodeStats</span></code></td>
 </tr>
 <tr>
 <td>
@@ -40,7 +62,7 @@
 </td>
 <td>
 <p>Stats reported to ethnetstats representing the hash of a transaction.</p>
-<code><span class="keyword">class </span><span class="identifier">TxStats</span></code></td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">TxStats</span></code></td>
 </tr>
 </tbody>
 </table>

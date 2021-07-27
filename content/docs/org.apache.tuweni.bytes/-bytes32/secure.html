@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Bytes32.secure - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.bytes</a>&nbsp;/&nbsp;<a href="index.html">Bytes32</a>&nbsp;/&nbsp;<a href="./secure.html">secure</a><br/>
+<br/>
+<h1>secure</h1>
+<a name="org.apache.tuweni.bytes.Bytes32$secure(kotlin.ByteArray)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">secure</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$secure(kotlin.ByteArray)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/bytes/src/main/java/org/apache/tuweni/bytes/Bytes32.java#L76">(source)</a>
+<p>Secures the provided byte array, which must be of length 32, as a <code><a href="index.html">Bytes32</a></code>.</p>
+<h3>Parameters</h3>
+<p><a name="bytes"></a>
+<code>bytes</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The bytes to secure.</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if <code>value.length != 32</code>.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span><span class="symbol">:</span> A <code><a href="index.html">Bytes32</a></code> securing <code>value</code>.</p>
+<a name="org.apache.tuweni.bytes.Bytes32$secure(kotlin.ByteArray, kotlin.Int)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">secure</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$secure(kotlin.ByteArray, kotlin.Int)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$secure(kotlin.ByteArray, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/bytes/src/main/java/org/apache/tuweni/bytes/Bytes32.java#L94">(source)</a>
+<p>Secures a slice/sub-part of the provided array as a <code><a href="index.html">Bytes32</a></code>.</p>
+<h3>Parameters</h3>
+<p><a name="bytes"></a>
+<code>bytes</code> - <span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">:</span> The bytes to secure.</p>
+<p><a name="offset"></a>
+<code>offset</code> - <span class="identifier">Int</span><span class="symbol">:</span> The index (inclusive) in <code>value</code> of the first byte exposed by the returned value. In other words, you will have <code>wrap(value, i).get(0) == value[i]</code>.</p>
+<h3>Exceptions</h3>
+<p><a name="IndexOutOfBoundsException"></a>
+<code>IndexOutOfBoundsException</code> - if <code>offset &lt; 0 || (value.length &gt; 0 &amp;&amp; offset &gt;= value.length)</code>.</p>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if <code>length &lt; 0 || offset + 32 &gt; value.length</code>.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span><span class="symbol">:</span> A <code><a href="index.html">Bytes32</a></code> that holds securely the bytes of <code>value</code> from <code>offset</code> (inclusive) to <code>offset + 32</code> (exclusive).</p>
+</BODY>
+</HTML>

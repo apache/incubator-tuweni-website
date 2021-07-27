@@ -1,0 +1,175 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JSONRPCConfig - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.jsonrpc.app</a>&nbsp;/&nbsp;<a href="./index.html">JSONRPCConfig</a><br/>
+<br/>
+<h1>JSONRPCConfig</h1>
+<code><span class="keyword">class </span><span class="identifier">JSONRPCConfig</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/jsonrpc-app/src/main/kotlin/org/apache/tuweni/jsonrpc/app/JSONRPCConfig.kt#L29">(source)</a>
+<p>Configuration of the JSON-RPC server as a TOML-based file.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Configuration of the JSON-RPC server as a TOML-based file.</p>
+<code><span class="identifier">JSONRPCConfig</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.jsonrpc.app.JSONRPCConfig$<init>(java.nio.file.Path)/filePath">filePath</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="config.html">config</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">config</span><span class="symbol">: </span><a href="../../org.apache.tuweni.config/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="file-path.html">filePath</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">filePath</span><span class="symbol">: </span><span class="identifier">Path</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="allowed-methods.html">allowedMethods</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">allowedMethods</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="allowed-ranges.html">allowedRanges</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">allowedRanges</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="basic-auth-password.html">basicAuthPassword</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">basicAuthPassword</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="basic-auth-realm.html">basicAuthRealm</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">basicAuthRealm</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="basic-auth-username.html">basicAuthUsername</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">basicAuthUsername</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="client-fingerprints-file.html">clientFingerprintsFile</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clientFingerprintsFile</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Path</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="metrics-grpc-push-enabled.html">metricsGrpcPushEnabled</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">metricsGrpcPushEnabled</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="metrics-network-interface.html">metricsNetworkInterface</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">metricsNetworkInterface</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="metrics-port.html">metricsPort</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">metricsPort</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="metrics-prometheus-enabled.html">metricsPrometheusEnabled</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">metricsPrometheusEnabled</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="network-interface.html">networkInterface</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">networkInterface</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="number-of-threads.html">numberOfThreads</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">numberOfThreads</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="port.html">port</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">port</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="rejected-ranges.html">rejectedRanges</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">rejectedRanges</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ssl.html">ssl</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">ssl</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="use-basic-authentication.html">useBasicAuthentication</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">useBasicAuthentication</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="schema.html">schema</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">schema</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.config/-schema/index.html"><span class="identifier">Schema</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

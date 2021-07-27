@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SHA512Hash.Input - tuweni</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../../index.html">org.apache.tuweni.crypto.sodium</a>&nbsp;/&nbsp;<a href="../index.html">SHA512Hash</a>&nbsp;/&nbsp;<a href="./index.html">Input</a><br/>
+<br/>
+<h1>Input</h1>
+<code><span class="keyword">class </span><span class="identifier">Input</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Destroyable</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/crypto/src/main/java/org/apache/tuweni/crypto/sodium/SHA512Hash.java#L42">(source)</a>
+<p>Input of a SHA-512 hash function</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="bytes.html">bytes</a></h4>
+</td>
+<td>
+<p>Provides the bytes of this key</p>
+<code><span class="keyword">fun </span><span class="identifier">bytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="bytes-array.html">bytesArray</a></h4>
+</td>
+<td>
+<p>Provides the bytes of this key</p>
+<code><span class="keyword">fun </span><span class="identifier">bytesArray</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="destroy.html">destroy</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">destroy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SHA512Hash.Input$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-bytes.html">fromBytes</a></h4>
+</td>
+<td>
+<p>Create a <code><a href="./index.html">SHA512Hash.Input</a></code> from an array of bytes.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SHA512Hash.Input$fromBytes(org.apache.tuweni.bytes.Bytes)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="../../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Input</span><span class="symbol">!</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBytes</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SHA512Hash.Input$fromBytes(kotlin.ByteArray)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Input</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-hash.html">fromHash</a></h4>
+</td>
+<td>
+<p>Create a <code><a href="./index.html">SHA512Hash.Input</a></code> from a hash.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromHash</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SHA512Hash.Input$fromHash(org.apache.tuweni.crypto.sodium.SHA512Hash.Hash)/hash">hash</span><span class="symbol">:</span>&nbsp;<span class="identifier">Hash</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Input</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-pointer.html">fromPointer</a></h4>
+</td>
+<td>
+<p>Create a <code><a href="./index.html">SHA512Hash.Input</a></code> from a pointer.</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromPointer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SHA512Hash.Input$fromPointer(org.apache.tuweni.crypto.sodium.Allocated)/allocated">allocated</span><span class="symbol">:</span>&nbsp;<a href="../../-allocated/index.html"><span class="identifier">Allocated</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Input</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="from-secret.html">fromSecret</a></h4>
+</td>
+<td>
+<p>Create a hash input from a Diffie-Helman secret</p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromSecret</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.crypto.sodium.SHA512Hash.Input$fromSecret(org.apache.tuweni.crypto.sodium.DiffieHelman.Secret)/secret">secret</span><span class="symbol">:</span>&nbsp;<span class="identifier">Secret</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Input</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-destroyed.html">isDestroyed</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isDestroyed</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="length.html">length</a></h4>
+</td>
+<td>
+<p>Provides the length of the input</p>
+<code><span class="keyword">fun </span><span class="identifier">length</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

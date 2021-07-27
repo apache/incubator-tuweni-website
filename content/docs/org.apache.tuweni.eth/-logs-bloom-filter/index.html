@@ -8,7 +8,7 @@
 <a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth</a>&nbsp;/&nbsp;<a href="./index.html">LogsBloomFilter</a><br/>
 <br/>
 <h1>LogsBloomFilter</h1>
-<code><span class="keyword">class </span><span class="identifier">LogsBloomFilter</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth/src/main/java/org/apache/tuweni/eth/LogsBloomFilter.java#L33">(source)</a>
+<code><span class="keyword">class </span><span class="identifier">LogsBloomFilter</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/eth/src/main/java/org/apache/tuweni/eth/LogsBloomFilter.java#L33">(source)</a>
 <p>Bloom filter implementation for storing persistent logs, describes a 2048-bit representation of all log entries of a transaction, except data. Sets the bits of the 2048 byte array, where indices are given by: The lower order 11-bits, of the first three double-bytes, of the SHA3, of each value. For instance the address "0x0F572E5295C57F15886F9B263E2F6D2D6C7B5EC6" results in the KECCAK256 hash "bd2b01afcd27800b54d2179edc49e2bffde5078bb6d0b204694169b1643fb108", of which the corresponding double-bytes are: bd2b, 01af, cd27, corresponding to the following bits in the bloom filter: 1323, 431, 1319</p>
 <h3>Constructors</h3>
 <table>

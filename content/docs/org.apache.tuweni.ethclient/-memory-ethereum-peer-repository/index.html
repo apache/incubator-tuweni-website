@@ -1,0 +1,162 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MemoryEthereumPeerRepository - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.ethclient</a>&nbsp;/&nbsp;<a href="./index.html">MemoryEthereumPeerRepository</a><br/>
+<br/>
+<h1>MemoryEthereumPeerRepository</h1>
+<code><span class="keyword">class </span><span class="identifier">MemoryEthereumPeerRepository</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-ethereum-peer-repository/index.html"><span class="identifier">EthereumPeerRepository</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/eth-client/src/main/kotlin/org/apache/tuweni/ethclient/EthereumPeerRepository.kt#L82">(source)</a>
+<p>Memory-backed Ethereum peer repository.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Memory-backed Ethereum peer repository.</p>
+<code><span class="identifier">MemoryEthereumPeerRepository</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="connections.html">connections</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">connections</span><span class="symbol">: </span><span class="identifier">ConcurrentHashMap</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">,</span>&nbsp;<a href="../-ethereum-connection/index.html"><span class="identifier">EthereumConnection</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="identities.html">identities</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">identities</span><span class="symbol">: </span><span class="identifier">HashSet</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.peer.repository/-identity/index.html"><span class="identifier">Identity</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="identity-listeners.html">identityListeners</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">identityListeners</span><span class="symbol">: </span><span class="identifier">HashMap</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">,</span>&nbsp;<span class="symbol">(</span><a href="../../org.apache.tuweni.peer.repository/-identity/index.html"><span class="identifier">Identity</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="peer-map.html">peerMap</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">peerMap</span><span class="symbol">: </span><span class="identifier">ConcurrentHashMap</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.peer.repository/-identity/index.html"><span class="identifier">Identity</span></a><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="status-listeners.html">statusListeners</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">statusListeners</span><span class="symbol">: </span><span class="identifier">HashMap</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">,</span>&nbsp;<span class="symbol">(</span><a href="../-ethereum-connection/index.html"><span class="identifier">EthereumConnection</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="active-connections.html">activeConnections</a></h4>
+</td>
+<td>
+<p>Provides a stream of active connections.</p>
+<code><span class="keyword">fun </span><span class="identifier">activeConnections</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Stream</span><span class="symbol">&lt;</span><a href="../-ethereum-connection/index.html"><span class="identifier">EthereumConnection</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-connection.html">addConnection</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addConnection</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$addConnection(org.apache.tuweni.peer.repository.Peer, org.apache.tuweni.peer.repository.Identity)/peer">peer</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$addConnection(org.apache.tuweni.peer.repository.Peer, org.apache.tuweni.peer.repository.Identity)/identity">identity</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-identity/index.html"><span class="identifier">Identity</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-identity-listener.html">addIdentityListener</a></h4>
+</td>
+<td>
+<p>Adds a listener to be called when a new peer connects</p>
+<code><span class="keyword">fun </span><span class="identifier">addIdentityListener</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$addIdentityListener(kotlin.Function1((org.apache.tuweni.peer.repository.Identity, kotlin.Unit)))/identityListener">identityListener</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../org.apache.tuweni.peer.repository/-identity/index.html"><span class="identifier">Identity</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-status-listener.html">addStatusListener</a></h4>
+</td>
+<td>
+<p>Adds a listener to be called when a status message is received</p>
+<code><span class="keyword">fun </span><span class="identifier">addStatusListener</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$addStatusListener(kotlin.Function1((org.apache.tuweni.ethclient.EthereumConnection, kotlin.Unit)))/statusListener">statusListener</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../-ethereum-connection/index.html"><span class="identifier">EthereumConnection</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mark-connection-inactive.html">markConnectionInactive</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">markConnectionInactive</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$markConnectionInactive(org.apache.tuweni.peer.repository.Peer, org.apache.tuweni.peer.repository.Identity)/peer">peer</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$markConnectionInactive(org.apache.tuweni.peer.repository.Peer, org.apache.tuweni.peer.repository.Identity)/identity">identity</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-identity/index.html"><span class="identifier">Identity</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="peer-discovered-at.html">peerDiscoveredAt</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">peerDiscoveredAt</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$peerDiscoveredAt(org.apache.tuweni.peer.repository.Peer, kotlin.Long)/peer">peer</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$peerDiscoveredAt(org.apache.tuweni.peer.repository.Peer, kotlin.Long)/time">time</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="random-peer.html">randomPeer</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">randomPeer</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.peer.repository/-peer/index.html"><span class="identifier">Peer</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-identity-listener.html">removeIdentityListener</a></h4>
+</td>
+<td>
+<p>Removes an identity listener</p>
+<code><span class="keyword">fun </span><span class="identifier">removeIdentityListener</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$removeIdentityListener(kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-status-listener.html">removeStatusListener</a></h4>
+</td>
+<td>
+<p>Removes a status listener</p>
+<code><span class="keyword">fun </span><span class="identifier">removeStatusListener</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$removeStatusListener(kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-identity.html">storeIdentity</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeIdentity</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$storeIdentity(kotlin.String, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.PublicKey)/networkInterface">networkInterface</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$storeIdentity(kotlin.String, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.PublicKey)/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$storeIdentity(kotlin.String, kotlin.Int, org.apache.tuweni.crypto.SECP256K1.PublicKey)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.peer.repository/-identity/index.html"><span class="identifier">Identity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-peer.html">storePeer</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storePeer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$storePeer(org.apache.tuweni.peer.repository.Identity, java.time.Instant, java.time.Instant)/id">id</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.peer.repository/-identity/index.html"><span class="identifier">Identity</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$storePeer(org.apache.tuweni.peer.repository.Identity, java.time.Instant, java.time.Instant)/lastContacted">lastContacted</span><span class="symbol">:</span>&nbsp;<span class="identifier">Instant</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$storePeer(org.apache.tuweni.peer.repository.Identity, java.time.Instant, java.time.Instant)/lastDiscovered">lastDiscovered</span><span class="symbol">:</span>&nbsp;<span class="identifier">Instant</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.peer.repository/-peer/index.html"><span class="identifier">Peer</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-status.html">storeStatus</a></h4>
+</td>
+<td>
+<p>Stores the status message sent for a connection</p>
+<code><span class="keyword">fun </span><span class="identifier">storeStatus</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$storeStatus(kotlin.String, org.apache.tuweni.devp2p.eth.Status)/connId">connId</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.ethclient.MemoryEthereumPeerRepository$storeStatus(kotlin.String, org.apache.tuweni.devp2p.eth.Status)/status">status</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.devp2p.eth/-status/index.html"><span class="identifier">Status</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -8,7 +8,7 @@
 <a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.bytes</a>&nbsp;/&nbsp;<a href="./index.html">DelegatingBytes</a><br/>
 <br/>
 <h1>DelegatingBytes</h1>
-<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DelegatingBytes</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-abstract-bytes/index.html"><span class="identifier">AbstractBytes</span></a><span class="symbol">, </span><a href="../-bytes/index.html"><span class="identifier">Bytes</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/bytes/src/main/java/org/apache/tuweni/bytes/DelegatingBytes.java#L23">(source)</a>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DelegatingBytes</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-abstract-bytes/index.html"><span class="identifier">AbstractBytes</span></a><span class="symbol">, </span><a href="../-bytes/index.html"><span class="identifier">Bytes</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/bytes/src/main/java/org/apache/tuweni/bytes/DelegatingBytes.java#L23">(source)</a>
 <p>A class that holds and delegates all operations to its inner bytes field. </p>
 <p> This class may be used to create more types that represent bytes, but need a different name for business logic.</p>
 <h3>Constructors</h3>
@@ -35,10 +35,24 @@
 </tr>
 <tr>
 <td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.DelegatingBytes$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
 <h4><a href="get.html">get</a></h4>
 </td>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.DelegatingBytes$get(kotlin.Int)/i">i</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Byte</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
 </tr>
 <tr>
 <td>
@@ -73,6 +87,22 @@
 <td>
 <p>An Ethereum account address.</p>
 <code><span class="keyword">class </span><span class="identifier">Address</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DelegatingBytes</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-delegating-bytes32/index.html">DelegatingBytes32</a></h4>
+</td>
+<td>
+<p>A class that holds and delegates all operations to its inner bytes field. </p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DelegatingBytes32</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DelegatingBytes</span></a><span class="symbol">, </span><a href="../-bytes32/index.html"><span class="identifier">Bytes32</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-delegating-bytes48/index.html">DelegatingBytes48</a></h4>
+</td>
+<td>
+<p>A class that holds and delegates all operations to its inner bytes field. </p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DelegatingBytes48</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DelegatingBytes</span></a><span class="symbol">, </span><a href="../-bytes48/index.html"><span class="identifier">Bytes48</span></a></code></td>
 </tr>
 </tbody>
 </table>

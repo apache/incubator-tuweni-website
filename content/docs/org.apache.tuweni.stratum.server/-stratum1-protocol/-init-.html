@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Stratum1Protocol.<init> - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.stratum.server</a>&nbsp;/&nbsp;<a href="index.html">Stratum1Protocol</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="org.apache.tuweni.stratum.server.Stratum1Protocol$&lt;init&gt;(kotlin.String, kotlin.Function0((kotlin.String)), kotlin.Function0((kotlin.String)), kotlin.Function1((org.apache.tuweni.stratum.server.PoWSolution, kotlin.Boolean)), kotlin.Function0((org.apache.tuweni.bytes.Bytes32)))"></a>
+<code><span class="identifier">Stratum1Protocol</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.stratum.server.Stratum1Protocol$<init>(kotlin.String, kotlin.Function0((kotlin.String)), kotlin.Function0((kotlin.String)), kotlin.Function1((org.apache.tuweni.stratum.server.PoWSolution, kotlin.Boolean)), kotlin.Function0((org.apache.tuweni.bytes.Bytes32)))/extranonce">extranonce</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.stratum.server.Stratum1Protocol$<init>(kotlin.String, kotlin.Function0((kotlin.String)), kotlin.Function0((kotlin.String)), kotlin.Function1((org.apache.tuweni.stratum.server.PoWSolution, kotlin.Boolean)), kotlin.Function0((org.apache.tuweni.bytes.Bytes32)))/jobIdSupplier">jobIdSupplier</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;{
+    val timeValue: Bytes =
+      Bytes.minimalBytes(Instant.now().toEpochMilli())
+    timeValue.slice(timeValue.size() - 4, 4).toShortHexString()
+  }<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.stratum.server.Stratum1Protocol$<init>(kotlin.String, kotlin.Function0((kotlin.String)), kotlin.Function0((kotlin.String)), kotlin.Function1((org.apache.tuweni.stratum.server.PoWSolution, kotlin.Boolean)), kotlin.Function0((org.apache.tuweni.bytes.Bytes32)))/subscriptionIdCreator">subscriptionIdCreator</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;{ createSubscriptionID() }<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.stratum.server.Stratum1Protocol$<init>(kotlin.String, kotlin.Function0((kotlin.String)), kotlin.Function0((kotlin.String)), kotlin.Function1((org.apache.tuweni.stratum.server.PoWSolution, kotlin.Boolean)), kotlin.Function0((org.apache.tuweni.bytes.Bytes32)))/submitCallback">submitCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../-po-w-solution/index.html"><span class="identifier">PoWSolution</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.stratum.server.Stratum1Protocol$<init>(kotlin.String, kotlin.Function0((kotlin.String)), kotlin.Function0((kotlin.String)), kotlin.Function1((org.apache.tuweni.stratum.server.PoWSolution, kotlin.Boolean)), kotlin.Function0((org.apache.tuweni.bytes.Bytes32)))/seedSupplier">seedSupplier</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">)</span></code>
+<p>Implementation of the stratum+tcp protocol.</p>
+<p>This protocol allows miners to submit EthHash solutions over a persistent TCP connection.</p>
+</BODY>
+</HTML>

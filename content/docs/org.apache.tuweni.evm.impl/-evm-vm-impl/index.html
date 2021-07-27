@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EvmVmImpl - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.evm.impl</a>&nbsp;/&nbsp;<a href="./index.html">EvmVmImpl</a><br/>
+<br/>
+<h1>EvmVmImpl</h1>
+<code><span class="keyword">class </span><span class="identifier">EvmVmImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.evm/-evm-vm/index.html"><span class="identifier">EvmVm</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/evm/src/main/kotlin/org/apache/tuweni/evm/impl/EvmVmImpl.kt#L36">(source)</a>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">EvmVmImpl</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="capabilities.html">capabilities</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">capabilities</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="close.html">close</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="execute.html">execute</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">execute</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.impl.EvmVmImpl$execute(org.apache.tuweni.evm.HostContext, org.apache.tuweni.evm.HardFork, org.apache.tuweni.evm.EVMMessage, org.apache.tuweni.bytes.Bytes)/hostContext">hostContext</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.evm/-host-context/index.html"><span class="identifier">HostContext</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.impl.EvmVmImpl$execute(org.apache.tuweni.evm.HostContext, org.apache.tuweni.evm.HardFork, org.apache.tuweni.evm.EVMMessage, org.apache.tuweni.bytes.Bytes)/fork">fork</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.evm/-hard-fork/index.html"><span class="identifier">HardFork</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.impl.EvmVmImpl$execute(org.apache.tuweni.evm.HostContext, org.apache.tuweni.evm.HardFork, org.apache.tuweni.evm.EVMMessage, org.apache.tuweni.bytes.Bytes)/msg">msg</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.evm/-e-v-m-message/index.html"><span class="identifier">EVMMessage</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.impl.EvmVmImpl$execute(org.apache.tuweni.evm.HostContext, org.apache.tuweni.evm.HardFork, org.apache.tuweni.evm.EVMMessage, org.apache.tuweni.bytes.Bytes)/code">code</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.evm/-e-v-m-result/index.html"><span class="identifier">EVMResult</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-option.html">setOption</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setOption</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.impl.EvmVmImpl$setOption(kotlin.String, kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.impl.EvmVmImpl$setOption(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="version.html">version</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">version</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="logger.html">logger</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">logger</span><span class="symbol">: </span><span class="identifier">Logger</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="registry.html">registry</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">registry</span><span class="symbol">: </span><a href="../-opcode-registry/index.html"><span class="identifier">OpcodeRegistry</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="create.html">create</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.evm/-evm-vm/index.html"><span class="identifier">EvmVm</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

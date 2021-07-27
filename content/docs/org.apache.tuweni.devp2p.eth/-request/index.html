@@ -8,7 +8,7 @@
 <a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.devp2p.eth</a>&nbsp;/&nbsp;<a href="./index.html">Request</a><br/>
 <br/>
 <h1>Request</h1>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Request</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/devp2p-eth/src/main/kotlin/org/apache/tuweni/devp2p/eth/EthRequestsManager.kt#L126">(source)</a>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Request</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/devp2p-eth/src/main/kotlin/org/apache/tuweni/devp2p/eth/EthRequestsManager.kt#L142">(source)</a>
 <p>A data request handle, matching the connection on which the request was made.</p>
 <h3>Parameters</h3>
 <p><a name="connectionId"></a>
@@ -26,7 +26,7 @@
 </td>
 <td>
 <p>A data request handle, matching the connection on which the request was made.</p>
-<code><span class="identifier">Request</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.Request$<init>(kotlin.String, org.apache.tuweni.concurrent.CompletableAsyncCompletion, kotlin.Any)/connectionId">connectionId</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.Request$<init>(kotlin.String, org.apache.tuweni.concurrent.CompletableAsyncCompletion, kotlin.Any)/handle">handle</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.concurrent/-completable-async-completion/index.html"><span class="identifier">CompletableAsyncCompletion</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.Request$<init>(kotlin.String, org.apache.tuweni.concurrent.CompletableAsyncCompletion, kotlin.Any)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">)</span></code></td>
+<code><span class="identifier">Request</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.eth.Request$<init>(kotlin.String, org.apache.tuweni.concurrent.CompletableAsyncResult((org.apache.tuweni.devp2p.eth.Request.T)), kotlin.Any)/connectionId">connectionId</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.Request$<init>(kotlin.String, org.apache.tuweni.concurrent.CompletableAsyncResult((org.apache.tuweni.devp2p.eth.Request.T)), kotlin.Any)/handle">handle</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.concurrent/-completable-async-result/index.html"><span class="identifier">CompletableAsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.devp2p.eth.Request$<init>(kotlin.String, org.apache.tuweni.concurrent.CompletableAsyncResult((org.apache.tuweni.devp2p.eth.Request.T)), kotlin.Any)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">)</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -55,7 +55,7 @@
 </td>
 <td>
 <p>the handle to the request completion</p>
-<code><span class="keyword">val </span><span class="identifier">handle</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-completable-async-completion/index.html"><span class="identifier">CompletableAsyncCompletion</span></a></code></td>
+<code><span class="keyword">val </span><span class="identifier">handle</span><span class="symbol">: </span><a href="../../org.apache.tuweni.concurrent/-completable-async-result/index.html"><span class="identifier">CompletableAsyncResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
 </tr>
 </tbody>
 </table>

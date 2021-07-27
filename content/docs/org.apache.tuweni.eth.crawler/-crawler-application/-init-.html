@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CrawlerApplication.<init> - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth.crawler</a>&nbsp;/&nbsp;<a href="index.html">CrawlerApplication</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="org.apache.tuweni.eth.crawler.CrawlerApplication$&lt;init&gt;(io.vertx.core.Vertx, org.apache.tuweni.eth.crawler.CrawlerConfig, kotlinx.coroutines.CoroutineDispatcher)"></a>
+<code><span class="identifier">CrawlerApplication</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerApplication$<init>(io.vertx.core.Vertx, org.apache.tuweni.eth.crawler.CrawlerConfig, kotlinx.coroutines.CoroutineDispatcher)/vertx">vertx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Vertx</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerApplication$<init>(io.vertx.core.Vertx, org.apache.tuweni.eth.crawler.CrawlerConfig, kotlinx.coroutines.CoroutineDispatcher)/config">config</span><span class="symbol">:</span>&nbsp;<a href="../-crawler-config/index.html"><span class="identifier">CrawlerConfig</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerApplication$<init>(io.vertx.core.Vertx, org.apache.tuweni.eth.crawler.CrawlerConfig, kotlinx.coroutines.CoroutineDispatcher)/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineDispatcher</span>&nbsp;<span class="symbol">=</span>&nbsp;Executors.newFixedThreadPool(
+      config.numberOfThreads()
+    ) {
+      val thread = Thread("crawler")
+      thread.isDaemon = true
+      thread
+    }.asCoroutineDispatcher()<span class="symbol">)</span></code>
+</BODY>
+</HTML>

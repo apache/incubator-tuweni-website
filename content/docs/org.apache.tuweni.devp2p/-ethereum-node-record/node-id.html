@@ -9,16 +9,19 @@
 <br/>
 <h1>nodeId</h1>
 <a name="org.apache.tuweni.devp2p.EthereumNodeRecord$nodeId()"></a>
-<code><span class="keyword">fun </span><span class="identifier">nodeId</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/devp2p/src/main/kotlin/org/apache/tuweni/devp2p/EthereumNodeRecord.kt#L288">(source)</a>
+<code><span class="keyword">fun </span><span class="identifier">nodeId</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/devp2p/src/main/kotlin/org/apache/tuweni/devp2p/EthereumNodeRecord.kt#L289">(source)</a>
 <p>Derives the public key of an ethereum node record into a unique 32 bytes hash.</p>
 <p><strong>Return</strong><br/>
 the hash of the public key</p>
 <a name="org.apache.tuweni.devp2p.EthereumNodeRecord.Companion$nodeId(org.apache.tuweni.crypto.SECP256K1.PublicKey)"></a>
-<code><span class="keyword">fun </span><span class="identifier">nodeId</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.EthereumNodeRecord.Companion$nodeId(org.apache.tuweni.crypto.SECP256K1.PublicKey)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/devp2p/src/main/kotlin/org/apache/tuweni/devp2p/EthereumNodeRecord.kt#L56">(source)</a>
+<code><span class="keyword">fun </span><span class="identifier">nodeId</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.devp2p.EthereumNodeRecord.Companion$nodeId(org.apache.tuweni.crypto.SECP256K1.PublicKey)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">PublicKey</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/devp2p/src/main/kotlin/org/apache/tuweni/devp2p/EthereumNodeRecord.kt#L57">(source)</a>
 <p>Derives the public key of an ethereum node record into a unique 32 bytes hash.</p>
 <h3>Parameters</h3>
 <p><a name="publicKey"></a>
 <code>publicKey</code> - the public key to hash</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if the public key is not valid.</p>
 <p><strong>Return</strong><br/>
 the hash of the public key</p>
 </BODY>

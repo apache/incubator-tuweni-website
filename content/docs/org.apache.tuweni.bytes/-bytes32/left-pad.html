@@ -8,8 +8,21 @@
 <a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.bytes</a>&nbsp;/&nbsp;<a href="index.html">Bytes32</a>&nbsp;/&nbsp;<a href="./left-pad.html">leftPad</a><br/>
 <br/>
 <h1>leftPad</h1>
+<a name="org.apache.tuweni.bytes.Bytes32$leftPad(org.apache.tuweni.bytes.Bytes, kotlin.Byte)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">leftPad</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$leftPad(org.apache.tuweni.bytes.Bytes, kotlin.Byte)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$leftPad(org.apache.tuweni.bytes.Bytes, kotlin.Byte)/fill">fill</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/bytes/src/main/java/org/apache/tuweni/bytes/Bytes32.java#L152">(source)</a>
+<p>Left pad a <code><a href="../-bytes/index.html">Bytes</a></code> value with a fill byte to create a <code><a href="index.html">Bytes32</a></code>.</p>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <a href="../-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">:</span> The bytes value pad.</p>
+<p><a name="fill"></a>
+<code>fill</code> - <span class="identifier">Byte</span><span class="symbol">:</span> the byte to fill with</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if <code>value.size() &gt; 32</code>.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span><span class="symbol">:</span> A <code><a href="index.html">Bytes32</a></code> that exposes the left-padded bytes of <code>value</code>.</p>
 <a name="org.apache.tuweni.bytes.Bytes32$leftPad(org.apache.tuweni.bytes.Bytes)"></a>
-<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">leftPad</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$leftPad(org.apache.tuweni.bytes.Bytes)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/bytes/src/main/java/org/apache/tuweni/bytes/Bytes32.java#L121">(source)</a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">leftPad</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$leftPad(org.apache.tuweni.bytes.Bytes)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/bytes/src/main/java/org/apache/tuweni/bytes/Bytes32.java#L171">(source)</a>
 <p>Left pad a <code><a href="../-bytes/index.html">Bytes</a></code> value with zero bytes to create a <code><a href="index.html">Bytes32</a></code>.</p>
 <h3>Parameters</h3>
 <p><a name="value"></a>

@@ -9,7 +9,7 @@
 <br/>
 <h1>cancel</h1>
 <a name="org.apache.tuweni.concurrent.AsyncResult$cancel()"></a>
-<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">cancel</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent/src/main/java/org/apache/tuweni/concurrent/AsyncResult.java#L298">(source)</a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">cancel</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/concurrent/src/main/java/org/apache/tuweni/concurrent/AsyncResult.java#L298">(source)</a>
 <p>Attempt to cancel execution of this task. </p>
 <p> This attempt will fail if the task has already completed, has already been cancelled, or could not be cancelled for some other reason. If successful, and this task has not started when <code>cancel</code> is called, this task should never run. </p>
 <p> After this method returns, subsequent calls to <code><a href="is-done.html">#isDone()</a></code> will always return <code>true</code>. Subsequent calls to <code><a href="is-cancelled.html">#isCancelled()</a></code> will always return <code>true</code> if this method returned <code>true</code>.</p>

@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EvmVm - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.evm</a>&nbsp;/&nbsp;<a href="./index.html">EvmVm</a><br/>
+<br/>
+<h1>EvmVm</h1>
+<code><span class="keyword">interface </span><span class="identifier">EvmVm</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/evm/src/main/kotlin/org/apache/tuweni/evm/EthereumVirtualMachine.kt#L452">(source)</a>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="capabilities.html">capabilities</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">capabilities</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="close.html">close</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="execute.html">execute</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">execute</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.EvmVm$execute(org.apache.tuweni.evm.HostContext, org.apache.tuweni.evm.HardFork, org.apache.tuweni.evm.EVMMessage, org.apache.tuweni.bytes.Bytes)/hostContext">hostContext</span><span class="symbol">:</span>&nbsp;<a href="../-host-context/index.html"><span class="identifier">HostContext</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.EvmVm$execute(org.apache.tuweni.evm.HostContext, org.apache.tuweni.evm.HardFork, org.apache.tuweni.evm.EVMMessage, org.apache.tuweni.bytes.Bytes)/fork">fork</span><span class="symbol">:</span>&nbsp;<a href="../-hard-fork/index.html"><span class="identifier">HardFork</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.EvmVm$execute(org.apache.tuweni.evm.HostContext, org.apache.tuweni.evm.HardFork, org.apache.tuweni.evm.EVMMessage, org.apache.tuweni.bytes.Bytes)/msg">msg</span><span class="symbol">:</span>&nbsp;<a href="../-e-v-m-message/index.html"><span class="identifier">EVMMessage</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.EvmVm$execute(org.apache.tuweni.evm.HostContext, org.apache.tuweni.evm.HardFork, org.apache.tuweni.evm.EVMMessage, org.apache.tuweni.bytes.Bytes)/code">code</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-e-v-m-result/index.html"><span class="identifier">EVMResult</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-option.html">setOption</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">setOption</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.EvmVm$setOption(kotlin.String, kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.EvmVm$setOption(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="version.html">version</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">version</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../../org.apache.tuweni.evm.impl/-evm-vm-impl/index.html">EvmVmImpl</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">EvmVmImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EvmVm</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

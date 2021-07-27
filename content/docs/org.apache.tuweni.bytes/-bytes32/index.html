@@ -8,7 +8,7 @@
 <a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.bytes</a>&nbsp;/&nbsp;<a href="./index.html">Bytes32</a><br/>
 <br/>
 <h1>Bytes32</h1>
-<code><span class="keyword">interface </span><span class="identifier">Bytes32</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-bytes/index.html"><span class="identifier">Bytes</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/bytes/src/main/java/org/apache/tuweni/bytes/Bytes32.java#L24">(source)</a>
+<code><span class="keyword">interface </span><span class="identifier">Bytes32</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-bytes/index.html"><span class="identifier">Bytes</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/bytes/src/main/java/org/apache/tuweni/bytes/Bytes32.java#L24">(source)</a>
 <p>A <code><a href="../-bytes/index.html">Bytes</a></code> value that is guaranteed to contain exactly 32 bytes.</p>
 <h3>Properties</h3>
 <table>
@@ -78,6 +78,8 @@
 <h4><a href="left-pad.html">leftPad</a></h4>
 </td>
 <td>
+<p>Left pad a <code><a href="../-bytes/index.html">Bytes</a></code> value with a fill byte to create a <code><a href="./index.html">Bytes32</a></code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">leftPad</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$leftPad(org.apache.tuweni.bytes.Bytes, kotlin.Byte)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$leftPad(org.apache.tuweni.bytes.Bytes, kotlin.Byte)/fill">fill</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code>
 <p>Left pad a <code><a href="../-bytes/index.html">Bytes</a></code> value with zero bytes to create a <code><a href="./index.html">Bytes32</a></code>.</p>
 <code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">leftPad</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$leftPad(org.apache.tuweni.bytes.Bytes)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
 </tr>
@@ -119,6 +121,16 @@
 <td>
 <p>Right pad a <code><a href="../-bytes/index.html">Bytes</a></code> value with zero bytes to create a <code><a href="./index.html">Bytes32</a></code>.</p>
 <code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">rightPad</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$rightPad(org.apache.tuweni.bytes.Bytes)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="secure.html">secure</a></h4>
+</td>
+<td>
+<p>Secures the provided byte array, which must be of length 32, as a <code><a href="./index.html">Bytes32</a></code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">secure</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$secure(kotlin.ByteArray)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code>
+<p>Secures a slice/sub-part of the provided array as a <code><a href="./index.html">Bytes32</a></code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">secure</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$secure(kotlin.ByteArray, kotlin.Int)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.bytes.Bytes32$secure(kotlin.ByteArray, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
@@ -170,11 +182,18 @@
 <tbody>
 <tr>
 <td>
+<h4><a href="../../org.apache.tuweni.units.bigints/-bytes-u-int256-value/index.html">BytesUInt256Value</a></h4>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">BytesUInt256Value</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256-value/index.html"><span class="identifier">UInt256Value</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Bytes32</span></a><span class="symbol">, </span><a href="../../org.apache.tuweni.units.bigints/-u-int256-value/index.html"><span class="identifier">UInt256Value</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
 <h4><a href="../-delegating-bytes32/index.html">DelegatingBytes32</a></h4>
 </td>
 <td>
 <p>A class that holds and delegates all operations to its inner bytes field. </p>
-<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DelegatingBytes32</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-abstract-bytes/index.html"><span class="identifier">AbstractBytes</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Bytes32</span></a></code></td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DelegatingBytes32</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-delegating-bytes/index.html"><span class="identifier">DelegatingBytes</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Bytes32</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -183,6 +202,14 @@
 <td>
 <p>A mutable <code><a href="./index.html">Bytes32</a></code>, that is a mutable <code><a href="../-bytes/index.html">Bytes</a></code> value of exactly 32 bytes.</p>
 <code><span class="keyword">interface </span><span class="identifier">MutableBytes32</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-mutable-bytes/index.html"><span class="identifier">MutableBytes</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Bytes32</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../org.apache.tuweni.units.bigints/-u-int256-value/index.html">UInt256Value</a></h4>
+</td>
+<td>
+<p>Represents a 256-bit (32 bytes) unsigned integer value. </p>
+<code><span class="keyword">interface </span><span class="identifier">UInt256Value</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256-value/index.html"><span class="identifier">UInt256Value</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Bytes32</span></a></code></td>
 </tr>
 </tbody>
 </table>

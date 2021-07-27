@@ -8,7 +8,7 @@
 <a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.evm</a>&nbsp;/&nbsp;<a href="./index.html">TransactionalEVMHostContext</a><br/>
 <br/>
 <h1>TransactionalEVMHostContext</h1>
-<code><span class="keyword">class </span><span class="identifier">TransactionalEVMHostContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">HostContext</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/evm/src/main/kotlin/org/apache/tuweni/evm/TransactionalEVMHostContext.kt#L39">(source)</a>
+<code><span class="keyword">class </span><span class="identifier">TransactionalEVMHostContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-host-context/index.html"><span class="identifier">HostContext</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/evm/src/main/kotlin/org/apache/tuweni/evm/TransactionalEVMHostContext.kt#L35">(source)</a>
 <p>EVM context that records changes to the world state, so they can be applied atomically.</p>
 <h3>Constructors</h3>
 <table>
@@ -31,7 +31,7 @@
 <h4><a href="account-changes.html">accountChanges</a></h4>
 </td>
 <td>
-<code><span class="keyword">val </span><span class="identifier">accountChanges</span><span class="symbol">: </span><span class="identifier">HashMap</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">HashMap</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+<code><span class="keyword">val </span><span class="identifier">accountChanges</span><span class="symbol">: </span><span class="identifier">HashMap</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">HashMap</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
 </tr>
 <tr>
 <td>
@@ -119,13 +119,6 @@
 </tr>
 <tr>
 <td>
-<h4><a href="gas-price.html">gasPrice</a></h4>
-</td>
-<td>
-<code><span class="keyword">val </span><span class="identifier">gasPrice</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a></code></td>
-</tr>
-<tr>
-<td>
 <h4><a href="logs.html">logs</a></h4>
 </td>
 <td>
@@ -152,6 +145,13 @@
 <td>
 <code><span class="keyword">val </span><span class="identifier">value</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a></code></td>
 </tr>
+<tr>
+<td>
+<h4><a href="warmed-up-storage.html">warmedUpStorage</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">warmedUpStorage</span><span class="symbol">: </span><span class="identifier">HashSet</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
 </tbody>
 </table>
 <h3>Functions</h3>
@@ -163,7 +163,7 @@
 </td>
 <td>
 <p>Check account existence function.</p>
-<code><span class="keyword">fun </span><span class="identifier">accountExists</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$accountExists(kotlin.ByteArray)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">accountExists</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$accountExists(org.apache.tuweni.eth.Address)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
 </tr>
 <tr>
 <td>
@@ -171,7 +171,7 @@
 </td>
 <td>
 <p>This function supports EVM calls.</p>
-<code><span class="keyword">fun </span><span class="identifier">call</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$call(java.nio.ByteBuffer)/msg">msg</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteBuffer</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteBuffer</span></code></td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">call</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$call(org.apache.tuweni.evm.EVMMessage)/evmMessage">evmMessage</span><span class="symbol">:</span>&nbsp;<a href="../-e-v-m-message/index.html"><span class="identifier">EVMMessage</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-e-v-m-result/index.html"><span class="identifier">EVMResult</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -179,7 +179,7 @@
 </td>
 <td>
 <p>Log function.</p>
-<code><span class="keyword">fun </span><span class="identifier">emitLog</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$emitLog(kotlin.ByteArray, kotlin.ByteArray, kotlin.Int, kotlin.Array((kotlin.ByteArray)), kotlin.Int)/address">address</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$emitLog(kotlin.ByteArray, kotlin.ByteArray, kotlin.Int, kotlin.Array((kotlin.ByteArray)), kotlin.Int)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$emitLog(kotlin.ByteArray, kotlin.ByteArray, kotlin.Int, kotlin.Array((kotlin.ByteArray)), kotlin.Int)/dataSize">dataSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$emitLog(kotlin.ByteArray, kotlin.ByteArray, kotlin.Int, kotlin.Array((kotlin.ByteArray)), kotlin.Int)/topics">topics</span><span class="symbol">:</span>&nbsp;<span class="identifier">Array</span><span class="symbol">&lt;</span><span class="identifier">ByteArray</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$emitLog(kotlin.ByteArray, kotlin.ByteArray, kotlin.Int, kotlin.Array((kotlin.ByteArray)), kotlin.Int)/topicCount">topicCount</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+<code><span class="keyword">fun </span><span class="identifier">emitLog</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$emitLog(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes, kotlin.collections.List((org.apache.tuweni.bytes.Bytes32)))/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$emitLog(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes, kotlin.collections.List((org.apache.tuweni.bytes.Bytes32)))/data">data</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$emitLog(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes, kotlin.collections.List((org.apache.tuweni.bytes.Bytes32)))/topics">topics</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
 </tr>
 <tr>
 <td>
@@ -187,7 +187,7 @@
 </td>
 <td>
 <p>Get balance function.</p>
-<code><span class="keyword">fun </span><span class="identifier">getBalance</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getBalance(kotlin.ByteArray)/addressBytes">addressBytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteBuffer</span></code></td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getBalance</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getBalance(org.apache.tuweni.eth.Address)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -195,7 +195,14 @@
 </td>
 <td>
 <p>Get block hash function.</p>
-<code><span class="keyword">fun </span><span class="identifier">getBlockHash</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getBlockHash(kotlin.Long)/number">number</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteBuffer</span></code></td>
+<code><span class="keyword">fun </span><span class="identifier">getBlockHash</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getBlockHash(kotlin.Long)/number">number</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a></code><code><span class="keyword">fun </span><span class="identifier">getBlockHash</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-block-number.html">getBlockNumber</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getBlockNumber</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
 </tr>
 <tr>
 <td>
@@ -203,7 +210,7 @@
 </td>
 <td>
 <p>Copy code function.</p>
-<code><span class="keyword">fun </span><span class="identifier">getCode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getCode(kotlin.ByteArray)/address">address</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteBuffer</span></code></td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getCode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getCode(org.apache.tuweni.eth.Address)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -211,7 +218,7 @@
 </td>
 <td>
 <p>Get code hash function.</p>
-<code><span class="keyword">fun </span><span class="identifier">getCodeHash</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getCodeHash(kotlin.ByteArray)/address">address</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteBuffer</span></code></td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getCodeHash</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getCodeHash(org.apache.tuweni.eth.Address)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -219,7 +226,44 @@
 </td>
 <td>
 <p>Get code size function.</p>
-<code><span class="keyword">fun </span><span class="identifier">getCodeSize</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getCodeSize(kotlin.ByteArray)/address">address</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getCodeSize</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getCodeSize(org.apache.tuweni.eth.Address)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-coinbase.html">getCoinbase</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCoinbase</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-difficulty.html">getDifficulty</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getDifficulty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-gas-limit.html">getGasLimit</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getGasLimit</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-gas-price.html">getGasPrice</a></h4>
+</td>
+<td>
+<p>Provides the gas price of the transaction.</p>
+<code><span class="keyword">fun </span><span class="identifier">getGasPrice</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-repository-storage.html">getRepositoryStorage</a></h4>
+</td>
+<td>
+<p>Get repository storage function.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getRepositoryStorage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getRepositoryStorage(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getRepositoryStorage(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes)/keyBytes">keyBytes</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -227,7 +271,7 @@
 </td>
 <td>
 <p>Get storage function.</p>
-<code><span class="keyword">fun </span><span class="identifier">getStorage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getStorage(kotlin.ByteArray, kotlin.ByteArray)/addressBytes">addressBytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getStorage(kotlin.ByteArray, kotlin.ByteArray)/keyBytes">keyBytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteBuffer</span></code></td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getStorage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getStorage(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes32)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getStorage(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes32)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -235,7 +279,14 @@
 </td>
 <td>
 <p>Get transaction context function.</p>
-<code><span class="keyword">fun </span><span class="identifier">getTxContext</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteBuffer</span></code></td>
+<code><span class="keyword">fun </span><span class="identifier">getTxContext</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="increase-balance.html">increaseBalance</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">increaseBalance</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$increaseBalance(org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$increaseBalance(org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei)/amount">amount</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
 </tr>
 <tr>
 <td>
@@ -243,7 +294,14 @@
 </td>
 <td>
 <p>Selfdestruct function.</p>
-<code><span class="keyword">fun </span><span class="identifier">selfdestruct</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$selfdestruct(kotlin.ByteArray, kotlin.ByteArray)/address">address</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$selfdestruct(kotlin.ByteArray, kotlin.ByteArray)/beneficiary">beneficiary</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">selfdestruct</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$selfdestruct(org.apache.tuweni.eth.Address, org.apache.tuweni.eth.Address)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$selfdestruct(org.apache.tuweni.eth.Address, org.apache.tuweni.eth.Address)/beneficiary">beneficiary</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-balance.html">setBalance</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">setBalance</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$setBalance(org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$setBalance(org.apache.tuweni.eth.Address, org.apache.tuweni.units.ethereum.Wei)/balance">balance</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
 </tr>
 <tr>
 <td>
@@ -251,7 +309,31 @@
 </td>
 <td>
 <p>Set storage function.</p>
-<code><span class="keyword">fun </span><span class="identifier">setStorage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$setStorage(kotlin.ByteArray, kotlin.ByteArray, kotlin.ByteArray)/addressBytes">addressBytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$setStorage(kotlin.ByteArray, kotlin.ByteArray, kotlin.ByteArray)/keyBytes">keyBytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$setStorage(kotlin.ByteArray, kotlin.ByteArray, kotlin.ByteArray)/valueBytes">valueBytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">setStorage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$setStorage(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes32)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$setStorage(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes32)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$setStorage(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes, org.apache.tuweni.bytes.Bytes32)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="timestamp.html">timestamp</a></h4>
+</td>
+<td>
+<p>Provides the timestamp of the transaction</p>
+<code><span class="keyword">fun </span><span class="identifier">timestamp</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="warm-up-account.html">warmUpAccount</a></h4>
+</td>
+<td>
+<p>Returns true if the account was never used.</p>
+<code><span class="keyword">fun </span><span class="identifier">warmUpAccount</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$warmUpAccount(org.apache.tuweni.eth.Address)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="warm-up-storage.html">warmUpStorage</a></h4>
+</td>
+<td>
+<p>Returns true if the storage slot was never used.</p>
+<code><span class="keyword">fun </span><span class="identifier">warmUpStorage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$warmUpStorage(org.apache.tuweni.eth.Address, org.apache.tuweni.units.bigints.UInt256)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$warmUpStorage(org.apache.tuweni.eth.Address, org.apache.tuweni.units.bigints.UInt256)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.units.bigints/-u-int256/index.html"><span class="identifier">UInt256</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
 </tr>
 </tbody>
 </table>

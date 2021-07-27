@@ -9,7 +9,7 @@
 <br/>
 <h1>await</h1>
 <a name="org.apache.tuweni.concurrent.coroutines$await(org.apache.tuweni.concurrent.AsyncCompletion)"></a>
-<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">.</span><span class="identifier">await</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/concurrent-coroutines/src/main/kotlin/org/apache/tuweni/concurrent/coroutines/AsyncCompletion.kt#L152">(source)</a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="../../org.apache.tuweni.concurrent/-async-completion/index.html"><span class="identifier">AsyncCompletion</span></a><span class="symbol">.</span><span class="identifier">await</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/concurrent-coroutines/src/main/kotlin/org/apache/tuweni/concurrent/coroutines/AsyncCompletion.kt#L152">(source)</a>
 <p>Awaits for completion of the <a href="../../org.apache.tuweni.concurrent/-async-completion/index.html">AsyncCompletion</a> without blocking a thread.</p>
 <p>This suspending function is cancellable. If the <a href="#">Job</a> of the current coroutine is cancelled or completed while this
 suspending function is waiting, this function stops waiting for the <a href="../../org.apache.tuweni.concurrent/-async-completion/index.html">AsyncCompletion</a> and immediately resumes with

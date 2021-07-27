@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TransactionalEVMHostContext.getRepositoryStorage - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.evm</a>&nbsp;/&nbsp;<a href="index.html">TransactionalEVMHostContext</a>&nbsp;/&nbsp;<a href="./get-repository-storage.html">getRepositoryStorage</a><br/>
+<br/>
+<h1>getRepositoryStorage</h1>
+<a name="org.apache.tuweni.evm.TransactionalEVMHostContext$getRepositoryStorage(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getRepositoryStorage</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getRepositoryStorage(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getRepositoryStorage(org.apache.tuweni.eth.Address, org.apache.tuweni.bytes.Bytes)/keyBytes">keyBytes</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/evm/src/main/kotlin/org/apache/tuweni/evm/TransactionalEVMHostContext.kt#L76">(source)</a>
+<p>Get repository storage function.</p>
+<p>This function is used by a VM to query the given account storage entry.</p>
+<h3>Parameters</h3>
+<p><a name="address"></a>
+<code>address</code> - The address of the account.</p>
+<p><a name="key"></a>
+<code>key</code> - The index of the account's storage entry.</p>
+<p><strong>Return</strong><br/>
+The storage value at the given storage key or null bytes if the account does not exist.</p>
+</BODY>
+</HTML>

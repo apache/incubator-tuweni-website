@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>HostContext.getBlockHash - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.evm</a>&nbsp;/&nbsp;<a href="index.html">HostContext</a>&nbsp;/&nbsp;<a href="./get-block-hash.html">getBlockHash</a><br/>
+<br/>
+<h1>getBlockHash</h1>
+<a name="org.apache.tuweni.evm.HostContext$getBlockHash(kotlin.Long)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getBlockHash</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.HostContext$getBlockHash(kotlin.Long)/number">number</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/evm/src/main/kotlin/org/apache/tuweni/evm/EthereumVirtualMachine.kt#L408">(source)</a>
+<p>Get block hash function.</p>
+<p>This function is used by a VM to query the hash of the header of the given block. If the
+information about the requested block is not available, then this is signalled by returning
+zeroed bytes.</p>
+<h3>Parameters</h3>
+<p><a name="number"></a>
+<code>number</code> - The block hash.</p>
+<p><strong>Return</strong><br/>
+The block hash or zeroed bytes if the information about the block is not available.</p>
+<a name="org.apache.tuweni.evm.HostContext$getBlockHash()"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getBlockHash</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/evm/src/main/kotlin/org/apache/tuweni/evm/EthereumVirtualMachine.kt#L445">(source)</a>
+</BODY>
+</HTML>

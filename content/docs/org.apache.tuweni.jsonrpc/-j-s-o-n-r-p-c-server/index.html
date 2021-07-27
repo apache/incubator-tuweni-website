@@ -1,0 +1,152 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JSONRPCServer - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.jsonrpc</a>&nbsp;/&nbsp;<a href="./index.html">JSONRPCServer</a><br/>
+<br/>
+<h1>JSONRPCServer</h1>
+<code><span class="keyword">class </span><span class="identifier">JSONRPCServer</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineScope</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/jsonrpc/src/main/kotlin/org/apache/tuweni/jsonrpc/JSONRPCServer.kt#L56">(source)</a>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">JSONRPCServer</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.jsonrpc.JSONRPCServer$<init>(io.vertx.core.Vertx, kotlin.Int, kotlin.String, kotlin.Boolean, io.vertx.core.net.TrustOptions, kotlin.Boolean, kotlin.String, kotlin.String, kotlin.String, org.apache.tuweni.net.ip.IPRangeChecker, kotlin.coroutines.CoroutineContext, kotlin.Function1((org.apache.tuweni.eth.JSONRPCRequest, org.apache.tuweni.eth.JSONRPCResponse)))/vertx">vertx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Vertx</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.jsonrpc.JSONRPCServer$<init>(io.vertx.core.Vertx, kotlin.Int, kotlin.String, kotlin.Boolean, io.vertx.core.net.TrustOptions, kotlin.Boolean, kotlin.String, kotlin.String, kotlin.String, org.apache.tuweni.net.ip.IPRangeChecker, kotlin.coroutines.CoroutineContext, kotlin.Function1((org.apache.tuweni.eth.JSONRPCRequest, org.apache.tuweni.eth.JSONRPCResponse)))/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.jsonrpc.JSONRPCServer$<init>(io.vertx.core.Vertx, kotlin.Int, kotlin.String, kotlin.Boolean, io.vertx.core.net.TrustOptions, kotlin.Boolean, kotlin.String, kotlin.String, kotlin.String, org.apache.tuweni.net.ip.IPRangeChecker, kotlin.coroutines.CoroutineContext, kotlin.Function1((org.apache.tuweni.eth.JSONRPCRequest, org.apache.tuweni.eth.JSONRPCResponse)))/networkInterface">networkInterface</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"127.0.0.1"<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.jsonrpc.JSONRPCServer$<init>(io.vertx.core.Vertx, kotlin.Int, kotlin.String, kotlin.Boolean, io.vertx.core.net.TrustOptions, kotlin.Boolean, kotlin.String, kotlin.String, kotlin.String, org.apache.tuweni.net.ip.IPRangeChecker, kotlin.coroutines.CoroutineContext, kotlin.Function1((org.apache.tuweni.eth.JSONRPCRequest, org.apache.tuweni.eth.JSONRPCResponse)))/ssl">ssl</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.jsonrpc.JSONRPCServer$<init>(io.vertx.core.Vertx, kotlin.Int, kotlin.String, kotlin.Boolean, io.vertx.core.net.TrustOptions, kotlin.Boolean, kotlin.String, kotlin.String, kotlin.String, org.apache.tuweni.net.ip.IPRangeChecker, kotlin.coroutines.CoroutineContext, kotlin.Function1((org.apache.tuweni.eth.JSONRPCRequest, org.apache.tuweni.eth.JSONRPCResponse)))/trustOptions">trustOptions</span><span class="symbol">:</span>&nbsp;<span class="identifier">TrustOptions</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.jsonrpc.JSONRPCServer$<init>(io.vertx.core.Vertx, kotlin.Int, kotlin.String, kotlin.Boolean, io.vertx.core.net.TrustOptions, kotlin.Boolean, kotlin.String, kotlin.String, kotlin.String, org.apache.tuweni.net.ip.IPRangeChecker, kotlin.coroutines.CoroutineContext, kotlin.Function1((org.apache.tuweni.eth.JSONRPCRequest, org.apache.tuweni.eth.JSONRPCResponse)))/useBasicAuthentication">useBasicAuthentication</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.jsonrpc.JSONRPCServer$<init>(io.vertx.core.Vertx, kotlin.Int, kotlin.String, kotlin.Boolean, io.vertx.core.net.TrustOptions, kotlin.Boolean, kotlin.String, kotlin.String, kotlin.String, org.apache.tuweni.net.ip.IPRangeChecker, kotlin.coroutines.CoroutineContext, kotlin.Function1((org.apache.tuweni.eth.JSONRPCRequest, org.apache.tuweni.eth.JSONRPCResponse)))/basicAuthenticationUsername">basicAuthenticationUsername</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.jsonrpc.JSONRPCServer$<init>(io.vertx.core.Vertx, kotlin.Int, kotlin.String, kotlin.Boolean, io.vertx.core.net.TrustOptions, kotlin.Boolean, kotlin.String, kotlin.String, kotlin.String, org.apache.tuweni.net.ip.IPRangeChecker, kotlin.coroutines.CoroutineContext, kotlin.Function1((org.apache.tuweni.eth.JSONRPCRequest, org.apache.tuweni.eth.JSONRPCResponse)))/basicAuthenticationPassword">basicAuthenticationPassword</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.jsonrpc.JSONRPCServer$<init>(io.vertx.core.Vertx, kotlin.Int, kotlin.String, kotlin.Boolean, io.vertx.core.net.TrustOptions, kotlin.Boolean, kotlin.String, kotlin.String, kotlin.String, org.apache.tuweni.net.ip.IPRangeChecker, kotlin.coroutines.CoroutineContext, kotlin.Function1((org.apache.tuweni.eth.JSONRPCRequest, org.apache.tuweni.eth.JSONRPCResponse)))/basicAuthRealm">basicAuthRealm</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"Apache Tuweni JSON-RPC proxy"<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.jsonrpc.JSONRPCServer$<init>(io.vertx.core.Vertx, kotlin.Int, kotlin.String, kotlin.Boolean, io.vertx.core.net.TrustOptions, kotlin.Boolean, kotlin.String, kotlin.String, kotlin.String, org.apache.tuweni.net.ip.IPRangeChecker, kotlin.coroutines.CoroutineContext, kotlin.Function1((org.apache.tuweni.eth.JSONRPCRequest, org.apache.tuweni.eth.JSONRPCResponse)))/ipRangeChecker">ipRangeChecker</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.net.ip/-i-p-range-checker/index.html"><span class="identifier">IPRangeChecker</span></a>&nbsp;<span class="symbol">=</span>&nbsp;IPRangeChecker.allowAll()<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.jsonrpc.JSONRPCServer$<init>(io.vertx.core.Vertx, kotlin.Int, kotlin.String, kotlin.Boolean, io.vertx.core.net.TrustOptions, kotlin.Boolean, kotlin.String, kotlin.String, kotlin.String, org.apache.tuweni.net.ip.IPRangeChecker, kotlin.coroutines.CoroutineContext, kotlin.Function1((org.apache.tuweni.eth.JSONRPCRequest, org.apache.tuweni.eth.JSONRPCResponse)))/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineContext</span>&nbsp;<span class="symbol">=</span>&nbsp;Dispatchers.Default<span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.jsonrpc.JSONRPCServer$<init>(io.vertx.core.Vertx, kotlin.Int, kotlin.String, kotlin.Boolean, io.vertx.core.net.TrustOptions, kotlin.Boolean, kotlin.String, kotlin.String, kotlin.String, org.apache.tuweni.net.ip.IPRangeChecker, kotlin.coroutines.CoroutineContext, kotlin.Function1((org.apache.tuweni.eth.JSONRPCRequest, org.apache.tuweni.eth.JSONRPCResponse)))/methodHandler">methodHandler</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../org.apache.tuweni.eth/-j-s-o-n-r-p-c-request/index.html"><span class="identifier">JSONRPCRequest</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../../org.apache.tuweni.eth/-j-s-o-n-r-p-c-response/index.html"><span class="identifier">JSONRPCResponse</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="basic-authentication-password.html">basicAuthenticationPassword</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">basicAuthenticationPassword</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="basic-authentication-username.html">basicAuthenticationUsername</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">basicAuthenticationUsername</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="basic-auth-realm.html">basicAuthRealm</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">basicAuthRealm</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="coroutine-context.html">coroutineContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">coroutineContext</span><span class="symbol">: </span><span class="identifier">CoroutineContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ip-range-checker.html">ipRangeChecker</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">ipRangeChecker</span><span class="symbol">: </span><a href="../../org.apache.tuweni.net.ip/-i-p-range-checker/index.html"><span class="identifier">IPRangeChecker</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="method-handler.html">methodHandler</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">methodHandler</span><span class="symbol">: </span><span class="symbol">(</span><a href="../../org.apache.tuweni.eth/-j-s-o-n-r-p-c-request/index.html"><span class="identifier">JSONRPCRequest</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../../org.apache.tuweni.eth/-j-s-o-n-r-p-c-response/index.html"><span class="identifier">JSONRPCResponse</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="network-interface.html">networkInterface</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">networkInterface</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ssl.html">ssl</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">ssl</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="trust-options.html">trustOptions</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">trustOptions</span><span class="symbol">: </span><span class="identifier">TrustOptions</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="use-basic-authentication.html">useBasicAuthentication</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">useBasicAuthentication</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="vertx.html">vertx</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">vertx</span><span class="symbol">: </span><span class="identifier">Vertx</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="port.html">port</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">port</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start.html">start</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">start</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stop.html">stop</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">stop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="logger.html">logger</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">logger</span><span class="symbol">: </span><span class="identifier">Logger</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mapper.html">mapper</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">mapper</span><span class="symbol">: </span><span class="identifier">ObjectMapper</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>StratumProtocol - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.stratum.server</a>&nbsp;/&nbsp;<a href="./index.html">StratumProtocol</a><br/>
+<br/>
+<h1>StratumProtocol</h1>
+<code><span class="keyword">interface </span><span class="identifier">StratumProtocol</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/stratum/server/src/main/kotlin/org/apache/tuweni/stratum/server/StratumProtocol.kt#L32">(source)</a>
+<p>Handler capable of taking care of a connection to a Stratum server according to a specific flavor of the Stratum protocol.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="can-handle.html">canHandle</a></h4>
+</td>
+<td>
+<p>Checks if the protocol can handle a TCP connection, based on the initial message.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">canHandle</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.stratum.server.StratumProtocol$canHandle(kotlin.String, org.apache.tuweni.stratum.server.StratumConnection)/initialMessage">initialMessage</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.stratum.server.StratumProtocol$canHandle(kotlin.String, org.apache.tuweni.stratum.server.StratumConnection)/conn">conn</span><span class="symbol">:</span>&nbsp;<a href="../-stratum-connection/index.html"><span class="identifier">StratumConnection</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="handle.html">handle</a></h4>
+</td>
+<td>
+<p>Handle a message over an established Stratum connection</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">handle</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.stratum.server.StratumProtocol$handle(org.apache.tuweni.stratum.server.StratumConnection, kotlin.String)/conn">conn</span><span class="symbol">:</span>&nbsp;<a href="../-stratum-connection/index.html"><span class="identifier">StratumConnection</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.stratum.server.StratumProtocol$handle(org.apache.tuweni.stratum.server.StratumConnection, kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-close.html">onClose</a></h4>
+</td>
+<td>
+<p>Callback when a stratum connection is closed.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">onClose</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.stratum.server.StratumProtocol$onClose(org.apache.tuweni.stratum.server.StratumConnection)/conn">conn</span><span class="symbol">:</span>&nbsp;<a href="../-stratum-connection/index.html"><span class="identifier">StratumConnection</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-current-work-task.html">setCurrentWorkTask</a></h4>
+</td>
+<td>
+<p>Sets the current proof-of-work job.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">setCurrentWorkTask</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.stratum.server.StratumProtocol$setCurrentWorkTask(org.apache.tuweni.stratum.server.PoWInput)/input">input</span><span class="symbol">:</span>&nbsp;<a href="../-po-w-input/index.html"><span class="identifier">PoWInput</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-stratum1-eth-proxy-protocol/index.html">Stratum1EthProxyProtocol</a></h4>
+</td>
+<td>
+<p>Implementation of the stratum1+tcp protocol.</p>
+<code><span class="keyword">class </span><span class="identifier">Stratum1EthProxyProtocol</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">StratumProtocol</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-stratum1-protocol/index.html">Stratum1Protocol</a></h4>
+</td>
+<td>
+<p>Implementation of the stratum+tcp protocol.</p>
+<code><span class="keyword">class </span><span class="identifier">Stratum1Protocol</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">StratumProtocol</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

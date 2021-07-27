@@ -8,11 +8,11 @@
 <a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.wallet</a>&nbsp;/&nbsp;<a href="./index.html">Wallet</a><br/>
 <br/>
 <h1>Wallet</h1>
-<code><span class="keyword">class </span><span class="identifier">Wallet</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/wallet/src/main/kotlin/org/apache/tuweni/wallet/Wallet.kt#L45">(source)</a>
+<code><span class="keyword">class </span><span class="identifier">Wallet</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/wallet/src/main/kotlin/org/apache/tuweni/wallet/Wallet.kt#L45">(source)</a>
 <p>Wallet containing a private key that is secured with symmetric encryption.</p>
-<p>This is vastly insecure - do not use in anything remotely close to production.</p>
-<p>This wallet encrypts the key pair at rest, but keeps the keypair in memory, which may be dumped.</p>
-<p>Nonce is also based on the password, should be instead stored in the wallet and unique.</p>
+<p>This has not been audited for security concerns and should not be used in production.</p>
+<p>This wallet encrypts the key pair at rest, and encrypts the key in memory.</p>
+<p>Nonce is based on the password, should be instead stored in the wallet and unique.</p>
 <p>The wallet loads from a file.</p>
 <h3>Constructors</h3>
 <table>

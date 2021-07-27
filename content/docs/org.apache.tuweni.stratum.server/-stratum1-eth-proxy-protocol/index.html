@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Stratum1EthProxyProtocol - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.stratum.server</a>&nbsp;/&nbsp;<a href="./index.html">Stratum1EthProxyProtocol</a><br/>
+<br/>
+<h1>Stratum1EthProxyProtocol</h1>
+<code><span class="keyword">class </span><span class="identifier">Stratum1EthProxyProtocol</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-stratum-protocol/index.html"><span class="identifier">StratumProtocol</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/stratum/server/src/main/kotlin/org/apache/tuweni/stratum/server/StratumProtocol.kt#L219">(source)</a>
+<p>Implementation of the stratum1+tcp protocol.</p>
+<p>This protocol allows miners to submit EthHash solutions over a persistent TCP connection.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Implementation of the stratum1+tcp protocol.</p>
+<code><span class="identifier">Stratum1EthProxyProtocol</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.stratum.server.Stratum1EthProxyProtocol$<init>(kotlin.Function1((org.apache.tuweni.stratum.server.PoWSolution, kotlin.Boolean)), kotlin.Function0((org.apache.tuweni.bytes.Bytes32)), kotlin.Function2((org.apache.tuweni.bytes.Bytes, kotlin.Long, kotlin.Boolean)))/submitCallback">submitCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../-po-w-solution/index.html"><span class="identifier">PoWSolution</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.stratum.server.Stratum1EthProxyProtocol$<init>(kotlin.Function1((org.apache.tuweni.stratum.server.PoWSolution, kotlin.Boolean)), kotlin.Function0((org.apache.tuweni.bytes.Bytes32)), kotlin.Function2((org.apache.tuweni.bytes.Bytes, kotlin.Long, kotlin.Boolean)))/seedSupplier">seedSupplier</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../../org.apache.tuweni.bytes/-bytes32/index.html"><span class="identifier">Bytes32</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.stratum.server.Stratum1EthProxyProtocol$<init>(kotlin.Function1((org.apache.tuweni.stratum.server.PoWSolution, kotlin.Boolean)), kotlin.Function0((org.apache.tuweni.bytes.Bytes32)), kotlin.Function2((org.apache.tuweni.bytes.Bytes, kotlin.Long, kotlin.Boolean)))/hashrateCallback">hashrateCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="can-handle.html">canHandle</a></h4>
+</td>
+<td>
+<p>Checks if the protocol can handle a TCP connection, based on the initial message.</p>
+<code><span class="keyword">fun </span><span class="identifier">canHandle</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.stratum.server.Stratum1EthProxyProtocol$canHandle(kotlin.String, org.apache.tuweni.stratum.server.StratumConnection)/initialMessage">initialMessage</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.stratum.server.Stratum1EthProxyProtocol$canHandle(kotlin.String, org.apache.tuweni.stratum.server.StratumConnection)/conn">conn</span><span class="symbol">:</span>&nbsp;<a href="../-stratum-connection/index.html"><span class="identifier">StratumConnection</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="handle.html">handle</a></h4>
+</td>
+<td>
+<p>Handle a message over an established Stratum connection</p>
+<code><span class="keyword">fun </span><span class="identifier">handle</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.stratum.server.Stratum1EthProxyProtocol$handle(org.apache.tuweni.stratum.server.StratumConnection, kotlin.String)/conn">conn</span><span class="symbol">:</span>&nbsp;<a href="../-stratum-connection/index.html"><span class="identifier">StratumConnection</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.stratum.server.Stratum1EthProxyProtocol$handle(org.apache.tuweni.stratum.server.StratumConnection, kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="handle-hashrate-submit.html">handleHashrateSubmit</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">handleHashrateSubmit</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.stratum.server.Stratum1EthProxyProtocol$handleHashrateSubmit(com.fasterxml.jackson.databind.json.JsonMapper, org.apache.tuweni.stratum.server.StratumConnection, org.apache.tuweni.stratum.server.JsonRpcRequest)/mapper">mapper</span><span class="symbol">:</span>&nbsp;<span class="identifier">JsonMapper</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.stratum.server.Stratum1EthProxyProtocol$handleHashrateSubmit(com.fasterxml.jackson.databind.json.JsonMapper, org.apache.tuweni.stratum.server.StratumConnection, org.apache.tuweni.stratum.server.JsonRpcRequest)/conn">conn</span><span class="symbol">:</span>&nbsp;<a href="../-stratum-connection/index.html"><span class="identifier">StratumConnection</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.stratum.server.Stratum1EthProxyProtocol$handleHashrateSubmit(com.fasterxml.jackson.databind.json.JsonMapper, org.apache.tuweni.stratum.server.StratumConnection, org.apache.tuweni.stratum.server.JsonRpcRequest)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../-json-rpc-request/index.html"><span class="identifier">JsonRpcRequest</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-close.html">onClose</a></h4>
+</td>
+<td>
+<p>Callback when a stratum connection is closed.</p>
+<code><span class="keyword">fun </span><span class="identifier">onClose</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.stratum.server.Stratum1EthProxyProtocol$onClose(org.apache.tuweni.stratum.server.StratumConnection)/conn">conn</span><span class="symbol">:</span>&nbsp;<a href="../-stratum-connection/index.html"><span class="identifier">StratumConnection</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-current-work-task.html">setCurrentWorkTask</a></h4>
+</td>
+<td>
+<p>Sets the current proof-of-work job.</p>
+<code><span class="keyword">fun </span><span class="identifier">setCurrentWorkTask</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.stratum.server.Stratum1EthProxyProtocol$setCurrentWorkTask(org.apache.tuweni.stratum.server.PoWInput)/input">input</span><span class="symbol">:</span>&nbsp;<a href="../-po-w-input/index.html"><span class="identifier">PoWInput</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

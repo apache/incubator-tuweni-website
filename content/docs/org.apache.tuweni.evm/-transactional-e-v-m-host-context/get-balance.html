@@ -8,8 +8,8 @@
 <a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.evm</a>&nbsp;/&nbsp;<a href="index.html">TransactionalEVMHostContext</a>&nbsp;/&nbsp;<a href="./get-balance.html">getBalance</a><br/>
 <br/>
 <h1>getBalance</h1>
-<a name="org.apache.tuweni.evm.TransactionalEVMHostContext$getBalance(kotlin.ByteArray)"></a>
-<code><span class="keyword">fun </span><span class="identifier">getBalance</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getBalance(kotlin.ByteArray)/addressBytes">addressBytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteBuffer</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/evm/src/main/kotlin/org/apache/tuweni/evm/TransactionalEVMHostContext.kt#L168">(source)</a>
+<a name="org.apache.tuweni.evm.TransactionalEVMHostContext$getBalance(org.apache.tuweni.eth.Address)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getBalance</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getBalance(org.apache.tuweni.eth.Address)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.units.ethereum/-wei/index.html"><span class="identifier">Wei</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/evm/src/main/kotlin/org/apache/tuweni/evm/TransactionalEVMHostContext.kt#L168">(source)</a>
 <p>Get balance function.</p>
 <p>This function is used by a VM to query the balance of the given account.</p>
 <h3>Parameters</h3>

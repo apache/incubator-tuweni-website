@@ -20,6 +20,13 @@
 </tr>
 <tr>
 <td>
+<h4><a href="-connection-management-strategy/index.html">ConnectionManagementStrategy</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ConnectionManagementStrategy</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../org.apache.tuweni.devp2p.eth/-connection-selection-strategy/index.html"><span class="identifier">ConnectionSelectionStrategy</span></a></code></td>
+</tr>
+<tr>
+<td>
 <h4><a href="-data-store-configuration/index.html">DataStoreConfiguration</a></h4>
 </td>
 <td>
@@ -72,10 +79,47 @@
 </tr>
 <tr>
 <td>
+<h4><a href="-ethereum-connection/index.html">EthereumConnection</a></h4>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">EthereumConnection</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../org.apache.tuweni.peer.repository/-connection/index.html"><span class="identifier">Connection</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-ethereum-peer-repository/index.html">EthereumPeerRepository</a></h4>
+</td>
+<td>
+<p>A peer repository of peers implementing the eth subprotocol.</p>
+<code><span class="keyword">interface </span><span class="identifier">EthereumPeerRepository</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../org.apache.tuweni.peer.repository/-peer-repository/index.html"><span class="identifier">PeerRepository</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-from-best-block-synchronizer/index.html">FromBestBlockSynchronizer</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FromBestBlockSynchronizer</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-synchronizer/index.html"><span class="identifier">Synchronizer</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-from-unknown-parent-synchronizer/index.html">FromUnknownParentSynchronizer</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FromUnknownParentSynchronizer</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-synchronizer/index.html"><span class="identifier">Synchronizer</span></a></code></td>
+</tr>
+<tr>
+<td>
 <h4><a href="-genesis-file-configuration/index.html">GenesisFileConfiguration</a></h4>
 </td>
 <td>
 <code><span class="keyword">interface </span><span class="identifier">GenesisFileConfiguration</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-memory-ethereum-peer-repository/index.html">MemoryEthereumPeerRepository</a></h4>
+</td>
+<td>
+<p>Memory-backed Ethereum peer repository.</p>
+<code><span class="keyword">class </span><span class="identifier">MemoryEthereumPeerRepository</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-ethereum-peer-repository/index.html"><span class="identifier">EthereumPeerRepository</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -86,6 +130,21 @@
 </tr>
 <tr>
 <td>
+<h4><a href="-peer-status-eth-synchronizer/index.html">PeerStatusEthSynchronizer</a></h4>
+</td>
+<td>
+<p>Synchronizer responsible for pulling blocks until such time the highest known block is met, or close enough.</p>
+<code><span class="keyword">class </span><span class="identifier">PeerStatusEthSynchronizer</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-synchronizer/index.html"><span class="identifier">Synchronizer</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-persistence-marshaller/index.html">PersistenceMarshaller</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">PersistenceMarshaller</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AbstractMarshaller</span></code></td>
+</tr>
+<tr>
+<td>
 <h4><a href="-r-l-px-service-configuration/index.html">RLPxServiceConfiguration</a></h4>
 </td>
 <td>
@@ -93,10 +152,86 @@
 </tr>
 <tr>
 <td>
+<h4><a href="-scored-connection-selection-strategy/index.html">ScoredConnectionSelectionStrategy</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ScoredConnectionSelectionStrategy</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../org.apache.tuweni.devp2p.eth/-connection-selection-strategy/index.html"><span class="identifier">ConnectionSelectionStrategy</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-static-peers-configuration/index.html">StaticPeersConfiguration</a></h4>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">StaticPeersConfiguration</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-static-peers-configuration-impl/index.html">StaticPeersConfigurationImpl</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">StaticPeersConfigurationImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-static-peers-configuration/index.html"><span class="identifier">StaticPeersConfiguration</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-synchronizer/index.html">Synchronizer</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">Synchronizer</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineScope</span></code></td>
+</tr>
+<tr>
+<td>
 <h4><a href="-wire-connection-peer-repository-adapter/index.html">WireConnectionPeerRepositoryAdapter</a></h4>
 </td>
 <td>
+<p>Class bridging the subprotocols and the connection repository of the RLPx service, updating the Ethereum peer repository with information.</p>
 <code><span class="keyword">class </span><span class="identifier">WireConnectionPeerRepositoryAdapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../org.apache.tuweni.rlpx/-wire-connection-repository/index.html"><span class="identifier">WireConnectionRepository</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-b-e-s-t_-p-e-e-r_-d-e-l-a-y.html">BEST_PEER_DELAY</a></h4>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">BEST_PEER_DELAY</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-d-e-l-a-y.html">DELAY</a></h4>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">DELAY</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-h-e-a-d-e-r_-p-a-r-e-n-t_-h-e-a-d-e-r_-r-e-q-u-e-s-t_-s-i-z-e.html">HEADER_PARENT_HEADER_REQUEST_SIZE</a></h4>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">HEADER_PARENT_HEADER_REQUEST_SIZE</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-h-e-a-d-e-r_-r-e-q-u-e-s-t_-s-i-z-e.html">HEADER_REQUEST_SIZE</a></h4>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">HEADER_REQUEST_SIZE</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-h-e-a-d-e-r-s_-r-e-s-p-o-n-s-e_-t-i-m-e-o-u-t.html">HEADERS_RESPONSE_TIMEOUT</a></h4>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">HEADERS_RESPONSE_TIMEOUT</span><span class="symbol">: </span><span class="identifier">Long</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="logger.html">logger</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">logger</span><span class="symbol">: </span><span class="identifier">Logger</span><span class="symbol">!</span></code></td>
 </tr>
 </tbody>
 </table>

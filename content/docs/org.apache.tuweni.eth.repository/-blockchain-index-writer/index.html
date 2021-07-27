@@ -8,7 +8,7 @@
 <a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth.repository</a>&nbsp;/&nbsp;<a href="./index.html">BlockchainIndexWriter</a><br/>
 <br/>
 <h1>BlockchainIndexWriter</h1>
-<code><span class="keyword">interface </span><span class="identifier">BlockchainIndexWriter</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/eth-repository/src/main/kotlin/org/apache/tuweni/eth/repository/BlockchainIndex.kt#L257">(source)</a>
+<code><span class="keyword">interface </span><span class="identifier">BlockchainIndexWriter</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/eth-repository/src/main/kotlin/org/apache/tuweni/eth/repository/BlockchainIndex.kt#L266">(source)</a>
 <p>Indexer for blockchain elements.</p>
 <h3>Functions</h3>
 <table>
@@ -19,7 +19,15 @@
 </td>
 <td>
 <p>Indexes a block header.</p>
-<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">indexBlockHeader</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainIndexWriter$indexBlockHeader(org.apache.tuweni.eth.BlockHeader)/blockHeader">blockHeader</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-block-header/index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">indexBlockHeader</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainIndexWriter$indexBlockHeader(org.apache.tuweni.eth.BlockHeader, kotlin.Boolean)/blockHeader">blockHeader</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-block-header/index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainIndexWriter$indexBlockHeader(org.apache.tuweni.eth.BlockHeader, kotlin.Boolean)/indexTotalDifficulty">indexTotalDifficulty</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="index-total-difficulty.html">indexTotalDifficulty</a></h4>
+</td>
+<td>
+<p>Indexes the total difficulty of a block header based on its position in the chain.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">indexTotalDifficulty</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.repository.BlockchainIndexWriter$indexTotalDifficulty(org.apache.tuweni.eth.BlockHeader)/blockHeader">blockHeader</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-block-header/index.html"><span class="identifier">BlockHeader</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
 </tr>
 <tr>
 <td>

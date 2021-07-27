@@ -37,11 +37,26 @@
 </tr>
 <tr>
 <td>
+<h4><a href="-e-v-m-message/index.html">EVMMessage</a></h4>
+</td>
+<td>
+<p>Message sent to the EVM for execution</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">EVMMessage</span></code></td>
+</tr>
+<tr>
+<td>
 <h4><a href="-e-v-m-result/index.html">EVMResult</a></h4>
 </td>
 <td>
 <p>Result of EVM execution</p>
 <code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">EVMResult</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-evm-vm/index.html">EvmVm</a></h4>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">EvmVm</span></code></td>
 </tr>
 <tr>
 <td>
@@ -53,11 +68,39 @@
 </tr>
 <tr>
 <td>
+<h4><a href="-host-context/index.html">HostContext</a></h4>
+</td>
+<td>
+<p>This interface represents the callback functions must be implemented in order to interface with
+the EVM.</p>
+<code><span class="keyword">interface </span><span class="identifier">HostContext</span></code></td>
+</tr>
+<tr>
+<td>
 <h4><a href="-transactional-e-v-m-host-context/index.html">TransactionalEVMHostContext</a></h4>
 </td>
 <td>
 <p>EVM context that records changes to the world state, so they can be applied atomically.</p>
-<code><span class="keyword">class </span><span class="identifier">TransactionalEVMHostContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">HostContext</span></code></td>
+<code><span class="keyword">class </span><span class="identifier">TransactionalEVMHostContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-host-context/index.html"><span class="identifier">HostContext</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="latest-hard-fork.html">latestHardFork</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">latestHardFork</span><span class="symbol">: </span><a href="-hard-fork/index.html"><span class="identifier">HardFork</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="opcodes.html">opcodes</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">opcodes</span><span class="symbol">: </span><span class="identifier">Map</span><span class="symbol">&lt;</span><span class="identifier">Byte</span><span class="symbol">,</span>&nbsp;<span class="identifier">String</span><span class="symbol">&gt;</span></code></td>
 </tr>
 </tbody>
 </table>

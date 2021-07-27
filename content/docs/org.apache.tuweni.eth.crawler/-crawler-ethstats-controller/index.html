@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CrawlerEthstatsController - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth.crawler</a>&nbsp;/&nbsp;<a href="./index.html">CrawlerEthstatsController</a><br/>
+<br/>
+<h1>CrawlerEthstatsController</h1>
+<code><span class="keyword">class </span><span class="identifier">CrawlerEthstatsController</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.ethstats/-eth-stats-server-controller/index.html"><span class="identifier">EthStatsServerController</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/eth-crawler/src/main/kotlin/org/apache/tuweni/eth/crawler/CrawlerEthstatsController.kt#L24">(source)</a>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">CrawlerEthstatsController</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$<init>(org.apache.tuweni.eth.crawler.EthstatsDataRepository)/repository">repository</span><span class="symbol">:</span>&nbsp;<a href="../-ethstats-data-repository/index.html"><span class="identifier">EthstatsDataRepository</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="repository.html">repository</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">repository</span><span class="symbol">: </span><a href="../-ethstats-data-repository/index.html"><span class="identifier">EthstatsDataRepository</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="read-block.html">readBlock</a></h4>
+</td>
+<td>
+<p>Reads block information from the peer.</p>
+<code><span class="keyword">fun </span><span class="identifier">readBlock</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$readBlock(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.BlockStats)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$readBlock(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.BlockStats)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$readBlock(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.BlockStats)/block">block</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.ethstats/-block-stats/index.html"><span class="identifier">BlockStats</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-disconnect.html">readDisconnect</a></h4>
+</td>
+<td>
+<p>Handles the disconnection of the peer.</p>
+<code><span class="keyword">fun </span><span class="identifier">readDisconnect</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$readDisconnect(kotlin.String, kotlin.String)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$readDisconnect(kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-latency.html">readLatency</a></h4>
+</td>
+<td>
+<p>Reads latency from the peer to the server, in milliseconds.</p>
+<code><span class="keyword">fun </span><span class="identifier">readLatency</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$readLatency(kotlin.String, kotlin.String, kotlin.Long)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$readLatency(kotlin.String, kotlin.String, kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$readLatency(kotlin.String, kotlin.String, kotlin.Long)/latency">latency</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-node-info.html">readNodeInfo</a></h4>
+</td>
+<td>
+<p>Reads node information. This is sent upon connection from the peer.</p>
+<code><span class="keyword">fun </span><span class="identifier">readNodeInfo</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$readNodeInfo(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeInfo)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$readNodeInfo(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeInfo)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$readNodeInfo(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeInfo)/nodeInfo">nodeInfo</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.ethstats/-node-info/index.html"><span class="identifier">NodeInfo</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-node-stats.html">readNodeStats</a></h4>
+</td>
+<td>
+<p>Reads node statistics.</p>
+<code><span class="keyword">fun </span><span class="identifier">readNodeStats</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$readNodeStats(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeStats)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$readNodeStats(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeStats)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$readNodeStats(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeStats)/nodeStats">nodeStats</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.ethstats/-node-stats/index.html"><span class="identifier">NodeStats</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-pending-tx.html">readPendingTx</a></h4>
+</td>
+<td>
+<p>Reads the number of pending transactions from the peer</p>
+<code><span class="keyword">fun </span><span class="identifier">readPendingTx</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$readPendingTx(kotlin.String, kotlin.String, kotlin.Long)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$readPendingTx(kotlin.String, kotlin.String, kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.CrawlerEthstatsController$readPendingTx(kotlin.String, kotlin.String, kotlin.Long)/pendingTx">pendingTx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

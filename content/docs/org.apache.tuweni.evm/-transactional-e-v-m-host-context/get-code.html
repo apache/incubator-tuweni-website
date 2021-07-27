@@ -8,8 +8,8 @@
 <a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.evm</a>&nbsp;/&nbsp;<a href="index.html">TransactionalEVMHostContext</a>&nbsp;/&nbsp;<a href="./get-code.html">getCode</a><br/>
 <br/>
 <h1>getCode</h1>
-<a name="org.apache.tuweni.evm.TransactionalEVMHostContext$getCode(kotlin.ByteArray)"></a>
-<code><span class="keyword">fun </span><span class="identifier">getCode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getCode(kotlin.ByteArray)/address">address</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteBuffer</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/master/evm/src/main/kotlin/org/apache/tuweni/evm/TransactionalEVMHostContext.kt#L233">(source)</a>
+<a name="org.apache.tuweni.evm.TransactionalEVMHostContext$getCode(org.apache.tuweni.eth.Address)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getCode</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.evm.TransactionalEVMHostContext$getCode(org.apache.tuweni.eth.Address)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.eth/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../org.apache.tuweni.bytes/-bytes/index.html"><span class="identifier">Bytes</span></a></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/evm/src/main/kotlin/org/apache/tuweni/evm/TransactionalEVMHostContext.kt#L225">(source)</a>
 <p>Copy code function.</p>
 <p>This function is used by an EVM to request a copy of the code of the given account to the
 memory buffer provided by the EVM. The Client MUST copy the requested code, starting with the

@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EthstatsDataRepository - tuweni</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tuweni</a>&nbsp;/&nbsp;<a href="../index.html">org.apache.tuweni.eth.crawler</a>&nbsp;/&nbsp;<a href="./index.html">EthstatsDataRepository</a><br/>
+<br/>
+<h1>EthstatsDataRepository</h1>
+<code><span class="keyword">class </span><span class="identifier">EthstatsDataRepository</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineScope</span></code> <a href="https://github.com/apache/incubator-tuweni/blob/main/eth-crawler/src/main/kotlin/org/apache/tuweni/eth/crawler/EthstatsDataRepository.kt#L34">(source)</a>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">EthstatsDataRepository</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$<init>(javax.sql.DataSource, kotlin.coroutines.CoroutineContext)/ds">ds</span><span class="symbol">:</span>&nbsp;<span class="identifier">DataSource</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$<init>(javax.sql.DataSource, kotlin.coroutines.CoroutineContext)/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineContext</span>&nbsp;<span class="symbol">=</span>&nbsp;Dispatchers.Default<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="coroutine-context.html">coroutineContext</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">coroutineContext</span><span class="symbol">: </span><span class="identifier">CoroutineContext</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ds.html">ds</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">ds</span><span class="symbol">: </span><span class="identifier">DataSource</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-latest-block.html">getLatestBlock</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getLatestBlock</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$getLatestBlock(kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Deferred</span><span class="symbol">&lt;</span><a href="../../org.apache.tuweni.ethstats/-block-stats/index.html"><span class="identifier">BlockStats</span></a><span class="symbol">?</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-peer-data.html">getPeerData</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getPeerData</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$getPeerData(kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Deferred</span><span class="symbol">&lt;</span><a href="../-peer-data/index.html"><span class="identifier">PeerData</span></a><span class="symbol">?</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-block.html">storeBlock</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeBlock</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$storeBlock(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.BlockStats)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$storeBlock(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.BlockStats)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$storeBlock(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.BlockStats)/block">block</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.ethstats/-block-stats/index.html"><span class="identifier">BlockStats</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Deferred</span><span class="symbol">&lt;</span><span class="identifier">Boolean</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-latency.html">storeLatency</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeLatency</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$storeLatency(kotlin.String, kotlin.String, kotlin.Long)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$storeLatency(kotlin.String, kotlin.String, kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$storeLatency(kotlin.String, kotlin.String, kotlin.Long)/latency">latency</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Deferred</span><span class="symbol">&lt;</span><span class="identifier">Boolean</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-node-info.html">storeNodeInfo</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeNodeInfo</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$storeNodeInfo(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeInfo)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$storeNodeInfo(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeInfo)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$storeNodeInfo(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeInfo)/nodeInfo">nodeInfo</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.ethstats/-node-info/index.html"><span class="identifier">NodeInfo</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Deferred</span><span class="symbol">&lt;</span><span class="identifier">Boolean</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-node-stats.html">storeNodeStats</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeNodeStats</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$storeNodeStats(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeStats)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$storeNodeStats(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeStats)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$storeNodeStats(kotlin.String, kotlin.String, org.apache.tuweni.ethstats.NodeStats)/nodeStats">nodeStats</span><span class="symbol">:</span>&nbsp;<a href="../../org.apache.tuweni.ethstats/-node-stats/index.html"><span class="identifier">NodeStats</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Deferred</span><span class="symbol">&lt;</span><span class="identifier">Boolean</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-pending-tx.html">storePendingTx</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storePendingTx</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$storePendingTx(kotlin.String, kotlin.String, kotlin.Long)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$storePendingTx(kotlin.String, kotlin.String, kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$storePendingTx(kotlin.String, kotlin.String, kotlin.Long)/pendingTx">pendingTx</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Deferred</span><span class="symbol">&lt;</span><span class="identifier">Boolean</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update-disconnect.html">updateDisconnect</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateDisconnect</span><span class="symbol">(</span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$updateDisconnect(kotlin.String, kotlin.String)/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.apache.tuweni.eth.crawler.EthstatsDataRepository$updateDisconnect(kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Deferred</span><span class="symbol">&lt;</span><span class="identifier">Boolean</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
