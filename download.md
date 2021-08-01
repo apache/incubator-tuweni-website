@@ -109,3 +109,14 @@ Gradle:
 ```groovy
 compile 'org.apache.tuweni:tuweni-bytes:{{site.data.project.latest_release}}'
 ```
+
+### Homebrew
+
+An *unofficial* homebrew tap is maintained under this [repository](https://github.com/tmio/homebrew-tuweni).
+
+You can follow these instructions to install Tuweni:
+
+```bash
+brew tap tmio/tuweni
+brew install tuweni
+```
