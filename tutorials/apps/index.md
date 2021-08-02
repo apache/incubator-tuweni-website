@@ -38,3 +38,10 @@ TODO
 The `eth-faucet` application is an Ethereum faucet that runs alongside an Ethereum client. The faucet allows to distribute funds.
 
 [More](/tutorials/apps/eth-faucet)
+
+# jsonrpc
+
+The `jsonrpc` application is a JSON-RPC proxy that can cache, filter, throttle, meter and authenticate requests to a JSON-RPC endpoint.
+
+[More](/tutorials/apps/jsonrpc)
+
