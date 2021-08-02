@@ -4,11 +4,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Scraper</title>
+    <title>JSON-RPC proxy</title>
     <link rel="icon"
           type="image/ico"
           href="/assets/themes/apache/img/tuweni_face.ico">
-    <meta name="description" content="Scraper">
+    <meta name="description" content="JSON-RPC proxy">
 
     <meta name="author" content="">
 
@@ -97,7 +97,7 @@
       
 
 <div class="page-header">
-  <h1>Scraper </h1>
+  <h1>JSON-RPC proxy </h1>
 </div>
 
 <div class="row-fluid post-full">
@@ -232,21 +232,34 @@
       <span></span>
     </div>
     <div class="content">
-      <p>Scraper is a discv5 server that constantly looks for new peers.</p>
+      <p>The <code class="highlighter-rouge">jsonrpc</code> application is a JSON-RPC proxy that can cache, filter, throttle, meter and authenticate requests to a JSON-RPC endpoint.</p>
 
-<p>Whenever it connects to peers, it asks for all their known peers, and keeps going until it has exhausted all peers it could discover, then starts all over again.</p>
+<p>The application is configured via a toml file, described below:</p>
 
-<p>Whenever a new peer is detected, its information is printed out to stdout with the following format:</p>
+<h2 id="examples">Examples</h2>
 
-<host address="">,<udp port="">,<attnets attribute="">,<base-64 RLP="" encoding="" of="" the="" ENR="">
+<h3 id="proxy-a-json-rpc-endpoint-publicly">Proxy a JSON-RPC endpoint publicly</h3>
 
-The attnets attribute is an ENR attribute used by Ethereum 2.0.
+<p>You set up a node and want to proxy. You expose all JSON-RPC methods on your node but only want to expose the <code class="highlighter-rouge">eth_</code> namespace publicly, with HTTP Basic authentication:</p>
 
-Usage:
+<div class="language-toml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">endpointUrl</span><span class="p">=</span><span class="s">"http://192.168.1.2:8545"</span> <span class="c"># IP of your node</span>
+<span class="py">allowedMethods</span><span class="p">=</span><span class="nn">["eth_"]</span>
+<span class="py">cacheEnabled</span><span class="p">=</span><span class="kc">true</span>
+<span class="py">cachedMethods</span><span class="p">=</span><span class="nn">["eth_"]</span>
+<span class="py">cacheStoragePath</span><span class="p">=</span><span class="s">"/var/jsonrpccache"</span> <span class="c"># Cache location</span>
+</code></pre></div></div>
 
+<h3 id="local-development">Local development</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">./scraper <span class="nt">-LK4QC3FCb7-JTNRiWAezECk_QUJc9c2IkJA1-EAmqAA5wmdbPWsAeRpnMXKRJqOYG0TE99ycB1nOb9y26mjb_UoHS4Bh2F0dG5ldHOIAAAAAAAAAACEZXRoMpDnp11aAAAAAf__________gmlkgnY0gmlwhDMPYfCJc2VjcDI1NmsxoQOmDQryZJApMwIT-dQAbxjvxLbPzyKn9GFk5dqam4MDTYN0Y3CCIyiDdWRwgiMo</span></code></pre></figure>
-</base-64></attnets></udp></host>
+<p>You have a local development and you’re using a service such as Infura or Alchemy, but you want to work without calling the service constantly.</p>
+
+<div class="language-toml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">endpointUrl="https://example.com:8545/?token</span><span class="p">=</span><span class="err">mytoken</span><span class="s">" # service URL
+cacheEnabled=true
+cachedMethods=[""] # All methods are cached
+cacheStoragePath="</span><span class="err">/var/jsonrpccache</span><span class="s">" # Cache location
+allowedMethods=[""] # All methods are enabled
+</span></code></pre></div></div>
+
 
     </div>
     <div class="pagination row col-md-12">
