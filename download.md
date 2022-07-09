@@ -110,6 +110,10 @@ Gradle:
 compile 'org.apache.tuweni:tuweni-bytes:{{site.data.project.latest_release}}'
 ```
 
+### Debian repository
+
+An *unofficial* APT repository is maintained under [deb.tmio.io](https://deb.tmio.io).
+
 ### Homebrew
 
 An *unofficial* homebrew tap is maintained under this [repository](https://github.com/tmio/homebrew-tuweni).
