@@ -1,5 +1,4 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
-@import url(//fonts.googleapis.com/css?family=Patua+One);
 
 body {
   padding-top: 50px;
@@ -298,15 +297,11 @@ a.bigFingerButton:visited {
   color: #FFF; }
 
 
-.jumbotron h1 {
-  font-family: 'Patua One', cursive; }
-
 .jumbotron small {
     font-size: 60%;
     color: #FFF;}
 
 .navbar-brand {
-    font-family: 'Patua One', cursive;
 }
 
 .navbar-brand small {
