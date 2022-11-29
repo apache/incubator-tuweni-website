@@ -32,3 +32,6 @@ To learn how to use Apache Tuweni for low-level libraries, such as bytes, bigint
 To learn more about the networking libraries Apache Tuweni supports, [follow along here](/tutorials/networking).
 
 To start using the applications bundled with Apache Tuweni, [click here](/tutorials/apps).
+
+{% include themes/apache/events.html %}
+

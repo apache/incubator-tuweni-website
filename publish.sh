@@ -79,7 +79,7 @@ cd ..
 #
 cd code
 gradle setup
-./gradlew dokka
+./gradlew dokkaHtml
 mkdir -p ../asf-site-branch/content/docs
 cp build/docs/style.css ../asf-site-branch/content/style.css
 cp -R build/docs/tuweni/* ../asf-site-branch/content/docs
